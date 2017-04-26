@@ -51,6 +51,7 @@ gem "roo"
 gem "acts_as_follower", github: "tcocca/acts_as_follower"
 gem "has_friendship"
 gem "figaro"
+gem "faker"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 3.0"
 # Use ActiveModel has_secure_password
@@ -65,7 +66,6 @@ group :development, :test do
   gem "rack-mini-profiler", require: false
   gem "factory_girl_rails"
   gem "rspec-rails", "~> 3.5"
-  gem "faker"
 end
 
 group :development do
