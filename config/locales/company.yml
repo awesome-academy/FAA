@@ -1,0 +1,64 @@
+en:
+  companies:
+    show:
+      info: "Info"
+      news: "News"
+      jobs: "Jobs"
+      members: "Members"
+      stats: "Stats"
+      founder: "Founder"
+      founded: "Founded on"
+      no_of_members: "# of Members"
+      about_us: "About us"
+      social_profiles: "Social Profiles"
+      follow: "Follow"
+    follow_form:
+      follow: "Follow"
+      unfollow: "Unfollow"
+    show_left_main_content:
+      info: "Info"
+      news: "News"
+      jobs: "Jobs"
+      members: "Members"
+      stats: "Stats"
+      founder: "Founder"
+      founded: "Founded on"
+      no_of_members: "# of Members"
+    show_right_main_content:
+      about_us: "About us"
+      social_profiles: "Social Profiles"
+      location: "Location"
+    show_header:
+      follow: "Follow"
+  admin:
+    layouts:
+      admin_header:
+        fcsp_dash: "Dashboard"
+        welcome: "Welcome"
+        general: "General Management"
+        companies: "Companies"
+        users: "Users"
+        log_out: "Log out"
+      admin_footer:
+        footer_content: "Framgia Code School Platform by"
+    companies:
+      new:
+        company_registration: "Company registration"
+      company_form:
+        next: "Next"
+        required: "Required"
+        optional: "Optional"
+        term: "By signing up you agree to our Enterprise Terms of Service,
+          Terms of Use and Policy"
+      create:
+        company_created: "Create company successfully! Please create company introductions"
+        company_failed: "Error(s) occur when create company"
+    users:
+      new:
+        employer_registration: "Employer registration"
+        next: "Finish"
+        required: "Required"
+        optional: "Optional"
+      create:
+        user_created: "Create employer successfully"
+        create_fail: "Fail to create employer"

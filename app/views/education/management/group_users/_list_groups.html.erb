@@ -1,0 +1,26 @@
+<div class="edu-group-tabs">
+  <ul class="edu-group-tab-links">
+    <% groups.each do |group| %>
+      <li class="edu-group-tab-<%= group.id %>">
+        <a href="#edu-group-tab-<%= group.id %>" group="<%= group.id %>"><%= group.name %></a>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="edu-group-tab-content group-custom">
+    <% groups.each do |group| %>
+      <div id="edu-group-tab-<%= group.id %>" class="edu-group-tab table-responsive">
+        <div class="group-search">
+          <input type="text" class="user-search form-control"
+            placeholder= "<%= t ".placeholder_search" %>" group="<%= group.id %>">
+        </div>
+        <div class="added_users">
+          <%= render partial: "users", locals: {users: group.users, group: group} %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<% groups.each do |group| %>
+  <%= render partial: "add_user_modal", locals: {group: group} %>
+<% end %>

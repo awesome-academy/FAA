@@ -1,0 +1,36 @@
+<div class="panel panel-default divcenter pnl-login">
+  <div class="panel-body login-custom">
+    <%= form_for :user, url: session_path(:user),
+      class: "nobottommargin" do |f| %>
+      <h3 class="text-center"><%= t ".login" %></h3>
+      <div class="col_full">
+        <%= f.label :email, class: "login-form-username" %><br />
+        <%= f.email_field :email, class: "form-control not-dark", autofocus: true %>
+      </div>
+
+      <div class="col_full password-custom">
+        <%= f.label :password, class: "login-form-password" %><br />
+        <%= f.password_field :password,
+          class: "form-control not-dark", autocomplete: "off" %>
+        <%= link_to t(".forgot_password"), "#", class: "forgot-password" %><br/>
+      </div>
+
+      <div class="col_full nobottommargin">
+        <%= f.submit t(".login"),
+          class: "button button-3d button-green nomargin" %>
+      </div>
+    <% end %>
+
+    <div class="line line-sm"></div>
+
+    <div class="center">
+      <h4 class="margin-section" ><%= t ".or_login_with" %></h4>
+      <a href="#" class="button button-rounded si-facebook si-colored">
+        <%= t ".facebook" %></a>
+      <span class="hidden-xs"></span>
+      <a href="#" class="button button-rounded si-twitter si-colored">
+        <%= t ".twitter" %>
+      </a>
+    </div>
+  </div>
+</div>

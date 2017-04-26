@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <title><%= full_title yield :title %></title>
+    <%= render "layouts/head" %>
+    <%= render "layouts/shim" %>
+  </head>
+  <body class="stretched">
+    <div id="wrapper" class="clearfix">
+      <%= render "layouts/header" %>
+      <div class="clearfix">
+        <%= render "shared/flash" %>
+        <%= yield %>
+      </div>
+      <%= render "layouts/footer" %>
+    </div>
+
+    <div id="gotoTop" class="icon-angle-up"></div>
+    <%= javascript_include_tag "template" %>
+  </body>
+</html>

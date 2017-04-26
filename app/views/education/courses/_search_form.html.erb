@@ -1,0 +1,37 @@
+<% if training_select.any? %>
+  <li class="<%= default_current_path %>">
+    <%= link_to controller: controller_name do %>
+      <div><%= t ".show_all" %></div>
+    <% end %>
+  </li>
+  <li><%= content_tag :div,
+    class: "training_size", data: {size: training_select.size} do %>
+  <% end %>
+  </li>
+  <% training_select.last(Settings.courses.number_filter)
+    .each_with_index do |training, i| %>
+    <li>
+      <%= link_to truncate(training.first,
+        length: Settings.education.search_nav.truncate_limit),
+        controller: controller_name, training_id: training.last %>
+    </li>
+  <% end %>
+  <% if check_size_max?%>
+    <li>
+      <a href="#">
+        <%= t "education.projects.more" %>
+        <i class="icon-angle-down"></i>
+      </a>
+      <ul class="ul-courses">
+        <% training_select.first(training_select.size - Settings.courses
+          .number_filter).each_with_index do |training, i| %>
+          <li>
+            <%= link_to truncate(training.first,
+              length: Settings.education.search_nav.truncate_limit),
+              controller: controller_name, training_id: training.last %>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+<% end %>

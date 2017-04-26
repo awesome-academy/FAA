@@ -1,0 +1,132 @@
+@import 'variables/color';
+
+.affix {
+  margin-top: 10px;
+}
+
+.input.required {
+  background-color: $white;
+  border: solid 1px $gray-border;
+  height: auto;
+  margin: 0;
+  padding: 20px;
+
+  label {
+    color: $gray-label;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 0;
+    width: 240px;
+  }
+
+  h3,
+    h5 {
+    text-align: center;
+  }
+
+  .custab td {
+    border: 0;
+  }
+}
+
+.action-create-job {
+  background-color: $gray-border !important;
+}
+
+.require {
+  color: $red;
+  font-weight: normal;
+}
+
+.custab .button-right {
+  float: right;
+}
+
+.tabs.tabs-alt .tab-nav :first-child {
+  margin-left: 0;
+}
+
+.button-create-job {
+  float: right;
+  margin-bottom: 10px;
+  z-index: 999;
+}
+
+.panel .title-image {
+  color: $orange;
+}
+
+.candidate-select-box {
+  color: $gray;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.col-id {
+  width: 10%;
+}
+
+.col-user {
+  width: 25%;
+}
+
+.col-interested {
+  width: 40%;
+}
+
+.fixed-position {
+  position: fixed;
+}
+
+.select-job {
+  float: right;
+  margin-left: 10px;
+  position: relative;
+}
+
+.button-job {
+  border: 1px solid $gray87;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  margin-left: -5px;
+  padding: 6px 12px;
+  text-align: center;
+
+  &:hover {
+    background-color: $hover-job;
+  }
+}
+
+.active {
+  background-color: $selected-job !important;
+}
+
+.all-job {
+  border-radius: 4px 0 0 4px;
+}
+
+.draff-job {
+  border-radius: 0 4px 4px 0;
+}
+
+.job-title {
+  color: $black;
+  font-weight: bold;
+}
+
+.sales {
+  border: 1px solid $blue;
+  border-radius: 2px;
+  color: $weight-blue;
+  font-size: 13px;
+  margin-top: 10px;
+  padding: 2px;
+}
+
+.job-thumb-image {
+  float: left;
+  padding: 10px;
+}

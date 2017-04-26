@@ -1,0 +1,22 @@
+<% provide :title, t("education.title") %>
+<%= render "slider" %>
+
+<section id="content">
+  <div class="content-wrap">
+    <%= render "our_trainings", trainings: @home_object.trainings %>
+    <%= render "lastest_courses", courses: @home_object.courses %>
+    <%= render "about_us", about: @home_object.about %>
+    <%= render "learning_programs", learning_programs: @home_object.learning_programs %>
+    <%= render "our_techniques", techniques: @home_object.techniques %>
+    <%= render "introduction_video" %>
+    <div class="content-wrap-custom">
+      <%= render "statistics" %>
+    </div>
+    <%= render "features" %>
+    <%= render "our_projects", projects: @home_object.projects %>
+    <%= render "need_content" %>
+    <%= render "clients_say" %>
+    <%= render "our_team", trainers: @home_object.trainers %>
+    <%= render "our_clients" %>
+  </div>
+</section>

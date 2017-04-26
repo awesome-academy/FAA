@@ -1,0 +1,65 @@
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= yield :heading %></h1>
+    <span><%= yield :heading_description %></span>
+    <ol class="breadcrumb">
+      <li><%= link_to t("education.header.home"), education_root_path %></li>
+      <li class="active"><%= t "education.header.posts" %></li>
+    </ol>
+  </div>
+</section>
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
+      <%= simple_form_for @post do |f| %>
+        <%= f.input :title, class: "sm-form-control" %>
+        <div class="row">
+          <div class="col-md-3">
+            <%= f.input :category_id, class: "sm-form-control",
+              collection: category_select, include_blank: false %>
+          </div>
+          <div class="col-md-9">
+            <%= f.input :tag_list, class: "sm-form-control" %>
+            <div class="hidden" id="post-tags">
+              <%= @post.tags.map{|tag| tag.name} %>
+            </div>
+            <div class="hidden" id="tags">
+              <%= @user_image_object.tags.map{|tag| tag.name} %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="file-input file-input-new">
+            <div class="input-group input-group-md">
+               <div class="input-group-btn">
+                   <div class="btn btn-primary btn-file">
+                     <i class="icon-picture"></i>
+                     <span class="hidden-xs"><%= t ".pick_image" %></span>
+                     <input id="choose-cover-btn" type="file">
+                   </div>
+                   <button type="button" title="Clear selected files"
+                     class="btn btn-default fileinput-remove
+                       fileinput-remove-button">
+                     <i class="icon-trash"></i>
+                     <span class="hidden-xs"><%= t ".delete" %></span>
+                   </button>
+               </div>
+               <%= f.input :cover_photo,
+                 class: "form-control file-caption kv-fileinput-cation",
+                 label: false %>
+            </div>
+          </div>
+        </div>
+        <div class="row publish-now">
+          <%= f.submit t(".publish_now"),
+            class: "button button-3d button-rounded button-amber btn-publish" %>
+        </div>
+        <div class="row">
+          <%= f.input :content, id: "content-markdown",
+            class: "education-post-content" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+<%= render "insert_image_modal" %>

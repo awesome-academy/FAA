@@ -1,0 +1,8 @@
+<div class="search_education_users">
+  <%= search_form_for @query_users, url: education_management_users_path do |f| %>
+    <div class="search-box">
+      <%= f.search_field :name_or_email_cont,
+        placeholder: t(".placeholder"), class: "form-control" %>
+    </div>
+  <% end %>
+</div>

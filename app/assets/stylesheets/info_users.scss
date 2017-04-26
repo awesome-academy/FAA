@@ -1,0 +1,21 @@
+@import 'variables/color';
+
+.introduction-form-button {
+  float: right;
+}
+
+.modal-txta {
+  border: 0;
+}
+
+.modal-content-info-user {
+  background-color: $gray-white;
+}
+
+.modal-footer-info-user {
+  margin-bottom: -25px;
+}
+
+.info-user-height {
+  min-height: 120px;
+}

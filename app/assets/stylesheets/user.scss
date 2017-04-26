@@ -1,0 +1,172 @@
+@import 'variables/color';
+
+.user-profile {
+  background: $white;
+  border: 1px solid $black-white-84p;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.user-profile .cover-image {
+  border: 5px solid $white;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+
+  img {
+    width: 100%;
+  }
+}
+
+.user-profile .user {
+  padding: 0 5px 5px;
+  position: relative;
+}
+
+.user-profile .user .user-avatar {
+  left: 20px;
+  position: absolute;
+  top: -85px;
+  z-index: 2;
+}
+
+.user-profile .user h2 {
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  margin: 4px 0 0 135px;
+}
+
+.user-profile .user .user-actions {
+  float: right;
+}
+
+.user-profile .additional-info {
+  float: left;
+  margin-left: 20px;
+}
+
+.img-avatar {
+  height: 100px;
+  width: 100px;
+}
+
+.img-cover {
+  height: 300px;
+  width: 800px;
+}
+
+@media (max-width: 768px) {
+  .btn-responsive {
+    border-radius: 3px;
+    font-size: 80%;
+    line-height: 1;
+    padding: 2px 4px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .btn-responsive {
+    font-size: 90%;
+    line-height: 1.2;
+    padding: 4px 9px;
+  }
+}
+
+.upload-user-avatar {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.upload-user-cover {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.img-avatar-upload {
+  height: 200px;
+  width: 200px;
+}
+
+.img-cover-upload {
+  height: 150px;
+  width: 400px;
+}
+
+.user-avatar:hover .my-img-avatar {
+  opacity: .3;
+}
+
+.ico-upload-avatar {
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s ease;
+}
+
+.user-avatar:hover .ico-upload-avatar {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.album-image {
+  margin-top: 20px;
+  max-height: 30vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  p {
+    text-align: center;
+  }
+}
+
+.user-image-div:hover {
+  border: 1px solid $orange;
+  cursor: pointer;
+}
+
+.ico-upload-cover {
+  background-color: $black-55opacity;
+  color: $white;
+  left: 50%;
+  opacity: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s ease;
+}
+
+.ico-upload-cover:hover {
+  cursor: pointer;
+}
+
+.cover-image:hover {
+  .ico-upload-cover {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+.edit-profile-title {
+  float: left;
+  margin-left: 10px;
+}
+
+.edit-profile-button {
+  float: right;
+  margin-right: 30px;
+  margin-top: 25px;
+}
+
+.job-custom {
+  margin-left: 50px !important;
+}

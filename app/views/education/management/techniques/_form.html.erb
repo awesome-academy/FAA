@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= simple_form_for technique, url: path do |f| %>
+      <%= f.label :name, class: "col-md-2 control-label" %>
+      <%= f.text_field :name, label: t(".name"), class: "form-control" %>
+      <br/>
+      <%= f.label :description, class: "col-md-2 control-label" %>
+      <%= f.text_area :description, label: t(".description"),
+        class: "form-control", rows: 5 %>
+      <br/>
+      <%= f.fields_for :image do |i| %>
+        <div class="nested-fields trainnings-image-form">
+          <%= i.input :url, as: :file, label: false %>
+          <%= image_tag i.object.url,
+            size: Settings.education.trainings.img_current_size,
+            class: "img-responsive current-img"%>
+          <%= image_tag "#", class: "img-responsive hidden img_prev",
+            size: Settings.education.trainings.img_prev_size %>
+        </div>
+      <% end %>
+      <br/>
+      <%= f.submit button_text, class: "btn btn-md btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

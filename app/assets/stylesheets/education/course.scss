@@ -1,0 +1,108 @@
+@import 'variables/color';
+
+.row-course {
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+.fslider {
+  .slide a {
+    width: 90%;
+  }
+}
+
+.portfolio-item-course {
+  .carousel {
+    a {
+      width: 90%;
+    }
+  }
+
+  img {
+    height: 250px !important;
+  }
+}
+
+.fslider.flex-thumb-grid {
+  .flex-control-nav.flex-control-thumbs li {
+    height: 50px !important;
+  }
+}
+
+.nobottommargin {
+  display: block;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.courses-search {
+  padding-left: 0;
+}
+
+.portfolio-image.course {
+  height: 180px;
+}
+
+.slide.course {
+  img {
+    height: 400px;
+  }
+}
+
+.icon-date {
+  color: $orange;
+}
+
+.course-detail {
+  height: 400px;
+}
+
+.description-course {
+  margin-left: 5px;
+}
+
+.share-course {
+  bottom: 0;
+  position: absolute;
+}
+
+.latest-course-image {
+  height: 180px !important;
+  width: 90%;
+}
+
+.training-search.text-field {
+  height: 70px;
+  margin-top: 5px;
+}
+
+.clearfix.course {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.content-course {
+  width: 100%;
+}
+
+.ul-courses {
+  max-height: 300px !important;
+  overflow: auto !important;
+}
+
+.left-field {
+  padding-left: 0;
+}
+
+.right-field {
+  padding-right: 0;
+}
+
+.ui-datepicker.ui-widget-content {
+  border: 1px solid !important;
+}
+
+.course-member-avatar img {
+  height: 158.7px !important;
+  width: 158px !important;
+}

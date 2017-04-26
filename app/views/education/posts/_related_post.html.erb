@@ -1,0 +1,13 @@
+<div class="related-posts clearfix">
+  <div class="col_half nobottommargin">
+    <% related_posts.to_a.slice(0, related_posts.length / 2).each do |post| %>
+      <%= render partial: "related_post_item", locals: {post: post} %>
+    <% end %>
+  </div>
+  <div class="col_half nobottommargin col_last">
+    <% related_posts.to_a.slice(related_posts.length / 2, related_posts.length)
+      .each do |post| %>
+      <%= render partial: "related_post_item", locals: {post: post} %>
+    <% end %>
+  </div>
+</div>

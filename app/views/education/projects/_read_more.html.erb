@@ -1,0 +1,53 @@
+<div class="modal fade" id="modal_description" tabindex="-1";
+  aria-labelledby="modal_label_message" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"
+          data-dismiss="modal" aria-hidden="true"><%= t ".close" %></button>
+        <h3 class="modal-title modal-title-custom" id="modal_label_message">
+          <%= t ".description" %>
+        </h3>
+      </div>
+      <div class="modal-content-custom">
+        <%= project.description %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal_core" tabindex="-1";
+  aria-labelledby="modal_label_message" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"
+          data-dismiss="modal" aria-hidden="true"><%= t ".close" %></button>
+        <h3 class="modal-title modal-title-custom" id="modal_label_message">
+          <%= t ".core_features" %>
+        </h3>
+      </div>
+      <div class="modal-content-custom">
+        <%= project.core_features %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal_release" tabindex="-1";
+  aria-labelledby="modal_label_message" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"
+          data-dismiss="modal" aria-hidden="true"><%= t ".close" %></button>
+        <h3 class="modal-title modal-title-custom" id="modal_label_message">
+          <%= t ".release_note" %>
+        </h3>
+      </div>
+      <div class="modal-content-custom">
+        <%= project.release_note %>
+      </div>
+    </div>
+  </div>
+</div>

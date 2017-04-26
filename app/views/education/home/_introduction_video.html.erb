@@ -1,0 +1,22 @@
+<div class="row clearfix common-height">
+  <div class="mg-left-2 col-md-6 center col-padding introduction-video-bg">
+    <div>&nbsp;</div>
+  </div>
+  <div class="col-md-5 center col-padding introduction-video-custom">
+    <div>
+      <div class="heading-block nobottomborder">
+        <h3><%= t ".heading" %></h3>
+      </div>
+      <div class="center bottommargin introduction-video-url">
+        <a href="<%= Settings.education.home_page.introduction_video_link %>"
+          data-lightbox="iframe">
+          <img src="<%= Settings.education.home_page.introduction_video_link_cover_image %>">
+          <span class="i-overlay nobg">
+            <img src="<%= Settings.education.home_page.introduction_video_link_play_button %>">
+          </span>
+        </a>
+      </div>
+      <p class="lead nobottommargin"><%= t ".description" %></p>
+    </div>
+  </div>
+</div>

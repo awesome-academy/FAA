@@ -1,0 +1,19 @@
+<%= render "header", user: @user %>
+<section id="content">
+  <div class="content-wrap">
+    <div class="container">
+      <div class="col-md-12">
+        <div class="col-sm-9">
+          <%= render "info_users/introduction" %>
+          <%= render "info_users/ambition" %>
+          <%= render "info_users/quote" %>
+        </div>
+        <div class="col-sm-3">
+          <%= render "social_network" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= javascript_include_tag "users" %>

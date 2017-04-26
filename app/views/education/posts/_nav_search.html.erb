@@ -1,0 +1,32 @@
+<li class="<%= default_current_path %>">
+  <%= link_to education_posts_path do %>
+    <div><%= t ".show_all" %></div>
+  <% end %>
+</li>
+<% array_category_show, array_category_hide = ArraySpliter.split_array(categories) %>
+<% array_category_show.each do |category| %>
+  <li class="category">
+    <%= link_to controller: education_posts_path,
+      category: category.id do %>
+      <div><%= category.name %></div>
+    <% end %>
+  </li>
+<% end %>
+<% if array_category_hide.present? %>
+  <li>
+    <a href="#">
+      <%= t "education.projects.more" %>
+      <i class="icon-angle-down"></i>
+    </a>
+    <ul>
+      <% array_category_hide.each do |category| %>
+        <li class="category">
+          <%= link_to controller: education_posts_path,
+            category: category.id do %>
+            <div><%= category.name %></div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>

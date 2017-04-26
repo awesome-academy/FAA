@@ -1,0 +1,6 @@
+$('#list_users').html('<%= j render "list_users", users: @show_course.users %>');
+$('#list_added_users').html('<%= j render "list_added_users", users: @show_course.added_users, course: @course %>');
+var user_ids = <%= @show_course.user_ids %>
+for(var i = 0; i < user_ids.length; i++){
+  $('#user-add-' + user_ids[i]).prop('checked', true);
+}

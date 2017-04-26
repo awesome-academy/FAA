@@ -1,0 +1,88 @@
+//= require_tree ../../../vendor/assets/stylesheets/
+//= require_self
+//= require_tree ./education
+//= require social-share-button
+//= require jquery-ui/datepicker
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'variables/color';
+
+.breadcrumb-custom a {
+  color: $white !important;
+}
+
+.breadcrumb-custom {
+  margin: -18px 0 0 !important;
+
+  li + li::before {
+    content: ' ';
+  }
+}
+
+.nested-fields.projects-image-form {
+  margin-top: 10px;
+}
+
+.portfolio-overlay.images-container {
+  input {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+  }
+}
+
+.shared-title {
+  align-items: center;
+  display: flex;
+
+  h1 {
+    flex-grow: 1;
+  }
+
+  &-right-buttons {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-left: 20px;
+    }
+  }
+}
+
+.data-liffect {
+  img {
+    height: 250px !important;
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .shared-title {
+    flex-direction: column;
+  }
+
+  .data-liffect {
+    img {
+      height: 200px !important;
+    }
+  }
+}
+
+@media all and (max-width: 800px){
+  .data-liffect {
+    img {
+      height: 150px !important;
+    }
+  }
+}
+
+@media all and (max-width: 600px){
+  .data-liffect {
+    img {
+      height: 100px !important;
+    }
+  }
+}

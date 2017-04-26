@@ -1,0 +1,17 @@
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= t ".heading" %></h1>
+    <span><%= t ".heading_description" %></span>
+    <ol class="breadcrumb">
+      <li><%= link_to t("education.header.home"), education_root_path %></li>
+      <li class="active"><%= t "education.header.courses" %></li>
+    </ol>
+  </div>
+</section>
+<section>
+  <div class="content-wrap">
+    <div class="container clearfix">
+      <%= render "form", course: @course, button_text: t(".edit") %>
+    </div>
+  </div>
+</section>

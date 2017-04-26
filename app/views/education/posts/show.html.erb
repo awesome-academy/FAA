@@ -1,0 +1,110 @@
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= t ".heading" %></h1>
+    <span><%= t ".heading_description" %></span>
+    <ol class="breadcrumb">
+      <li><%= link_to t("education.header.home"), education_root_path %></li>
+      <li class="active"><%= t "education.header.posts" %></li>
+    </ol>
+  </div>
+</section>
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
+      <div class="postcontent nobottommargin clearfix">
+        <div class="single-post nobottommargin">
+          <div class="entry clearfix">
+            <div class="entry-title">
+              <h2><%= @post.title %></h2>
+            </div>
+            <ul class="entry-meta clearfix">
+              <li><i class="icon-calendar3"></i>
+                <%= @post.created_at.to_formatted_s :long_ordinal %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <i class="icon-user"></i><%= @post.user_name %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <i class="icon-folder-open"></i><%= @post.category.name %>
+                <% end %>
+               </li>
+              <li>
+                <%= link_to "#" do %>
+                  <i class="icon-comments"></i>
+                  <%= pluralize @post.comments_count, "comments" %></a>
+                <% end %>
+              </li>
+              <li><a href="#"><i class="icon-camera-retro"></i></a></li>
+            </ul>
+            <div class="entry-image">
+              <%= link_to load_cover_photo(@post), "#" %>
+            </div>
+            <div class="entry-content notopmargin">
+              <div class="post-article markdown">
+                <%= render html: markdown_render(@post.content).html_safe %>
+              </div>
+              <%= render "tag_cloud_post" %>
+              <% if is_belong_to_user? @post, current_user %>
+                <div class="edit-delete-buttons">
+                  <%= link_to t(".edit"), edit_education_post_path(@post),
+                    class: "button button-3d button-rounded button-amber" %>
+                  <%= link_to t(".delete"), education_post_path(@post), method: :delete,
+                    class: "button button-3d button-border button-rounded button-amber" %>
+                </div>
+              <% end %>
+              <div class="clear"></div>
+                <%= render "education/rates/score", object: @post %>
+              <div class="clear"></div>
+                <%= render partial: "education/rates/rate",
+                  locals: {rateable_id: @post.id,
+                    rateable_type: Education::Post.name,
+                    rate: (@post_object.get_rate(current_user.id) if user_signed_in?)} %>
+              <div class="clear"></div>
+              <%= render "share_post" %>
+            </div>
+          </div>
+          <div class="post-navigation clearfix">
+            <div class="col_half nobottommargin">
+              <a href="#">
+                &lArr; This is a Standard post with a Slider Gallery
+              </a>
+            </div>
+            <div class="col_half col_last tright nobottommargin">
+              <a href="#">This is an Embedded Audio Post &rArr;</a>
+            </div>
+          </div>
+          <div class="line"></div>
+          <%= render "posted_by" %>
+          <div class="line"></div>
+          <h4><%= t ".related_posts" %></h4>
+          <%= render partial: "education/posts/related_post",
+            locals: {related_posts: @post_object.related_posts} %>
+          <%= render partial: "comments", locals: {post: @post} %>
+        </div>
+      </div>
+      <div class="sidebar nobottommargin col_last clearfix">
+        <div class="sidebar-widgets-wrap">
+          <%= render "twitter_feed" %>
+          <%= render "flickr_photo" %>
+          <div class="widget clearfix">
+            <div class="tabs nobottommargin clearfix" id="sidebar-tabs">
+              <ul class="tab-nav clearfix tab-nav-post">
+                <li><%= link_to t(".popular"), "#tabs-1" %></li>
+                <li><%= link_to t(".recent"), "#tabs-2" %></li>
+              </ul>
+              <div class="tab-container">
+                <%= render "popular_post" %>
+                <%= render "recent_post" %>
+              </div>
+            </div>
+          </div>
+          <%= render "portfolio_coursel" %>
+          <%= render "tag_cloud" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

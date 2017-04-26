@@ -1,0 +1,3 @@
+$('#list_added_users').html('<%= j render "education/courses/list_added_users", users: @course.users, course: @course %>');
+$('#list_users').html('<%= j render "education/courses/list_users", users: @users %>');
+$.growl.notice({message: '<%= flash[:success] %>'});

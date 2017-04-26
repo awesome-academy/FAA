@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-xs-8 col-md-8 col-md-offset-2">
+    <%= simple_form_for project do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <%= f.input :name, label: t(".name"), class: "form-control" %>
+
+      <%= f.input :server_info, label: t(".server_info"),
+        class: "form-control" %>
+
+      <%= f.input :pm_url, label: t(".pm_url"), class: "form-control" %>
+
+      <%= f.input :plat_form, label: t(".plat_form"),
+        class: "form-control" %>
+
+      <%= f.input :git_repo, label: t(".git_repo"), class: "form-control" %>
+
+      <%= f.input :description, as: :text, label: t(".description"),
+        input_html: {rows: Settings.education.projects.textarea_rows,
+          class: "form-control"} %>
+
+      <%= f.input :core_features, as: :text, label: t(".core_features"),
+        input_html: {rows: Settings.education.projects.textarea_rows,
+          class: "form-control"} %>
+
+      <%= f.input :release_note, as: :text, label: t(".release_note"),
+        input_html: {rows: Settings.education.projects.textarea_rows,
+          class: "form-control"} %>
+
+      <%= f.label t ".choose_technique" %>
+      <div class="form-choose-technique">
+        <%= render "education/shared/choose_technique", object: project %>
+      </div>
+      
+      <div>
+        <%= f.simple_fields_for :images do |image| %>
+          <%= render "image_fields", f: image %>
+        <% end %>
+      </div>
+      <div class="new-added-images">
+      </div>
+      <div class="links links-form-project">
+        <%= link_to_add_association f, :images, class: "button button-3d
+          button-small button-rounded button-green",
+          data: {"association-insertion-node": ".new-added-images"} do %>
+          <i class="icon-upload"></i>
+          <%= t ".add_image" %>
+        <% end %>
+      </div>
+      <%= button_tag type: :submit, class: "button button-3d button-rounded
+        button-amber pull-right" do %>
+        <i class="icon-plus-sign"></i>
+        <%= button_text %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

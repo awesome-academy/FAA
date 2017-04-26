@@ -1,0 +1,6 @@
+<div class="tab-content clearfix" id="tabs-2">
+  <div id="recent-post-list-sidebar">
+    <%= render partial: "recent_post_item",
+      locals: {recent_posts: @post_object.newest_post} %>
+  </div>
+</div>

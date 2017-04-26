@@ -1,0 +1,29 @@
+<div class="si-share share-custom clearfix noborder">
+  <% if user_signed_in? %>
+    <% if rate.nil? %>
+      <div>  
+        <span><%= t ".your_rating" %>:</span>
+      </div>
+      <div>
+        <div class="user-rate star-rate" rateable-id="<%= rateable_id %>"
+          rateable-type="<%= rateable_type %>" user-id="<%= current_user.id %>">
+        </div>
+      </div>
+    <% else %>
+      <div>
+        <span><%= t ".your_rating" %>:</span>
+      </div>
+      <div>
+        <div class="rated star-rate" rateable-id="<%= rateable_id %>"
+          score="<%= rate.rate %>"></div>
+      </div>
+    <% end %>
+  <% else %>
+    <div>
+      <span><%= t ".your_rating" %>:</span>
+    </div>
+    <div>
+      <div class="guess-rate star-rate"></div>
+    </div>
+  <% end %>
+</div>

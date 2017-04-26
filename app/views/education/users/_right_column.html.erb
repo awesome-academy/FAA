@@ -1,0 +1,73 @@
+<div class="col-sm-3">
+  <div class="fancy-title">
+    <h4><%= t(".profile").upcase %></h4>
+    <% if current_user && current_user == @user %>
+      <%= link_to user_path(current_user) do %>
+        <span><i class="icon-edit icon-amber"></i></span>
+      <% end %>
+    <% end %>
+  </div>
+  <%= load_user_avatar @user,
+    class: "alignleft img-thumbnail notopmargin nobottommargin user-avatar" %>
+  <div class="heading-block noborder">
+    <h3><%= @user.name %></h3>
+    <span><%= @user.email %></span>
+  </div>
+  <div class="list-group">
+    <div class="list-group-item">
+      <%= t ".posts" %>
+      <span id="user-posts-size" class="pull-right">
+        <%= @user.education_posts.size %>
+      </span>
+    </div>
+    <div class="list-group-item">
+      <%= t ".projects" %>
+      <span class="pull-right"><%= @user.education_projects.size %></span>
+    </div>
+    <div class="list-group-item">
+      <%= t ".courses" %>
+      <span class="pull-right"><%= @user.education_courses.size %></span>
+    </div>
+  </div>
+  <div class="fancy-title topmargin title-border">
+    <h4><%= t ".about_me" %></h4>
+  </div>
+
+  <% if @user.info_user.present? %>
+    <p><%= @user.info_user_introduce %></p>
+  <% end %>
+
+  <div class="fancy-title topmargin title-border">
+    <h4><%= t ".social_profiles" %></h4>
+  </div>
+  <a href="#" class="social-icon si-facebook si-small si-rounded
+    si-light" title="Facebook">
+    <i class="icon-facebook"></i>
+    <i class="icon-facebook"></i>
+  </a>
+  <a href="#" class="social-icon si-gplus si-small si-rounded
+    si-light" title="Google+">
+    <i class="icon-gplus"></i>
+    <i class="icon-gplus"></i>
+  </a>
+  <a href="#" class="social-icon si-dribbble si-small si-rounded
+    si-light" title="Dribbble">
+    <i class="icon-dribbble"></i>
+    <i class="icon-dribbble"></i>
+  </a>
+  <a href="#" class="social-icon si-flickr si-small si-rounded
+    si-light" title="Flickr">
+    <i class="icon-flickr"></i>
+    <i class="icon-flickr"></i>
+  </a>
+  <a href="#" class="social-icon si-linkedin si-small si-rounded
+    si-light" title="LinkedIn">
+    <i class="icon-linkedin"></i>
+    <i class="icon-linkedin"></i>
+  </a>
+  <a href="#" class="social-icon si-twitter si-small si-rounded
+    si-light" title="Twitter">
+    <i class="icon-twitter"></i>
+    <i class="icon-twitter"></i>
+  </a>
+</div>

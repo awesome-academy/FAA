@@ -1,0 +1,136 @@
+@import 'variables/color';
+
+.display.technique-items {
+  text-align: -webkit-match-parent;
+}
+
+.btn-see-more {
+  top: 4px;
+}
+
+.color-orange {
+  border-bottom: 1px solid $orange;
+  color: $orange;
+  display: inline-block;
+  font-family: 'Crete Round', serif;
+  font-style: italic;
+  padding: 0 2px;
+}
+
+.training-search input {
+  background: $white;
+  border: 1px solid $gray-ddd;
+  border-radius: 2em;
+  display: initial;
+  font-size: 1em;
+  height: 34px;
+  padding: .5em 1.3em;
+  width: 100%;
+}
+
+.training-search input:focus {
+  border-color: $blue-light;
+}
+
+.training-search .results .ui-widget-content {
+  background: $white;
+  border-color: #gray-ddd;
+  box-shadow: 0 .1em .2em $gray;
+  font-size: .9em;
+  line-height: 1.2;
+  max-height: 20em;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: .5em 0;
+}
+
+.training-search .results .ui-menu-item {
+  border: 0;
+  border-left: 5px solid transparent;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  height: 6.5em;
+  padding: .4em .6em .4em 6.2em;
+  position: relative;
+}
+
+.training-search .results .ui-state-focus {
+  background: $white;
+  border-left-color: $blue;
+  font-weight: 300;
+}
+
+.training-search .ui-menu-item .img {
+  height: 1em;
+  left: .6em;
+  overflow: hidden;
+  position: absolute;
+  top: .4em;
+  width: 5em;
+}
+
+.training-image {
+  width: 90%;
+}
+
+.training-infor {
+  float: left;
+  padding: 10px 0;
+  width: 360px;
+}
+
+.margin-training-infor {
+  margin-left: 20px;
+}
+
+.nested-fields.trainnings-image-form {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  img {
+    flex-grow: 1;
+    padding-right: 10px;
+  }
+}
+
+.education-training-name {
+  width: 100%;
+}
+
+.education-training-description {
+  width: 100%;
+}
+
+@media only screen and (max-width : 480px) {
+  .nested-fields.trainnings-image-form {
+    img {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.portfolio-item-training {
+  .carousel {
+    a {
+      width: 90%;
+    }
+  }
+
+  img {
+    height: 250px !important;
+  }
+}
+
+.choose-technique {
+  min-width: 100px;
+}
+
+.form-choose-technique {
+  max-height: 200px;
+  overflow: auto;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}

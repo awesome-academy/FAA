@@ -1,0 +1,11 @@
+<script type="text/javascript">
+  <% flash.each do |message_type, message| %>
+    <% if is_notice_flash? message_type %>
+      growl.notice({title: '<%= t "education.feedback.success_title" %>',
+        message: '<%= message %>'});
+    <% else %>
+      growl.error({title: '<%= t "education.feedback.failed_title" %>',
+        message: '<%= message %>'});
+    <% end %>
+  <% end %>
+</script>

@@ -1,0 +1,91 @@
+<header id="header" class="transparent-header full-header" data-sticky-class="not-dark">
+  <div id="header-wrap" class="edu-header-wrap-custom">
+    <div class="container clearfix">
+      <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+      <div id="logo" class="edu-logo-custom">
+        <%= link_to education_root_url, class: "standard-logo edu-standard-logo-custom",
+          data: {"dark-logo": "/assets/logo-faa.png"} do %>
+          <img src="/assets/logo-faa.png" alt="<%= t "education.logo_alt" %>">
+        <% end %>
+        <%= link_to education_root_url, class: "retina-logo edu-retina-logo-custom",
+          data: {"dark-logo": "/assets/logo-faa.png"} do %>
+          <img src="/assets/logo-faa.png" alt="<%= t "education.logo_alt" %>">
+        <% end %>
+      </div>
+
+      <nav id="primary-menu" class="dark">
+        <ul class="edu-menu-custom">
+          <%= view_object(:home_tabs).html %>
+          <li class="dropdown chosen-language">
+            <% if session[:locale].present? %>
+              <%= link_to url_for(locale: session[:locale]), class:"dropdown-toggle dropdown-custom",
+                data: {toggle: "dropdown"} do %>
+                <%= image_tag "flag/#{session[:locale]}.png", class: "icon-language" %>
+                <i class="icon-angle-down"></i>
+              <% end %>
+            <% else %>
+              <%= link_to url_for(locale: :en), class:"dropdown-toggle dropdown-custom",
+                data: {toggle: "dropdown"} do %>
+                <%= image_tag "flag/en.png", class: "icon-language" %>
+                <i class="icon-angle-down"></i>
+              <% end %>
+            <% end %>
+            <ul class="dropdown-menu dropdown-custom dropdown-menu-right choose-language" role="menu">
+              <% Settings.languages.keys.each do |lang| %>
+                <%= link_to url_for(locale: lang) do %>
+                  <%= image_tag "flag/#{lang}.png", class: "icon-language" %>
+                  <%= Settings.languages[lang] %>
+                <% end %>
+                <br/>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+
+        <% if user_signed_in? %>
+          <div id="top-cart" class="dropdown-user">
+            <a><i class="icon-user"></i></a>
+            <div class="dropdown-user-content">
+              <% if is_management? %>
+                <div class="edu-dropdown-user-detail">
+                  <%= link_to education_management_root_path do %>
+                    <span><i class="icon-cog"></i>&nbsp;<%= t ".management" %></span>
+                  <% end %>
+                </div>
+                <hr>
+              <% end %>
+              <div class="edu-dropdown-user-detail">
+                <%= link_to education_user_path(current_user) do %>
+                  <span><i class="icon-user"></i>&nbsp;<%= t ".profile" %></span>
+                <% end %>
+              </div>
+              <div class="edu-dropdown-user-detail">
+                <%= link_to new_education_post_path do %>
+                  <span><i class="icon-edit" aria-hidden="true"></i>&nbsp;<%= t ".create_new_post" %></span>
+                <% end %>
+              </div>
+              <div class="edu-dropdown-user-detail">
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <span><i class="icon-signout"></i>&nbsp;<%= t ".log_out" %></span>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% else %>
+          <div id="top-cart">
+            <%= link_to new_user_session_path do %>
+              <i class="icon-signin"></i>
+            <% end %>
+          </div>
+        <% end %>
+        <div id="top-search">
+          <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+          <form action="#" method="get">
+            <input type="text" name="q" class="form-control" value=""
+              placeholder="<%= t "education.header.search" %>">
+          </form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

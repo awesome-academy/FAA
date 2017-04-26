@@ -1,0 +1,204 @@
+languages: {en: "English", vi: "Tiếng Việt", jp: "日本語"}
+education:
+  management:
+    users:
+      per_page: 20
+      active: "active"
+      blocked: "blocked"
+    categories:
+      per_page: 10
+  home_page:
+    introduction_video_link: "https://www.youtube.com/watch?v=9k-1pLiS8so"
+    introduction_video_link_cover_image: "http://img.youtube.com/vi/9k-1pLiS8so/maxresdefault.jpg"
+    introduction_video_link_play_button: "/assets/images/icons/youtube.png"
+    course_count: 356
+    trainee_count: 608
+    trainer_count: 24
+    need_content_img: "/assets/images/services/apl.png"
+    our_techniques_center_img: "/assets/images/services/iphone7.png"
+    client_img_3: "/assets/images/testimonials/logo_top_teamlab.png"
+    client_img_2: "/assets/images/testimonials/Hanoi_University.png"
+    client_img_1: "/assets/images/testimonials/doan.jpg"
+    team_member_img_1: "/assets/images/team/3.jpg"
+    team_member_img_2: "/assets/images/team/2.jpg"
+    team_member_img_3: "/assets/images/team/8.jpg"
+    team_member_img_4: "/assets/images/team/4.jpg"
+    bkhn_logo: "/assets/our_client/dai_hoc_bk_ha_noi.jpg"
+    khtnhn_logo: "/assets/our_client/dai_hoc_khtn_ha_noi.jpg"
+    dhda_logo: "/assets/our_client/dai_hoc_dong_a.jpg"
+    bkdn_logo: "/assets/our_client/dai_hoc_bk_da_nang.jpg"
+    pnv_logo: "/assets/our_client/pn-logo.png"
+    cdcnhue_logo: "/assets/our_client/cao_dang_cong_nghiep_hue.png"
+    slide1_img: "/assets/welcome1.jpg"
+    slide2_poster: "/assets/videos/explore.jpg"
+    slide2_video_webm: "/assets/videos/explore.webm"
+    slide2_video_mp4: "/assets/videos/explore.mp4"
+    slide3_img: "/assets/welcome2.jpg"
+    framgia_email: "staff@framgia.com"
+    framgia_phone: "+91-11-6541-6369"
+  number_one: 1
+  project:
+    modal_description: "#modal_description"
+    modal_core: "#modal_core"
+    modal_release: "#modal_release"
+    per_page: 12
+    per_page_trainer: 11
+    truncate: 100
+    link_truncate: 23
+    content_truncate: 75
+    max_name_length: 50
+    max_server_info_length: 255
+    max_plat_form_length: 255
+  technique:
+    per_page: 6
+    truncate: 100
+    max_name_length: 100
+    home_limit: 6
+  index:
+    max_learning_program_desc: 1000
+    max_learning_program_name: 150
+    max_learning_program: 3
+  trainings:
+    per_page: 11
+    limit_string: 200
+    description_rows: 5
+    img_prev_size: "150x150"
+    img_current_size: "150x150"
+    create_new_training_truncate: 30
+  page_404_url: "public/404"
+  related_project:
+    limit: 20
+  related_post:
+    limit: 4
+  projects:
+    textarea_rows: 8
+    split_array: 4
+    min_array_size: 3
+  mess_success: "success"
+  mess_notice: "notice"
+  feedback_form_rows: 6
+  feedback_form_cols: 30
+  feedback:
+    per_page: 30
+    max_name_length: 50
+    max_email_length: 255
+    max_phone_number_length: 255
+    max_subject_length: 255
+    min_subject_length: 3
+    min_content_length: 10
+    max_content_length: 255
+  category:
+    max_length_title: 200
+  posts:
+    max_length_title: 200
+    content_character_display: 255
+    per_page: 10
+    category_split_length: 4
+  comment:
+    per_page: 3
+    max_content_length: 255
+  post:
+    comment_form_cols: 58
+    comment_form_rows: 4
+    comment_user_avatar_height: 60
+    comment_user_avatar_width: 60
+    popular_posts_limit: 3
+    newest_post_limit: 3
+    title_max_length: 255
+    title_min_length: 10
+    content_min_length: 10
+    comment_item_avatar_size: "60x60"
+  rate:
+    precision: 1
+  index_name:
+    truncate_limit: 20
+  index_detail:
+    truncate_limit: 100
+  search_nav:
+    truncate_limit: 15
+  trainers:
+    training_description_truncate: 20
+    truncate_limit: 160
+  group_trainer_name: "Trainer"
+  limit_choose_technique_name: 8
+  course:
+    max_name_length: 50
+  training:
+    max_name_length: 50
+team_introductions:
+  images:
+    number_images: 2
+home_trainings_limit: 8
+company:
+  country: ["United States", "Japan", "Germany", "Korea"]
+  max_length_name: 50
+default_user_password: {"password": "123456"}
+courses:
+  modal_detail: "#modal_detail"
+  home_limit: 4
+  index_limit: 8
+  index_limit_trainer: 7
+  course_detail: 20
+  max_course_detail: 80
+  truncate_other_course: 200
+  truncate_detail_course: 200
+  other_coures_limit: 12
+  number_filter: 4
+  detail_rows: 5
+  new_course_image: "/assets/default.jpg"
+user:
+  max_length_name: 50
+max_length_title: 150
+hiring_type:
+  max_length_name: 50
+jobs:
+  per_page: 5
+  image_size: 100%
+  image_url: "/assets/welcome1.jpg"
+  image_company_size: 32x32
+  limit_user_show: 3
+  limit_job_show: 4
+  image_job_size: 200x100
+  image_member_size: 70x70
+  image_member_url: "/assets/avatar.jpg"
+  posting_job_default: "/assets/posting_job_default.jpg"
+  team_intro_default: "/assets/team_intro.png"
+  max_length_title: 20
+industries:
+  max_length_name: 50
+activity:
+  per_page: 10
+employer:
+  jobs:
+    per_page: 6
+    thumb_image_size: "100x50"
+truncate_job_describe: 150
+user_portfolios:
+  title_min: 10
+  title_max: 255
+  description_min: 10
+  description_max: 1000
+user_educations:
+  school_min: 3
+  school_max: 255
+  major_min: 3
+  major_max: 255
+  description_min: 10
+  description_max: 1000
+recommend:
+  user_limit: 5
+home:
+  limit: 8
+  max_job: 24
+friend_ship:
+  accept: "accept"
+  decline: "decline"
+mailer:
+  sent_mail: "fcsp.info@gmail.com"
+info_users:
+  introduction_form_rows: 7
+  max_length_introduce: 2000
+  ambition_form_rows: 2
+  quote_form_rows: 2
+  max_length_ambition: 255
+  max_length_quote: 255

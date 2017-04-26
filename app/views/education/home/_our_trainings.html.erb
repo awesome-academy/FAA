@@ -1,0 +1,60 @@
+<div class="section topmargin nobottommargin nobottomborder custom-our-training">
+  <div class="container clearfix">
+    <div class="heading-block center nomargin">
+      <h3><%= t ".our_trainings" %></h3>
+    </div>
+  </div>
+</div>
+<div class="container clearfix">
+  <div id="oc-portfolio" class="owl-carousel portfolio-carousel
+    portfolio-nomargin carousel-widget" data-margin="1" data-pagi="false"
+    data-autoplay="5000" data-items-xxs="1" data-items-xs="2" data-items-sm="3"
+    data-items-lg="4">
+    <% if trainings.any? %>
+      <% trainings.each do |training| %>
+        <div class="oc-item">
+          <div class="iportfolio">
+            <div class="portfolio-image">
+              <a href="#">
+                <% if training.images.any? %>
+                  <%= link_to image_tag(training.images.first.url,
+                    class: "image_fade latest-course-image"), education_training_path(training) %>
+                <% else %>
+                  <%=link_to image_tag "/assets/images/magazine/thumb/1.jpg",
+                    class: "image_fade" %>
+                <% end %>
+              </a>
+              <div class="portfolio-overlay">
+                <%= link_to education_training_path training do %>
+                  <i class="icon-eye"></i>
+                <% end %>
+              </div>
+            </div>
+            <div class="portfolio-desc">
+              <h3>
+                <%= link_to education_training_path training do %>
+                  <%= truncate(training.name, length: Settings.education.index_name.truncate_limit) %>
+                <% end %>
+              </h3>
+              <strong><%= t ".techniques" %>: </strong>
+              <% training.techniques.each do |technique| %>
+                <%= link_to "#" do %>
+                  <%= truncate(technique.name, length: Settings.education.index_name.truncate_limit) %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to education_trainings_path do %>
+  <div class="button button-full button-dark center tright bottommargin-lg">
+    <div class="container clearfix">
+      <strong><%= t ".see_more" %></strong>
+      <i class="icon-caret-right btn-see-more"></i>
+    </div>
+  </div>
+<% end %>

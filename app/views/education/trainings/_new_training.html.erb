@@ -1,0 +1,21 @@
+<article class="portfolio-item portfolio-item-training pf-media pf-icons">
+  <div class="portfolio-image">
+    <%= link_to "#" do %>
+      <%= image_tag "images/portfolio/4/1.jpg" %>
+    <% end %>
+    <div class="portfolio-overlay">
+      <%= link_to new_education_training_path, class: "center-icon" do %>
+        <i class="icon-plus-sign i-alt"></i>
+      <% end %>
+    </div>
+  </div>
+  <div class="portfolio-desc">
+    <h3>
+      <%= link_to t(".create_new_training"), new_education_training_path %>
+    </h3>
+    <span>
+      <%= truncate t(".create_new_training"),
+        length: Settings.education.trainings.create_new_training_truncate %>
+    </span>
+  </div>
+</article>

@@ -1,0 +1,61 @@
+<section id="page-title">
+<div class="container clearfix">
+  <h1><%= t "education.feedback.title" %></h1>
+  <span><%= t "education.feedback.description" %></span>
+  <ol class="breadcrumb">
+    <li><%= link_to t("education.header.home"), education_root_path %></li>
+    <li class="active"><%= t "education.header.feedback" %></li>
+  </ol>
+</div>
+</section>
+  <section id="map-overlay">
+    <div class="container clearfix">
+      <div id="contact-form-overlay" class="clearfix">
+        <div class="fancy-title title-dotted-border">
+          <h3><%= t "education.feedback.send_us_an_email" %></h3>
+        </div>
+        <div class="contact-form-result"></div>
+        <%= simple_form_for @feedback do |f| %>
+          <div class="col_half">
+            <%= f.label :name %>
+            <%= f.text_field :name, error_class: :error,
+              id: "template-contactform-name", class: "sm-form-control" %>
+            <%= f.error :name %>
+          </div>
+          <div class="col_half col_last">
+            <%= f.label :email %>
+            <%= f.text_field :email, id: "template-contactform-email",
+              class: "email sm-form-control" %>
+            <%= f.error :email %>
+          </div>
+          <div class="clear"></div>
+          <div class="col_half">
+            <%= f.label :phone_number %>
+            <%= f.text_field :phone_number, id: "template-contactform-phone",
+              class: "sm-form-control required" %>
+          </div>
+          <div class="clear"></div>
+          <div class="col_full">
+            <%= f.label :subject %>
+            <%= f.text_field :subject, id: "template-contactform-subject",
+              class: "sm-form-control required" %>
+            <%= f.error :subject %>
+          </div>
+          <div class="col_full">
+            <%= f.label :content %>
+            <%= f.text_area :content, id: "template-contactform-message",
+              class: "sm-form-control",
+              rows: Settings.education.feedback_form_rows,
+              cols: Settings.education.feedback_form_cols %>
+            <%= f.error :content %>
+          </div>
+          <div class="col_full">
+            <%= f.submit t("education.feedback.send_feed_back"),
+              class: "button button-3d nomargin",
+              id: "template-contactform-submit" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <section id="google-map" class="gmap"></section>
+</section>

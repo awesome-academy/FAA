@@ -1,0 +1,16 @@
+<div id="posts" class="small-thumbs">
+  <%= render index_post_object.posts %>
+</div>
+<ul class="pager nomargin">
+  <li class="previous">
+    <%= link_to_previous_page index_post_object.posts,
+      raw(t "education.posts.older") %>
+  </li>
+  <li class="next">
+    <%= link_to_next_page index_post_object.posts,
+      raw(t "education.posts.newer") %>
+  </li>
+</ul>
+<div class="center">
+  <%= page_entries_info index_post_object.posts %>
+</div>

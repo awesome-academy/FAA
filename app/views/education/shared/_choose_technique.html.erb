@@ -1,0 +1,10 @@
+<% if all_technique.any? %>
+  <% all_technique.each do |t| %>
+    <label class="choose-technique" title="<%= t.name %>">  
+    <%= check_box_tag "technique_ids[]", t.id, 
+      object.techniques.include?(t) %>
+    <%= truncate t.name, 
+      length: Settings.education.limit_choose_technique_name %>
+    </label>
+  <% end %>
+<% end %>

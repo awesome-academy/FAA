@@ -1,0 +1,30 @@
+<li class="<%= default_current_path %>">
+  <%= link_to controller: controller_name do %>
+    <div><%= t ".show_all" %></div>
+  <% end %>
+</li>
+<% array_technique_show, array_technique_hide = split_array(techniques) %>
+<% array_technique_show.each do |technique| %>
+  <li class="<%= current_path_trainer? technique %>">
+    <%= link_to controller: controller_name, technique_name: technique.name do %>
+      <div><%= truncate(technique.name, length: Settings.education.search_nav.truncate_limit) %></div>
+    <% end %>
+  </li>
+<% end %>
+<% if array_technique_hide %>
+  <li>
+    <a href="#">
+      <%= t ".more" %>
+      <i class="icon-angle-down"></i>
+    </a>
+    <ul>
+      <% array_technique_hide.each do |technique| %>
+        <li class="<%= current_path_trainer? technique %>">
+          <%= link_to controller: controller_name, technique_name: technique.name do %>
+            <div><%= truncate(technique.name, length: Settings.education.search_nav.truncate_limit) %></div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>

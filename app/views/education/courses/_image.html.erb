@@ -1,0 +1,15 @@
+<% images.each do |image| %>
+  <div class="slide" data-thumb="<%= image.url %>">
+    <%= image_tag image.url %>
+    <div class="overlay">
+      <div class="text-overlay">
+        <div class="text-overlay-title">
+          <h3><%= course.name %></h3>
+        </div>
+        <div class="text-overlay-meta">
+          <span><%= truncate course.detail, length: Settings.courses.max_course_detail %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

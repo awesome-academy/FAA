@@ -1,0 +1,27 @@
+<div class="mpost clearfix">
+  <div class="entry-image">
+    <%= link_to load_cover_photo(post), "#" %>
+  </div>
+  <div class="entry-c">
+    <div class="entry-title">
+      <h4>
+        <%= link_to education_post_path(post) do %>
+          <%= post.title %>
+        <% end %>
+      </h4>
+    </div>
+    <ul class="entry-meta clearfix">
+      <li><i class="icon-calendar3"></i>
+        <%= post.created_at.to_formatted_s :long_ordinal %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <i class="icon-comments"></i><%= post.comments_count %>
+        <% end %>
+      </li>
+    </ul>
+    <div class="entry-content">
+      <%= truncate post.content %>
+    </div>
+  </div>
+</div>

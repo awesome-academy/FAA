@@ -1,0 +1,96 @@
+<% provide :title, t("education.project.title") %>
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= t "education.projects.home.title" %></h1>
+    <span><%= t "education.projects.home.description" %></span>
+    <ol class="breadcrumb">
+      <li>
+        <%= link_to education_root_url do %>
+          <div><%= t ".home" %></div>
+        <% end %>
+      </li>
+      <li class="active"><%= t "education.header.project" %></li>
+    </ol>
+  </div>
+</section>
+
+<% if current_user && can_manage?(Education::Project) %>
+  <%= render "education/trainers/index_project" %>
+<% else %>
+  <div id="page-menu">
+    <div id="page-menu-wrap">
+      <div class="container clearfix">
+        <div class="menu-title">
+          <%= t ".header" %>
+          <span> <%= t ".filter" %></span>
+        </div>
+        <nav>
+          <ul>
+            <%= render "education/layouts/nav_filter",
+              {controller_name: "education/projects", techniques: @techniques} %>
+            <li class="project-search">
+              <input type="text" id="projects-search-txt" class="form-control"
+                placeholder= "<%= t ".placeholder_search" %>" autofocus>
+            </li>
+          </ul>
+        </nav>
+        <div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="content">
+    <div class="content-wrap nobottompadding nobottompadding-custom">
+      <div id="list-portfolio" class="container clearfix">
+        <div id="portfolio" class="portfolio grid-container portfolio-full portfolio-nomargin clearfix">
+          <%= render @projects %>
+        </div>
+      </div>
+      <div id="next-project" class="read-more" align="center">
+        <%= paginate @projects %>
+      </div>
+    </div>
+  </section>
+  <div class="divider divider-center"><i class="icon-circle"></i></div>
+  <section id="content">
+    <div class="content-wrap custom-wrap">
+      <div class="container clearfix">
+        <div class="col_one_third nobottommargin">
+          <div class="feature-box fbox-center fbox-effect nobottomborder">
+            <div class="fbox-icon">
+              <i class="icon-th i-alt"></i>
+            </div>
+            <h3><%= total_project %><%= t ".total_project_title" %><span class="subtitle"><%= t ".total_project_subtitle" %></span></h3>
+          </div>
+        </div>
+        <div class="col_one_third nobottommargin">
+          <div class="feature-box fbox-center fbox-effect nobottomborder">
+            <div class="fbox-icon">
+              <i class="icon-lightbulb i-alt"></i>
+            </div>
+            <h3><%= t ".platform_title" %><span class="subtitle"><%= t ".platform_subtitle" %></span></h3>
+          </div>
+        </div>
+
+        <div class="col_one_third nobottommargin col_last">
+          <div class="feature-box fbox-center fbox-effect nobottomborder">
+            <div class="fbox-icon">
+              <i class="icon-cogs i-alt"></i>
+            </div>
+            <h3><%= t ".technique_title" %><span class="subtitle"><%= t ".technique_subtitle" %></span></h3>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="container clearfix">
+      </div>
+    </div>
+  </section>
+
+  <div class="col-md-4 project-search">
+    <div class="results" id="projects-search-results"></div>
+  </div>
+
+<% end %>
+
+

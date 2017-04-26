@@ -1,0 +1,38 @@
+@import 'variables/color';
+
+.searchbar {
+  background: $white;
+  border-top: 1px solid $lighter-gray-85;
+  box-shadow: -1px 2px 2px $black-20opacity;
+  display: none;
+  float: right;
+  height: 32px;
+  padding-left: 25px;
+  padding-right: 10px;
+  width: 100%;
+  z-index: 9999;
+}
+
+.search-input {
+  border: 0;
+  color: $lighter-gray-40;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  outline: none;
+  padding: 0;
+  width: 88%;
+}
+
+.searchsubmit {
+  background: none;
+  border: 0;
+  color: $lighter-gray-44;
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-top: 6px;
+  outline: none;
+}

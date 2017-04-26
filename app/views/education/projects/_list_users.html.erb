@@ -1,0 +1,18 @@
+<% users.each_with_index do |user, index| %>
+  <tr class="search-user-image">
+    <td>
+      <%= check_box_tag "users[]", user.id, false,
+        id: "user-add-#{user.id}", class: "user-add",
+        onclick: "check_user(this)" %>
+      <%= load_user_avatar user %>
+      <strong><%= user.name %></strong>
+      <%= user.email %>
+      <%= select_tag :position,
+        options_for_select(project_member_position),
+        id: "project-member-position-#{user.id}",
+        class: "form-control project-member-position selectpicker",
+        include_blank: t(".position"),
+        onchange: "choose_member_position(this)" %>
+    </td>
+  </tr>
+<% end %>

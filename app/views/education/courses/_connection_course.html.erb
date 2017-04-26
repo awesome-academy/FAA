@@ -1,0 +1,25 @@
+<div class="sidebar nobottommargin col_last">
+  <div class="sidebar-widgets-wrap">
+    <div class="widget widget_links clearfix course">
+      <h4><%= t ".techniques" %></h4>
+      <div class="col_half nobottommargin">
+        <ul>
+          <% techniques.to_a.slice(0, techniques.length / 2).each do |technology| %>
+            <li class="label label-warning"><%= technology.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col_half nobottommargin col_last">
+        <ul>
+          <% techniques.to_a.slice(techniques.length / 2, techniques.length).each do |technology| %>
+            <li class="label label-warning"><%= technology.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="widget clearfix">
+      <div class="tabs nobottommargin clearfix" id="sidebar-tabs">
+      </div>
+    </div>
+  </div>
+</div>

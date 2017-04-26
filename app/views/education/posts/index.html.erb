@@ -1,0 +1,41 @@
+<%= provide :title, t(".title") %>
+
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= t ".title" %></h1>
+    <span><%= t ".title_description" %></span>
+  </div>
+</section>
+
+<section id="content">
+  <div id="page-menu">
+    <div id="page-menu-wrap">
+      <div class="container clearfix">
+        <div class="menu-title">
+          <%= t "education.header.posts" %>
+          <span> <%= t ".filter" %></span>
+        </div>
+        <nav>
+          <ul>
+            <%= render "education/posts/nav_search",
+              {controller_name: "education/posts",
+                categories: @index_post_object.categories} %>
+            <li class="project-search">
+              <input type="text" id="posts-search-txt" class="form-control"
+                placeholder= "<%= t ".placeholder_search" %>" autofocus>
+            </li>
+          </ul>
+        </nav>
+        <div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+      </div>
+    </div>
+  </div>
+  <div class="content-wrap">
+    <div class="container clearfix" id="posts_result">
+      <%= render partial: "paginate",
+        locals: {index_post_object: @index_post_object} %>
+    </div>
+  </div>
+</section>
+<div class="hidden default-image" path="<%= asset_path "default.jpg" %>">
+<%= javascript_include_tag "education/posts_search" %>

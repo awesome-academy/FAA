@@ -1,0 +1,13 @@
+<li class="list-group-item user-show-activity">
+  <i class="icon-plus-sign"></i>
+  <span><%= activity.owner_name %></span>
+  <% if activity.trackable %>
+    <%= t ".created_project" %>
+    <%= link_to activity.trackable_name, activity.trackable %>
+  <% else %>
+    <%= t ".created_project_currently_deleted" %>
+  <% end %>
+  <small class="text-muted pull-right">
+    <%= l activity.created_at, format: :time_date_month_year %>
+  </small>
+</li>

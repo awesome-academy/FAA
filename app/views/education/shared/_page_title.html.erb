@@ -1,0 +1,28 @@
+<section id="page-title" class="page-title">
+  <div class="container clearfix clearfix-custom shared-title">
+    <h1><%= object.name %></h1>
+    <ul class="flex-center-vertically shared-title-right-buttons">
+      <% if have_member %>
+        <li>
+          <%= link_to content_tag(:i, t("education.layouts.page_title.member"), class: "icon-user"),
+            "#", class: "btn btn-primary",
+            data: {toggle: "modal", target: "#object-member-modal"} %>
+        </li>
+      <% end %>
+      <li>
+        <a href="#" class="btn btn-warning" id="<%= btn_object_edit %>" data-id="<%= object.id %>">
+          <i class="icon-edit"></i>
+          <%= t ".edit_button" %>
+        </a>
+      </li>
+      <li>
+        <%= link_to object, method: :delete, class: "btn btn-danger",
+          data: {confirm: t(".delete_object")} do %>
+          <i class="icon-remove"></i>
+          <%= t "education.projects.destroy.delete" %>
+        <% end %>
+      </li>
+    </ol>
+    </div>
+  </div>
+</section>

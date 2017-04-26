@@ -1,0 +1,246 @@
+jp:
+  employer:
+    dashboards:
+      index:
+        title: "Company"
+      dashboard:
+        menu: "Menu"
+        manager_postings: "Manager Postings"
+        candidates: "Candidates"
+        messages: "Messages"
+        recommendations: "Recommendations"
+        view_mores: "View mores"
+        current_plans: "Current Plans"
+        contact: "Contact Us"
+        trial: "Trial"
+        view_candidates: "Current viewable candidates"
+        mail: "Mail"
+        help: "Help"
+        company_info: "Company Info"
+    layouts:
+      header:
+        dashboard: "Dashboard"
+        jobs: "Jobs"
+        feed: "Feed"
+        tools: "Tools"
+        edit_profile: "Edit Profile"
+        account_info: "Account Info"
+        company_info: "Company Info"
+        setting: "Setting"
+        logout: "Logout"
+  companies:
+    show:
+      info: "Info"
+      news: "News"
+      jobs: "Jobs"
+      members: "Members"
+      stats: "Stats"
+      founder: "Founder"
+      founded: "Founded on"
+      no_of_members: "# of Members"
+      about_us: "About us"
+      social_profiles: "Social Profiles"
+      follow: "Follow"
+  follow_companies:
+    create:
+      follow: "follow company successfully!"
+      not_found: "Company not found!"
+    destroy:
+      unfollow: "Unfollow company successfully!"
+      not_found: "Company not found!"
+  layouts:
+    base_title: "FCSP"
+    header:
+      home: "Home"
+      help: "Help"
+      about: "About"
+      login: "Login"
+      logout: "Logout"
+  pages:
+    home:
+      title: "Home"
+    about:
+      content: "This is about page"
+      title: "About"
+    help:
+      content: "This is help page"
+      title: "Help"
+  title: "Framgia code school platform"
+  copy: "Copyright by Framgia"
+  flash:
+    deleted_success: "deleted successfully!"
+  education:
+    home:
+      our_trainings:
+        techniques: "Techniques"
+        our_trainings: "Our Trainings"
+        see_more: "See more"
+      clients_say:
+        heading: "What Clients Say?"
+      our_projects:
+        heading: "Our Projects"
+      our_team:
+        heading: "Our team"
+    trainings:
+      training_not_found: "Training Not Found."
+      index:
+        title: "Education Trainings"
+        home: "Home"
+        page_title: "All Trainings"
+        techniques: "Techniques"
+        view_courses: "View list courses"
+        hot: "Hot"
+      show:
+        not_found: "The training could not be found"
+        home: "Home"
+        trainings: "Trainings"
+        training_info: "Training info"
+        techniques: "Techniques"
+        share: "Share"
+        new_courses: "New Courses"
+        view_courses: "View all courses"
+      new:
+        create_training: "Create"
+      edit:
+        update_project: "Update"
+      update:
+        training_updated_successfully: "Training updated successfully!"
+      create:
+        training_created: "Training created !"
+        training_create_failed: "Create training failed!"
+      form:
+        description: "Description"
+        name: "Name"
+    see_more: "See More"
+    title: "Framgia Awesome Academy"
+    logo_alt: "Framgia logo"
+    project:
+      not_found: "Project not found!"
+      title: "Project"
+      detail: "Detail"
+      php: "PHP"
+      android: "Android"
+      ruby: "Ruby"
+      ios: "IOS"
+      other: "Other"
+      name: "+ Project"
+      see_more: "See more"
+      next_page: "Next Page"
+      back_page: "Previous Page"
+      total_project:
+        title: "+ project of education"
+        subtitle: "Total project education of Framgia"
+      platform:
+        title: "4+ platform for education"
+        subtitle: "Ruby, PHP, Android, IOS..."
+      rate_avg:
+        title: "3rate"
+        subtitle: "rate avg"
+    projects:
+      project_not_found: "Project Not Found."
+      more: "More"
+      detail_project:
+        members: "Members"
+        name: "Name"
+        related_project: "Related Projects:"
+        read_more: "Read more"
+        technique: "Technique:"
+        project_info: "Project Info:"
+        share: "Share:"
+        server_info: "Server:"
+        plat_form: "Platform:"
+        git_repo: "Git Repo:"
+        pm_url: " PM Url:"
+      read_more:
+        close: "Close"
+        description: "Description"
+        core_features: "Core Features"
+        release_note: "Release Note"
+      form:
+        name: "Name"
+        description: "Description"
+        core_features: "Core features"
+        server_info: "Server info"
+        pm_url: "PM URL"
+        plat_form: "Platform"
+        release_note: "Release note"
+        git_repo: "Git repository"
+      new:
+        create_project: "Create project"
+      edit:
+        update_project: "Update project"
+      create:
+        project_created: "Project created!"
+      update:
+        project_updated_successfully: "Project updated successfully!"
+      destroy:
+        project_deleted: "Project deleted"
+        project_delete_fail: "Fail to delete project."
+      home:
+        title: "Project Title"
+        description: "Project Description"
+        filter: "Filter"
+    header:
+      home: "Home"
+      project: "Project"
+      posts: "Posts"
+      trainers: "Trainers"
+      trainees: "Trainees"
+      search: "Type & Hit Enter.."
+      feedback: "Feedback"
+    feedback:
+      title: "Feedback"
+      description: "Get in Touch with Us"
+      message: "message"
+      send_feed_back: "Send Feedback"
+      send_us_an_email: "Send us an Email"
+      feedback_success: "Thanks for your feedback."
+      feedback_error: "Something was wrong, check your feedback form again."
+      success_title: "Success!"
+      failed_title: "Failed!"
+    slider:
+      welcome: "Welcome to Framgia Awesome Academy"
+      description: "Master your self. Come with us"
+    index:
+      learning_program: "Learning Programs"
+    courses:
+      index:
+        show_all: "Show all"
+        techniques: "Techniques"
+        courses: "courses"
+        show_all_course: "All studying IT courses at Framgia"
+        training_program: "Training program"
+        language_program: "Language program"
+    posts:
+      title: "Member's Posts"
+      title_des: "Lastest posts of our Members"
+      read_more: "Read more"
+      date_format: "%d-%m-%Y"
+      create_new: "Create new post"
+      older: "&larr;Older"
+      newer: "Newer &rarr;"
+  time:
+    formats:
+      date_month_year_concise: '%d-%m-%y'
+  copy: "Copyright by Framgia"
+  error: "error"
+  users:
+    find_user:
+      not_found: "User not found"
+    friend_ship_form:
+      remove_request: " Cancel Request"
+      request_friend: " Add Friend"
+      unfriend: " Unfriend"
+  friend_ships:
+    create:
+      request_friend: "Sent a request to %{name}"
+      not_found: "User not found"
+    destroy:
+      remove_request: "Cancelled request to %{name}"
+      unfriend: "Unfriended with %{name}"
+      not_found: "User not found"
+  friend_request_mailer:
+    friend_request:
+      subject: "You have a friend request from %{name}"
+      hi: "Hi %{name},"
+      end: "This email is sent automatically from FCSP, Please do not reply!"

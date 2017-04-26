@@ -1,0 +1,22 @@
+<div class="container">
+  <section id="page-title" class="edu-managment-page-title">
+    <div class="container clearfix">
+      <h1><%= t ".title" %></h1>
+      <span><%= t ".title_description" %></span>
+    </div>
+  </section>
+  <section id="content">
+    <div class="container clearfix">
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+          <tr>
+            <th><%= t ".name" %></th>
+            <th><%= t ".description" %></th>
+            <th><%= t ".setting" %></th>
+          </tr>
+          <%= render "learning_program", learning_programs: @learning_programs %>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>

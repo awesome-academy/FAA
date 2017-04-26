@@ -1,0 +1,19 @@
+<div class="col-md-6 bottommargin">
+  <div class="team team-list clearfix">
+    <div class="team-image">
+      <%= link_to load_user_avatar(trainer), education_user_path(trainer) %>
+    </div>
+    <div class="team-desc">
+      <div class="team-title">
+        <h4><%= link_to trainer.name, education_user_path(trainer) %></h4>
+        <span><%= t ".trainer_title" %></span>
+      </div>
+      <div class="team-content">
+        <% if trainer.info_user.present? %>
+          <p><%= truncate trainer.info_user_introduce,
+            length: Settings.education.trainers.truncate_limit %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

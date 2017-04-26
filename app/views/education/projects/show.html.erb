@@ -1,0 +1,49 @@
+<% if current_user && can_manage?(Education::Project) %>
+  <%= render "education/shared/page_title",
+    {have_member: true,
+     btn_object_members: "btn-project-members",
+     btn_object_edit: "btn-project-edit",
+     object: @project} %>
+
+  <%= render "education/shared/edit_popup",
+    modal_title: t("education.projects.edit_project") %>
+  <div class="add_project_member_modal">
+    <%= render "add_project_member_modal",
+      users: @show_projects.users, project: @project %>
+  </div>
+<% else %>
+  <section id="page-title">
+    <div class="container clearfix">
+      <h1><%= @project.name %></h1>
+      <div id="portfolio-navigation">
+        <% if Education::Project.previous(@project).any? %>
+          <%= link_to education_project_path(Education::Project.previous(@project).first),
+            class: "left-icon" do %>
+            <i class="icon-angle-left"></i>
+          <% end %>
+        <% end %>
+        <%= link_to education_project_path(@show_projects.rand_project_id),
+          class: "right-icon" do %>
+          <i class="icon-line-grid"></i>
+        <% end %>
+        <% if Education::Project.next(@project).any? %>
+          <%= link_to education_project_path(Education::Project.next(@project).first),
+            class: "left-icon" do %>
+            <i class="icon-angle-right"></i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+<% end %>
+
+<section id="content">
+  <div class="content-wrap content-wrap-custom">
+    <div class="container clearfix">
+      <%= render partial: "detail_project", locals: {project: @project,
+        relations: @show_projects.relations, techniques: @techniques,
+        project_members: @show_projects.project_members,
+        rate: (@show_projects.get_rate(current_user.id) if user_signed_in?)} %>
+    </div>
+  </div>
+</section>

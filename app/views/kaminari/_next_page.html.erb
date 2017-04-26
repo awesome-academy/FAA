@@ -1,0 +1,4 @@
+<li class="page-item">
+  <%= link_to_unless current_page.last?, raw(t "views.pagination.next"), url,
+    rel: t("kaminari.next"), remote: remote, class: "page-link" %>
+</li>

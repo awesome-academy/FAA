@@ -1,0 +1,45 @@
+@import 'variables/color';
+
+.education-group-users-w2 {
+  width: 2%;
+}
+
+.add-user-group-modal .footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edu-users-management-paginate {
+  text-align: center;
+}
+
+.edu-users-management {
+  text-align: center;
+
+  th {
+    text-align: center;
+  }
+}
+
+.edu-users-search input {
+  border: 1px solid $gray-ddd;
+  border-radius: 2em;
+  display: initial;
+  float: right;
+  font-size: 1em;
+  height: 30px;
+  margin-bottom: 7px;
+  padding: .5em 1.3em;
+  text-align: left;
+  width: 200px;
+}
+
+.edu-users-search input:focus {
+  border-color: $blue-light;
+  width: 300px;
+}
+
+.import-user {
+  cursor: pointer;
+  margin-bottom: 10px;
+}

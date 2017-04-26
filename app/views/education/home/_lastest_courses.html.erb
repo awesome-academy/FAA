@@ -1,0 +1,37 @@
+<div class="section notopmargin notopborder custom-lastest-course">
+  <div class="container clearfix">
+    <div class="heading-block center nomargin">
+      <h3><%= t ".last_courses" %></h3>
+    </div>
+  </div>
+</div>
+<div class="container clearfix">
+  <div class="row course">
+    <% courses.each do |course|%>
+      <div class="col-md-3 col-sm-3 bottommargin">
+        <div class="ipost clearfix course">
+          <div class="entry-image">
+            <% if course.images.any? %>
+              <%= link_to image_tag(course.images.first.url,
+                class: "image_fade latest-course-image"), education_course_path(course) %>
+            <% else %>
+              <%=link_to image_tag "/assets/images/magazine/thumb/1.jpg",
+                class: "image_fade" %>
+            <% end %>
+          </div>
+          <div class="entry-title">
+            <h3><%= link_to truncate(course.name, length: Settings.education.index_name.truncate_limit), education_course_path(course) %></h3>
+          </div>
+          <ul class="entry-meta clearfix">
+            <li><i class="icon-calendar3"></i><%= l(course.start_date, format: :date_month_year_concise) %></li>
+            <li><a href="blog-single.html#comments"></a></li>
+            <li><i class="icon-calendar3"></i><%= l(course.end_date, format: :date_month_year_concise) %></li>
+          </ul>
+          <div class="entry-content">
+            <p><%= truncate course.detail, length: Settings.courses.max_course_detail %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

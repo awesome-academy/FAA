@@ -1,0 +1,5 @@
+$('#list_members').html('<%= j render "education/projects/list_added_users", users: @project.users, project: @project %>');
+$('#list_find_users').html('<%= j render "education/projects/list_users", users: @users %>');
+$('#list_project_member').html('<%= j render "education/projects/list_members", project_members: @project.members, project: @project %>');
+$('select[name="position"]').hide();
+$.growl.notice({message: '<%= flash[:success] %>'});

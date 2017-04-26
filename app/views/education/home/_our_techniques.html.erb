@@ -1,0 +1,20 @@
+<div class="container clearfix">
+  <div class="row">
+    <div class="heading-block center">
+      <h2><%= t ".title" %></h2>
+      <span class="divcenter"><%= t ".introduce" %></span>
+    </div>
+    <div class="col-md-4 col-sm-6 bottommargin technique-scale-width technique-align-right">
+      <%= render partial: "education/techniques/technique_home", collection: techniques.in_groups(2)[0], locals: {add_css_fbox_right: "fbox-right"} %>
+    </div>
+
+    <div class="col-md-4 hidden-sm bottommargin center technique-scale-width">
+      <img src="<%= Settings.education.home_page.our_techniques_center_img %>">
+    </div>
+    <% if techniques.in_groups(2)[1].any? %>
+      <div class="col-sm-4 bottommargin technique-scale-width technique-align-left">
+        <%= render partial: "education/techniques/technique_home", collection: techniques.in_groups(2)[1], locals: {add_css_fbox_right: ""} %>
+      </div>
+    <% end %>
+  </div>
+</div>

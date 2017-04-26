@@ -1,0 +1,197 @@
+@import 'variables/color';
+@import 'variables/background_image';
+
+.edu-standard-logo-custom,
+.edu-retina-logo-custom {
+  width: 126px;
+}
+
+.edu-standard-logo-custom img,
+.edu-retina-logo-custom img {
+  height: 100%;
+  object-fit: scale-down;
+  width: 100%;
+}
+
+.edu-logo-custom {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+.edu-header-wrap-custom,
+.edu-logo-custom,
+.edu-menu-custom {
+  border: none !important;
+}
+
+.slide-custom {
+  position: relative;
+  z-index: 1;
+
+  cap,
+  p {
+    color: $white;
+  }
+
+  .bg-slide-custom {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    opacity: .4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.content-wrap-custom {
+  padding: 20px 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 80px;
+  position: relative;
+}
+
+.dropdown-user {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-user-content {
+  box-shadow: 0 8px 16px 0 $black-60opacity;
+  display: none;
+  padding: 12px 16px;
+  position: absolute;
+  right: 0;
+  white-space: nowrap;
+  width: 160px;
+  z-index: 1;
+
+  span {
+    display: inline-flex;
+  }
+}
+
+.dropdown-user:hover .dropdown-user-content {
+  display: block;
+}
+
+.down-custom {
+  padding-top: 5px;
+}
+
+.choose-language a:hover {
+  color: $orange;
+}
+
+.introduction-video-bg {
+  background: image-url($introduction-video-bg) center center no-repeat;
+  background-size: cover;
+}
+
+
+.introduction-video-custom {
+  background-color: $white-gray;
+  height: 711px;
+
+  img {
+    width: 80%;
+  }
+}
+
+.introduction-video-url a {
+  position: relative;
+}
+
+.statistics-course {
+  background-color: $dark-blue;
+}
+
+.statistics-trainee {
+  background-color: $blue48;
+}
+
+.statistics-trainer {
+  background-color: $blue56;
+}
+
+.clients-say-custom {
+  background-image: image-url($clients-say-bg);
+  padding: 100px 0;
+
+  .clients-say-title {
+    position: relative;
+  }
+
+  .clients-say-slider {
+    height: 227px;
+  }
+
+  .clients-say-slide {
+    display: block;
+    float: left;
+    margin-right: -100%;
+    opacity: 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.video-overlay-custom {
+  background-color: $black-55opacity;
+}
+
+.edu-dropdown-user-detail {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.team-image img {
+  height: 285.52px;
+  width: 284.25px;
+}
+
+.mg-left-2 {
+  margin-left: 2%;
+}
+
+.our-client-custom {
+  height: 105px;
+}
+
+.our-client-custom img {
+  height: 100%;
+  object-fit: scale-down;
+  width: 100%;
+}
+
+.education-login-form {
+  max-width: 400px;
+}
+
+.custom-our-training {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.custom-lastest-course {
+  padding-top: 0 !important;
+}
+
+.custom-about-us {
+  margin-top: 50px;
+}
+
+.testi-meta::before {
+  content: none;
+}

@@ -1,0 +1,50 @@
+@import 'variables/color';
+
+.img-thumbnail.user-avatar {
+  height: 84px;
+  max-height: 84px;
+  max-width: 84px;
+  width: 84px;
+}
+
+.heading-block.noborder.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+.list-group-item.user-show-activity {
+  .icon-plus-sign {
+    color: $weight-blue;
+  }
+
+  .icon-remove {
+    color: $light-red;
+  }
+
+  .icon-edit {
+    color: $light-green;
+  }
+
+  .text-muted {
+    visibility: hidden;
+  }
+
+  &:hover {
+    .text-muted {
+      visibility: visible;
+    }
+  }
+}
+
+.user-posts-title {
+  a {
+    text-transform: uppercase;
+  }
+}
+
+.more-link-delete-custom {
+  color: $red;
+}
+
+.icon-amber {
+  color: $orange;
+}

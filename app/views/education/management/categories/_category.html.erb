@@ -1,0 +1,9 @@
+<tr id="edu-category-<%= category.id %>">
+  <td id="edu-category-name-<%= category.id %>"><%= category.name %></td>
+  <td>
+    <%= link_to t(".edit"), "javascript:;", data: {id: category.id},
+      class: "btn btn-default edit-edu-category" %>
+    <%= link_to t(".delete"), "javascript:;", data: {id: category.id},
+      class: "btn btn-danger delete-edu-category" %>
+  </td>
+</tr>

@@ -1,0 +1,22 @@
+<div class="technique-page-title">
+  <div class="row clearfix">
+    <div class="heading-block center">
+      <h2><%= t "education.technique.index.our_technique" %></h2>
+      <span class="divcenter">
+        <%= t "education.technique.index.introduce" %>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="container clearfix technique-index">
+    <div class="row">
+      <%= render @techniques %>
+    </div>
+  </div>
+</div>
+
+<div class="center">
+  <%= paginate @techniques %>
+</div>

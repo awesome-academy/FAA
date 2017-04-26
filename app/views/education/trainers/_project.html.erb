@@ -1,0 +1,19 @@
+<article class="portfolio-item portfolio-item-project pf-media pf-icons" id="project-<%= project.id %>">
+  <div class="portfolio-image">
+    <a href="portfolio-single.html">
+      <%= load_image project %>
+    </a>
+    <div class="portfolio-overlay">
+      <%= link_to education_project_path(project), class: "left-icon" do %>
+        <i class="icon-eye i-alt"></i>
+      <% end %>
+      <a href="#", class="right-icon">
+        <i class="icon-trash delete-project" data-id="<%= project.id %>"></i>
+      </a>
+    </div>
+  </div>
+  <div class="portfolio-desc">
+    <h3><%= link_to truncate(project.name, length: Settings.education.index_name.truncate_limit), education_project_path(project) %></h3>
+    <span><%= project.plat_form %></span>
+  </div>
+</article>

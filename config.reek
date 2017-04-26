@@ -1,0 +1,29 @@
+---
+
+### Generic smell configuration
+
+# You can disable smells completely
+IrresponsibleModule:
+  enabled: false
+
+FeatureEnvy:
+  enabled: false
+
+UtilityFunction:
+  enabled: false
+
+DuplicateMethodCall:
+  enabled: false
+
+exclude_paths:
+  - db
+
+'app/controllers':
+  InstanceVariableAssumption:
+    enabled: false
+  TooManyStatements:
+    max_statements: 10
+  NilCheck:
+    enabled: false
+  RepeatedConditional:
+    enabled: false

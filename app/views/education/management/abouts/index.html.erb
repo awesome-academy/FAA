@@ -1,0 +1,18 @@
+<div class="container">
+  <section id="page-title" class="edu-managment-page-title">
+    <div class="container clearfix">
+      <h1><%= t ".title" %></h1>
+      <span><%= t ".title_description" %></span>
+    </div>
+  </section>
+  <div class="preview-about-title">
+    <h1><%= t ".preview" %></h1>
+  </div>
+  <div class="preview-about">
+    <%= render "education/home/about_us", about: @about %>
+  </div>
+  <button class="button button-border button-border-thin button-amber edit-about-btn"
+    data-toggle="modal" data-target="#modal_about">
+    <%= t ".edit_button" %></button>
+  <%= render "edit", about: @about %>
+</div>

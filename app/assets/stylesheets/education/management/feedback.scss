@@ -1,0 +1,21 @@
+@import 'variables/color';
+
+.edu-feedback {
+  margin-top: 20px;
+}
+
+.edu-feedback-links a {
+  background: $white;
+  border-radius: 3px 3px 0 0;
+  color: $black-light;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 9px 15px;
+  transition: all linear .15s;
+}
+
+.edu-feedback-links a:hover {
+  background: $orange;
+  text-decoration: none;
+}

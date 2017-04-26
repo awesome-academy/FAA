@@ -1,0 +1,2 @@
+module Supports::Education
+end

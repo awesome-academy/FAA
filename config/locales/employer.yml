@@ -1,0 +1,202 @@
+en:
+  employer:
+    dashboards:
+      index:
+        title: "Company"
+    layouts:
+      sidebar:
+        menu: "Menu"
+        manage_postings: "Manage Postings"
+        candidates: "Candidates"
+        messages: "Messages"
+        recommendations: "Recommendations"
+        view_mores: "View mores"
+        current_plans: "Current Plans"
+        contact: "Contact Us"
+        trial: "Trial"
+        view_candidates: "Current viewable candidates"
+        mail: "Mail"
+        help: "Help"
+        company_info: "Company Info"
+      header:
+        dashboard: "Dashboard"
+        jobs: "Jobs"
+        feed: "Feed"
+        tools: "Tools"
+        edit_profile: "Edit Profile"
+        account_info: "Account Info"
+        company_info: "Company Info"
+        setting: "Setting"
+        logout: "Logout"
+    candidates:
+      index:
+        all_jobs: "All jobs"
+        title: "Candidates"
+        filter_candidate: "Filter candidate by select job"
+        user: "User"
+        id: "ID"
+        job: "Job"
+        interested_in: "Interested in"
+        show: "Show"
+        process: "Process"
+      candidate_by_select_job:
+        user: "User"
+        id: "ID"
+        job: "Job"
+        email: "Email"
+        interested_in: "Interested in"
+    jobs:
+      candidate_by_job:
+        user: "User"
+        id: "ID"
+        job: "Job"
+        email: "Email"
+        interested_in: "Interested in"
+        have: " have "
+        candidates: " candidates"
+      show_candidates:
+        all_candidates: "All candidates"
+        close: Close
+      form:
+        submit: "Post"
+        question_des_job: "Who is neccesary to your company?"
+        des_job_last: "This is the last section."
+      job_detail:
+        title: "Title"
+        description: "Description"
+        placeholder_title: "Join us to create a better workplace"
+        placeholder_des: "If you are a cool rocking young engineer and into
+          charities, I want to hear what you think about my new idea.
+          I will buy you a drink!"
+      new:
+        job_recruitment: "Post job recruitment"
+        job: "Create job"
+        members: "Add members"
+        create_team_story: "Create team story"
+      create:
+        created_job: "Posted job recruitment"
+        create_job_fail: "Fail to post job recruitment"
+      index:
+        job: "Jobs Post"
+        manage_post: "Manage Job Postings"
+        create_job: "+ Create new job"
+        all: "All"
+        draft: "Draft"
+        open: "Open"
+        close: "Close"
+        title: "Title"
+        status: "Status"
+        candidates: "Candidates"
+        who_can_apply: "Who can apply"
+        describe: "Describe"
+        action: "Action"
+        public: "Public"
+        messages: "Messages"
+      update:
+        job_post_updated: "Updated post job recruitment"
+        job_post_update_fail: "Failed to update post job"
+      edit:
+        edit_job: "Edit job"
+      show:
+        view_job: "View job"
+      job:
+        close: "Close"
+        show_posting: "Show posting"
+        edit_posting: "Edit posting"
+        bookmark: "Bookmark (%{count})"
+      draft:
+        reopen: "Reopen"
+      info_main:
+        question_des_job: "Who is neccesary to your company?"
+        des_job_last: "This is the last section."
+        title: "Title"
+        description: "Description"
+        placeholder_title: "Join us to create a better workplace"
+        placeholder_des: "If you are a cool rocking young engineer and into
+          charities, I want to hear what you think about my new idea.
+          I will buy you a drink!"
+        community: "Community"
+        preview: "Preview"
+      info_hiring_type:
+        looking_for: "Looking for"
+        hiring_type: "Hiring type"
+        who_can_apply: "Who can apply"
+        everyone: "Everyone can apply"
+        friends_om: "Only friends of members"
+        of_friends_om: "Only friends of friends of members"
+    companies:
+      edit:
+        company_info: "Company Info"
+        edit_company_info: "Edit company info"
+        manage_members: "Manage members"
+        manage_images: "Manage images"
+        manage_accounts: "Manage accounts on social network"
+      update:
+        company_updated: "Company info updated !"
+        company_update_fail: "Fail to update company info"
+      edit_company_info:
+        update_company_info: "Update Company"
+        required: "(required)"
+        article_btn: "Add article"
+        article: "Article"
+      image:
+        image: "Image"
+      no_load_data:
+        facebook: "Facebook"
+        twitter: "Twitter"
+        logo: "Logo"
+        background: "Background Image"
+        what_we_do: "What We Do"
+        why_we_do: "Why We Do"
+        how_we_do: "How We Do"
+        optional: "(Optional)"
+    team_introductions:
+      form:
+        title: "Title"
+        contents: "Content"
+        images: "Image"
+        submit: "Save"
+      image_fields:
+        caption: "write caption"
+        team_introduction: "Team Introduction"
+      new:
+        team_introduction: "Team Introduction"
+        team_introduction_1: "Team Introduction 1"
+        team_introduction_2: "Team Introduction 2"
+        team_introduction_3: "Team Introduction 3"
+        team_introduction_recruitment: "Team Introduction Recruiment"
+        submit: "Submit"
+      not_found: "Team Introduction not found"
+      success: "Successfully added team introduction"
+      create_confirm: "Are you sure to set up this company introduction?"
+  type_of_candidates:
+    prompt: "Select type of candidates"
+    engineer: "Engineer / Programmer"
+    creative: "Creative(Designer, Writer, etc..)"
+    director: "Director / Manager"
+    business_admin: "Business admin(Finance, HR etc)"
+    sales: "Sales"
+    marketing: "Marketing"
+    medical: "Medical"
+    others: "Others"
+  activerecord:
+    attributes:
+      job:
+        type_of_candidates:
+          engineer: "Engineer / Programmer"
+          creative: "Creative(Designer, Writer, etc..)"
+          director: "Director / Manager"
+          business_admin: "Business admin(Finance, HR etc)"
+          sales: "Sales"
+          marketing: "Marketing"
+          medical: "Medical"
+          others: "Others"
+        who_can_applies:
+          everyone: "Everyone"
+          friends_of_members: "Only friends of members"
+          friends_of_friends_of_member: "Only friends of friends of members"
+        statuses:
+          draft: "Draft"
+          open: "Open"
+          close: "Close"
+          active: "Open"

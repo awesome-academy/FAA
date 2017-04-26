@@ -1,0 +1,14 @@
+<div class="form-edit">
+  <%= simple_form_for @comment, url: education_project_comment_path(@comment.commentable, @comment), remote: :true do |f| %>
+    <div class="col-md-12" data-turbolinks-temporary>
+      <div class="col-md-12">
+        <div class="comment-from">
+          <%= f.text_area :content, value: @comment.content, class: "form-control"%>
+        </div>
+        <div>
+          <%= f.submit t("comment.edit_button"), class: "comment-edit" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

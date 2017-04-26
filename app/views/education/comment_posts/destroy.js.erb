@@ -1,0 +1,8 @@
+<% if @comment.errors.any? %>
+  $('.comment-errors').html('<%= j render "shared/error_messages", object: @comment %>')
+  $('.sm-form-control').val('');
+<% else %>
+  $('#comment-<%= @comment.id %>').remove();
+  $('.comments-count').html('<%= @post.comments_count %>')
+  $('.comment-errors').html('')
+<% end %>

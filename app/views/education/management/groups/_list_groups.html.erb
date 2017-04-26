@@ -1,0 +1,17 @@
+<div class="edu-group-tabs">
+  <ul class="edu-group-tab-links">
+    <% groups.each do |group| %>
+      <li class="edu-group-tab-<%= group.id %>">
+        <a href="#edu-group-tab-<%= group.id %>"><%= group.name %></a>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="edu-group-tab-content group-custom">
+    <% groups.each do |group| %>
+      <div id="edu-group-tab-<%= group.id %>" class="edu-group-tab table-responsive">
+        <%= render "list_permissions", permissions: group.permissions %>
+      </div>
+    <% end %>
+  </div>
+</div>

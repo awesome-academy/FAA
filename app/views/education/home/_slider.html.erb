@@ -1,0 +1,50 @@
+<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix"
+  data-autoplay="7000" data-speed="650" data-loop="true">
+  <div class="slider-parallax-inner">
+    <div class="swiper-container swiper-parent">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide dark slide-custom">
+          <div class="bg-slide-custom">
+            <img src="<%= Settings.education.home_page.slide1_img %>">
+          </div>
+          <div class="container clearfix">
+            <div class="slider-caption slider-caption-center">
+              <h2 data-caption-animate="fadeInUp">
+                <cap><%= t ".welcome" %></cap></h2>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide dark slide-custom">
+          <div class="container clearfix">
+            <div class="slider-caption slider-caption-center">
+              <h2 data-caption-animate="fadeInUp">
+                <cap><%= t ".welcome" %></cap></h2>
+            </div>
+          </div>
+          <div class="video-wrap">
+            <video id="slide-video" preload="auto" loop autoplay muted
+              poster="<%= Settings.education.home_page.slide2_poster %>">
+              <source src="<%= Settings.education.home_page.slide2_video_webm %>" type="video/webm" />
+              <source src="<%= Settings.education.home_page.slide2_video_mp4 %>" type="video/mp4" />
+            </video>
+            <div class="video-overlay video-overlay-custom"></div>
+          </div>
+        </div>
+        <div class="swiper-slide dark slide-custom">
+          <div class="bg-slide-custom">
+            <img src="<%= Settings.education.home_page.slide3_img %>">
+          </div>
+          <div class="container clearfix">
+            <div class="slider-caption slider-caption-center">
+              <h2 data-caption-animate="fadeInUp">
+                <cap><%= t ".welcome" %></cap></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
+      <div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
+    </div>
+    <a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<div class="modal fade" id="modal_learning_program_<%= learning_program.id %>"
+  tabindex="-1"; aria-labelledby="modal_label_message" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"
+          data-dismiss="modal" aria-hidden="true">&times</button>
+        <h4 class="modal-title" id="modal_label_message">
+          <%= t ".title" %>
+        </h4>
+      </div>
+      <%= simple_form_for learning_program,
+        url: education_management_learning_program_path(learning_program) do |f| %>
+        <div class="form-group">
+          <div class="col-md-12">
+            <div class="form-group">
+              <%= f.input :name,
+                input_html: {class: "form-control margin-bot-10",
+                  "data-validation": "required"} %>
+              <%= f.input :description, as: :text,
+                input_html: {class: "form-control margin-bot-10 content-about-us",
+                  "data-validation": "required"} %>
+              <%= f.hidden_field :id, value: learning_program.id %>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <%= f.submit t(".save"), method: :update, class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

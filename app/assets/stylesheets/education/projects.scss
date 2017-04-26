@@ -1,0 +1,203 @@
+@import 'variables/color';
+@import 'variables/size';
+
+.data-liffect li {
+  animation: pageRight 600ms ease both;
+  animation-play-state: paused;
+  transform-origin: 100% 50%;
+}
+
+.data-liffect.play li {
+  animation-play-state: running;
+}
+
+@keyframes pageRight {
+  0% { opacity: 0; transform: perspective(400px) rotateY(90deg); }
+  100% { opacity: 1; transform: perspective(400px) rotateY(0deg); }
+}
+
+.center {
+  text-align: center;
+}
+
+.portfolio-item-custom {
+  width: 100%;
+}
+
+.content-wrap-custom {
+  padding: 25px;
+}
+
+.modal-content-custom {
+  height: 250px;
+  margin: 20px;
+  overflow-y: auto;
+}
+
+.modal-title-custom {
+  color: $orange;
+}
+
+.menu-technique .current-custom a {
+  background-color: $gray;
+}
+
+.project-search input {
+  background: $white;
+  border: 1px solid $gray-ddd;
+  border-radius: 2em;
+  display: initial;
+  font-size: 1em;
+  padding: .5em 1.3em;
+  width: 100%;
+}
+
+.project-search input:focus {
+  border-color: $blue-light;
+}
+
+.project-search .results .ui-widget-content {
+  background: $white;
+  border-color: #gray-ddd;
+  box-shadow: 0 .1em .2em $gray;
+  font-size: .9em;
+  line-height: 1.2;
+  max-height: 20em;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: .5em 0;
+}
+
+.project-search .results .ui-menu-item {
+  border: 0;
+  border-left: 5px solid transparent;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  height: 6.5em;
+  padding: .4em .6em .4em 6.2em;
+  position: relative;
+}
+
+.project-search .results .ui-state-focus {
+  background: $white;
+  border-left-color: $blue;
+  font-weight: 300;
+}
+
+.project-search .ui-menu-item .img {
+  height: 6em;
+  left: .6em;
+  overflow: hidden;
+  position: absolute;
+  top: .4em;
+  width: 5em;
+}
+
+.ui-menu-item .img img {
+  max-width: 100%;
+}
+
+.project-search .ui-menu-item .name {
+  color: $gray-black;
+  display: block;
+}
+
+.project-search .ui-menu-item .description {
+  color: $gray-aaa;
+  display: block;
+  font-size: .8em;
+  letter-spacing: 1px;
+  margin-top: .6em;
+  text-transform: uppercase;
+}
+
+.project-search .ui-menu-item .plat-form {
+  color: $gray-aaa;
+  display: block;
+  font-size: .8em;
+  margin-top: .5em;
+}
+
+.project-search .ui-state-focus .name,
+.project-search .ui-state-focus .description,
+.project-search .ui-state-focus .plat-form {
+  color: $blue;
+}
+
+.share-custom div {
+  float: left;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.share-custom span {
+  font-size: 15px;
+}
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size-icon-share $size-icon-share !important;
+    height: $size-icon-share !important;
+    width: $size-icon-share !important;
+  }
+}
+
+.dropdown-custom {
+  padding-bottom: 0 !important;
+}
+
+.icon-language {
+  max-height: 12px;
+  max-width: 18px;
+}
+
+.nobottompadding-custom {
+  padding-top: 30px;
+}
+
+.custom-wrap {
+  padding-top: 30px;
+}
+
+.navigation-header {
+  margin-top: 0 !important;
+}
+
+.bottommargin-custom {
+  margin-top: 85px;
+}
+
+.portfolio-single-content-custom {
+  margin-left: 10px;
+}
+
+.content-detail-project {
+  height: 80%;
+  min-height: 200px;
+}
+
+.project-member-position {
+  display: inline;
+  float: right;
+  max-width: 130px;
+}
+
+.create-custom {
+  padding-top: 5px;
+}
+
+.portfolio-item-project {
+  .carousel {
+    a {
+      width: 90%;
+    }
+  }
+
+  img {
+    height: 250px !important;
+  }
+}
+
+.links-form-project {
+  display: inline-table;
+  width: 100%;
+}
