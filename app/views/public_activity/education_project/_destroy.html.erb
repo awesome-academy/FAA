@@ -1,0 +1,8 @@
+<li class="list-group-item user-show-activity">
+  <i class="icon-remove"></i>
+  <span><%= activity.owner_name %></span>
+  <%= t ".deleted_project" %>
+  <small class="text-muted pull-right">
+    <%= l activity.created_at, format: :time_date_month_year %>
+  </small>
+</li>

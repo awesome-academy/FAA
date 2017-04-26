@@ -1,0 +1,36 @@
+<%= provide :title, t(".title") %>
+
+<section id="page-title" class="edu-managment-page-title">
+  <div class="container clearfix">
+    <h1><%= t ".title" %></h1>
+    <span><%= t ".title_description" %></span>
+  </div>
+</section>
+
+<section id="content">
+  <div class="container clearfix">
+    <div class="edu-feedback">
+      <div class="edu-feedback-links">
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered">
+            <tr>
+              <th><%= t ".name" %></th>
+              <th><%= t ".email" %></th>
+              <th><%= t ".subject" %></th>
+              <th><%= t ".content" %></th>
+              <th><%= t ".phone_number" %></th>
+              <th><%= t ".destroy" %></th>
+            </tr>
+            <%= render partial: "feedback", collection: @feedbacks %>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="center">
+  <%= paginate @feedbacks %>
+</div>
+
+<%= javascript_include_tag "education/management/feedbacks" %>

@@ -1,0 +1,24 @@
+en:
+  public_activity:
+    education_project:
+      create:
+        created_project: "created a project:"
+        created_project_currently_deleted: "created a project that is
+          currently deleted."
+      update:
+        edited_project: "edited a project:"
+        edited_project_currently_deleted: "edited a project that is currently
+          deleted."
+      destroy:
+        deleted_project: "deleted a project."
+    education_post:
+      create:
+        created_post: "created a post:"
+        created_post_currently_deleted: "created a post that is currently
+          deleted."
+      destroy:
+        deleted_post: "deleted a post."
+      update:
+        edited_post: "edited a post:"
+        edited_post_currently_deleted: "edited a post that is currently
+          deleted."

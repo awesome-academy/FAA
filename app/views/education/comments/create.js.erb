@@ -1,0 +1,9 @@
+<% if @comment.errors.any? %>
+  $('.comment-errors').html('<%= j render "shared/error_messages", object: @comment %>')
+  $('.sm-form-control').val('');
+<% else %>
+  $('.all-comment').prepend('<%= j render @comment %>');
+  $('.sm-form-control').val('');
+  $('.comment-count').html('<%= @project.comments_count %>')
+  $('.comment-errors').html("")
+<% end %>

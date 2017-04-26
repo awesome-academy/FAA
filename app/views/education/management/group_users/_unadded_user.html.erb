@@ -1,0 +1,12 @@
+<% users.each_with_index do |user, index| %>
+  <tr class="search-user-image">
+    <td>
+      <%= check_box_tag "users[]", user.id, false,
+        user: "#{user.id}", class: "user-add",
+        onclick: "check_user(this)" %>
+      <%= load_user_avatar user %>
+      <strong><%= user.name %></strong>
+      <%= user.email %>
+    </td>
+  </tr>
+<% end %>

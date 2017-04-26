@@ -1,0 +1,6 @@
+<% if @courses.any? %>
+  $('#portfolio').html('<%= j render @courses %>');
+  $('.course_image_slide').carousel();
+<% else %>
+  $('#portfolio').html('<h1><%= t ".no_courses" %></h1>');
+<% end %>

@@ -1,0 +1,86 @@
+@import 'variables/color';
+
+.edu-groups {
+  margin-top: 20px;
+}
+
+.edu-group-tabs {
+  display: inline-block;
+  width: 100%;
+}
+
+.edu-group-tab-links::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.edu-group-tab-links li {
+  float: left;
+  list-style: none;
+  margin: 0 5px;
+}
+
+.edu-group-tab-links a {
+  background: $white;
+  border-radius: 3px 3px 0 0;
+  color: $black-light;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 9px 15px;
+  transition: all linear .15s;
+}
+
+.edu-group-tab-links a:hover {
+  background: $orange;
+  text-decoration: none;
+}
+
+.edu-group-active a,
+.edu-group-active a:hover {
+  background: $orange;
+  color: $black-light;
+}
+
+.edu-group-tab-content {
+  background: $white;
+  border-radius: 3px;
+  box-shadow: -1px 1px 1px $black-background;
+  padding: 15px;
+}
+
+.edu-group-tab {
+  display: none;
+}
+
+.edu-group-tab.active {
+  display: block;
+}
+
+.edu-update-permission {
+  float: right;
+}
+
+.group-search input {
+  background: $white url('search.png') no-repeat 9px center;
+  border: 1px solid $gray-ddd;
+  border-radius: 2em;
+  display: initial;
+  float: right;
+  font-size: 1em;
+  height: 30px;
+  margin-bottom: 7px;
+  padding: .5em 1.3em;
+  text-align: center;
+  width: 190px;
+}
+
+.group-search input:focus {
+  border-color: $blue-light;
+  width: 300px;
+}
+
+.group-custom {
+  padding-top: 10px;
+}

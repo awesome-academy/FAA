@@ -1,0 +1,13 @@
+$('.unadded-user').html('<%= j render partial: "unadded_user", locals: {users: @group_user_object.unadded_users} %>')
+$('#edu-group-tab-<%= @group_user_object.group.id %> .added_users').html('<%= j render partial: "users", locals: {users: @group_user_object.added_users, group: @group_user_object.group } %>');
+<% if @group_user_object.checked_input.present? %>
+  <% @group_user_object.checked_input.each do |input| %>
+    $('.unadded-user tr td input[user=<%= input %>]').prop('checked', true)
+  <% end %>
+<% end %>
+
+<% if @group_user_object.added_checked_users.present? %>
+  <% @group_user_object.added_checked_users.each do |input| %>
+    $('.added_users tr td input[user=<%= input %>]').prop('checked', true)
+  <% end %>
+<% end %>

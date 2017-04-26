@@ -1,0 +1,15 @@
+<% if object.errors.any? %>
+  <div class="style-msg2 errormsg">
+    <div class="msgtitle">
+      <%= t "the_form_contains" %>
+      <%= pluralize object.errors.count, t("error") %>.
+    </div>
+    <div class="sb-msg">
+      <ul>
+        <% object.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>

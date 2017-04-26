@@ -1,0 +1,18 @@
+<%= provide :title, t(".title") %>
+
+<section id="page-title" class="edu-managment-page-title">
+  <div class="container clearfix">
+    <h1><%= t ".title" %></h1>
+    <span><%= t ".title_description" %></span>
+  </div>
+</section>
+
+<section id="content">
+  <div class="container clearfix">
+    <div class="edu-groups">
+      <%= render "list_groups", groups: @groups %>
+    </div>
+  </div>
+</section>
+
+<%= javascript_include_tag "education/management/groups" %>

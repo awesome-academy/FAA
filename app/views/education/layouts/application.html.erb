@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title><%= full_title yield :title %></title>
+      <%= csrf_meta_tags %>
+      <%= stylesheet_link_tag "education", media: "all",
+        "data-turbolinks-track": "reload" %>
+      <%= javascript_include_tag "education",
+        "data-turbolinks-track": "reload" %>
+  </head>
+
+  <body class="stretched">
+    <%= render "education/layouts/message" %>
+    <div id="wrapper" class="clearfix">
+      <%= render "education/layouts/header" %>
+      <%= yield %>
+      <%= render "education/layouts/footer" %>
+    </div>
+
+    <div id="gotoTop" class="icon-angle-up"></div>
+    <%= javascript_include_tag "template" %>
+  </body>
+</html>

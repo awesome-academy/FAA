@@ -1,0 +1,26 @@
+<article class="portfolio-item portfolio-item-training pf-media pf-icons" id="training-<%= training.id %>" >
+  <div class="portfolio-image">
+    <a href="javascript:;">
+      <%= load_image training %>
+    </a>
+    <div class="portfolio-overlay">
+      <%= link_to education_training_path(training), class: "left-icon" do %>
+        <i class="icon-eye i-alt"></i>
+      <% end %>
+      <a href="#", class="right-icon">
+        <i class="icon-trash delete-training" data-id="<%= training.id %>"></i>
+      </a>
+    </div>
+  </div>
+  <div class="portfolio-desc">
+    <h3 title="<%= training.name %>">
+      <%= link_to truncate(training.name,
+        length: Settings.education.index_name.truncate_limit),
+        education_training_path(training) %>
+    </h3>
+    <span title="<%= training.description %>">
+      <%= truncate training.description,
+        length: Settings.education.trainers.training_description_truncate %>
+    </span>
+  </div>
+</article>

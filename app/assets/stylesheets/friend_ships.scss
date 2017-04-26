@@ -1,0 +1,15 @@
+@import 'variables/color';
+
+.top-cart-content-custom {
+  width: 400px !important;
+}
+
+.top-cart-items-custom {
+  max-height: 300px !important;
+  overflow: auto;
+}
+
+.button-light-custom {
+  color: $red44-reject-friend;
+  text-transform: capitalize !important;
+}

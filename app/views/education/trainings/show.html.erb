@@ -1,0 +1,100 @@
+<% if current_user && can_manage?(Education::Project) %>
+  <%= render "education/shared/page_title",
+    {have_member: false,
+     btn_object_members: "btn-training-members",
+     btn_object_edit: "btn-training-edit",
+     object: @training} %>
+
+  <%= render "education/shared/edit_popup",
+    modal_title: t(".edit_training") %>
+<% else %>
+  <section id="page-title">
+    <div class="container clearfix">
+      <h1><%= @training.name %></h1>
+      <ol class="breadcrumb">
+        <li><%= link_to t(".home"), education_root_path %></li>
+        <li><%= link_to t(".trainings"), education_trainings_path %></li>
+        <li class="active"><%= @training.name %></li>
+      </ol>
+    </div>
+  </section>
+<% end %>
+
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
+      <div class="col_two_third portfolio-single-image nobottommargin">
+        <div class="fslider" data-arrows="false" data-animation="fade">
+          <div class="flexslider">
+            <div class="slider-wrap">
+              <%= render "education/shared/load_images_slider",
+                object: @training %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col_one_third portfolio-single-content col_last nobottommargin">
+        <div class="fancy-title title-bottom-border">
+          <h2><%= t ".training_info" %></h2>
+        </div>
+        <p><%= @training.description %></p>
+        <br>
+        <div class="fancy-title title-bottom-border">
+          <h2><%= t ".techniques" %></h2>
+        </div>
+        <ul class="iconlist">
+          <% @training.techniques.each do |technique| %>
+            <li class="display technique-items">
+              <%= link_to "#" do %>
+                <i class="icon-ok"></i> <%= technique.name %>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+        <br>
+        <div class="si-share share-custom clearfix">
+          <div>
+            <span><%= t ".share" %></span>
+          </div>
+          <div>
+            <%= social_share_button_tag @training.name %>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="divider divider-center"><i class="icon-circle"></i></div>
+      <h4><b><%= t ".all_courses" %>:</b></h4>
+      <div id="oc-portfolio" class="owl-carousel portfolio-carousel
+        portfolio-nomargin carousel-widget" data-margin="1" data-pagi="false"
+        data-autoplay="5000" data-items-xxs="1" data-items-xs="2" data-items-sm="3"
+        data-items-lg="4">
+        <% if @courses.any? %>
+          <% @courses.each do |course| %>
+            <div class="oc-item">
+              <div class="iportfolio">
+                <div class="portfolio-image">
+                  <%= link_to "#" do %>
+                    <%= image_tag "images/portfolio/4/1.jpg" %>
+                  <% end %>
+                  <div class="portfolio-overlay">
+                    <%= link_to "#", class: "right-icon" do %>
+                      <i class="icon-eye"></i>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="portfolio-desc">
+                  <h3>
+                    <%= link_to "#" do %>
+                      <%= course.name %>
+                    <% end %>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

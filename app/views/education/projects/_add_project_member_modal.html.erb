@@ -1,0 +1,94 @@
+<div id="object-member-modal" class="modal fade course-member" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content"> 
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="#1" data-toggle="tab"><%= t ".add_member" %></a>
+        </li>
+        <li><a href="#2" data-toggle="tab"><%= t ".manage_member" %></a>
+        </li>
+      </ul>
+      <div class="tab-content ">
+        <div class="tab-pane active" id="1">
+          <div class="hidden_position">
+          </div>
+          <div id="hidden_project_id">
+            <%= hidden_field_tag :project_id, project.id %>
+          </div>
+          <div class="body">
+            <div class="panel panel-success">
+              <div class="search-user-form">
+                <div class="search_users">
+                  <div class="form-group">
+                    <%= text_field_tag :project_member_search,
+                      params[:project_member_search],
+                      placeholder: t(".search"), class: "form-control" %> 
+                  </div>
+                </div>
+              </div>
+              <div class="choose-all-member">
+                <label>
+                  <%= check_box_tag "check", "check_all", false, class: "check_all" %>
+                  <%= t ".choose_all" %>
+                </label>
+              </div>
+              <div class="add-user-table">           
+                <table class="table table-striped table-hover table-bordered">
+                  <thead class="">
+                    <tr>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="list_find_users">
+                    <%= render "education/projects/list_users", users: users %>
+                  </tbody>
+                </table> 
+              </div>
+            </div>
+          </div>
+          <div class="footer text-center create-member">
+            <%= link_to t(".add"),"#", 
+              class: "btn btn-primary defaut-btn", id: "btn-project-member",
+                remote: true %> 
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <%= t ".close" %>
+            </button>
+          </div>
+        </div>
+        <div class="tab-pane" id="2">
+          <div class="body">
+            <div class="panel panel-success">
+              <div class="search-user-form">
+                <div class="search_added_users">
+                  <div class="form-group">
+                    <%= text_field_tag :search_added_members, 
+                      params[:search_added_members],
+                      placeholder: t(".search"), class: "form-control" %> 
+                  </div>
+                </div>
+              </div>
+              <div class="add-user-table">           
+                <table class="table table-striped table-hover table-bordered">
+                  <thead class="">
+                    <tr>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="list_members">
+                    <%= render "education/projects/list_added_users", 
+                      users: project.users.by_active, project: project %>
+                  </tbody>
+                </table> 
+              </div>
+            </div>
+          </div>
+          <div class="footer text-center create-member"> 
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <%= t ".close" %>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

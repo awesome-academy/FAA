@@ -1,0 +1,42 @@
+<header id="header" class="no-sticky edu-management-header">
+  <div id="header-wrap">
+    <div class="container clearfix">
+      <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+      <div id="logo" class="nobottomborder edu-management-logo">
+        <%= link_to education_root_path do %>
+          <%= image_tag "logo-framgia.png" %>
+        <% end %>
+      </div>
+      <nav id="primary-menu">
+        <ul>
+          <li class="dropdown chosen-language">
+            <% if session[:locale].present? %>
+              <%= link_to url_for(locale: session[:locale]), class:"dropdown-toggle dropdown-custom",
+                data: {toggle: "dropdown"} do %>
+                <%= image_tag "flag/#{session[:locale]}.png", class: "icon-language" %>
+                <%= Settings.languages[session[:locale]] %>
+              <% end %>
+            <% else %>
+              <%= link_to url_for(locale: :en), class:"dropdown-toggle dropdown-custom",
+                data: {toggle: "dropdown"} do %>
+                <%= image_tag "flag/en.png", class: "icon-language" %>
+                <%= Settings.languages[:en] %>
+              <% end %>
+            <% end %>
+            <ul class="dropdown-menu dropdown-custom dropdown-menu-right choose-language" role="menu">
+              <% Settings.languages.keys.each do |lang| %>
+                <%= link_to url_for(locale: lang) do %>
+                  <%= image_tag "flag/#{lang}.png", class: "icon-language" %>
+                  <%= Settings.languages[lang] %>
+                <% end %>
+                <br/>
+              <% end %>
+            </ul>
+          </li>
+          <hr>
+          <%= view_object(:management_tabs).html %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

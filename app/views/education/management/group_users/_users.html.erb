@@ -1,0 +1,30 @@
+<table class="table table-hover table-bordered permission">
+  <tr>
+    <th class="education-group-users-w2">
+      <input type="checkbox" name="select-all" class="select-all">
+    </th>
+    <th><%= t ".name" %></th>
+    <th><%= t ".email" %></th>
+  </tr>
+  <% users.each do |user| %>
+    <tr class="edu-permission-info" data-id="<%= user.id %>">
+      <td class="education-group-users-w4">
+        <input type="checkbox" name="user-select" user="<%= user.id %>">
+      </td>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+    </tr>
+  <% end %>
+</table>
+<div class="pull-right">
+  <%= link_to "javascript:;",
+    class: "button button-border button-border-thin button-green btn-add-user",
+    group: group.id do %>
+    <%= t ".add_user" %>
+  <% end %>
+  <%= link_to "javascript:;",
+    class: "button button-border button-border-thin button-amber btn-remove-user",
+    group: group.id do %>
+    <%= t ".remove" %>
+  <% end %>
+</div>

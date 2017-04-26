@@ -1,0 +1,8 @@
+<div class="widget clearfix">
+  <h4><%= t ".tag_cloud" %></h4>
+  <div class="tagcloud">
+    <% @post_object.all_tags.each do |tag| %>
+      <%= link_to tag.name, "javascript:;" %>
+    <% end %>
+  </div>
+</div>

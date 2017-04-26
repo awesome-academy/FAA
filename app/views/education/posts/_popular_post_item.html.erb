@@ -1,0 +1,18 @@
+<% popular_posts.each do |post| %>
+  <div class="spost clearfix">
+    <div class="entry-image">
+      <%= link_to load_cover_photo(post), education_post_path(post),
+        class: "nobg" %>
+    </div>
+    <div class="entry-c">
+      <div class="entry-title">
+        <h4><%= link_to post.title, education_post_path(post) %></h4>
+      </div>
+      <ul class="entry-meta">
+        <li><i class="icon-comments-alt"></i>
+          <%= pluralize post.comments_count, "comments" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<% relations.each do |relaion| %>
+  <div class="oc-item">
+    <div class="iportfolio">
+      <div class="portfolio-image">
+          <ul data-liffect="pageRight" class="data-liffect">
+            <li><%= load_image relaion %></li>
+          </ul>
+          <div class="portfolio-overlay">
+            <a href="#" class="left-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
+            <%= link_to education_project_path(relaion), class: "right-icon" do %>
+              <i class="icon-line-ellipsis"></i>
+            <% end %>
+          </div>
+        </div>
+      <div class="portfolio-desc">
+        <h3><%= relaion.name %></h3>
+        <span><%= relaion.plat_form %></span>
+      </div>
+    </div>
+  </div>
+<% end %>

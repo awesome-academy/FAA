@@ -1,0 +1,26 @@
+<div class="modal fade" id="newCategoryModal" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <%= form_for category, url: education_management_categories_path do |f| %>
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><%= t ".title" %></h4>
+        </div>
+
+        <div class="modal-body">
+          <div class="form-group">
+            <%= f.label :name, t(".name") %>
+            <%= f.text_field :name, required: true, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <%= f.submit t(".save"), class: "btn btn-primary" %>
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            <%= t ".close" %>
+          </button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

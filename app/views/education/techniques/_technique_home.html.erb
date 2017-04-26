@@ -1,0 +1,13 @@
+<div class="feature-box <%= add_css_fbox_right %> topmargin scale-padding"
+  data-animate="fadeIn" data-delay="200">
+  <div class="technique-backgroud-color">
+    <div class="fbox-icon technique-scale-image">
+       <%= load_technique_image technique_home %>
+    </div>
+  </div>
+  <h3><%= technique_home.name %></h3>
+  <p>
+    <%= truncate(technique_home.description,
+      length: Settings.education.technique.truncate) %>
+  </p>
+</div>

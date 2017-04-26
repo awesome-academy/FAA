@@ -1,0 +1,31 @@
+.search-user-image {
+  img {
+    border-radius: 45px;
+    height: 45px;
+    width: 45px;
+  }
+}
+
+.course-member {
+
+  .add-user-table {
+    height: 300px;
+    overflow: auto;
+  }
+
+  .body {
+    padding: 20px 20px 0;
+  }
+
+  .search-user-form {
+    padding: 10px 10px 0;
+  }
+}
+
+.delete-member {
+  float: right;
+}
+
+.choose-all-member {
+  padding-left: 10px;
+}

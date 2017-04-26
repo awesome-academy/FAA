@@ -1,0 +1,5 @@
+<% if @training_object.trainings_for_guest.any? %>
+  $('#training_search_result').html('<%= j render partial: "trainings", locals: {trainings: @training_object.trainings_for_guest} %>');
+<% else %>
+  $('#training_search_result').html('<h1><%= t ".not_found" %></h1>');
+<% end %>

@@ -1,0 +1,14 @@
+<% course_members.each do |member| %>
+  <div class="owl-item">
+    <div class="oc-item">
+      <div class="iportfolio course">
+        <div class="portfolio-image course-member-avatar">
+          <%= load_user_avatar member.user %>
+        </div>
+        <div class="portfolio-desc">
+          <h5><%= member.user_name %></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

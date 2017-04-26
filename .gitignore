@@ -8,6 +8,7 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
+/test/*
 **.orig
 rerun.txt
 pickle-email-*.html
@@ -40,3 +41,32 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+/config/database.yml
+/public/uploads
+config/settings.local.yml
+config/settings/*.local.yml
+config/settings/test.yml
+config/environments/*.local.yml
+
+.DS_Store
+/config/application.yml
+config/application.yml
+.byebug_history
+/public/assets
+/.framgia-ci-reports
+.framgia-ci-result.temp.yml
+.idea/
+app/assets/videos/*
+/coverage/
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+/public/javascripts/translations.js
+
+.rake_tasks~
+
+
+# Ignore application configuration
+/config/application.yml

@@ -1,0 +1,21 @@
+<section class="job-show-main-section job-show-section-members">
+  <div class="job-show-member-wrapper">
+    <% if job.present? %>
+      <ul class="members cf job-custom">
+        <% job.each do |job| %>
+          <li>
+            <a data-ref="staffing">
+              <div class="member-photo">
+                <%= link_to job do %>
+                  <%= image_tag job.images.present? ? job.images.first : "default.jpg",
+                    size: Settings.jobs.image_member_size %>
+                <% end %>
+              </div>
+              <h5><%= truncate job.title, length: Settings.jobs.max_length_title %></h5>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</section>

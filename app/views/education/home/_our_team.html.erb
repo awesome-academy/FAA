@@ -1,0 +1,47 @@
+<div class="section">
+  <div class="container clearfix">
+    <div class="row topmargin-sm">
+      <div class="heading-block center">
+        <h3><%= t ".title" %></h3>
+      </div>
+      <div class="container clearfix">
+        <div id="oc-portfolio"
+          class="owl-carousel portfolio-carousel
+          portfolio-nomargin carousel-widget"
+          data-margin="1" data-pagi="false" data-loop="true"
+          data-autoplay="5000" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-lg="4">
+          <% trainers.each do |trainer| %>
+            <div class="team">
+              <div class="team-image">
+                <%= link_to education_user_path trainer do %>
+                  <%= load_user_avatar trainer %>
+                <% end %>
+              </div>
+              <div class="team-desc team-desc-bg">
+                <div class="team-title">
+                  <h4><%= trainer.name %></h4>
+                  <span><%= t ".team_member_trainer" %></span>
+                </div>
+                <a href="#" class="social-icon
+                  inline-block si-small si-light si-rounded si-facebook">
+                  <i class="icon-facebook"></i>
+                  <i class="icon-facebook"></i>
+                </a>
+                <a href="#" class="social-icon
+                  inline-block si-small si-light si-rounded si-twitter">
+                  <i class="icon-twitter"></i>
+                  <i class="icon-twitter"></i>
+                </a>
+                <a href="#" class="social-icon
+                  inline-block si-small si-light si-rounded si-gplus">
+                  <i class="icon-gplus"></i>
+                  <i class="icon-gplus"></i>
+                </a>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

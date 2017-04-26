@@ -1,0 +1,46 @@
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= t ".page_title" %></h1>
+    <ol class="breadcrumb">
+      <li><%= link_to t(".home"), education_root_path %></li>
+      <li class="active"><%= t ".page_title" %></li>
+    </ol>
+  </div>
+</section>
+
+<div id="page-menu" class="page-menu-course">
+  <div id="page-menu-wrap">
+    <div class="container clearfix">
+      <div class="menu-title">
+        <%= t ".course" %>
+        <span> <%= t ".filter" %></span>
+      </div>
+      <nav>
+        <ul>
+          <%= render "search_form", {controller_name: "education/courses"} %>
+          <li class="training-search">
+            <%= text_field_tag :course_search, params[:course_search],
+              placeholder: t(".search"), class: "form-control" %>
+          </li>
+        </ul>
+      </nav>
+      <div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+    </div>
+  </div>
+</div>
+
+<section id="content"  class="content-course">
+  <div class="content-wrap nopadding", id="tab-courses">
+    <div id="portfolio" class="portfolio portfolio-4 clearfix course">
+      <% if current_user && can_manage?(Education::Course) %>
+        <%= render "new_course" %>
+      <% end %>
+      <%= render @courses %>
+    </div>
+    <hr/>
+    <div class="center custom-paginate">
+      <%= paginate @courses, remote: true, params: {tab: "tab-courses"} %>
+    </div>
+    <br/>
+  </div>
+</section>

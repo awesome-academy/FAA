@@ -1,0 +1,28 @@
+<div class="container">
+  <section id="page-title" class="edu-managment-page-title">
+    <div class="clearfix">
+      <h1><%= t "education.technique.index.our_technique" %></h1>
+      <span>
+        <a href="javascript:showNewForm()" class="button button-xlarge button-circle button-3d button-amber" >
+          <i class="icon-plus"></i>
+          <%= t "education.techniques.new.create_technique" %>
+        </a>
+      </span>
+    </div>
+  </section>
+  <section id="content">
+    <div class="clearfix technique-index">
+      <div class="row">
+        <%= render partial: "education/techniques/technique",
+          collection: @techniques %>
+      </div>
+    </div>
+    <div class="center">
+      <%= paginate @techniques %>
+    </div>
+  </section>
+</div>
+
+
+<%= render "education/shared/edit_popup",
+  modal_title: t("education.techniques.edit.edit_technique") %>

@@ -1,0 +1,22 @@
+<div class="container clearfix custom-about-us">
+  <div class="row clearfix">
+    <div class="col-lg-5">
+      <div class="heading-block">
+        <h1><%= about.title %></h1>
+      </div>
+      <p class="lead"><%= about.content %></p>
+    </div>
+    <div class="col-lg-7">
+      <div class="ohidden about-edu-custom" data-height-lg="426" data-height-md="567"
+        data-height-sm="470" data-height-xs="287" data-height-xxs="183">
+        <% if about.image.present? %>
+          <%= image_tag about.image.url, data: {animate: "fadeInUp", delay: "100"},
+            alt: "#{t "education.title"}" %>
+        <% else %>
+          <%= image_tag "welcome2.jpg",
+            data: {animate: "fadeInUp", delay: "100"}, alt: "#{t "education.title"}" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

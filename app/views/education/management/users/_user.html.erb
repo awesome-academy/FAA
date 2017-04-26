@@ -1,0 +1,11 @@
+<tr>
+  <td><%= user.name %></td>
+  <td><%= user.email %></td>
+  <td><%= user.education_groups.first.name %></td>
+  <td id="user-edu-stt-<%= user.id %>">
+    <%= get_user_education_status user %>
+  </td>
+  <td id="action-user-edu-stt-<%= user.id %>">
+    <%= get_action_for_education_status user %>
+  </td>
+</tr>

@@ -1,0 +1,29 @@
+<% courses.each do |course| %>
+  <div class="col-xs-12 bottommargin-sm">
+    <div class="ipost clearfix">
+      <div class="row clearfix">
+        <div class="col-sm-4">
+          <div class="entry-image">
+            <%= link_to load_image(course), course %>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="entry-title">
+            <h3><%= link_to course.name, course %></h3>
+          </div>
+          <ul class="entry-meta clearfix">
+            <li>
+              <i class="icon-calendar3"></i>
+              <%= l course.created_at, format: :date_month_year_concise %>
+            </li>
+          </ul>
+          <div class="entry-content">
+            <p>
+              <%= course.detail %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

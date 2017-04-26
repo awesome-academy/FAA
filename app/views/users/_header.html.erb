@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="col-md-12">
+    <div class="user-profile clearfix">
+      <div class="cover-image">
+        <% if user.is_user? current_user %>
+          <%= load_user_cover user, class: "img-cover my-img-cover" %>
+          <div class="ico-upload-cover" data-toggle="modal"
+            data-target="#changeCoverModal">
+            <h3 class="glyphicon glyphicon-camera"></h3>
+            <p><%= t ".change_cover" %></p>
+          </div>
+        <% else %>
+          <%= load_user_cover user, class: "img-cover" %>
+        <% end %>
+      </div>
+      <div class="user clearfix">
+        <div class="user-avatar">
+          <% if user.is_user? current_user %>
+            <%= load_user_avatar user, class: "img-thumbnail img-avatar my-img-avatar" %>
+            <div class="ico-upload-avatar">
+              <h3 class="glyphicon glyphicon-camera" data-toggle="modal"
+                data-target="#changeAvatarModal"></h3>
+            </div>
+          <% else %>
+            <%= load_user_avatar user, class: "img-thumbnail img-avatar" %>
+          <% end %>
+        </div>
+        <h2><%= user.name %></h2>
+        <div class="user-actions">
+          <div class="btn-group">
+            <% if user_signed_in? && !user.is_user?(current_user) %>
+              <%= render "friend_ship_form" %>
+            <% end %>
+            <button class="btn btn-default btn-sm tip btn-responsive">
+              <span class="glyphicon glyphicon-envelope glyphicon glyphicon-white"></span>
+              <%= t ".message" %>
+            </button>
+            <button class="btn btn-default btn-sm tip btn-responsive">
+              <span class="glyphicon glyphicon-pencil glyphicon glyphicon-white"></span>
+              <%= t ".edit_profile" %>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-info">
+        <p>
+          <span class="glyphicon glyphicon-briefcase"></span>
+          <span class="title"><%= t ".working_at" %>:</span>
+        </p>
+        <p>
+          <span class="glyphicon glyphicon-map-marker"></span>
+          <span class="title"><%= t ".location" %>:</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "change_avatar", user: user if user.is_user? current_user %>
+<%= render "change_cover", user: user if user.is_user? current_user %>

@@ -1,0 +1,39 @@
+<div class="col_full bottommargin-lg clearfix">
+  <div class="fancy-title title-border">
+    <h3><%= t ".other_courses" %></h3>
+  </div>
+  <div id="related-portfolio"
+    class="owl-carousel portfolio-carousel carousel-widget" data-margin="20" data-nav="false" data-autoplay="3000" data-items-xxs="1" data-items-xs="2"
+    data-items-sm="3" data-items-lg="4">
+    <% relations.each do |relation| %>
+      <div class="oc-item">
+        <div class="iportfolio">
+          <div class="portfolio-image course">
+            <ul data-liffect="pageRight" class="data-liffect">
+              <li><%= load_image relation %></li>
+            </ul>
+            <div class="portfolio-overlay">
+              <a href="#" class="left-icon" data-lightbox="image">
+                <i class="icon-line-plus"></i></a>
+              <%= link_to education_course_path(relation),
+                class: "right-icon" do %>
+                <i class="icon-line-ellipsis"></i>
+              <% end %>
+            </div>
+          </div>
+          <ul class="entry-meta clearfix">
+            <li><i class="icon-calendar3"></i>
+              <%= l relation.start_date, format: :date_month_year_concise %></li>
+            <li><i class="icon-calendar3"></i>
+              <%= l relation.end_date, format: :date_month_year_concise %></li>
+          </ul>
+          <div class="portfolio-desc">
+            <h3><%= link_to relation.name, education_course_path(relation) %></h3>
+            <span><%= truncate relation.detail, length: Settings.courses.truncate_other_course %></span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="clear"></div>
+</div>

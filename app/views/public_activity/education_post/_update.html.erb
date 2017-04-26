@@ -1,0 +1,13 @@
+<li class="list-group-item user-show-activity">
+  <i class="icon-edit"></i>
+  <span><%= activity.owner_name %></span>
+  <% if activity.trackable %>
+    <%= t ".edited_post" %>
+    <%= link_to activity.trackable_title, activity.trackable %>
+  <% else %>
+    <%= t ".edited_post_currently_deleted" %>
+  <% end %>
+  <small class="text-muted pull-right">
+    <%= l activity.created_at, format: :time_date_month_year %>
+  </small>
+</li>

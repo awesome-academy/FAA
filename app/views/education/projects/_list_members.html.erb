@@ -1,0 +1,27 @@
+<div id="oc-portfolio" class="owl-carousel portfolio-carousel
+  carousel-widget owl-loaded owl-drag" data-items="4" data-items-xs="2">
+  <% project_members.each do |member| %>
+    <div class="owl-item">
+      <div class="oc-item">
+        <div class="iportfolio">
+          <div class="portfolio-image">
+            <%= load_user_avatar member.user %>
+          </div>
+          <div class="portfolio-desc">
+            <h5><%= member.user.name.capitalize %></h5>
+            <small><%= member.position.titleize %></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="owl-nav">
+    <div class="owl-prev">
+      <i class="icon-angle-left"></i>
+    </div>
+    <div class="owl-next">
+      <i class="icon-angle-right"></i>
+    </div>
+  </div>
+  <div class="owl-dots disabled"></div>
+</div>

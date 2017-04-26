@@ -1,0 +1,5 @@
+<h4><%= t ".title" %></h4>
+<%= form_tag education_management_users_path, multipart: true do %>
+  <%= file_field_tag :file, class: "import-user" %>
+  <%= submit_tag t(".submit"), class: "btn btn-primary" %>
+<% end %>

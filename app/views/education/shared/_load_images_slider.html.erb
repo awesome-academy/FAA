@@ -1,0 +1,9 @@
+<% if object.images.any? %>
+  <% object.images.each do |image| %>
+    <div class="slide course">
+      <%= image_tag image.url %>
+    </div>
+  <% end %>
+<% else %>
+  <%= image_tag ImageUploader.new.default_url, class: "slide course" %>
+<% end %>

@@ -1,0 +1,78 @@
+@import 'variables/color';
+
+.technique-page-title {
+  background-color: $white-gray;
+  border-bottom: 1px solid $white-eee;
+  padding-top: 50px;
+  position: relative;
+}
+
+.technique-backgroud-color .fbox-icon img {
+  background-color: $white;
+}
+
+.technique-scale-width {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.technique-scale-image {
+  min-height: 80px;
+  min-width: 80px;
+}
+
+.technique-align-right .feature-box.fbox-right {
+  padding: 0 100px 0 0;
+  text-align: right;
+}
+
+.technique-align-left .feature-box {
+  padding: 0 0 0 100px;
+  position: relative;
+}
+
+.technique-thumbs {
+  align-items: center;
+}
+
+.technique-index {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+
+    [class*='col-'] {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.panel-custom {
+  height: 100%;
+}
+
+@media screen and (max-width: 1000px){
+  .technique-panel {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+.img-circle-custom {
+  height: 100px;
+  width: 100px;
+}
+
+.technique-item {
+  position: relative;
+}
+
+.technique-btn-group {
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  z-index: 99;
+}

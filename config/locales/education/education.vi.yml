@@ -1,0 +1,598 @@
+vi:
+  education:
+    base:
+      user_blocked: "Tài khoản của bạn đã bị khóa."
+    javascripts:
+      training_alert: "Bạn chắc muốn xóa?"
+      project_alert: "Bạn chắc muốn xóa?"
+      feedback_alert: "Bạn chắc muốn xóa?"
+      active_alert: "sẽ được kích hoạt?"
+      block_alert: "sẽ bị khóa?"
+      detete_category: "Bạn chắc muốn xóa?"
+    shared:
+      page_title:
+        edit_button: "Chỉnh sửa"
+    layouts:
+      nav_filter:
+        show_all: "Tất cả"
+        more: "Xem thêm"
+      page_title:
+        member: " Thành viên"
+        delete_object: "Bạn chắc muốn xóa?"
+      footer:
+        tools: "Công cụ khác"
+        copyright: "&copy; 2017 Framgia Human Development Div Education Section - All rights reserved."
+        tearm_of_use: "Điều khoản sử dụng"
+        privacy_policy: "Chính sách bảo mật"
+      header_management:
+        abouts: "Về chúng tôi"
+        permissions: "phân quyền"
+        feedbacks: "Phản Hồi"
+        learning_programs: "Chương trình đào tạo"
+        techniques: "Công nghệ"
+        users: "Người dùng"
+        categories: "Chủ đề"
+        group_users: "Nhóm Người Dùng"
+      header:
+        home: "Trang chủ"
+        portfolio: "Danh mục"
+        project: "Dự án"
+        posts: "Bài viết"
+        courses: "Khóa học"
+        trainings: "Đào tạo"
+        trainees: "Học viên"
+        search: "Type & Hit Enter.."
+        feedback: "Phản hồi"
+        trainers: "Giảng viên"
+        profile: "Trang cá nhân"
+        log_out: "Đăng xuất"
+        log_in: "Đăng nhập"
+        create_new_post: "Tạo bài viết"
+        management: "Quản lý"
+    trainers:
+      trainer:
+        trainer_title: "Giảng viên"
+      index:
+        home: "Trang chủ"
+        trainer_description: "Tất cả các người đào tạo tại Framgia"
+        trainer_title: "Người đào tạo"
+      index_project:
+        placeholder_search: "Nhập tìm kiếm"
+        add_project: "Thêm một dự án"
+        creater: "Trainer"
+        create_project: "Thêm"
+      project:
+        delete_object: "Bạn chắc muốn xóa?"
+      training:
+        delete_object: "Bạn chắc muốn xóa?"
+      index_trainings:
+        search_placeholder: "Nhập tìm kiếm"
+      show_course:
+        add_member: "Thêm khóa học"
+        edit_course: "Sửa khóa học"
+        delete_course: "Xóa khóa học"
+        confirm_delete: "Bạn chắc chứ?"
+    home:
+      slider:
+        welcome: "Chào mừng đến với Framgia Awesome Academy"
+        description: "Tiềm năng lớn của bạn + Thực hành thực tế = Chiến thắng</br>
+                      Ở lại với Framgia Awesome Academy và mang khả năng của bạn đến với thế giới"
+      learning_programs:
+        header: "Phương thức đào tạo"
+      our_projects:
+        see_more: "Xem thêm"
+      introduction_video:
+        before_heading: "Dễ Hiểu & Tuỳ chỉnh"
+        heading: "Tại Framgia Awesome Academy"
+        description: "Bất cứ đều gì chúng tôi làm, phải thật sự mang nhiều ý nghĩa. Bất cứ lúc bạn tin vào chúng tôi, bạn sẽ đạt được tầm cao mới."
+      statistics:
+        course: "Khóa học"
+        trainee: "Người học"
+        trainer: "Người hướng dẫn"
+      features:
+        mentoring: "Cố vấn"
+        mentoring_des: "Dựa trên kinh nghiệm làm việc thực tế, chúng tôi hướng dẫn các học viên xây dựng kỹ năng chuyên môn cho mình thông qua kiến thức đan xen với thực hành. Ngôn ngữ lập trình, phương pháp quản lý dự án và kỹ năng nơi làm việc sẽ được trang bị đậy đủ nhằm nâng cao hiểu quả công việc."
+        coaching: "Huấn luyện"
+        coaching_des: "Phương pháp của chúng tôi là huấn luyện học viên học và cùng họ khám phá khả năng của mình hơn là chỉ dạy và truyền đạt kiến thức từ một phía. Chúng tôi sẽ đi cùng học viên trong suốt quá trình đào tạo, xem xét từng dòng code và đưa ra các phản hồi kịp thời để thảo luận, thống nhất và đi đến một kết quả tốt nhất."
+        job_rotation: "Luân phiên công việc"
+        job_rotation_des: "Học viên sẽ được tiếp cận và thực hiện hầu như tất cả các khâu để phát triển một dự án phần mềm, từ việc thiết kế database, xây dựng các chức năng, thiết kế giao diện và deploy lên server... Sự đa dạng về kinh nghiệm và kiến thức sẽ giúp họ trở thành một nhân sự cạnh tranh trong ngành."
+        job_instructual_training: "Đào tạo hướng nghiệp"
+        job_instructual_training_des: "Để có được kinh nghiệm thực tiễn, học viên sẽ được tham gia thực hiện dự án với các lập trình viên giàu kinh nghiệm. Các nhiệm vụ quan trọng sẽ được chia nhỏ nhằm giúp những thành viên mới dễ dàng tiếp cận, học hỏi và hoàn thành một cách hiệu quả."
+        understudy: "Đảm nhận vai trò"
+        understudy_des: "Trong một thời gian ngắn, học viên sẽ đảm nhận một vài vai trò quan trọng trong team để được học hỏi và trải nghiệm những công việc khi cũng đồng đội phát triển một dự án phần mềm. Để phối hợp được hiệu quả, các kỹ năng như phản ứng trước các vấn đề, quản lý thời gian, giao tiếp chyên nghiệp,... đều được yêu cầu từ phía học viên."
+        apprenticeship: "Tập sự"
+        apprenticeship_des: "Học viên sẽ làm một công việc thực sự cùng với các chuyên gia giàu kinh nghiệm. Học hỏi từ họ và áp dụng ngay vào công việc."
+        color_schemes: "Các Khung Màu Ánh sáng và Đen"
+        color_schemes_des: "Thay đổi sơ đồ sơ cấp của trang web của bạn ngay lập tức bằng cách thêm lớp tối cho cơ thể."
+        layouts: "Boxed & Giao diện rộng"
+        layouts_des: "Mở rộng Website của bạn đến toàn bộ Width hoặc làm cho nó đóng hộp làm ngạc nhiên du khách của bạn."
+        documentation: "Tài liệu mở rộng"
+        documentation_des: "Chúng tôi đã bảo vệ tất cả mọi thứ và trong Tài liệu của chúng tôi bao gồm Video & Ảnh chụp màn hình."
+      our_techniques:
+        title: "Công nghệ"
+        introduce: "Chúng tôi luôn cập nhật các xu thế công nghệ mới để chắc chắn rằng các sản phẩm mà học viên chúng tôi phát triển nên đều có thể sử dụng trên những thiệt bị hiện đại nhất."
+      need_content:
+        header: "Chương trình đào tạo thực tiễn và toàn diện."
+        description1: "Chúng ta được biết sản phẩm công nghệ thực thụ được sử dụng rộng rãi trên thị trường chỉ có thể được tạo ra bởi các công ty IT lớn hay những nhóm phát triển phần mềm nhiều năm kinh nghiệm. Riêng Framgia Awesome Academy, chúng tôi tin rằng bất kỳ những ai có đam mê cũng với một hướng đi và phương pháp tiếp cận hiệu quả đều có thể làm ra các những phần mềm có tính ứng dụng cao, mang lại nhiều giá trị cho cộng đồng. Vì thế, giảng dạy và học tập nhất định phải đáp ứng được thực tiễn, các sản phẩm công nghệ của Framgia Awesome Academy không chỉ giúp học viên hiểu hơn về kiến thức mà hơn hết còn phải đạt được yêu cầu về tính ứng dụng trên thị trường. Tất cả điều đó sẽ rèn luyện các lập trình viên có được một tầm nhìn bao quát và một bộ các kỹ năng để họ nâng cao năng lực cạnh tranh của chính mình trên thị trường nhân sự CNTT Việt Nam đang rất sôi động hiện nay."
+        description2: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam."
+        learn_more: "Tìm hiểu thêm"
+      clients_say:
+        title: "Cảm nhận từ khách hàng"
+        client1_say: "Chúng tôi không thể hài lòng hơn với Framgia Awesome Academy. Một chương trình đào tạo giàu kiến thức nhưng rất thực tế. Một dịch vụ training chuyên nghiệp và đốc đáo."
+        client1_name: "- Teamlab -"
+        client1_company: "- Tech company -"
+        client2_say: "Cám ơn Framgia Awesome Academy! Sinh viên của chúng tôi đã có những trải nghiệm tuyệt vời tại Framgia Awesome Academy. Giờ đây với những kỹ năng và kiến thức có được từ đó, các em cảm thấy vững vàng hơn rất nhiều khi bước vào môi trường làm việc thực tế trong ngành CNTT. "
+        client2_name: "- Đại học bách khoa hà nội -"
+        client2_company: "- University -"
+        client3_say: "Khóa học thật sự rất tuyệt. Em nhận thấy các kiến thức và kỹ năng được học đều rất thiết thực và giúp em tiến bộ lên từng ngày. Giờ em đã là lập trình viên tại đúng công ty mà mình từng mơ ước. Em cảm thấy tự tin khi áp dụng những điều học được tại Framgia Awesome Academy để phát triển xa hơn với sự nghiệp của mình."
+        client3_name: "- Doan -"
+        client3_company: "- Graduated trainee -"
+      our_team:
+        title: "Team chúng tôi"
+        team_member1_name: "John Doe"
+        team_member1_role: "CEO"
+        team_member2_name: "Josh Clark"
+        team_member2_role: "Co-Founder"
+        team_member3_name: "Mary Jane"
+        team_member3_role: "Sales"
+        team_member4_name: "Nix Maxwell"
+        team_member4_role: "Support"
+        team_member_trainer: "Người hướng dẫn"
+      lastest_courses:
+        last_courses: "Các khóa học sắp tới"
+    trainings:
+      training_not_found: "Không tìm thấy khóa đào tạo."
+      index:
+        read_more: "Xem thêm"
+        title: "Danh sách khóa đào tạo."
+        home: "Home"
+        page_title: "Danh sách khóa đào tạo"
+        filter: "Filter"
+        hot: "Hot"
+        search_placeholder: "Tìm kiếm ..."
+        show_all: "Xem tất cả"
+        more: "Thêm"
+        not_found: "Không tìm thấy khóa đào tạo."
+      trainings:
+        techniques: "Các kỹ thuật"
+        view_courses: "Xem danh sách khóa học"
+      show:
+        not_found: "Không tìm thấy khóa đào tạo"
+        home: "Trang chủ"
+        trainings: "Khóa đào tạo"
+        training_info: "Thông tin đào tạo"
+        techniques: "Các kỹ thuật"
+        share: "Chia sẻ"
+        all_courses: "Các khóa học"
+        view_courses: "Xem các khóa học"
+        edit_training: "Chỉnh sửa khóa học"
+      new:
+        create_training: "Tạo mới"
+        heading: "phần mở đầu"
+        heading_description: "Miêu tả phần mở đầu"
+      new_training:
+        create_new_training: "Tạo mới"
+      edit:
+        update_project: "Sửa"
+      update:
+        training_updated_successfully: "Chỉnh sửa khóa đào tạo thành công!"
+      create:
+        training_created: "Tạo mới khóa đào tạo thành công!"
+        training_create_failed: "Tạo mới khóa đào tạo thất bại!"
+      destroy:
+        training_delete_fail: "Xóa khóa đào tạo thất bại!"
+        deleted_success: "Xóa khóa đào tạo thành công!"
+      form:
+        add_image: "Thêm ảnh"
+        description: "Mô tả"
+        name: "Tên khóa"
+        choose_technique: "Chọn công nghệ"
+    projects:
+      form:
+        choose_technique: "Chọn công nghệ"
+      index:
+        placeholder_search: "Nhập tìm kiếm"
+        home: "Trang chủ"
+        header: "Dự Án"
+        filter: "Bộ Lọc"
+        show_all: "Xem tất cả"
+        more: "Thêm"
+        technique_title: "3+ Công nghệ"
+        technique_subtitle: "HTML, Bootstrap, Angularjs..."
+        platform_title: "4+ Nền tảng "
+        platform_subtitle: "Ruby, PHP, Android, IOS..."
+        total_project_title: "+ Dự án"
+        total_project_subtitle: "Tổng số dự án của chương trình đào tạo tại Framgia"
+      destroy:
+        project_delete_fail: "Xóa dự án thất bại."
+        deleted_success: "Xóa dự án thành công!"
+      add_project_member_modal:
+        add_member: "Thêm thành viên"
+        manage_member: "Quản lý thành viên"
+        search: "Tìm kiếm người dùng bằng tên hoặc email"
+        choose_all: "Chọn tất cả"
+        add: "Thêm"
+        close: "Đóng"
+      list_users:
+        position: "Vai trò"
+      list_added_users:
+        delete: "Xóa"
+        delete_confirm: "Bạn chắc chứ?"
+      not_found: "Không tìm thấy dự án"
+      edit_project: "Chỉnh sửa dự án"
+    project_members:
+      create:
+        success: "Thêm thành viên thành công!"
+      destroy:
+        success: "Xóa thành viên thành công!"
+        destroy_faild: "Xóa thành viên không thành công"
+      load_course:
+        not_found: "Không tìm thấy dự án"
+      load_project_member:
+        not_found: "Không tìm thấy thành viên"
+    courses:
+      form:
+        name: "Tên"
+        detail: "Chi tiết"
+        training: "Khóa đào tạo"
+        start_date: "Ngày bắt đầu"
+        end_date: "Ngày kết thúc"
+        image: "Hình ảnh"
+        add_image: "Thêm ảnh"
+        save: "Lưu"
+        reset: "Tạo lại"
+        select_date: "Chọn ngày"
+      image_fields:
+        remove: "Xóa"
+      new:
+        new: "Tạo khóa học"
+        heading: "Tạo khóa học mới"
+        heading_description: "Mô tả thêm khóa học mới"
+      new_course:
+        new: "Create a new course"
+        new_description: "Create a new course description"
+        new_title: "Create a new course title"
+      edit:
+        edit: "Cập nhật khóa học"
+        update_course: "Cập nhật khóa học"
+      course:
+        delete: "Xóa"
+        edit: "Sửa"
+        delete_confirm: "Bạn chắc chứ?"
+      create:
+        new_success: "Tạo khóa học mới thành công"
+        new_faild: "Tạo khóa học mới không thành công"
+      update:
+        update_success: "Cập nhật khóa học thành công"
+        update_faild: "Cập nhật khóa học không thành công"
+      destroy:
+        destroy_success: "Xóa khóa học thành công"
+        destroy_faild: "Xóa khóa học không thành công"
+      not_found: "Không tìm thấy khóa học"
+      add_course_member_modal:
+        add_member: "Thêm thành viên"
+        manage_member: "Quản lý thành viên"
+        search: "Tìm kiếm người dùng bằng tên hoặc email"
+        choose_all: "Chọn tất cả"
+        add: "Thêm"
+        close: "Đóng"
+      list_added_user:
+        delete: "Xóa"
+        delete_confirm: "Bạn chắc chứ?"
+      search_form:
+        show_all: "Tất cả"
+      index:
+        home: "Trang chủ"
+        no_courses: "Không tìm thấy khóa học"
+        page_title: "Danh sách tất cả các khóa học"
+        course: "Khóa Học"
+        filter: "Bộ Lọc"
+        search: "Tìm kiếm khóa học"
+      detail_course:
+        start_date: "Ngày bắt đầu : "
+        end_date: "Ngày kết thúc : "
+        course_info: "Chi tiết khóa học"
+      connection_course:
+        techniques: "Công nghệ"
+      other_course:
+        other_courses: "Các khóa học khác"
+    techniques:
+      new:
+        create_technique: "Tạo công nghệ"
+      create:
+       new_success: "Tạo mới công nghệ thành công"
+       new_faild: "Không thể tạo mới công nghệ"
+      edit:
+        edit_technique: "Sửa công nghệ"
+        update_technique: "Cập nhật"
+      update:
+        technique_updated_successfully: "Cập nhật thành công"
+        update_fail: "Cập nhật thất bại"
+      destroy:
+        technique_deleted: "Xóa công nghệ thành công"
+        technique_delete_fail: "Xóa công nghệ thất bại"
+      not_found: "Không tìm thấy công nghệ"
+      edit_button: "Sửa"
+      delete_button: "Xóa"
+      technique:
+        delete_confirm: "Bạn chắc chứ?"
+    course_members:
+      create:
+        add_fail: "Không thể thêm thành viên"
+        success: "Thêm thành viên thành công!"
+      destroy:
+        delete_fail: "Không thể xóa thành viên"
+        success: "Xóa thành viên thành công!"
+      not_found: "Không tìm thấy thành viên khóa học"
+      index:
+        show_all: "Hiển thị tất cả"
+        techniques: "Công nghệ"
+        courses: "Khóa học"
+        show_all_course: "Tất cả các khóa học tại Framgia"
+        training_program: "chương trình đào tạo"
+        language_program: "Ngôn ngữ lập trình"
+      other_course:
+        other_courses: "Khóa học khác"
+      connection_course:
+        facebook: "Facebook"
+        twitter: "Twitter"
+        photos: "Ảnh"
+        techniques: "Công nghệ"
+    posts:
+      title: "Bài viết"
+      title_des: "Bài viết mới nhất của các thành viên"
+      read_more: "Xem thêm"
+      date_format: "%d-%m-%Y"
+      create_new: "Tạo một bài viết"
+      older: "&larr;Older"
+      newer: "Newer &rarr;"
+      post:
+        read_more: "Xem thêm"
+        delete_confirm: "Bạn có chắc chắn xóa bài post không?"
+        delete: "Xóa"
+      index:
+        no_posts: "Không tìm thấy bài viết"
+        posts: "Bài viết"
+        search_placeholder: "Tìm kiếm"
+        show_all: "Xem tất cả"
+        more: "Xem thêm"
+        placeholder_search: "Tìm kiếm"
+        title_description: "Bài viết mới nhất của các thành viên"
+        title: "Bài viết"
+        filter: "Lọc"
+      nav_search:
+        new: "Tạo bài viết mới"
+        show_all: "Xem tất cả"
+        keyword: "Tìm kiếm"
+      show:
+        follow_us_on_twitter: "Theo dõi trên Twitter"
+        share_this_post: "Chia sẻ bài viết này:"
+        posted_by: "Được viết bởi"
+        related_posts: "Bài viết liên quan:"
+        popular: "Popular"
+        recent: "Gần đây"
+        heading: "Bài viết"
+        comments: "Bình luận"
+        heading_description: "bài viết mới nhất"
+        name: "Tên"
+        email: "Thư điện tử"
+        delete: "Xóa bài viết"
+        edit: "Chỉnh sửa bài viết"
+      share_post:
+        share_this_post: "Chia sẻ bài viết"
+      posted_by:
+        posted_by: "Được viết bởi"
+      comments:
+        comments: "Bình luận"
+        login_to_comment: "Đăng nhập để bình luận"
+      comment_item:
+        delete_confirm: "Bạn có muốn tiếp tục?"
+      comment_form:
+        leave_a: "Để lại một"
+        comment: "Bình luận"
+        submit_comment: "Tạo bình luận"
+        comment_placeholder: "Bình luận nhiều hơn..."
+        submit_button: "Tạo bình luận"
+      edit_comment_form:
+        edit_button: "Lưu"
+      twitter_feed:
+        twitter_feed: "Twitter Feed"
+        follow_us_on_twitter: "Theo dõi trên Twitter"
+      flickr_photo:
+        flickr_photo_stream: "Flickr Photostream"
+      portfolio_coursel:
+        portfolio_coursel: "Portfolio Carousel"
+      tag_cloud:
+        tag_cloud: "Tag Cloud"
+      post_not_found: "Bài viết không tồn tại."
+    users:
+      show:
+        projects: "Dự Án"
+        posts: "Bài Viết"
+        courses: "Khóa Học"
+        user_not_found: "Người dùng không tồn tài."
+        page_not_found: "Trang không tồn tại."
+        activities: "Hoạt động"
+        blocked: "Người dùng này đã bị khóa!"
+      right_column:
+        profile: "Hồ sơ"
+        about_me: "Về tôi"
+        projects: "Dự Án"
+        posts: "Bài Viết"
+        courses: "Khóa Học"
+        social_profiles: "Hồ sơ xã hội"
+      index:
+        show_all: "Xem tất cả"
+        techniques: "Công nghệ"
+        courses: "Khóa Học"
+        show_all_course: "Tất cả khóa học tại Framgia"
+        training_program: "Chương trình đào tạo"
+        language_program: "Ngôn ngữ lập trình"
+      other_course:
+        other_courses: "Khóa học khác"
+      connection_course:
+        facebook: "Facebook"
+        twitter: "Twitter"
+        photos: "Ảnh"
+        techniques: "Công nghệ"
+    rates:
+      create:
+        create_error: "Đánh giá không thành công"
+      rate:
+        rating: "Đánh giá"
+        your_rating: "Đánh giá của bạn"
+        thanks_title: "Cảm ơn"
+        thanks: "Cảm ơn đánh giá của bạn!"
+      score:
+        rating: "Đánh giá"
+        votes: "(%{count} lượt đánh giá)"
+      load_object:
+        not_found: "Không tìm thấy"
+    management:
+      group_users:
+        index:
+          title: "Quản lý nhóm của thành viên"
+          title_description: "Quản lý nhóm của thành viên"
+        destroy:
+          remove_success: "Xóa thành công"
+          group_not_found: "Không tìm thấy nhóm"
+          user_not_found: "Không tìm thấy thành viên"
+          remove_failed: "Xóa thất bại"
+        create:
+          add_success: "Thêm thành viên vào nhóm thành công"
+          group_not_found: "Không tìm thấy nhóm"
+          user_not_found: "Không tìm thấy thành viên"
+          add_failed: "Thêm thành viên vào nhóm thất bại"
+        users:
+          name: "Tên"
+          email: "Thư điện tử"
+          add_user: "Thêm thành viên vào nhóm"
+          remove: "Xóa"
+        add_user_modal:
+          choose_all: "Chọn tất cả"
+          add: "Thêm vào nhóm"
+          close: "Đóng"
+          search: "Tìm kiếm"
+        list_groups:
+          placeholder_search: "Tìm kiếm"
+        at_least_one: "Chọn ít nhất một thành viên"
+      feedbacks:
+        index:
+          name: "Họ tên"
+          email: "Thư điện tử"
+          subject: "Chủ đề"
+          content: "Nội dung"
+          phone_number: "Số điện thoại"
+          destroy: "Xóa"
+          title: "Phản hồi"
+          title_description: "Quản lý phản hồi về đào tạo của Framgia"
+        destroy:
+          deleted_success: "Xóa phản hồi thành công!"
+          feedback_delete_fail: "Xóa phản hồi thất bại"
+          feedback_not_found: "Phản hồi không tồn tại"
+      abouts:
+        edit:
+          title: "Cập nhật thông tin"
+          save: "Lưu thay đổi"
+        update:
+          success: "Cập nhật thành công!"
+          fail: "Cập nhật thất bại!"
+        index:
+          edit_button: "Cập nhật"
+          preview: "Xem trước"
+          title: "Giới thiệu Framgia Awesome Academy"
+          title_description: "Cập nhật thông tin"
+      groups:
+        index:
+          title: "Quản lý phân quyền"
+          title_description: "Quản lý phân quyền của Framgia Awesome Academy"
+        list_permissions:
+          placeholder_search: "Nhập tìm kiếm"
+          object: "Đối tượng"
+          create: "Tạo"
+          read: "Xem"
+          update: "Cập nhật"
+          destroy: "Xóa"
+          save: "Lưu thay đổi"
+      permissions:
+        create:
+          success: "Cập nhật thành công!"
+          fail: "Cập nhật thất bại!"
+          not_found: "Không tìm thấy phân quyền!"
+      learning_programs:
+        index:
+          title: "Chương trình đào tạo"
+          title_description: "Chương trình đào tạo của Framgia Awesome Academy"
+          name: "Tên"
+          description: "Mô tả"
+          setting: "Thiết lập"
+        learning_program:
+          edit: "Chỉnh sửa"
+          delete: "Xóa"
+        edit:
+          title: "Cập nhật"
+          save: "Lưu thay đổi"
+        update:
+          success: "Cập nhật thành công"
+          fail: "Cập nhật thất bại"
+          not_found: "Không tìm thấy chương trình đào tạo"
+      users:
+        index:
+          title: "Quản lý người dùng"
+          title_description: "Quản lý người dùng của Framgia Awesome Academy"
+        list:
+          name: "Tên"
+          email: "Email"
+          status: "Trạng thái"
+          group: "Nhóm"
+          action: "Hành động"
+          show_details: "Xem chi tiết"
+        search_form:
+          placeholder: "Nhập tên hoặc email ..."
+        import:
+          title: "Nhập người dùng từ file Excel"
+          submit: "Nhập"
+        update:
+          not_found: "Không tìm thấy người dùng"
+          success: "Cập nhật thành công"
+          fail: "Cập nhật thất bại"
+        create:
+          success: "Đã nhập người dùng thành công."
+      categories:
+        index:
+          title: "Quản lý chủ đề bài viết"
+          title_description: "Quản lý tất cả chủ đề bài viết của Framgia Education"
+          add: "Thêm mới một chủ đề"
+        list:
+          name: "Tên chủ đề"
+          setting: "Thiết lập"
+        category:
+          edit: "Chỉnh sửa"
+          delete: "Xóa"
+        search_form:
+          placeholder: "Nhập chủ đề ...."
+        new_category:
+          title: "Thêm mới một chủ đề"
+          close: "Đóng"
+          save: "Lưu lại"
+          name: "Tên chủ đề"
+        create:
+          success: "Tạo mới thành công!"
+          fail: "Tạo mới thất bại!"
+        update:
+          not_found: "Không tìm thấy chủ đề!"
+          success: "Cập nhật thành công!"
+          fail: "Cập nhật thất bại!"
+        destroy:
+          not_found: "Không tìm thấy chủ đề!"
+          success: "Xóa thành công!"
+          fail: "Xóa không thành công!"
+    time:
+      formats:
+        date_month_year: "%d/%m/%Y"
+    user_status:
+      blocked: "Khóa"
+      active: "Kích hoạt"
+    import_user:
+      unknow_format: "Tệp không đúng định dạng"
+      row_error: "Lỗi tại dòng"

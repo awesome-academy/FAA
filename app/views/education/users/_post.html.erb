@@ -1,0 +1,40 @@
+<% posts.each do |post| %>
+  <div class="col-xs-12 bottommargin-sm">
+    <div class="ipost clearfix">
+      <div class="row clearfix">
+        <div class="col-sm-4">
+          <div class="entry-image">
+            <%= image_tag "images/magazine/thumb/1.jpg" %>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="entry-title user-posts-title">
+            <h3><%= link_to post.title, education_post_path(post) %></h3>
+          </div>
+          <ul class="entry-meta clearfix">
+            <li>
+              <i class="icon-calendar3"></i>
+              <%= l post.created_at, format: :date_month_year_concise %>
+            </li>
+            <li>
+              <i class="icon-comments"></i>
+              <%= post.comments_count %>
+            </li>
+          </ul>
+          <div class="entry-content">
+            <p>
+              <%= truncate post.content,
+                length: Settings.education.posts.content_character_display %>
+            </p>
+          </div>
+          <% if is_belong_to_user? post, current_user %>
+            <%= link_to t(".edit"), edit_education_post_path(post), class: "more-link" %>
+            <%= link_to t(".delete"), education_post_path(post),
+              method: :delete, remote: true, data: {confirm: t(".delete_confirm")},
+              class: "more-link more-link-delete-custom" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

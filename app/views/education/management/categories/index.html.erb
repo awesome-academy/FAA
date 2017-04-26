@@ -1,0 +1,23 @@
+<div class="container">
+  <section id="page-title" class="edu-managment-page-title">
+    <div class="container clearfix">
+      <h1><%= t ".title" %></h1>
+      <span><%= t ".title_description" %></span>
+    </div>
+  </section>
+
+  <section id="content">
+    <div class="container clearfix">
+      <div class="edu-categories-search row">
+        <%= link_to t(".add"), "#", class: "btn btn-primary",
+          data: {toggle: "modal", target: "#newCategoryModal"} %>
+        <%= render "search_form" %>
+      </div>
+      <div class="table-responsive" id="list_education_categories">
+        <%= render "list", categories: @categories %>
+      </div>
+    </div>
+  </section>
+</div>
+<%= render "new_category", category: @category %>
+<%= javascript_include_tag "education/management/categories" %>

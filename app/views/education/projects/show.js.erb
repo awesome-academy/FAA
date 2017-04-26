@@ -1,0 +1,22 @@
+$('#all-comment').html('<%= j render @show_projects.comments %>');
+$('#load-more').replaceWith
+  ('<%= j (link_to_next_page(@show_projects.comments, t("comment.more_comment"), remote: true, id: "load-more", class: "button button-3d button-teal button-small nobottommargin tada animated")) %>')
+
+$('#list_find_users').html('<%= j render "education/projects/list_users", users: @show_projects.users %>');
+$('#list_members').html('<%= j render "education/projects/list_added_users", users: @show_projects.added_users, project: @project %>');
+
+$('select[name="position"]').hide();
+$('#hidden_position').html('<%= hidden_field_tag :choosen_user, @show_projects.member_position %>');
+
+var position = <%= @show_projects.member_position %>;
+
+var user_ids = <%= @show_projects.user_ids %>;
+for(var i = 0; i < user_ids.length; i++){
+  $('#user-add-' + user_ids[i]).prop('checked', true);
+}
+
+$('input:checkbox[name="users[]"]:checked').each(function(){
+  i = $(this).val();
+  $('#project-member-position-'+i).show();
+  $('#project-member-position-'+i).val(position[i]);
+});

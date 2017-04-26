@@ -1,0 +1,18 @@
+<div class="section nobottommargin text-center">
+  <div class="container clear-bottommargin clearfix">
+    <div class="heading-block center">
+      <h2><%= t ".header" %></h2>
+    </div>
+    <div class="row topmargin-sm clearfix">
+      <% learning_programs.each_with_index do |program, index| %>
+        <div class="col-md-4 col-sm-4 bottommargin">
+          <i class="i-plain color i-large <%= learning_icon(index) %> inline-block"></i>
+          <div class="heading-block nobottomborder">
+            <h4><%= program.name %></h4>
+          </div>
+          <p><%= program.description %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

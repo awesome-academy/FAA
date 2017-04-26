@@ -1,0 +1,19 @@
+<div class="si-share share-custom clearfix noborder score-rating">
+  <div>
+    <span class="label-score-rate"><%= t ".rating" %>: </span> 
+  </div>
+  <div>
+    <div class="score-rate">
+      <%= number_with_precision object.rates.average(:rate),
+        precision: Settings.education.rate.precision %>
+    </div>
+    <div class="star-rate">
+      <%= image_tag "education/rate/star-on.png" %>
+    </div>
+    <div class="label-rate">
+      <div class="votes">
+        <strong><%= t(".votes", count: object.rates.count) %><strong>
+      </div>
+    </div>
+  </div>
+</div>

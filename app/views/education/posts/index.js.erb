@@ -1,0 +1,5 @@
+<% if @index_post_object.posts.any? %>
+  $('#posts_result').html('<%= j render partial: "paginate", locals: {index_post_object:@index_post_object} %>')
+<% else %>
+  $('#posts_result').html('<p class="text-center"> <%= t(".no_posts") %></p>')
+<% end %>

@@ -1,0 +1,5 @@
+<div class="tagcloud clearfix bottommargin">
+  <% @post_object.post_tags.each do |tag| %>
+    <%= link_to tag, "javascript:;" %>
+  <% end %>
+</div>

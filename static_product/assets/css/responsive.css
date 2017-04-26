@@ -1,0 +1,41 @@
+@media (max-width: 449px) {
+  .blog-list{
+    width: 100%;
+  }
+  .blog-excerpt {
+    height: 200px;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 767px) {
+  .blog-list{
+    width: 100%;
+  }
+  .blog-excerpt {
+    height: 160px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog-list{
+    width: 48%;
+  }
+  .blog-excerpt {
+    height: 170px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .blog-list{
+    width: 31%;
+  }
+  .blog-excerpt {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog-list{
+    width: 31%;
+  }
+}

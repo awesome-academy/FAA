@@ -1,0 +1,62 @@
+<%= render "header", user: @user %>
+<section id="content">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="col-sm-9">
+        <div class="row clearfix">
+          <div class="col-md-12">
+            <div class="tabs tabs-alt clearfix" id="tabs-profile">
+              <ul class="tab-nav clearfix">
+                <% if @user.is_user? current_user %>
+                  <li>
+                    <a href="#tab-new-feed">
+                      <i class="icon-rss2"></i><%= t ".new_feed" %>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#tab-suggest-job">
+                      <i class="icon-lightbulb"></i><%= t ".job_suggest" %>
+                    </a>
+                  </li>
+                <% end %>
+                <li>
+                  <a href="#tab-information">
+                    <i class="icon-info-sign"></i><%= t ".information" %>
+                  </a>
+                </li>
+                <li>
+                  <a href="#tab-posts">
+                    <i class="icon-pencil2"></i><%= t ".posts" %>
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-container">
+                <% if @user.is_user? current_user %>
+                  <div class="tab-content clearfix" id="tab-suggest-job">
+                    <div id="job-show-wrapper">
+                      <div id="job-show-body">
+                        <div class="row two-column">
+                          <aside class="col-md-12 column-main">
+                            <div class="column-main-inner">
+                            </div>
+                          </aside>
+                          <aside class="col-md-0 column-side">
+                          </aside>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <%= render "social_network" %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= javascript_include_tag "users" %>

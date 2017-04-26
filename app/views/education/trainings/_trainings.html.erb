@@ -1,0 +1,54 @@
+<div id="portfolio" class="portfolio grid-container portfolio-1 clearfix">
+  <% trainings.each_with_index do |training, index| %>
+  <% if Parity.parity_odd? index %>
+    <article class="portfolio-item pf-illustrations alt clearfix">
+  <% else %>
+    <article class="portfolio-item pf-media pf-icons clearfix">
+  <% end %>
+      <div class="row">
+        <div class="portfolio-image">
+          <%= link_to "#" do %>
+            <%= load_image training %>
+          <% end %>
+          <div class="portfolio-overlay">
+            <%= link_to education_training_path training do %>
+              <i class="icon-eye"></i>
+            <% end %>
+          </div>
+        </div>
+        <div class="training-infor">
+          <div class="margin-training-infor">
+            <h3><b>
+              <%= link_to education_training_path training do %>
+                <%= training.name %>
+              <% end %>
+            </b></h3>
+            <p>
+              <%= truncate training.description,
+                length: Settings.education.trainings.limit_string %>
+            </p>
+            <h4><strong><%= t ".techniques" %></strong></h4>
+            <ul class="iconlist">
+              <% training.techniques.each do |technique| %>
+                <li class="display technique-items">
+                  <%= link_to education_technique_path technique do %>
+                    <i class="icon-ok"></i> <%= technique.name %>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+            <br>
+            <%= link_to education_training_path training do %>
+              <div class="button button-3d button-small button-amber">
+                <%= t ".view_courses" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </article>
+  <% end %>
+</div>
+<div class="center custom-paginate">
+  <%= paginate trainings, remote: true %>
+</div>

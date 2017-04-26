@@ -1,0 +1,12 @@
+<% if @index_post_object.posts.any? %>
+  $('#posts_result').html('<%= j render partial: "paginate", locals: {index_post_object:@index_post_object} %>')
+  $('.user-posts').html('<%= j render partial: "education/users/post", locals: {posts: @index_post_object.posts} %>')
+  $('#user-posts-size').html('<%= @index_post_object.posts.size %>')
+<% else %>
+  $('#posts_result').html('<p class="text-center"> <%= t(".no_posts") %></p>')
+<% end %>
+<% if flash[:success].present? %>
+  $.growl.notice({message: '<%= flash[:success] %>'});
+<% elsif flash[:danger].present? %>
+  $.growl.error({message: '<%= flash[:danger] %>'});
+<% end %>

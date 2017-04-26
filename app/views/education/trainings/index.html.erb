@@ -1,0 +1,47 @@
+<% provide :title, t(".title") %>
+
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= t ".page_title" %></h1>
+    <ol class="breadcrumb">
+      <li><%= link_to t(".home"), education_root_path %></li>
+      <li class="active"><%= t ".page_title" %></li>
+    </ol>
+  </div>
+</section>
+
+<% if current_user && can_manage?(Education::Training) %>
+  <%= render "education/trainers/index_trainings" %>
+<% else %>
+  <section id="content">
+    <div id="page-menu">
+      <div id="page-menu-wrap">
+        <div class="container clearfix">
+          <div class="menu-title">
+            <%= t ".training" %>
+            <span> <%= t ".filter" %></span>
+          </div>
+          <nav>
+            <ul>
+              <%= render "education/layouts/nav_filter",
+                {controller_name: "education/trainings",
+                techniques: @training_object.techniques} %>
+              <li class="training-search">
+                <%= text_field_tag :training_search, params[:training_search],
+                  placeholder: t(".search_placeholder"), class: "form-control" %> 
+              </li>
+            </ul>
+          </nav>
+          <div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrap">
+      <div class="container clearfix">
+        <div class="content-wrap content-wrap-custom" id="training_search_result">
+          <%= render "trainings", trainings: @training_object.trainings_for_guest %>
+        </div>
+      </div>
+    </div>
+  </section>
+<% end %>

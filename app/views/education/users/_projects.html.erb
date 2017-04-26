@@ -1,0 +1,6 @@
+<div class="tab-content clearfix" id="tab-projects">
+  <%= render "project", projects: projects %>
+  <div class="center custom-paginate">
+    <%= paginate projects, remote: true, params: {tab: "tab-projects"} %>
+  </div>
+</div>

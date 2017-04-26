@@ -1,0 +1,18 @@
+<div id="respond" class="clearfix">
+  <h3><%= t ".leave_a" %>
+    <span> <%= t ".comment" %></span>
+  </h3>
+  <%= simple_form_for Education::Comment.new, remote: true,
+    url: education_post_comment_posts_path(@post, Education::Comment.new),
+    class: "clearfix", id: "commentform" do |f| %>
+    
+    <%= f.label :comment %>
+    </hr>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+    </br>
+    <%= f.text_area :content, placeholder: t(".comment_placeholder"), id: "content",
+      class: "sm-form-control", rows: Settings.education.post.comment_form_rows %>
+      <br/>
+    <%= f.submit t(".submit_button"), class: "button button-3d nomargin" %>
+  <% end %>
+</div>

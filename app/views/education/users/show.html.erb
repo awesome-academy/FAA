@@ -1,0 +1,53 @@
+<section id="content">
+  <div class="content-wrap">
+    <div class="container clearfix">
+      <div class="row clearfix">
+        <div class="col-sm-9">
+          <div class="row clearfix">
+            <div class="col-md-12">
+              <div class="tabs tabs-alt clearfix" id="tabs-profile">
+                <ul class="tab-nav clearfix">
+                  <li>
+                    <a href="#tab-projects">
+                      <i class="icon-folder-open"></i><%= t ".projects" %>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#tab-posts">
+                      <i class="icon-pencil2"></i><%= t ".posts" %>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#tab-courses">
+                      <i class="icon-book"></i><%= t ".courses" %>
+                    </a>
+                  </li>
+                  <% if current_user %>
+                    <li>
+                      <a href="#tab-activities">
+                        <i class="icon-rss2"></i><%= t ".activities" %>
+                      </a>
+                    </li>
+                  <% end %>
+                </ul>
+                <div class="tab-container">
+                  <%= render "projects",
+                    projects: @show_user_object.education_projects %>
+                  <div class="user-posts">
+                    <%= render "posts",
+                      posts: @show_user_object.education_posts %>
+                  </div>
+                  <%= render "courses",
+                    courses: @show_user_object.education_courses %>
+                  <%= render "activities", activities: @activities if
+                    current_user %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%= render "right_column" %>
+      </div>
+    </div>
+  </div>
+</section>

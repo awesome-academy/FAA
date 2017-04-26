@@ -1,0 +1,22 @@
+<article class="portfolio-item pf-graphics pf-illustrations">
+  <div class="portfolio-image">
+    <div class="carousel slide course_image_slide">
+      <div class="carousel-inner" role="listbox">
+        <%= image_tag Settings.courses.new_course_image %>
+      </div>
+    </div>
+    <div class="portfolio-overlay">
+      <%= link_to new_education_course_path, class: "center-icon" do %>
+        <i class="icon-plus-sign i-alt"></i>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="portfolio-desc">
+    <h3><a href="portfolio-single-gallery.html"><%= link_to t(".new"),
+      new_education_course_path %></h3>
+    <span title="<%= t ".new_title" %>">
+      <%= t ".new_description" %>
+     </span>
+  </div>
+</article>

@@ -1,0 +1,23 @@
+@import 'variables/color';
+
+.hiring-type {
+  padding-top: 15px;
+}
+
+.inner-addon {
+  position: relative;
+}
+
+.inner-addon .glyphicon {
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.right-addon .glyphicon {
+  right: 0;
+}
+
+.right-addon input {
+  padding-right: 30px;
+}

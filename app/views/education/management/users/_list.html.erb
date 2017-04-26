@@ -1,0 +1,17 @@
+<table class="table table-hover table-bordered edu-users-management">
+  <thead>
+    <tr>
+      <th><%= t ".name" %></th>
+      <th><%= t ".email" %></th>
+      <th><%= t ".group" %></th>
+      <th><%= t ".status" %></th>
+      <th><%= t ".action" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "user", collection: @users %>
+  </tbody>
+</table>
+<div class="edu-users-management-paginate">
+  <%= paginate users %>
+</div>

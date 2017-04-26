@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-xs-8 col-md-8 col-md-offset-2">
+    <%= simple_form_for training do |f| %>
+      <%= f.input :name, label: t(".name"), class: "form-control" %>
+      <%= f.input :description, as: :text, label: t(".description"),
+        class: "form-control",
+        input_html: {rows: Settings.education.trainings.description_rows} %>
+      
+      <%= f.label t ".choose_technique" %>
+      <div class="form-choose-technique">
+        <%= render "education/shared/choose_technique", object: training %>
+      </div>
+
+      <%= f.simple_fields_for :images do |image| %>
+        <%= render "image_fields", f: image %>
+      <% end %>
+      <div class="new-added-images">
+      </div>
+      <div class="links">
+        <%= link_to_add_association t(".add_image"), f, :images,
+          class: "button button-3d button-small button-rounded button-green",
+          data: {"association-insertion-node": ".new-added-images"} %>
+      </div>
+      <%= f.submit button_text,
+        class: "button button-3d button-rounded button-amber pull-right" %>
+    <% end %>
+  </div>
+</div>

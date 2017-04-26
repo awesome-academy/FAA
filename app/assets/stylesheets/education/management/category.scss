@@ -1,0 +1,40 @@
+@import 'variables/color';
+
+.edu-categories-management-paginate {
+  text-align: center;
+}
+
+.edu-categories-management {
+  text-align: center;
+
+  th {
+    text-align: center;
+  }
+}
+
+.edu-categories-search input {
+  border: 1px solid $gray-ddd;
+  border-radius: 2em;
+  display: initial;
+  float: right;
+  font-size: 1em;
+  height: 30px;
+  margin-bottom: 7px;
+  padding: .5em 1.3em;
+  text-align: left;
+  width: 200px;
+}
+
+.edu-categories-search input:focus {
+  border-color: $blue-light;
+  width: 300px;
+}
+
+.edu-categories-search a {
+  float: left;
+}
+
+.edu-categories-search {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

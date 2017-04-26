@@ -1,0 +1,42 @@
+<div class="modal fade" id="changeAvatarModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><%= t ".title" %></h4>
+      </div>
+
+      <div class="modal-body">
+        <div class="upload-user-avatar">
+          <%= load_user_avatar user, class: "img-thumbnail img-avatar-upload img-upload" %>
+        </div>
+        <%= form_tag user_avatars_path, id: "form-create-avatar", multipart: true do %>
+          <div class="row">
+            <div class="col-md-6">
+              <%= file_field_tag :picture, accept: "image/png, image/jpg, image/jpeg",
+                class: "btn btn-default change-image form-control" %>
+            </div>
+            <div class="col-md-6">
+              <%= link_to t(".from_album"), "#",
+                class: "btn btn-default form-control album-for-user" %>
+            </div>
+          </div>
+        <% end %>
+        <%= form_tag user_avatars_path, method: :patch, multipart: true,
+          id: "form-update-avatar" do %>
+          <div class="album-image">
+            <%= hidden_field_tag :image_id, "", class: "user-old-image" %>
+            <%= render "album_image", user: user %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="modal-footer">
+        <%= button_tag t(".save"), class: "btn btn-primary btn-submit-avatar" %>
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          <%= t ".close" %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

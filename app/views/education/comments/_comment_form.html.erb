@@ -1,0 +1,17 @@
+<%= simple_form_for Education::Comment.new,
+  url: education_project_comments_path(@project, Education::Comment.new),
+  remote: :true do |f| %>
+  <div class="col-md-12">
+    <div class="col-md-12">
+    <div class="comment-from">
+      </hr>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+      </br>
+      <%= f.text_area :content, placeholder: t("comment.content"), class: "sm-form-control",
+        id: "content" %>
+        <br/>
+      <%= f.submit t("comment.submit_button"), class: "button button-3d nomargin" %>
+    </div>
+    </div>
+  </div>
+<% end %>

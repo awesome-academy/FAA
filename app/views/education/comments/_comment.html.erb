@@ -1,0 +1,34 @@
+<div id="comment-<%= comment.id %>">
+  <div id="comment-1" class="comment-wrap clearfix">
+    <div class="comment-meta">
+      <div class="comment-author vcard">
+        <span class="comment-avatar clearfix">
+          <%= image_tag("welcome1.jpg", class: "img-circle")%>
+        </span>
+      </div>
+    </div>
+    <div class="comment-content clearfix">
+      <div class="comment-author">
+        <%= comment.user_name %>
+        <span>
+          <%= time_ago_in_words(comment.created_at) unless comment.created_at.blank? %>
+        </span>
+      </div>
+      <div class="comment-content">
+        <p><%= comment.content %></p>
+      </div>
+    </div>
+    <a class="comment-reply-link" href="#">
+      <% if comment.user == current_user %>
+        <%= link_to image_tag("delete.png", class: "delete-button"),
+          education_project_comment_path(comment.commentable, comment),
+          method: :delete, remote: true %>
+        <%= link_to image_tag("edit.png", class: "delete-button"),
+          edit_education_project_comment_path(comment.commentable, comment),
+          remote: true %>
+      <% end %>
+    </a>
+    <div id="comment-edit-<%= comment.id %>"></div>
+  </div>
+</div>
+</br>
