@@ -600,3 +600,61 @@ en:
     import_user:
       unknow_format: "Unknow file type"
       row_error: "Error in row"
+    about:
+      index:
+        about_us: "About us"
+      introduce:
+        our: "Our"
+        vision: "Vision"
+        mission: "Mission"
+        core: "Core"
+        values: "Values"
+        why_chooce: "Why chooce"
+        us: "Us"
+        what: "What"
+        different: "Different"
+        what_we: "What we"
+        do: "Do"
+        vision_content: "Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Quasi quidem minus id omnis, nam expedita, ea fuga commodi
+          voluptas iusto, hic autem deleniti dolores explicabo labore enim r
+          epellat earum perspiciatis."
+        mission_content: "Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Quasi quidem minus id omnis, nam expedita, ea fuga commodi
+          voluptas iusto, hic autem deleniti dolores explicabo labore enim r
+          epellat earum perspiciatis."
+        core_value_content: "Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Quasi quidem minus id omnis, nam expedita, ea fuga commodi
+          voluptas iusto, hic autem deleniti dolores explicabo labore enim r
+          epellat earum perspiciatis."
+        why_chooce_us_content: "Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Quasi quidem minus id omnis, nam expedita, ea fuga commodi
+          voluptas iusto, hic autem deleniti dolores explicabo labore enim r
+          epellat earum perspiciatis."
+        what_difference_content: "Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Quasi quidem minus id omnis, nam expedita, ea fuga commodi
+          voluptas iusto, hic autem deleniti dolores explicabo labore enim r
+          epellat earum perspiciatis."
+        what_we_do_content: "Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. Quasi quidem minus id omnis, nam expedita, ea fuga commodi
+          voluptas iusto, hic autem deleniti dolores explicabo labore enim r
+          epellat earum perspiciatis."
+      ruby:
+        header: "Ruby"
+        description: "Ruby is one of the best programming languages to start
+          with when you are first learning to code and this course is designed
+          for individuals with no previous knowledge of Ruby in particular or
+          any programming/computer science knowledge in general. Its general
+          purpose and flexible language can be used in web/Internet development,
+          to process text, to create games, and as part of the popular Ruby on
+          Rails web framework. This coding course is available courtesy of
+          Codecademy, an online, interactive platform that offers free coding
+          classes in six different programming languages like Python, PHP,
+          jQuery, JavaScript, and Ruby, as well as markup languages including
+          HTML and CSS."
+      our_trainer:
+        trainer: "Trainer"
+        certificates: "Certificates"
+        viblo: "Viblo"
+        master_of_scientist: "Master of scientist"
+        agile_certification: "Agile certification"

@@ -1,0 +1,44 @@
+<div class="container clearfix">
+  <% if @trainers.any? %>
+    <% @trainers.each do |trainer| %>
+      <div class="col-md-6 bottommargin">
+        <div class="team team-list clearfix">
+          <div class="team-image">
+            <%= link_to education_user_path trainer do %>
+              <%= load_user_avatar trainer %>
+            <% end %>
+          </div>
+          <div class="team-desc">
+            <div class="team-title"><h4><%= trainer.name %></h4><span><%= t ".trainer" %></span></div>
+            <h5><strong><%= t ".certificates"%></strong></h5>
+            <ul class="iconlist">
+              <li class="display technique-items">
+                <i class="icon-ok"></i><%= t ".master_of_scientist" %>
+              </li>
+              <li class="display technique-items">
+                <i class="icon-ok"></i><%= t ".agile_certification" %>
+              </li>
+            </ul>
+            <h5><strong><%= t ".viblo"%></strong></h5>
+            <ul class="iconlist">
+              <li class="display technique-items">
+                <i class="icon-link"></i>
+                <%= link_to truncate(Settings.education.about_page.viblo_link, 
+                  length: Settings.education.about_page.truncate_link),
+                  Settings.education.about_page.viblo_link,
+                  target: t("education.project.git_repo") %>
+              </li>
+              <li class="display technique-items">
+                <i class="icon-link"></i>
+                <%= link_to truncate(Settings.education.about_page.viblo_link, 
+                  length: Settings.education.about_page.truncate_link),
+                  Settings.education.about_page.viblo_link,
+                  target: t("education.project.git_repo") %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
