@@ -149,6 +149,16 @@ en:
         heading: "Projects"
       our_team:
         heading: "Our team"
+      our_clients:
+        heading: "Our partners"
+      lastest_courses:
+        heading: "Lastest courses"
+        see_more: "See more"
+      course_register:
+        create_success: "Successfully created"
+        create_failed: "Create failed"
+        heading: "Course Register"
+        submit: "Register"
     trainings:
       training_not_found: "Training Not Found."
       index:
@@ -377,7 +387,7 @@ en:
         cost: "Cost"
         all_course: "All Course"
         deadline_register: "Deadline Register"
-      course: 
+      course:
         register: "Register"
       new:
         create_course: "Create Course"
@@ -520,3 +530,13 @@ en:
       subject: "You have a friend request from %{name}"
       hi: "Hi %{name},"
       end: "This email is sent automatically from FCSP, Please do not reply!"
+  course_registers:
+    create:
+      create_success: "Successfully registered"
+      create_failed: "Register failed"
+      submit: "Register"
+  course_register_mailer:
+    course_register:
+      greeting: "Hi, %{receiver_name}"
+      thanks: "Thanks for your registration to course: "
+      end: "Your registration will be review and we'll contact your as soon as possible."

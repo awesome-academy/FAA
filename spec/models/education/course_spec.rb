@@ -10,7 +10,6 @@ RSpec.describe Education::Course, type: :model do
 
   context "validations" do
     it{is_expected.to validate_presence_of :name}
-    it{is_expected.to validate_presence_of :detail}
     it do
       is_expected.to validate_length_of(:name)
         .is_at_most Settings.education.course.max_name_length

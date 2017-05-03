@@ -9,6 +9,7 @@ class Education::Course < ApplicationRecord
   has_many :images, class_name: Education::Image.name, as: :imageable,
     dependent: :destroy
   has_many :techniques, through: :training
+  has_many :course_registers
 
   delegate :id, to: :training, prefix: true, allow_nil: true
 

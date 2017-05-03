@@ -209,3 +209,11 @@ info_users:
   quote_form_rows: 2
   max_length_ambition: 255
   max_length_quote: 255
+course_register:
+  max_name_length: 255
+  min_name_length: 3
+  max_email_length: 255
+  max_phone_number_length: 255
+  min_phone_number_length: 3
+  max_address_length: 255
+  min_address_length: 3

@@ -1,0 +1,20 @@
+<% courses.each do |course| %>
+  <div class="load-more-project">
+    <article class="portfolio-item">
+      <div class="portfolio-image">
+        <ul data-liffect="pageRight" class="data-liffect">
+          <li><%= load_image course %></li>
+        </ul>
+        <div class="portfolio-overlay">
+          <div class="portfolio-desc">
+            <h3><%= truncate(course.name, length: Settings.education.index_name.truncate_limit) %></h3>
+            <span></span>
+          </div>
+          <%= link_to education_course_path(course), class: "center-icon" do %>
+            <i class="icon-line-ellipsis"></i>
+          <% end %>
+        </div>
+      </div>
+    </article>
+  </div>
+<% end %>

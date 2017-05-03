@@ -111,15 +111,6 @@ RSpec.describe Education::CoursesController, type: :controller do
     end
 
     context "with invalid attributes" do
-      it "does not update invalid eattributes" do
-        patch :update, params: {id: course, education_course:
-          FactoryGirl.attributes_for(:course, name: "Course",
-            detail: nil)}
-        course.reload
-        expect(course.name).not_to eq "Course"
-        expect(course.detail).to eq "Course Old"
-      end
-
       it "re-renders :edit template" do
         patch :update, params: {id: course,
           education_course: FactoryGirl.attributes_for(:invalid_course)}
