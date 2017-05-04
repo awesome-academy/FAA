@@ -38,8 +38,11 @@ education:
     framgia_phone: "+91-11-6541-6369"
   about_page:
     ruby_img: "/assets/images/about/ruby.png"
+    framgia_img1: "/assets/images/about/framgia_1.jpg"
+    framgia_img2: "/assets/images/about/framgia_2.jpg"
     truncate_link: 30
     viblo_link: "https://viblo.asia/tran.xuan.nam/posts/6J3ZgD6WlmB"
+    limit: 4
   number_one: 1
   project:
     modal_description: "#modal_description"
