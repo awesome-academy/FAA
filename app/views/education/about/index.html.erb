@@ -1,0 +1,10 @@
+<% provide :title, t(".about_us") %>
+<section id="content">
+  <%= render "slider" %>
+  <br>
+  <%= render "introduce" %>
+  <br>
+  <%= render "ruby" %>
+  <br>
+  <%= render "our_trainer", trainers: @trainers %>
+</section>

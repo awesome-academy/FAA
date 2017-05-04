@@ -1,6 +1,7 @@
+@import 'variables/color';
+
 .about-edu-custom {
   position: relative;
-
   img {
     height: 100%;
     left: 0;
@@ -8,4 +9,26 @@
     top: 0;
     width: 100%;
   }
+}
+
+.height-slider {
+  height: 600px;
+}
+
+.height-img-ruby {
+  height: 280px;
+  margin-top: 30px;
+}
+
+.ruby-introduce {
+  background-color: $gray-white;
+  min-height: 340px;
+}
+
+.ruby-description {
+  margin-right: 50px;
+}
+
+.ruby-img {
+  margin-right: 0;
 }

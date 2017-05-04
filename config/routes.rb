@@ -34,6 +34,7 @@ Rails.application.routes.draw do
     resources :users, only: :show
     resources :images
     resources :project_members, only: [:create, :destroy]
+    resources :about, only: :index
   end
 
   resources :users

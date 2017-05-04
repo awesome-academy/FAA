@@ -1,0 +1,18 @@
+project_type: ruby
+test:
+  bundle-audit:
+    command: bundle-audit check --update | tee .framgia-ci-reports/bundle-audit.txt
+  rspec:
+    command: bundle exec rspec --format html --out .framgia-ci-reports/rspec.html spec/
+  brakeman:
+    command: bundle exec brakeman -o .framgia-ci-reports/brakeman.html -o .framgia-ci-reports/brakeman.json
+  reek:
+    command: bundle exec reek -c config.reek --format html > .framgia-ci-reports/reek.html app/
+  rubocop:
+    command: bundle exec rubocop --require rubocop/formatter/checkstyle_formatter --format RuboCop::Formatter::CheckstyleFormatter --no-color --rails --out .framgia-ci-reports/rubocop.xml
+  scss-lint:
+    command: bundle exec scss-lint --require=scss_lint_reporter_checkstyle --format=Checkstyle --out=.framgia-ci-reports/scss-lint.xml app/assets/stylesheets/
+  eslint:
+    command: /bin/bash -l -c rake eslint:run_all --format=checkstyle --output-file=.framgia-ci-reports/eslint.xml app/ --ignore-path path::app/assets/javascripts/application.js
+  rails_best_practices:
+    command: /bin/bash -l -c bundle exec rails_best_practices -e "db/schema.rb,db/migrate,vendor" --format html --output-file .framgia-ci-reports/rails_best_practices.html app/

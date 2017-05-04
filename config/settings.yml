@@ -36,6 +36,10 @@ education:
     slide3_img: "/assets/welcome2.jpg"
     framgia_email: "staff@framgia.com"
     framgia_phone: "+91-11-6541-6369"
+  about_page:
+    ruby_img: "/assets/images/about/ruby.png"
+    truncate_link: 30
+    viblo_link: "https://viblo.asia/tran.xuan.nam/posts/6J3ZgD6WlmB"
   number_one: 1
   project:
     modal_description: "#modal_description"

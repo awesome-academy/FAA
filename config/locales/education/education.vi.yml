@@ -596,3 +596,43 @@ vi:
     import_user:
       unknow_format: "Tệp không đúng định dạng"
       row_error: "Lỗi tại dòng"
+    about:
+      index:
+        about_us: "Giới thiệu"
+      introduce:
+        our: "của húng tôi"
+        vision: "Tầm nhìn"
+        mission: "Sứ mệnh"
+        core: "Cốt lõi"
+        values: "Gía trị"
+        why_chooce: "Vì sao chọn"
+        us: "chúng tôi"
+        what: "Có điều gì"
+        different: "khác biệt"
+        what_we: "Điều chúng tôi"
+        do: "làm"
+        vision_content: ""
+        mission_content: ""
+        core_value_content: ""
+        why_chooce_us_content: ""
+        what_difference_content: ""
+        what_we_do_content:
+      ruby:
+        header: "Ruby"
+        description: "Ruby là một trong những ngôn ngữ lập trình tốt nhất để bắt đầu
+           Với khi bạn lần đầu tiên học mã và khóa học này được thiết kế
+           Cho những người không có kiến thức trước về Ruby nói riêng hoặc
+           Bất kỳ chương trình / khoa học máy tính kiến thức nói chung. Nói chung
+           Mục đích và ngôn ngữ linh hoạt có thể được sử dụng trong phát triển web / Internet,
+           Để xử lý văn bản, tạo các trò chơi, và như một phần của Ruby phổ biến trên
+           Rails khuôn khổ web. Khóa học mã hóa này được cung cấp bởi
+           Codecademy, một nền tảng tương tác trực tuyến cung cấp mã hóa miễn phí
+           Các lớp học trong sáu ngôn ngữ lập trình khác nhau như Python, PHP,
+           JQuery, JavaScript, và Ruby, cũng như các ngôn ngữ đánh dấu bao gồm
+           HTML và CSS."
+      our_trainer:
+        trainer: "Người hướng dẫn"
+        certificates: "Chứng chỉ"
+        viblo: "Viblo"
+        master_of_scientist: "Tiến sỹ khoa học"
+        agile_certification: "Chứng chỉ Agile"
