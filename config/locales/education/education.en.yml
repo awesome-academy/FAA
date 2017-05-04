@@ -37,7 +37,7 @@ en:
         home: "Home"
         portfolio: "Portfolio"
         project: "Projects"
-        posts: "Posts"
+        news: "News"
         courses: "Courses"
         trainings: "Trainings"
         trainees: "Trainees"
@@ -47,7 +47,7 @@ en:
         profile: "Profile"
         log_out: "Logout"
         log_in: "Login"
-        create_new_post: "Create new post"
+        create_news: "Create news"
         management: "Management"
     trainers:
       trainer:
@@ -168,8 +168,8 @@ en:
         edit_training: "Edit Training"
       new:
         create_training: "Create"
-        heading: "heading"
-        heading_description: "heading description"
+        heading: "Create a training"
+        heading_description: "Make it awesome!"
       new_training:
         create_new_training: "Create a new training"
       edit:
@@ -339,47 +339,56 @@ en:
         photos: "Images"
         techniques: "Techniques"
     posts:
-      title: "Member's Posts"
-      title_des: "Lastest posts of our Members"
+      title: "Member's News"
+      title_description: "Lastest news of our Members"
       read_more: "Read more"
       date_format: "%d-%m-%Y"
       create_new: "Create new post"
-      older: "&larr;Older"
-      newer: "Newer &rarr;"
+      paginate:
+        newer: "&larr;Newer"
+        older: "Older &rarr;"
+        news: "new"
       post:
         read_more: "Read more"
         delete_confirm: "Are you sure?"
         delete: "Delete"
       index:
         no_posts: "No posts found"
-        posts: "Posts"
+        news: "News"
         search_placeholder: "Search"
         show_all: "Show all"
         more: "More"
         placeholder_search: "Search"
-        title_description: "Lastest posts of our Members"
-        title: "Member's posts"
+        title_description: "Lastest news of our Members"
+        title: "Member's news"
         filter: "Filter"
+      new:
+        heading: "Create a news"
+        heading_description: "Make it awesome!"
+      edit:
+        heading: "Edit News"
+        heading_description: "Make is awesome!"
       nav_search:
         new: "Create new post"
         show_all: "Show all"
         keyword: "Search"
       show:
         follow_us_on_twitter: "Follow Us on Twitter"
-        share_this_post: "Share Post:"
-        posted_by: "Posted by"
-        related_posts: "Related Posts:"
+        share_this_news: "Share News:"
+        related_posts: "Related News:"
         popular: "Popular"
         recent: "Recent"
-        heading: "Posts"
+        heading: "News"
         comments: "Comments"
         heading_description: "Our Latest News in Masonry Layout"
         name: "Name"
         email: "Email"
         delete: "Delete"
         edit: "Edit"
+        standard_news: "This is a Standard post with a Slider Gallery"
+        embedded_news: "This is an Embedded Audio Post "
       share_post:
-        share_this_post: "Share post"
+        share_this_news: "Share news"
       posted_by:
         posted_by: "Posted by"
       comments:
@@ -408,7 +417,7 @@ en:
     users:
       show:
         projects: "Projects"
-        posts: "Posts"
+        news: "News"
         courses: "Courses"
         user_not_found: "User not found."
         page_not_found: "Page not found."
@@ -418,7 +427,7 @@ en:
         profile: "Profile"
         about_me: "About me"
         projects: "Projects"
-        posts: "Posts"
+        news: "News"
         courses: "Courses"
         social_profiles: "Social profiles"
       index:

@@ -37,7 +37,7 @@ vi:
         home: "Trang chủ"
         portfolio: "Danh mục"
         project: "Dự án"
-        posts: "Bài viết"
+        news: "Tin tức"
         courses: "Khóa học"
         trainings: "Đào tạo"
         trainees: "Học viên"
@@ -47,7 +47,7 @@ vi:
         profile: "Trang cá nhân"
         log_out: "Đăng xuất"
         log_in: "Đăng nhập"
-        create_new_post: "Tạo bài viết"
+        create_news: "Tạo một bản tin"
         management: "Quản lý"
     trainers:
       trainer:
@@ -344,42 +344,51 @@ vi:
       read_more: "Xem thêm"
       date_format: "%d-%m-%Y"
       create_new: "Tạo một bài viết"
-      older: "&larr;Older"
-      newer: "Newer &rarr;"
+      paginate:
+        newer: "&larr;Mới hơn"
+        older: "Cũ hơn &rarr;"
+        news: "Tin tức"
       post:
         read_more: "Xem thêm"
         delete_confirm: "Bạn có chắc chắn xóa bài post không?"
         delete: "Xóa"
       index:
         no_posts: "Không tìm thấy bài viết"
-        posts: "Bài viết"
+        news: "Tin tức"
         search_placeholder: "Tìm kiếm"
         show_all: "Xem tất cả"
         more: "Xem thêm"
         placeholder_search: "Tìm kiếm"
-        title_description: "Bài viết mới nhất của các thành viên"
-        title: "Bài viết"
+        title_description: "Tin tức mới nhất của các thành viên"
+        title: "Tin tức"
         filter: "Lọc"
+      new:
+        heading: "Tạo mới tin tức"
+        heading_description: "Make it awesome!"
+      edit:
+        heading: "Sửa tin tức"
+        heading_description: "Make is awesome!"
       nav_search:
         new: "Tạo bài viết mới"
         show_all: "Xem tất cả"
         keyword: "Tìm kiếm"
       show:
         follow_us_on_twitter: "Theo dõi trên Twitter"
-        share_this_post: "Chia sẻ bài viết này:"
-        posted_by: "Được viết bởi"
-        related_posts: "Bài viết liên quan:"
-        popular: "Popular"
+        share_this_news: "Chia sẻ tin tức này:"
+        related_posts: "Tin tức liên quan:"
+        popular: "Phổ biến"
         recent: "Gần đây"
-        heading: "Bài viết"
+        heading: "Tin tức"
         comments: "Bình luận"
         heading_description: "bài viết mới nhất"
         name: "Tên"
         email: "Thư điện tử"
-        delete: "Xóa bài viết"
-        edit: "Chỉnh sửa bài viết"
+        delete: "Xóa tin tức"
+        edit: "Chỉnh sửa tin tức"
+        standard_news: "Đây là bài đăng Tiêu chuẩn"
+        embedded_news: "Đây là bài đăng âm thanh đã được nhúng"
       share_post:
-        share_this_post: "Chia sẻ bài viết"
+        share_this_news: "Chia sẻ tin tức"
       posted_by:
         posted_by: "Được viết bởi"
       comments:
@@ -408,7 +417,7 @@ vi:
     users:
       show:
         projects: "Dự Án"
-        posts: "Bài Viết"
+        news: "Tin tức"
         courses: "Khóa Học"
         user_not_found: "Người dùng không tồn tài."
         page_not_found: "Trang không tồn tại."
@@ -418,7 +427,7 @@ vi:
         profile: "Hồ sơ"
         about_me: "Về tôi"
         projects: "Dự Án"
-        posts: "Bài Viết"
+        news: "Tin đã đăng"
         courses: "Khóa Học"
         social_profiles: "Hồ sơ xã hội"
       index:
