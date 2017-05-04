@@ -89,8 +89,12 @@ ActiveRecord::Schema.define(version: 20170421044233) do
     t.integer  "training_id"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "cost"
+    t.text     "place"
+    t.text     "schedule"
+    t.datetime "deadline_register"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "education_feedbacks", force: :cascade do |t|

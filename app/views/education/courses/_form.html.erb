@@ -2,8 +2,9 @@
   <div class="col-xs-8 col-md-8 col-md-offset-2">
     <%= simple_form_for course do |f| %>
       <%= f.input :name %>
-      <%= f.input :detail, as: :text,
-        input_html: {rows: Settings.courses.detail_rows} %>
+      <%= f.input :schedule %>
+      <%= f.input :place %>
+
       <div class="form-group">
         <div class="col-md-6 left-field">
         <%= f.input :start_date, as: :string, placeholder: t(".select_date"),
@@ -16,6 +17,19 @@
           input_html: {class: "datetimepicker",
           value: localize(f.object.end_date || Date.today,
           format: t("education.time.formats.date_month_year"))} %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-6 left-field">
+        <%= f.input :deadline_register, as: :string,
+          placeholder: t(".select_date"),
+          input_html: {class: "datetimepicker",
+          value: localize(f.object.start_date || Date.today,
+          format: t("education.time.formats.date_month_year"))} %>
+        </div>
+        <div class="col-md-6 right-field">
+        <%= f.input :cost, as: :integer %>
         </div>
       </div>
 

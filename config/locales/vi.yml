@@ -434,6 +434,18 @@ vi:
         show_all_course: "All studying IT courses at Framgia"
         training_program: "Training program"
         language_program: "Language program"
+        create_new: "Tạo mới"
+        course_name: "Tên khóa học"
+        schedule: "Lịch học"
+        start_date: "Ngày bắt đầu"
+        place: "Địa điểm"
+        cost: "Giá"
+        all_course: "Tất cả khóa học"
+        deadline_register: "Thời hạn đăng ký"
+      course:
+        register: "Đăng Ki"
+      new:
+        create_course: "Tạo mới khóa học"
   time:
     formats:
       date_month_year_concise: '%d-%m-%y'

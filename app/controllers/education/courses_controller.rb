@@ -9,13 +9,21 @@ class Education::CoursesController < Education::BaseController
       .per pagination_by_permission(Education::Course,
         Settings.courses.index_limit, Settings.courses.index_limit_trainer)
     respond_to do |format|
-      format.html{request.referer}
+      format.html
       format.js
     end
   end
 
   def new
     @course = Education::Course.new
+    respond_to do |format|
+      format.html
+      format.js do
+        render partial: "education/courses/form",
+          locals: {course: @course, button_text: t(".create_course")},
+          layout: false
+      end
+    end
   end
 
   def create
@@ -69,8 +77,8 @@ class Education::CoursesController < Education::BaseController
 
   private
   def course_params
-    params.require(:education_course).permit :name, :detail,
-      :start_date, :end_date, :training_id,
+    params.require(:education_course).permit :name, :detail, :deadline_register,
+      :start_date, :end_date, :training_id, :cost, :place, :schedule,
       images_attributes: [:id, :url, :url_cache, :_destroy]
   end
 

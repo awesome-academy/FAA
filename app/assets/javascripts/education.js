@@ -35,9 +35,8 @@
 //= require jquery-ui/datepicker
 
 $(document).ready(function(){
-  showEditForm('#btn-project-edit', '/education/projects/');
-  showEditForm('#btn-course-edit', '/education/courses/');
-  showEditForm('#btn-training-edit', '/education/trainings/');
+  showEditForm('.btn-course-edit', '/education/courses/');
+  showNewForm('.btn-course-new', '/education/courses/new')
 })
 
 function showEditForm(object, path) {
@@ -52,6 +51,23 @@ function showEditForm(object, path) {
         $('#show-edit-form').html(html_text);
         $('#edit-modal').modal('show');
         $('.datetimepicker').datepicker({dateFormat: 'dd/mm/yy'});
+      }
+    })
+  })
+}
+
+function showNewForm(object, path) {
+  $(object).on('click', function(){
+    $.ajax({
+      url: path,
+      type:'GET',
+      dataType: 'json',
+      complete: function(xhr){
+        var html_text = xhr.responseText;
+        $('#show-edit-form').html(html_text);
+        $('#edit-modal').modal('show');
+        $('.datetimepicker').datepicker({dateFormat: 'dd/mm/yy'});
+        $('#myModalLabel').text(I18n.t("education.courses.new.create_course"));
       }
     })
   })

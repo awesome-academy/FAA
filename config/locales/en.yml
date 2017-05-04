@@ -375,6 +375,18 @@ en:
         show_all_course: "All studying IT courses at Framgia"
         training_program: "Training program"
         language_program: "Language program"
+        create_new: "Create New Course"
+        course_name: "Course Name"
+        schedule: "Schedule"
+        start_date: "Start Date"
+        place: "Place"
+        cost: "Cost"
+        all_course: "All Course"
+        deadline_register: "Deadline Register"
+      course: 
+        register: "Register"
+      new:
+        create_course: "Create Course"
   time:
     formats:
       date_month_year_concise: '%d-%m-%y'
