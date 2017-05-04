@@ -12,7 +12,7 @@
 }
 
 .height-slider {
-  height: 600px;
+  height: 550px;
 }
 
 .height-img-ruby {
@@ -25,10 +25,22 @@
   min-height: 340px;
 }
 
-.ruby-description {
-  margin-right: 50px;
-}
-
 .ruby-img {
   margin-right: 0;
+}
+
+.content-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.color-button {
+  background-color: $gray-white;
+}
+
+.text-btn-color {
+  color: black;
+  a {
+    color: black;
+  }
 }

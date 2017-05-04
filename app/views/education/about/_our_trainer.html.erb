@@ -1,4 +1,7 @@
 <div class="container clearfix">
+  <div class="heading-block center">
+    <h3><%= t ".title" %></h3>
+  </div>
   <% if @trainers.any? %>
     <% @trainers.each do |trainer| %>
       <div class="col-md-6 bottommargin">
@@ -40,5 +43,11 @@
         </div>
       </div>
     <% end %>
+  <% end %>
+</div>
+<div class="text-btn-color">
+  <%= link_to education_trainers_path, class: "button button-full button-dark center tright bottommargin-lg color-button" do %>
+    <strong><%= t ".see_more" %></strong>
+    <i class="icon-caret-right btn-see-more"></i>
   <% end %>
 </div>
