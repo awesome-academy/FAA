@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= t ".posted_by" %>
+      <span>
+        <%= link_to @recruitment.user_name, "#" %>
+      </span>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <div class="author-image">
+      <%= load_user_avatar @recruitment.user, class: "img-circle" %>
+    </div>
+  </div>
+</div>

@@ -504,6 +504,7 @@ vi:
         rating: "Đánh giá"
         votes: "(%{count} lượt đánh giá)"
       load_object:
+        post_not_found: "Không tìm thấy bài viết"
         not_found: "Không tìm thấy"
     management:
       group_users:
@@ -674,36 +675,31 @@ vi:
       index:
         about_us: "Giới thiệu"
       introduce:
-        our: "của húng tôi"
-        vision: "Tầm nhìn"
-        mission: "Sứ mệnh"
-        core: "Cốt lõi"
-        values: "Gía trị"
-        why_chooce: "Vì sao chọn"
-        us: "chúng tôi"
-        what: "Có điều gì"
-        different: "khác biệt"
-        what_we: "Điều chúng tôi"
-        do: "làm"
+        our_vision: "Tầm nhìn của chúng tôi"
+        our_mision: "Sứ mệnh của chúng tôi"
+        core_values: "Gía trị cốt lõi"
+        why_chooce_us: "Nên chọn chúng tôi vì?"
+        what_difference: "Chúng tôi có sự khác biệt?"
+        what_we_do: "Điều chúng tôi làm?"
         vision_content: ""
         mission_content: ""
         core_value_content: ""
         why_chooce_us_content: ""
         what_difference_content: ""
-        what_we_do_content:
+        what_we_do_content: ""
       ruby:
         header: "Ruby"
-        description: "Ruby là một trong những ngôn ngữ lập trình tốt nhất để bắt đầu
-           Với khi bạn lần đầu tiên học mã và khóa học này được thiết kế
-           Cho những người không có kiến thức trước về Ruby nói riêng hoặc
-           Bất kỳ chương trình / khoa học máy tính kiến thức nói chung. Nói chung
-           Mục đích và ngôn ngữ linh hoạt có thể được sử dụng trong phát triển web / Internet,
-           Để xử lý văn bản, tạo các trò chơi, và như một phần của Ruby phổ biến trên
-           Rails khuôn khổ web. Khóa học mã hóa này được cung cấp bởi
-           Codecademy, một nền tảng tương tác trực tuyến cung cấp mã hóa miễn phí
-           Các lớp học trong sáu ngôn ngữ lập trình khác nhau như Python, PHP,
-           JQuery, JavaScript, và Ruby, cũng như các ngôn ngữ đánh dấu bao gồm
-           HTML và CSS."
+        description: "Ruby là một trong những ngôn ngữ lập trình tốt nhất để
+          bắt đầu khi bạn lần đầu tiên học về lập trình và khóa học này được
+          tạo ra cho những người không có kiến thức trước về Ruby nói riêng
+          hoặc kiênt thức về ngôn ngữ lập trình và khoa học máy tính nói chung.
+          Nói chung mục đích và ngôn ngữ linh hoạt có thể được sử dụng trong
+          phát triển web / Internet, dể xử lý văn bản, tạo các trò chơi, và như
+          một phần của Ruby phổ biến trên Framework Rails. Khóa học lập trình này
+          được cung cấp bởi FAA, một nền tảng tương tác trực tuyến cung cấp mã hóa
+          miễn phí các lớp học trong sáu ngôn ngữ lập trình khác nhau như Python, PHP,
+          JQuery, JavaScript, và Ruby, cũng như các ngôn ngữ đánh dấu bao gồm
+          HTML và CSS."
       our_trainer:
         trainer: "Người hướng dẫn"
         certificates: "Chứng chỉ"
@@ -712,3 +708,49 @@ vi:
         agile_certification: "Chứng chỉ Agile"
         title: "Đội ngũ giảng dạy"
         see_more: "Xem thêm"
+    recruitments:
+      index:
+        hot_recruitment: "Thông tin tuyển dụng hot"
+        recruitment_tag: "Thẻ thông tin tuyển dụng"
+        recruitment: "Thông tin tuyển dụng"
+        filter: "Lọc"
+        search_placeholder: "Tìm kiếm..."
+        not_found: "Không tìm thấy thông tin tuyển dụng"
+      show:
+        heading: "Thông tin tuyển dụng"
+        heading_description: "Tất cả thông tin tuyển dụng"
+        edit: "Chỉnh sửa"
+        delete: "Xóa"
+        popular: "Phổ biến"
+        recent: "Gần đây"
+        related_recruitments: "Các thông tin tuyển dụng liên quan"
+        delete_confirm: "Bạn chắc chắn muốn xóa?"
+        hot_recruitment: "Thông tin tuyển dụng hot"
+      nav_search:
+        show_all: "Tất cả"
+        more: "Thêm"
+      recruitment:
+        read_more: "Xem thêm"
+        confirm_delete: "Bạn chắc chắn muốn xóa?"
+      comment_form:
+        leave_a: "Để lại"
+        comment: "bình luận"
+        comment_placeholder: "Viết bình luận..."
+        submit_button: "Bình luận"
+      comment_item:
+        delete_confirm: "Bạn chắc chắn muốn xóa?"
+      edit_comment_form:
+        edit_button: "Sửa"
+      comments:
+        login_to_comment: "Đăng nhập để để lại bình luận"
+        comments: "Bình luận"
+      posted_by:
+        posted_by: "Đăng bởi"
+      recruitment:
+        read_more: "Xem thêm"
+        delete: "Xóa"
+        confirm_delete: "Bạn chắc chắn muốn xóa?"
+      share_recruitment:
+        share_this_recruitment: "Chia sẻ thông tin tuyển dụng này"
+      tag_cloud:
+        recruitment_tag: "Các thẻ thông tin tuyển dụng"

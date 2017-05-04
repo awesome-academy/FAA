@@ -1,0 +1,5 @@
+<% if @index_recruitment_object.recruitments.any? %>
+  $('.list-recruitment').html('<%= j render partial: "list_recruitment", locals: {index_recruitment_object: @index_recruitment_object} %>');
+<% else %>
+  $('.list-recruitment').html('<span><%= t ".not_found" %></h1>');
+<% end %>

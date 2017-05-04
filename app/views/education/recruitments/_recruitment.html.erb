@@ -1,0 +1,49 @@
+<div id="posts" class="small-thumbs margin-recruitment">
+  <div class="entry clearfix">
+    <div class="entry-image post-thumb-image">
+      <%= load_cover_photo recruitment %>
+    </div>
+    <div class="entry-c">
+      <div class="entry-title">
+        <h2>
+          <%= link_to education_recruitment_path(recruitment) do %>
+            <%= recruitment.title %>
+          <% end %>
+        </h2>
+      </div>
+      <ul class="entry-meta clearfix">
+        <li><i class="icon-calendar3"></i>
+          <%= l recruitment.created_at, format: :date_month_year_concise %></li>
+        <li>
+          <%= link_to education_recruitments_path(user_id_eq: recruitment.user_id) do %>
+            <i class="icon-user"></i> <%= recruitment.user_name %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to education_recruitments_path(category_id_eq: recruitment.category_id) do %>
+            <i class="icon-folder-open"></i> <%= recruitment.category.name %>
+          <% end %>
+        </li>
+        <li>
+          <a href="#comments"><i class="icon-comments"></i>
+            <%= recruitment.comments_count %>
+          </a>
+        </li>
+      </ul>
+      <div class="entry-content">
+        <p class="content-justify">
+          <%= markdown_truncate recruitment.content
+            .truncate(Settings.education.posts.content_character_display) %>
+        </p>
+        <%= link_to education_recruitment_path(recruitment), class: "more-link" do %>
+          <%= t ".read_more" %>
+        <% end %>
+        <% if is_belong_to_user? recruitment, current_user %>
+          <%= link_to t(".delete"), education_recruitment_path(recruitment), method: :delete,
+            remote: true, data: {confirm: t(".confirm_delete")},
+            class: "more-link more-link-delete-custom" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

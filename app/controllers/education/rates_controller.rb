@@ -23,7 +23,8 @@ class Education::RatesController < ApplicationController
   def load_object
     @object = case rate_params[:rateable_type]
               when Education::Post.name
-                Education::Post.find_by id: params[:post_id]
+                post_id = params[:post_id] || params[:recruitment_id]
+                Education::Post.find_by id: post_id
               when Education::Project.name
                 Education::Project.find_by id: params[:project_id]
               end

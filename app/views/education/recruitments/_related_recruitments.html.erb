@@ -1,0 +1,14 @@
+<div class="related-posts clearfix">
+  <div class="col_half nobottommargin">
+    <% related_recruitment_slice(related_recruitments.to_a).first
+      .each do |recruitment| %>
+      <%= render partial: "related_recruitment_item", locals: {recruitment: recruitment} %>
+    <% end %>
+  </div>
+  <div class="col_half nobottommargin col_last">
+    <% related_recruitment_slice(related_recruitments.to_a).last
+      .each do |recruitment| %>
+      <%= render partial: "related_recruitment_item", locals: {recruitment: recruitment} %>
+    <% end %>
+  </div>
+</div>

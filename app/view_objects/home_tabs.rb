@@ -38,7 +38,7 @@ class HomeTabs < Tabs
 
   def recruitment_tab
     build_tab t("education.layouts.header.recruitment"),
-      "#", :recruitments
+      education_recruitments_path, :recruitments
   end
 
   def contact_tab

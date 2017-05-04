@@ -36,6 +36,10 @@ Rails.application.routes.draw do
     resources :images
     resources :project_members, only: [:create, :destroy]
     resources :about, only: :index
+    resources :recruitments do
+      resources :comment_recruitments, except: [:index, :show]
+      resources :rates, only: :create
+    end
   end
 
   resources :users

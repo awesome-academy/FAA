@@ -1,0 +1,8 @@
+<% if index_recruitment_object.recruitments.any? %>
+  <% index_recruitment_object.recruitments.each do |recruitment| %>
+      <%= render "recruitment", recruitment: recruitment %>
+  <% end %>
+<% end %>
+<div class="center">
+  <%= paginate @index_recruitment_object.recruitments %>
+</div>
