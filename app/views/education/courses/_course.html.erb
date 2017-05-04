@@ -1,30 +1,33 @@
-<article class="portfolio-item pf-graphics pf-illustrations portfolio-item-course">
-  <div class="portfolio-image">
+<tr>
+  <td>
     <% if course.images.any? %>
-      <div class="carousel slide course_image_slide">
-        <div class="carousel-inner" role="listbox">
-          <% course.images.each_with_index do |image, index| %>
-            <div class="<%= index.zero? ? 'item active' : 'item' %>">
-              <%= link_to image_tag(image.url),
-                education_course_path(course) %>
-            </div>
-          <% end %>
-        </div>
-      </div>
+      <%= image_tag course.images.first.url, class: "img-circle" %>
     <% else %>
-      <%= image_tag ImageUploader.new.default_url %>
+      <%= image_tag ImageUploader.new.default_url, class: "img-circle" %>
     <% end %>
-  </div>
-  <div class="portfolio-desc">
-    <h3 title="<%= course.name %>">
-      <%= link_to truncate(course.name,
-        length: Settings.education.index_name.truncate_limit),
-        education_course_path(course) %>
-    </h3>
-    <span title="<%= course.detail %>">
-      <%= truncate course.detail,
-        length: Settings.courses.course_detail %>
-      <%= truncate(course.training.name, length: Settings.education.index_name.truncate_limit) %>
-     </span>
-  </div>
-</article>
+  </td>
+  <td>
+    <h4>
+      <b><%= course.name %></b>
+    </h4>
+    <p><%= course.training.name %></p>
+  </td>
+  <td><%= course.schedule %></td>
+  <td><%= l course.start_date, format: :date_month_year_concise %></td>
+  <td><%= course.place %></td>
+  <td><%= l course.deadline_register, format: :date_month_year_concise %></td>
+  <td><%= course.cost %></td>
+  <td align="center">
+    <% if current_user && can_manage?(Education::Course) %>
+      <a class="btn btn-default btn-course-edit" data-id="<%= course.id %>">
+        <em class="icon-pencil"></em>
+      </a>
+      <a class="btn btn-danger"><em class="icon-trash"></em></a>
+    <% else%>
+      <a href="" class="button button-rounded button-reveal button-large button-yellow button-light">
+        <i class="icon-ok"></i>
+        <span><%= t ".register" %></span>
+      </a>
+    <% end %>
+  </td>
+</tr>

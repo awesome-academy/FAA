@@ -14,7 +14,6 @@ class Education::Course < ApplicationRecord
 
   validates :name, presence: true,
     length: {maximum: Settings.education.course.max_name_length}
-  validates :detail, presence: true
 
   scope :newest, ->{order created_at: :desc}
   scope :relation_training, ->training_id do
