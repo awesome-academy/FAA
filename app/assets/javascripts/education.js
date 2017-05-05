@@ -29,6 +29,8 @@
 //= require education/rates
 //= require education/trainings
 //= require education/techniques
+//= require select2-full
+//= require education/home
 //= require i18n
 //= require i18n.js
 //= require i18n/translations

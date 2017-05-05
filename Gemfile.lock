@@ -516,6 +516,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   scss_lint
   scss_lint_reporter_checkstyle
+  select2-rails (~> 4.0, >= 4.0.3)
   shoulda-matchers (~> 3.0)
   simple_form
   simplecov

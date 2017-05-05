@@ -39,7 +39,6 @@ class User < ApplicationRecord
   enum role: [:user, :admin]
   enum education_status: [:blocked, :active], _prefix: true
 
-
   validates :name, presence: true,
     length: {maximum: Settings.user.max_length_name}
   validates :email, presence: true
@@ -56,7 +55,6 @@ class User < ApplicationRecord
   scope :of_education, -> do
     joins(:education_user_groups).distinct
   end
-
 
   scope :by_active, ->{where education_status: :active}
 

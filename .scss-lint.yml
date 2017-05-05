@@ -1,0 +1,11 @@
+scss_files: 'app/assets/stylesheets/**'
+exclude:
+  - 'app/assets/stylesheets/application.scss'
+  - 'app/assets/stylesheets/admin/gentelella-custom.scss'
+  - 'app/assets/stylesheets/admin/admin.scss'
+  - 'vendor/assets/**'
+linters:
+  ImportantRule:
+    enabled: false
+  MergeableSelector:
+    enabled: false

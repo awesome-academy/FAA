@@ -43,4 +43,5 @@ Rails.application.routes.draw do
   resources :user_covers, only: :create
   resource :user_covers, only: :update
   resources :info_users, only: :update
+  resources :course_registers, only: [:new, :create]
 end

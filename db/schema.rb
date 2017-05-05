@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(version: 20170504071342) do
     t.index ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type", using: :btree
   end
 
+  create_table "course_registers", force: :cascade do |t|
+    t.integer  "course_id"
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.string   "address"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "education_about_translations", force: :cascade do |t|
     t.integer  "education_about_id", null: false
     t.string   "locale",             null: false
@@ -390,6 +400,7 @@ ActiveRecord::Schema.define(version: 20170504071342) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "course_registers", "education_courses", column: "course_id"
   add_foreign_key "education_comments", "users"
   add_foreign_key "education_course_members", "education_courses", column: "course_id"
   add_foreign_key "education_course_members", "users"

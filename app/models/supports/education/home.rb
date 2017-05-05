@@ -1,7 +1,7 @@
 module Supports::Education
   class Home
     attr_reader :about, :projects, :learning_programs, :trainings, :courses,
-      :techniques
+      :techniques, :courses_select_options, :new_course_register
 
     def about
       Education::About.first
@@ -34,6 +34,10 @@ module Supports::Education
 
     def trainers
       Education::Group.get_trainers.users.by_active.includes :avatar
+    end
+
+    def new_course_register
+      CourseRegister.new
     end
   end
 end

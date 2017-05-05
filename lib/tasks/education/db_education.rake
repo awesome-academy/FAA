@@ -46,6 +46,9 @@ namespace :education do
     puts "Create Education feedback"
     Rake::Task["education:make_feedbacks"].invoke
 
+    puts "Create course registers"
+    Rake::Task["education:course_register"].invoke
+
     puts "Create education group user"
     groups = ["Admin", "Trainer", "Trainee", "Guess"]
     groups.each do |group|
