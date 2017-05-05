@@ -4,7 +4,7 @@
     <span><%= yield :heading_description %></span>
     <ol class="breadcrumb">
       <li><%= link_to t("education.header.home"), education_root_path %></li>
-      <li class="active"><%= t "education.header.posts" %></li>
+      <li class="active"><%= t "education.layouts.header.news" %></li>
     </ol>
   </div>
 </section>
@@ -20,6 +20,7 @@
           </div>
           <div class="col-md-9">
             <%= f.input :tag_list, class: "sm-form-control" %>
+            <%= f.hidden_field :post_type, value: :news %>
             <div class="hidden" id="post-tags">
               <%= @post.tags.map{|tag| tag.name} %>
             </div>

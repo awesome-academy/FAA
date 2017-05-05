@@ -354,12 +354,6 @@ en:
         modal_header: "Insert Images"
         cancel: "Cancel"
         modal_header: "Insert image"
-      new:
-        heading: "Create a new post"
-        heading_description: "Make it awesome!"
-      edit:
-        heading: "Edit post"
-        heading_description: "Make is awesome!"
     post:
       post_not_found: "Post is not found."
     slider:

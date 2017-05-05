@@ -2,7 +2,7 @@
   <div class="panel-heading">
     <h3 class="panel-title"><%= t ".posted_by" %>
       <span>
-        <%= link_to @post.user_name, "#" %>
+        <%= link_to @post.user_name, education_user_path(@post.user) %>
       </span>
     </h3>
   </div>

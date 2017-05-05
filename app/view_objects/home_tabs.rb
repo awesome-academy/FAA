@@ -21,7 +21,7 @@ class HomeTabs < Tabs
   end
 
   def posts_tab
-    build_tab t("education.layouts.header.posts"),
+    build_tab t("education.layouts.header.news"),
       education_posts_path, :posts
   end
 

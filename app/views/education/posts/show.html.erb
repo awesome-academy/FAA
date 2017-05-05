@@ -4,7 +4,7 @@
     <span><%= t ".heading_description" %></span>
     <ol class="breadcrumb">
       <li><%= link_to t("education.header.home"), education_root_path %></li>
-      <li class="active"><%= t "education.header.posts" %></li>
+      <li class="active"><%= t "education.layouts.header.news" %></li>
     </ol>
   </div>
 </section>
@@ -22,7 +22,7 @@
                 <%= @post.created_at.to_formatted_s :long_ordinal %>
               </li>
               <li>
-                <%= link_to "#" do %>
+                <%= link_to education_user_path @post.user do %>
                   <i class="icon-user"></i><%= @post.user_name %>
                 <% end %>
               </li>
@@ -69,11 +69,11 @@
           <div class="post-navigation clearfix">
             <div class="col_half nobottommargin">
               <a href="#">
-                &lArr; This is a Standard post with a Slider Gallery
+                &lArr;<%= t ".standard_news" %>
               </a>
             </div>
             <div class="col_half col_last tright nobottommargin">
-              <a href="#">This is an Embedded Audio Post &rArr;</a>
+              <a href="#"><%= t ".embedded_news" %>&rArr;</a>
             </div>
           </div>
           <div class="line"></div>

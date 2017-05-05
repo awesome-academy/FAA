@@ -413,12 +413,6 @@ vi:
         modal_header: "Thêm hình ảnh"
         cancel: "Bỏ qua"
         modal_header: "Thêm hình ảnh"
-      new:
-        heading: "Tạo mới"
-        heading_description: "Make it awesome!"
-      edit:
-        heading: "Chỉnh sửa"
-        heading_description: "Make is awesome!"
     post:
       post_not_found: "Không tìm thấy post"
     slider:
