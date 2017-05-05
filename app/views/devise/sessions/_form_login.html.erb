@@ -1,42 +1,24 @@
-<div class="panel panel-default divcenter pnl-login">
-  <div class="panel-body login-custom">
-    <%= form_for :user, url: session_path(:user),
-      class: "nobottommargin" do |f| %>
-      <h3 class="text-center"><%= t ".login" %></h3>
-      <div class="col_full">
-        <%= f.label :email, class: "login-form-username" %><br />
-        <%= f.email_field :email, class: "form-control not-dark", autofocus: true %>
-      </div>
-
-      <div class="col_full password-custom">
-        <%= f.label :password, class: "login-form-password" %><br />
-        <%= f.password_field :password,
-          class: "form-control not-dark", autocomplete: "off" %>
-        <%= link_to t(".forgot_password"), "#", class: "forgot-password" %><br/>
-      </div>
-
-      <div class="col_full nobottommargin">
-        <%= f.submit t(".login"),
-          class: "button button-3d button-green nomargin" %>
-      </div>
-    <% end %>
-
-    <div class="line line-sm"></div>
-
-    <div class="center">
-      <% if devise_mapping.omniauthable? %>
-        <h4 class="margin-section" ><%= t ".or_login_with" %></h4>
-        <% resource_class.omniauth_providers.each do |provider| %>
-          <% if OmniAuth::Utils.camelize(provider) == "Facebook" %>
-            <%= link_to t(".facebook"), omniauth_authorize_path(resource_name, provider),
-              class: "button button-rounded si-facebook si-colored" %>
-            <span class="hidden-xs"></span>
-          <% elsif OmniAuth::Utils.camelize(provider) == "GoogleOauth2" %>
-            <%= link_to t(".google"), omniauth_authorize_path(resource_name, provider),
-              class: "button button-rounded si-google si-colored" %>
-          <% end %>
-        <% end %>
-      <% end %>
-    </div>
+<%= form_for resource, as: resource_name, url: session_path(resource_name),
+  html: {id: "sign-in-user", data: {type: "json"}},
+  remote: true do |f | %>
+  <h3 class="text-center orange-text"><%= t ".login" %></h3>
+  <div class="alert-messages"></div>
+  <div class="col_full">
+    <%= f.label :email, class: "login-form-username" %><br />
+    <%= f.email_field :email, class: "form-control not-dark", autofocus: true %>
   </div>
-</div>
+
+  <div class="col_full password-custom">
+    <%= f.label :password, class: "login-form-password" %><br />
+    <%= f.password_field :password,
+      class: "form-control not-dark", autocomplete: "off" %>
+    <p><%= t ".dont_have_account" %>
+      <a href="#" id="login-register-btn"><%= t ".signup_here" %></a>
+    </p>
+  </div>
+
+  <div class="col_full nobottommargin">
+    <%= f.submit t(".login"),
+      class: "button button-3d button-green nomargin" %>
+  </div>
+<% end %>

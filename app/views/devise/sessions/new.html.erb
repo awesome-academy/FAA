@@ -3,3 +3,13 @@
 <div class="container-fluid clearfix bg-login education-login-form">
   <%= render "form_login" %>
 </div>
+
+<div class="center">
+  <h4 class="margin-section" ><%= t ".or_login_with" %></h4>
+  <%= link_to t(".facebook"), user_facebook_omniauth_authorize_path,
+    class: "button button-rounded si-facebook si-colored" %>
+  <span class="hidden-xs"></span>
+  <%= link_to t(".google"),
+    user_google_oauth2_omniauth_authorize_path,
+    class: "button button-rounded si-google si-colored" %>
+</div>

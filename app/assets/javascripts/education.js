@@ -43,7 +43,7 @@ $(document).ready(function(){
   showNewForm('.btn-course-new', '/education/courses/new')
 })
 
-function showEditForm(object, path) {
+function showEditForm(object, path){
   $(object).on('click', function(){
     var id = $(this).data('id');
     $.ajax({
@@ -60,7 +60,7 @@ function showEditForm(object, path) {
   })
 }
 
-function showNewForm(object, path) {
+function showNewForm(object, path){
   $(object).on('click', function(){
     $.ajax({
       url: path,
@@ -76,3 +76,27 @@ function showNewForm(object, path) {
     })
   })
 }
+
+
+$(function(){
+  return $('form#sign-in-user, form#sign-up-user').bind('ajax:success', function(event, xhr, settings){
+    window.location.reload();
+  }).bind('ajax:error', function(event, xhr, settings, exceptions) {
+    $('.form-group').removeClass('has-error');
+    $('span').remove('.help-block');
+    var $form = $(this);
+    var error_messages;
+    if(xhr.responseJSON['error']){
+      error_messages = '<div class ="alert alert-danger pull-left">' + xhr.responseJSON['error'] + '</div>';
+    }else if(xhr.responseJSON['errors']){
+      $.map(xhr.responseJSON['errors'], function(v, k) {
+        var element_id = '#user_' + k;
+        var $divFormGroup = $form.find(element_id).parent()
+        $divFormGroup.addClass('has-error');
+        $divFormGroup.append('<span class="help-block">' + v + '</span>');
+      });
+    }
+    $('.alert-messages').html(error_messages)
+    $('#div-forms').height($form.height());
+  });
+});
