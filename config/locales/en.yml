@@ -101,6 +101,7 @@ en:
       login: "Login"
       logout: "Logout"
       create_new_post: "Create new post"
+      course_registration: "Course registration"
   pages:
     index:
       title: "Home"
@@ -391,6 +392,12 @@ en:
         register: "Register"
       new:
         create_course: "Create Course"
+      detail_course:
+        register: "Register"
+        share: "Share"
+      read_more:
+        close: "Close"
+        detail: "Detail"
   time:
     formats:
       date_month_year_concise: '%d-%m-%y'
@@ -535,6 +542,10 @@ en:
       create_success: "Successfully registered"
       create_failed: "Register failed"
       submit: "Register"
+    register_form:
+      submit: "Register"
+    new:
+      course_registration: "Course registration"
   course_register_mailer:
     course_register:
       greeting: "Hi, %{receiver_name}"

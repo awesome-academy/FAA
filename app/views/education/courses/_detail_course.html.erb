@@ -1,7 +1,7 @@
 <section id="content">
   <div class="content-wrap content-wrap-custom">
-    <div class="container-fluid clearfix">
-      <div class="col_two_third portfolio-single-image nobottommargin">
+    <div class="container-fluid clearfix course-detail-wrapper">
+      <div class="course-slide-wrapper">
         <div class="fslider" data-arrows="false" data-animation="fade">
           <div class="flexslider">
             <div class="slider-wrap">
@@ -10,11 +10,8 @@
             </div>
           </div>
         </div>
-        <div class="divider divider-center divider-custom">
-          <i class="icon-circle"></i>
-        </div>
       </div>
-      <div class="col_one_third portfolio-single-content col_last course">
+      <div class="course-detail-inner">
         <div class="course-detail">
           <div class="fancy-title title-bottom-border">
             <h2><%= t ".course_info" %></h2>
@@ -33,8 +30,15 @@
               <%= t ".end_date" %><%= l course.end_date,
               format: :date_month_year_concise %></span>
           </div>
+          <div>
+            <%= render "connection_course", techniques: show_course.techniques,
+              course: course, users: show_course.users %>
+          </div>
+          <div class="course-registration">
+            <%= link_to t(".register"), new_course_register_path(course: course.id),
+              class: "button button-3d button-amber nomargin" %>
+          </div>
           <div class="share-course">
-
             <div class="si-share share-custom clearfix">
               <div>
                 <span><%= t ".share" %></span>
@@ -45,13 +49,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="col_two_third portfolio-single-image nobottommargin">
-        <%= render "members_course", course_members: show_course.course_members %>
-      </div>
-      <div class="col_one_third portfolio-single-content col_last">
-        <%= render "connection_course", techniques: show_course.techniques,
-          course: course, users: show_course.users %>
       </div>
     </div>
   </div>

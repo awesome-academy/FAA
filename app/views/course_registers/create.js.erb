@@ -4,5 +4,6 @@
 <% elsif flash[:danger].present? %>
   $.growl.error({message: '<%= flash[:danger] %>'});
   $('#course_registers_section').html('<%= j render partial: "education/home/course_register", locals: {course_register: @course_register} %>')
+  $('#new_course_register_page').html('<%= j render partial: "register_form", locals: {course_register: @course_register} %>')
   $('#course_register_course_id').select2();
 <% end %>

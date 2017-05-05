@@ -1,4 +1,10 @@
 class CourseRegistersController < ApplicationController
+  layout "education/layouts/application"
+
+  def new
+    @course_register = CourseRegister.new
+  end
+
   def create
     @course_register = CourseRegister.new course_register_params
     if @course_register.save
