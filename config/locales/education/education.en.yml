@@ -1,4 +1,7 @@
 en:
+  time:
+    formats:
+      date_month_year: "%d/%m/%Y"
   education:
     base:
       user_blocked: "You are blocked in this site."
@@ -49,6 +52,12 @@ en:
         log_in: "Login"
         create_news: "Create news"
         management: "Management"
+        about: "About us"
+        schedule: "Schedule"
+        register: "Register"
+        news: "News"
+        recruitment: "Recruitment"
+        contact: "Contact"
     trainers:
       trainer:
         trainer_title: "Trainer"
@@ -140,6 +149,9 @@ en:
         team_member_trainer: "Trainer"
       lastest_courses:
         last_courses: "Upcoming courses"
+        see_more: "See more"
+      course:
+        at: "at"
     trainings:
       training_not_found: "Training Not Found."
       index:

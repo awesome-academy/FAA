@@ -6,9 +6,13 @@
           <li><%= load_image course %></li>
         </ul>
         <div class="portfolio-overlay">
-          <div class="portfolio-desc">
-            <h3><%= truncate(course.name, length: Settings.education.index_name.truncate_limit) %></h3>
+          <div class="portfolio-desc index-course-details">
+            <h2><%= truncate(course.name, length: Settings.education.index_name.truncate_limit) %></h2>
             <span></span>
+            <p><%= course.schedule %></p>
+            <p><%= l course.start_date, format: :date_month_year %> -
+              <%= l course.end_date, format: :date_month_year %></p>
+            <p><%= t ".at" %> <%= course.place %></p>
           </div>
           <%= link_to education_course_path(course), class: "center-icon" do %>
             <i class="icon-line-ellipsis"></i>
