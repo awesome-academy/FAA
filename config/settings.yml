@@ -218,3 +218,5 @@ course_register:
   min_phone_number_length: 3
   max_address_length: 255
   min_address_length: 3
+friendly_token_low: 0
+friendly_token_high: 20

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, only: :session
+  devise_for :users, controllers: {omniauth_callbacks: :callbacks}
   root "education/home#index"
   namespace :education do
     namespace :management do

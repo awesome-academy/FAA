@@ -4,7 +4,7 @@ class User < ApplicationRecord
   acts_as_follower
   has_friendship
   devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :validatable
+    :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   has_many :articles
   has_many :education_posts, class_name: Education::Post.name
@@ -88,6 +88,17 @@ class User < ApplicationRecord
 
     def header_of_file file
       spreadsheet(file).row 1
+    end
+
+    def from_omniauth auth
+      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+        user.provider = auth.provider
+        user.uid = auth.uid
+        user.email = auth.info.email
+        user.name = auth.info.name
+        user.password = Devise
+          .friendly_token[Settings.friendly_token_low, Settings.friendly_token_high]
+      end
     end
   end
 
