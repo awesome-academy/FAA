@@ -39,6 +39,25 @@
           <h2><%= t ".training_info" %></h2>
         </div>
         <p><%= @training.description %></p>
+        <h5><span class="glyphicon glyphicon-minus">
+          <%= t(".usage") %></span> <%= @training.usage %>
+        </h5>
+        <h5>
+          <span class="glyphicon glyphicon-minus">
+          <%= t(".reason") %></span> <%= @training.reason %>
+        </h5>
+        <h5>
+          <span class="glyphicon glyphicon-minus">
+          <%= t(".learner") %></span> <%= @training.learner %>
+        </h5>
+        <h5>
+          <span class="glyphicon glyphicon-minus">
+          <%= t(".duration") %></span> <%= @training.duration %>
+        </h5>
+        <h5>
+          <span class="glyphicon glyphicon-minus">
+          <%= t(".benefit") %></span> <%= @training.benefit %>
+        </h5>
         <br>
         <div class="fancy-title title-bottom-border">
           <h2><%= t ".techniques" %></h2>

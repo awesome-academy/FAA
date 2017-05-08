@@ -3,7 +3,7 @@ class HomeTabs < Tabs
 
   def tabs
     [about_tab,
-     courses_tab,
+     trainings_tab,
      schedule_tab,
      register_tab,
      news_tab,
@@ -16,14 +16,14 @@ class HomeTabs < Tabs
       "#", :about
   end
 
-  def courses_tab
-    build_tab t("education.layouts.header.courses"),
-      education_courses_path, :courses
+  def trainings_tab
+    build_tab t("education.layouts.header.trainings"),
+      education_trainings_path, :trainings
   end
 
   def schedule_tab
     build_tab t("education.layouts.header.schedule"),
-      "#", :schedule
+      education_courses_path, :schedule
   end
 
   def register_tab
