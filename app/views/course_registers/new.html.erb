@@ -1,0 +1,12 @@
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= t ".course_registration" %></h1>
+    <ol class="breadcrumb">
+      <li><%= link_to t("education.header.home"), education_root_path %></li>
+      <li class="active"><%= t ".course_registration" %></li>
+    </ol>
+  </div>
+</section>
+<div class="container p-t-60" id="new_course_register_page">
+  <%= render partial: "register_form", locals: {course_register: @course_register} %>
+</div>

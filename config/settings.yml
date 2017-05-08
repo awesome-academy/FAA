@@ -153,6 +153,7 @@ courses:
   number_filter: 4
   detail_rows: 5
   new_course_image: "/assets/default.jpg"
+  part_num: 2
 user:
   max_length_name: 50
 max_length_title: 150

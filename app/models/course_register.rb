@@ -11,7 +11,8 @@ class CourseRegister < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}
   validates :phone_number,
     length: {maximum: Settings.course_register.max_phone_number_length,
-      minimum: Settings.course_register.min_phone_number_length}
+      minimum: Settings.course_register.min_phone_number_length},
+      allow_blank: true
   validates :address, length:
     {maximum: Settings.course_register.max_address_length,
       minimum: Settings.course_register.min_address_length}, allow_blank: true
