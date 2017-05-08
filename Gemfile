@@ -53,6 +53,9 @@ gem "has_friendship"
 gem "figaro"
 gem "faker"
 gem "select2-rails", "~> 4.0", ">= 4.0.3"
+gem "omniauth-facebook"
+gem "omniauth-google-oauth2"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 3.0"
 # Use ActiveModel has_secure_password

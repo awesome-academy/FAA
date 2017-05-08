@@ -51,6 +51,7 @@ en:
       form_login:
         login: "Login"
         facebook: "Facebook"
+        google: "Google+"
         twitter: "Twitter"
         or_login_with: "Or login with"
         forgot_password: "Forgot your password?"

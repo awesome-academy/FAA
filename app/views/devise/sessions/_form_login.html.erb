@@ -24,13 +24,19 @@
     <div class="line line-sm"></div>
 
     <div class="center">
-      <h4 class="margin-section" ><%= t ".or_login_with" %></h4>
-      <a href="#" class="button button-rounded si-facebook si-colored">
-        <%= t ".facebook" %></a>
-      <span class="hidden-xs"></span>
-      <a href="#" class="button button-rounded si-twitter si-colored">
-        <%= t ".twitter" %>
-      </a>
+      <% if devise_mapping.omniauthable? %>
+        <h4 class="margin-section" ><%= t ".or_login_with" %></h4>
+        <% resource_class.omniauth_providers.each do |provider| %>
+          <% if OmniAuth::Utils.camelize(provider) == "Facebook" %>
+            <%= link_to t(".facebook"), omniauth_authorize_path(resource_name, provider),
+              class: "button button-rounded si-facebook si-colored" %>
+            <span class="hidden-xs"></span>
+          <% elsif OmniAuth::Utils.camelize(provider) == "GoogleOauth2" %>
+            <%= link_to t(".google"), omniauth_authorize_path(resource_name, provider),
+              class: "button button-rounded si-google si-colored" %>
+          <% end %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
