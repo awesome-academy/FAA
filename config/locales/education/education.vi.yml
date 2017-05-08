@@ -1,4 +1,7 @@
 vi:
+  time:
+    formats:
+      date_month_year: "%d/%m/%Y"
   education:
     base:
       user_blocked: "Tài khoản của bạn đã bị khóa."
@@ -38,7 +41,7 @@ vi:
         portfolio: "Danh mục"
         project: "Dự án"
         news: "Tin tức"
-        courses: "Khóa học"
+        courses: "Khoá học"
         trainings: "Đào tạo"
         trainees: "Học viên"
         search: "Type & Hit Enter.."
@@ -49,6 +52,12 @@ vi:
         log_in: "Đăng nhập"
         create_news: "Tạo một bản tin"
         management: "Quản lý"
+        about: "Giới thiệu"
+        schedule: "Lịch khai giảng"
+        register: "Đăng ký"
+        news: "Tin tức"
+        recruitment: "Tuyển dụng"
+        contact: "Liên hệ"
     trainers:
       trainer:
         trainer_title: "Giảng viên"
@@ -140,6 +149,9 @@ vi:
         team_member_trainer: "Người hướng dẫn"
       lastest_courses:
         last_courses: "Các khóa học sắp tới"
+        see_more: "Xem thêm"
+      course:
+        at: "tại"
     trainings:
       training_not_found: "Không tìm thấy khóa đào tạo."
       index:

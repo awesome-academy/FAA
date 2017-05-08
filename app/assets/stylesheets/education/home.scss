@@ -216,3 +216,29 @@
 .courses-heading {
   padding-top: 0;
 }
+
+.index-course-details {
+  color: $white;
+
+  h2 {
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 13px;
+    font-style: italic;
+    margin: 0;
+  }
+}
+
+.japan-market-video {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.edu-menu-custom {
+  a {
+    font-size: 10px !important;
+    padding-right: 5px !important;
+  }
+}

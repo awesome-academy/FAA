@@ -2,27 +2,18 @@ class HomeTabs < Tabs
   private
 
   def tabs
-    [home_tab,
-     trainings_tab,
+    [about_tab,
      courses_tab,
-     projects_tab,
-     posts_tab,
-     trainers_tab].compact
+     schedule_tab,
+     register_tab,
+     news_tab,
+     recruitment_tab,
+     contact_tab].compact
   end
 
-  def home_tab
-    build_tab t("education.layouts.header.home"),
-      education_root_path, :home
-  end
-
-  def projects_tab
-    build_tab t("education.layouts.header.project"),
-      education_projects_path, :projects
-  end
-
-  def posts_tab
-    build_tab t("education.layouts.header.news"),
-      education_posts_path, :posts
+  def about_tab
+    build_tab t("education.layouts.header.about"),
+      "#", :about
   end
 
   def courses_tab
@@ -30,13 +21,28 @@ class HomeTabs < Tabs
       education_courses_path, :courses
   end
 
-  def trainings_tab
-    build_tab t("education.layouts.header.trainings"),
-      education_trainings_path, :trainings
+  def schedule_tab
+    build_tab t("education.layouts.header.schedule"),
+      "#", :schedule
   end
 
-  def trainers_tab
-    build_tab t("education.layouts.header.trainers"),
-      education_trainers_path, :trainers
+  def register_tab
+    build_tab t("education.layouts.header.register"),
+      "#", :register
+  end
+
+  def news_tab
+    build_tab t("education.layouts.header.news"),
+      "#", :news
+  end
+
+  def recruitment_tab
+    build_tab t("education.layouts.header.recruitment"),
+      "#", :recruitment
+  end
+
+  def contact_tab
+    build_tab t("education.layouts.header.contact"),
+      "#", :contact
   end
 end
