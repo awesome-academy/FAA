@@ -26,7 +26,7 @@ class Education::Management::CategoriesController <
 
   def update
     if @category.update_attributes category_params
-      respond_to_json t(".success"), 200, @category.name
+      respond_to_json t(".success"), 200, @category
     else
       respond_to_json t(".fail"), 400
     end
@@ -43,7 +43,7 @@ class Education::Management::CategoriesController <
   private
 
   def category_params
-    params.require(:education_category).permit :name
+    params.require(:education_category).permit :name, :category_type
   end
 
   def find_category
@@ -51,9 +51,11 @@ class Education::Management::CategoriesController <
     respond_to_json t(".not_found"), 400 unless @category
   end
 
-  def respond_to_json message, status, name = nil
+  def respond_to_json message, status, category = {}
     respond_to do |format|
-      format.json{render json: {flash: message, status: status, name: name}}
+      format.json do
+        render json: {flash: message, status: status, category: category}
+      end
     end
   end
 end

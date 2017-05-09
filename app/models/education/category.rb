@@ -7,5 +7,7 @@ class Education::Category < ApplicationRecord
   validates :name, presence: true,
     length: {maximum: Settings.education.category.max_length_title}
 
+  enum category_type: {news: 0, recruitment: 1}
+
   scope :newest, ->{order created_at: :desc}
 end
