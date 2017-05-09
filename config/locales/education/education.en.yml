@@ -3,9 +3,16 @@ en:
     formats:
       date_month_year: "%d/%m/%Y"
   education:
+    course_status:
+      registered: "Registered"
+      contacted: "Contacted"
+      send_contact: "Send contact"
+      reject_contact: "Reject contact"
     base:
       user_blocked: "You are blocked in this site."
     javascripts:
+      reject_alert: "reject contact to"
+      send_alert: "send contact to"
       training_alert: "Are you sure ?"
       project_alert: "Are you sure ?"
       feedback_alert: "Are you sure ?"
@@ -36,6 +43,7 @@ en:
         group_users: "Group Users"
         users: "Users"
         categories: "Categories"
+        courses: "Courses"
       header:
         home: "Home"
         portfolio: "Portfolio"
@@ -637,6 +645,23 @@ en:
           not_found: "Category not found!"
           success: "Deleted successfully!"
           fail: "Deteted failed!"
+      course_registers:
+        update:
+          success: "Update status successfully"
+          fail: "Update status failed"
+        index:
+          title: "Courses Register Management"
+          title_description: "Manage all Courses Register of Framgia Education"
+        search_form:
+          placeholder: "Enter your search"
+        list_course_register:
+          name: "Name"
+          email: "EMail"
+          address: "Address"
+          phone_number: "Phone Number"
+          course_name: "Course name"
+          status: "Status"
+          action: "Action"
     time:
       formats:
         date_month_year: "%d/%m/%Y"

@@ -18,6 +18,14 @@ class CourseRegister < ApplicationRecord
       minimum: Settings.course_register.min_address_length}, allow_blank: true
   validates :course_id, presence: true
 
+  enum status: [:contacted, :registered], _prefix: true
+
+  scope :newest, ->{order created_at: :desc}
+
+  scope :filter_by_status, ->status do
+    where status: status if status.present?
+  end
+
   def send_email user_email, user_name
     CourseRegisterMailer
       .course_register(education_course, user_email, user_name).deliver_later

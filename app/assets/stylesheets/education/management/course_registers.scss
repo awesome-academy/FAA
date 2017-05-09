@@ -1,0 +1,26 @@
+@import 'variables/color';
+
+.status-course {
+  float: right;
+  margin-right: 5px;
+  text-transform: capitalize;
+  width: 300px;
+ }
+
+.search-form-course input {
+  border: 1px solid $gray-ddd;
+  border-radius: 2em;
+  display: initial;
+  float: right;
+  font-size: 1em;
+  height: 40px;
+  margin-bottom: 7px;
+  padding: .5em 1.3em;
+  text-align: left;
+  width: 200px;
+}
+
+.search-form-course input:focus {
+  border-color: $blue-light;
+  width: 300px;
+}
