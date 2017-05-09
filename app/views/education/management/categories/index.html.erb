@@ -19,5 +19,10 @@
     </div>
   </section>
 </div>
+
+<div class="hidden" id="category_types_select" class="category_types_select">
+  <%= select_tag "category_types", options_for_select(category_type_select),
+    class: "sm-form-control edu-category-types-select" %>
+</div>
 <%= render "new_category", category: @category %>
 <%= javascript_include_tag "education/management/categories" %>

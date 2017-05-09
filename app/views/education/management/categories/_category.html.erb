@@ -1,7 +1,11 @@
 <tr id="edu-category-<%= category.id %>">
   <td id="edu-category-name-<%= category.id %>"><%= category.name %></td>
+  <td id="edu-category-type-<%= category.id %>" class="edu-category-type">
+    <%= category.category_type %>
+  </td>
   <td>
-    <%= link_to t(".edit"), "javascript:;", data: {id: category.id},
+    <%= link_to t(".edit"), "javascript:;", data: {id: category.id,
+      selected: category.category_type_before_type_cast},
       class: "btn btn-default edit-edu-category" %>
     <%= link_to t(".delete"), "javascript:;", data: {id: category.id},
       class: "btn btn-danger delete-edu-category" %>

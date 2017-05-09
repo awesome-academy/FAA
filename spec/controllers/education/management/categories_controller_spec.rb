@@ -57,11 +57,18 @@ RSpec.describe Education::Management::CategoriesController, type: :controller do
     it "render json success if update category successfully" do
       sign_in admin_edu
       patch :update, params: {id: category,
-        education_category: {name: "Ruby on Rails"}}, xhr: true
-      expected = {flash:
-        I18n.t("education.management.categories.update.success"),
-        status: 200, name: "Ruby on Rails"}.to_json
-      expect(response.body).to eq expected
+        education_category: {name: "Ruby on Rails", category_type: "news"}},
+        xhr: true
+      category.reload
+      expect(category.name).to eq "Ruby on Rails"
+    end
+
+    it "render category_type if update category successfully" do
+      sign_in admin_edu
+      patch :update, params: {id: category,
+        education_category: {name: "Ruby on Rails", category_type: "news"}},
+        xhr: true
+      expect(category.category_type).to eq "news"
     end
 
     it "render json fail if update category failed" do
@@ -70,7 +77,7 @@ RSpec.describe Education::Management::CategoriesController, type: :controller do
         education_category: {name: nil}}, xhr: true
       expected = {flash:
         I18n.t("education.management.categories.update.fail"),
-        status: 400, name: nil}.to_json
+        status: 400, category: {}}.to_json
       expect(response.body).to eq expected
     end
   end
@@ -87,7 +94,7 @@ RSpec.describe Education::Management::CategoriesController, type: :controller do
       delete :destroy, params: {id: category}, xhr: true
       expected = {flash:
         I18n.t("education.management.categories.destroy.success"),
-        status: 200, name: nil}.to_json
+        status: 200, category: {}}.to_json
       expect(response.body).to eq expected
     end
   end
