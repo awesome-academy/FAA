@@ -83,7 +83,8 @@ class Education::TrainingsController < Education::BaseController
   end
 
   def training_params
-    params.require(:education_training).permit :name, :description,
+    params.require(:education_training).permit :name, :description, :usage,
+      :reason, :learner, :duration, :cost, :benefit,
       images_attributes: [:id, :url, :url_cache, :_destroy]
   end
 

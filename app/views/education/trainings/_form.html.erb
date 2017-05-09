@@ -5,7 +5,39 @@
       <%= f.input :description, as: :text, label: t(".description"),
         class: "form-control",
         input_html: {rows: Settings.education.trainings.description_rows} %>
-      
+
+      <div class="form-group">
+        <%= f.input :usage, as: :text, label: t(".usage"),
+          input_html: {rows: Settings.education.trainings.textarea_rows,
+            class: "form-control"} %>
+      </div>
+      <div class="form-group">
+        <%= f.input :reason, as: :text, label: t(".reason"),
+          input_html: {rows: Settings.education.trainings.textarea_rows,
+            class: "form-control"} %>
+      </div>
+      <%= f.input :learner, label: t(".learner"), class: "form-control" %>
+      <div class="form-group">
+        <div class="col-md-12">
+          <div class="col-md-3 left-field">
+            <%= f.input :duration, as: :integer %>
+          </div>
+          <div class="col-md-3 right-field courses-duration">
+            <h5><%= t(".days") %></h5>
+          </div>
+          <div class="col-md-5">
+            <%= f.input :cost, as: :integer %>
+          </div>
+          <div class="col-md-1 courses-duration">
+            <h5><%= t(".vnd") %></h5>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.input :benefit, as: :text, label: t(".benefit"),
+          input_html: {rows: Settings.education.trainings.textarea_rows,
+            class: "form-control"} %>
+      </div>
       <%= f.label t ".choose_technique" %>
       <div class="form-choose-technique">
         <%= render "education/shared/choose_technique", object: training %>

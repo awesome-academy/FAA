@@ -178,6 +178,11 @@ vi:
         all_courses: "Các khóa học"
         view_courses: "Xem các khóa học"
         edit_training: "Chỉnh sửa khóa học"
+        usage: "Ứng dụng: "
+        reason: "Lý do học: "
+        learner: "Đối tượng có thể học: "
+        duration: "Thời lượng: "
+        benefit: "Lợi ích: "
       new:
         create_training: "Tạo mới"
         heading: "phần mở đầu"
@@ -199,6 +204,11 @@ vi:
         description: "Mô tả"
         name: "Tên khóa"
         choose_technique: "Chọn công nghệ"
+        usage: "Ứng dụng làm gì ?"
+        reason: "Lý do tham gia học"
+        learner: "Đối tượng có thể tham gia"
+        days: "Ngày"
+        vnd: "VNĐ"
     projects:
       form:
         choose_technique: "Chọn công nghệ"

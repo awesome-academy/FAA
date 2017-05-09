@@ -72,6 +72,7 @@ education:
     img_prev_size: "150x150"
     img_current_size: "150x150"
     create_new_training_truncate: 30
+    textarea_rows: 2
   page_404_url: "public/404"
   related_project:
     limit: 20

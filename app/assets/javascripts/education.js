@@ -37,7 +37,8 @@
 //= require jquery-ui/datepicker
 
 $(document).ready(function(){
-  showEditForm('.btn-course-edit', '/education/courses/');
+  showEditForm('#btn-course-edit', '/education/courses/');
+  showEditForm('#btn-training-edit', '/education/trainings/');
   showNewForm('.btn-course-new', '/education/courses/new')
 })
 

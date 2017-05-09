@@ -178,6 +178,11 @@ en:
         all_courses: "All Courses"
         view_courses: "View all courses"
         edit_training: "Edit Training"
+        usage: "Use for: "
+        reason: "reason for learn: "
+        learner: "Object can learn: "
+        duration: "Duration: "
+        benefit: "Benefit: "
       new:
         create_training: "Create"
         heading: "Create a training"
@@ -199,6 +204,11 @@ en:
         description: "Description"
         name: "Name"
         choose_technique: "Choose techniques"
+        usage: "Usage"
+        reason: "Reason"
+        learner: "Object can learner"
+        days: "Days"
+        vnd: "VND"
     projects:
       form:
         choose_technique: "Choose techniques"
