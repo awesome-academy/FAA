@@ -20,13 +20,13 @@
       <div class="form-group">
         <div class="col-md-12">
           <div class="col-md-3 left-field">
-            <%= f.input :duration, as: :integer %>
+            <%= f.input :duration, as: :integer, label: t(".duration") %>
           </div>
           <div class="col-md-3 right-field courses-duration">
-            <h5><%= t(".days") %></h5>
+            <h5><%= t(".months") %></h5>
           </div>
           <div class="col-md-5">
-            <%= f.input :cost, as: :integer %>
+            <%= f.input :cost, as: :integer, label: t(".cost") %>
           </div>
           <div class="col-md-1 courses-duration">
             <h5><%= t(".vnd") %></h5>

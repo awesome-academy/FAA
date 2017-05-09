@@ -38,27 +38,65 @@
         <div class="fancy-title title-bottom-border">
           <h2><%= t ".training_info" %></h2>
         </div>
-        <p><%= @training.description %></p>
-        <h5><span class="glyphicon glyphicon-minus">
-          <%= t(".usage") %></span> <%= @training.usage %>
-        </h5>
-        <h5>
-          <span class="glyphicon glyphicon-minus">
-          <%= t(".reason") %></span> <%= @training.reason %>
-        </h5>
-        <h5>
-          <span class="glyphicon glyphicon-minus">
-          <%= t(".learner") %></span> <%= @training.learner %>
-        </h5>
-        <h5>
-          <span class="glyphicon glyphicon-minus">
-          <%= t(".duration") %></span> <%= @training.duration %>
-        </h5>
-        <h5>
-          <span class="glyphicon glyphicon-minus">
-          <%= t(".benefit") %></span> <%= @training.benefit %>
-        </h5>
+        <p>
+          <%= truncate @training.description,
+            length: Settings.education.trainings.content_truncate %>
+            <%= check_lenght_content @training.description,
+            Settings.education.trainings.modal_description %>
+        </p>
+        <span>
+          <h4>
+            <%= image_tag "education/training/usage.png",
+              class: "icon-training-show" %><b>
+              <%= t(".usage") %></b>
+          </h4>
+          <%= truncate @training.usage,
+            length: Settings.education.trainings.content_truncate %>
+          <%= check_lenght_content @training.usage,
+            Settings.education.trainings.modal_usage %>
+        </span>
+        <span>
+          <h4>
+            <%= image_tag "education/training/reason.png",
+              class: "icon-training-show" %><b>
+              <%= t(".reason") %></b>
+          </h4>
+          <%= truncate @training.reason,
+            length: Settings.education.trainings.content_truncate %>
+          <%= check_lenght_content @training.reason,
+            Settings.education.trainings.modal_reason %>
+        </span>
+        <span>
+          <h4>
+            <%= image_tag "education/training/learner.png",
+              class: "icon-training-show" %><b>
+            <%= t(".learner") %></b>
+          </h4>
+          <%= truncate @training.learner,
+            length: Settings.education.trainings.content_truncate %>
+          <%= check_lenght_content @training.learner,
+            Settings.education.trainings.modal_learner %>
+        </span>
+        <h4>
+          <%= image_tag "education/training/benefit.png",
+            class: "icon-training-show" %><b>
+          <%= t(".benefit") %></b>
+        </h4>
+          <%= truncate @training.benefit,
+            length: Settings.education.trainings.content_truncate %>
+          <%= check_lenght_content @training.benefit,
+            Settings.education.trainings.modal_benefit %>
+        <h4>
+          <%= image_tag "education/training/duration.png",
+            class: "icon-training-show" %><b>
+          <%= t(".duration") %></b> <%= @training.duration %> <%= t(".month") %>
+        </h4>
+        <div class="cost-training">
+              <span class="amount color lead"><strong><h4 class="text-cost"><i><b>
+                <%= t(".cost") %> <%= @training.cost %></i> <%= t(".vnd")%></b></h4></strong></span>
+            </div>
         <br>
+        <%= render "read_more", training: @training %>
         <div class="fancy-title title-bottom-border">
           <h2><%= t ".techniques" %></h2>
         </div>

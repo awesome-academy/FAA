@@ -74,6 +74,7 @@ vi:
         delete_object: "Bạn chắc muốn xóa?"
       training:
         delete_object: "Bạn chắc muốn xóa?"
+        vnd: "VNĐ"
       index_trainings:
         search_placeholder: "Nhập tìm kiếm"
       show_course:
@@ -168,6 +169,8 @@ vi:
       trainings:
         techniques: "Các kỹ thuật"
         view_courses: "Xem danh sách khóa học"
+        cost: "Học phí: "
+        vnd: "VNĐ"
       show:
         not_found: "Không tìm thấy khóa đào tạo"
         home: "Trang chủ"
@@ -183,6 +186,9 @@ vi:
         learner: "Đối tượng có thể học: "
         duration: "Thời lượng: "
         benefit: "Lợi ích: "
+        cost: "Học phí: "
+        vnd: "VNĐ"
+        month: "Tháng"
       new:
         create_training: "Tạo mới"
         heading: "phần mở đầu"
@@ -207,8 +213,17 @@ vi:
         usage: "Ứng dụng làm gì ?"
         reason: "Lý do tham gia học"
         learner: "Đối tượng có thể tham gia"
-        days: "Ngày"
+        duration: "Thời lượng"
+        cost: "Học phí"
+        benefit: "Lợi ích"
+        months: "Tháng"
         vnd: "VNĐ"
+      read_more:
+        description: "Mô tả khóa đào tạo"
+        usage: "Ưng dụng của khóa đào tạo"
+        reason: "Lý do tham gia khóa đào tạo"
+        learner: "Đối tượng có thể tham gia khóa đào tạo"
+        benefit: "Lợi ích tham gia khóa đào tạo"
     projects:
       form:
         choose_technique: "Chọn công nghệ"

@@ -1,4 +1,5 @@
-<article class="portfolio-item portfolio-item-training pf-media pf-icons">
+<article class="portfolio-item portfolio-item-training pf-media pf-icons
+  trainings-index">
   <div class="portfolio-image">
     <%= link_to "#" do %>
       <%= image_tag "images/portfolio/4/1.jpg" %>
@@ -13,9 +14,5 @@
     <h3>
       <%= link_to t(".create_new_training"), new_education_training_path %>
     </h3>
-    <span>
-      <%= truncate t(".create_new_training"),
-        length: Settings.education.trainings.create_new_training_truncate %>
-    </span>
   </div>
 </article>

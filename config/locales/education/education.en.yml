@@ -74,6 +74,7 @@ en:
         delete_object: "Are you sure?"
       training:
         delete_object: "Are you sure?"
+        vnd: "VND"
       index_trainings:
         search_placeholder: "Enter your search"
       show_course:
@@ -168,6 +169,8 @@ en:
       trainings:
         techniques: "Techniques"
         view_courses: "View list courses"
+        cost: "Tuition fees: "
+        vnd: "VND"
       show:
         not_found: "The training could not be found"
         home: "Home"
@@ -179,10 +182,13 @@ en:
         view_courses: "View all courses"
         edit_training: "Edit Training"
         usage: "Use for: "
-        reason: "reason for learn: "
+        reason: "Reason for learn: "
         learner: "Object can learn: "
         duration: "Duration: "
         benefit: "Benefit: "
+        cost: "Tuition fees: "
+        vnd: "VND"
+        month: "Months"
       new:
         create_training: "Create"
         heading: "Create a training"
@@ -206,9 +212,18 @@ en:
         choose_technique: "Choose techniques"
         usage: "Usage"
         reason: "Reason"
+        duration: "Duration"
+        cost: "Cost"
+        benefit: "Benefit"
         learner: "Object can learner"
-        days: "Days"
+        months: "Months"
         vnd: "VND"
+      read_more:
+        description: "description training"
+        usage: "Usage training"
+        reason: "Reason to join training"
+        learner: "Object can learn training"
+        benefit: "benefit training"
     projects:
       form:
         choose_technique: "Choose techniques"
