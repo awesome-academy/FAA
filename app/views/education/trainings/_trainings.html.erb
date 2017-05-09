@@ -37,6 +37,11 @@
                 </li>
               <% end %>
             </ul>
+            <div class="cost-training">
+              <span><%= image_tag "education/training/cost.png",
+                class: "icon-training float-left" %><h4 class="text-cost"><i>
+                <%= t(".cost") %> <%= training.cost %></i> <%= t(".vnd") %></h4></span>
+            </div>
             <br>
             <%= link_to education_training_path training do %>
               <div class="button button-3d button-small button-amber">

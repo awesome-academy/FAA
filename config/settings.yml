@@ -73,6 +73,12 @@ education:
     img_current_size: "150x150"
     create_new_training_truncate: 30
     textarea_rows: 2
+    modal_description: "#modal_description"
+    modal_usage: "#modal_usage"
+    modal_reason: "#modal_reason"
+    modal_learner: "#modal_learner"
+    modal_benefit: "#modal_benefit"
+    content_truncate: 35
   page_404_url: "public/404"
   related_project:
     limit: 20
