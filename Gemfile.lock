@@ -313,7 +313,7 @@ GEM
       railties (= 5.0.2)
       sprockets-rails (>= 2.0.0)
     rails-assets-es6-promise (4.0.5)
-    rails-assets-sweetalert2 (6.4.2)
+    rails-assets-sweetalert2 (5.1.1)
       rails-assets-es6-promise
     rails-controller-testing (1.0.1)
       actionpack (~> 5.x)
@@ -439,7 +439,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     stateful_enum (0.4.0)
-    sweet-alert-confirm (0.4.1)
+    sweet-alert2-rails (0.1.0)
     switchery-rails (0.8.1.1)
       railties (>= 3.2, < 6.0)
     therubyracer (0.12.3)
@@ -527,7 +527,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rack-mini-profiler
   rails (~> 5.0.2)
-  rails-assets-sweetalert2!
+  rails-assets-sweetalert2 (~> 5.1.1)!
   rails-controller-testing
   rails-i18n
   rails_best_practices
@@ -550,7 +550,7 @@ DEPENDENCIES
   social-share-button (= 0.8.4)
   spring
   spring-watcher-listen (~> 2.0.0)
-  sweet-alert-confirm
+  sweet-alert2-rails
   therubyracer
   turbolinks (~> 5)
   tzinfo-data

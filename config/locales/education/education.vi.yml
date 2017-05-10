@@ -382,8 +382,8 @@ vi:
         photos: "Ảnh"
         techniques: "Công nghệ"
     posts:
-      title: "Bài viết"
-      title_des: "Bài viết mới nhất của các thành viên"
+      title: "Tin tức - Thông báo"
+      title_des: "Tin tức - Thông báo mới nhất"
       read_more: "Xem thêm"
       date_format: "%d-%m-%Y"
       create_new: "Tạo một bài viết"
@@ -402,8 +402,8 @@ vi:
         show_all: "Xem tất cả"
         more: "Xem thêm"
         placeholder_search: "Tìm kiếm"
-        title_description: "Tin tức mới nhất của các thành viên"
-        title: "Tin tức"
+        title_description: "Tin tức - Thông báo mới nhất"
+        title: "Tin tức - Thông báo"
         filter: "Lọc"
       new:
         heading: "Tạo mới tin tức"

@@ -97,7 +97,8 @@ class User < ApplicationRecord
         user.email = auth.info.email
         user.name = auth.info.name
         user.password = Devise
-          .friendly_token[Settings.friendly_token_low, Settings.friendly_token_high]
+          .friendly_token[Settings.friendly_token_low,
+            Settings.friendly_token_high]
       end
     end
   end
