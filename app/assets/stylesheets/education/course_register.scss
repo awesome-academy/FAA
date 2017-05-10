@@ -3,3 +3,33 @@
 .p-t-60 {
   padding-top: 60px;
 }
+
+.show-successful-registration-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+
+  .show-successful-registration-message {
+    padding-top: 50px;
+    text-align: center;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 900 !important;
+    }
+  }
+
+  .show-successful-registration-button {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    text-align: center;
+
+    a {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+  }
+}

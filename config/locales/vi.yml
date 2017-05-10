@@ -26,6 +26,7 @@ vi:
       should_update_heading_description: "Update your profile and comeback to us"
       cancel: "Cancel"
       edit_profile: "Edit my profile"
+      no_result: "No one matches these skills"
     index:
       table:
         thead:
@@ -573,15 +574,20 @@ vi:
       end: "Email này được gửi tự động từ FCSP, vui lòng đừng trả lời!"
   course_registers:
     create:
-      create_success: "Đăng ký thành công"
-      create_failed: "Đăng ký thất bại"
-      submit: "Đăng ký"
+      create_success: "Đăng kí thành công"
+      create_failed: "Đăng kí thất bại"
+      submit: "Đăng kí"
     register_form:
-      submit: "Đăng ký"
+      submit: "Đăng kí"
     new:
-      course_registration: "Đăng ký khóa học"
+      course_registration: "Đăng kí khóa học"
+    show:
+      thank_you: "Cảm ơn!"
+      direction: "Đăng kí cho khóa học %{course_name} đã được ghi nhận, chúng tôi sẽ liên lạc với bạn sớm."
+      back_to_home: "&#x2190; Về trang chủ"
+      view_more_course: "Xem thêm khóa học khác"
   course_register_mailer:
     course_register:
-      greeting: "Xin chào, %{receiver_name}"
-      thanks: "Cảm ơn bạn đã đăng ký khóa học: "
-      end: "Việc đăng ký của bạn sẽ được xem xét và chúng tôi sẽ liên lạc với bạn sớm nhất có thể."
+      greeting: "Chào, %{receiver_name}"
+      thanks: "Cảm ơn bạn vì đã đăng kí khóa học: "
+      end: "Bản đăng kí của bạn đang được xem xét, chúng tôi sẽ liên lạc lại với bạn sớm nhất có thể."

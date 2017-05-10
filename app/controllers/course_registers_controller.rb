@@ -1,8 +1,11 @@
 class CourseRegistersController < ApplicationController
   layout "education/layouts/application"
-
+  before_action :load_course_register, only: :show
   def new
     @course_register = CourseRegister.new
+  end
+
+  def show
   end
 
   def create
@@ -27,5 +30,11 @@ class CourseRegistersController < ApplicationController
   def course_register_params
     params.require(:course_register).permit :course_id, :name, :email, :address,
       :phone_number
+  end
+
+  def load_course_register
+    return if @course_register = CourseRegister.find_by(id: params[:id])
+    flash[:danger] = t ".course_register_not_found"
+    redirect_to root_path
   end
 end
