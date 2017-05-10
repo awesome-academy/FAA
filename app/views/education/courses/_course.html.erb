@@ -19,15 +19,20 @@
   <td><%= course.cost %></td>
   <td align="center">
     <% if current_user && can_manage?(Education::Course) %>
-      <a class="btn btn-default btn-course-edit" data-id="<%= course.id %>">
+      <%= link_to edit_education_course_path(course),
+        class: "btn btn-default btn-course-edit" do %>
         <em class="icon-pencil"></em>
-      </a>
-      <a class="btn btn-danger"><em class="icon-trash"></em></a>
+      <% end %>
+      <%= link_to education_course_path(course), method: :delete,
+        class: "btn btn-danger", data: {confirm: t(".delete_confirm")} do %>
+        <em class="icon-trash"></em>
+      <% end %>
     <% else%>
-      <a href="" class="button button-rounded button-reveal button-large button-yellow button-light">
+      <%= link_to new_course_register_path(course: course.id),
+        class: "button button-rounded button-reveal button-large button-yellow button-light" do %>
         <i class="icon-ok"></i>
         <span><%= t ".register" %></span>
-      </a>
+      <% end %>
     <% end %>
   </td>
 </tr>

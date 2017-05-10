@@ -384,11 +384,11 @@ en:
         photos: "Images"
         techniques: "Techniques"
     posts:
-      title: "Member's News"
-      title_description: "Lastest news of our Members"
+      title: "News"
+      title_description: "Lastest news"
       read_more: "Read more"
       date_format: "%d-%m-%Y"
-      create_new: "Create new post"
+      create_new: "Create new news"
       paginate:
         newer: "&larr;Newer"
         older: "Older &rarr;"
@@ -398,14 +398,14 @@ en:
         delete_confirm: "Are you sure?"
         delete: "Delete"
       index:
-        no_posts: "No posts found"
+        no_posts: "No news found"
         news: "News"
         search_placeholder: "Search"
         show_all: "Show all"
         more: "More"
         placeholder_search: "Search"
-        title_description: "Lastest news of our Members"
-        title: "Member's news"
+        title_description: "Lastest news"
+        title: "News"
         filter: "Filter"
       new:
         heading: "Create a news"

@@ -13,7 +13,7 @@ class HomeTabs < Tabs
 
   def about_tab
     build_tab t("education.layouts.header.about"),
-      "#", :about
+      education_about_index_path, :about
   end
 
   def trainings_tab
@@ -23,26 +23,26 @@ class HomeTabs < Tabs
 
   def schedule_tab
     build_tab t("education.layouts.header.schedule"),
-      education_courses_path, :schedule
+      education_courses_path, :courses
   end
 
   def register_tab
     build_tab t("education.layouts.header.register"),
-      "#", :register
+      new_course_register_path, :course_registers
   end
 
   def news_tab
     build_tab t("education.layouts.header.news"),
-      "#", :news
+      education_posts_path, :posts
   end
 
   def recruitment_tab
     build_tab t("education.layouts.header.recruitment"),
-      "#", :recruitment
+      "#", :recruitments
   end
 
   def contact_tab
     build_tab t("education.layouts.header.contact"),
-      "#", :contact
+      new_education_feedback_path, :feedbacks
   end
 end

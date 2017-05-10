@@ -35,6 +35,7 @@
 //= require i18n.js
 //= require i18n/translations
 //= require jquery-ui/datepicker
+//= require common
 
 $(document).ready(function(){
   showEditForm('#btn-course-edit', '/education/courses/');
