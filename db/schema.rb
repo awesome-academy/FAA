@@ -37,8 +37,9 @@ ActiveRecord::Schema.define(version: 20170509021430) do
     t.string   "email"
     t.string   "phone_number"
     t.string   "address"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "status",       default: 1
   end
 
   create_table "education_about_translations", force: :cascade do |t|

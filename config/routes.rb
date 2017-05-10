@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :group_users, only: [:create, :index]
       resources :users, only: [:index, :update, :create]
       resources :categories, except: [:show, :new, :edit]
+      resources :course_registers, only: [:index, :update]
       root "users#index"
     end
     root "home#index"

@@ -3,6 +3,11 @@ vi:
     formats:
       date_month_year: "%d/%m/%Y"
   education:
+    course_status:
+      registered: "Đã đăng ký"
+      contacted: "Đã liên hệ"
+      send_contact: "Gửi liên hệ"
+      reject_contact: "Từ chối liên hệ"
     base:
       user_blocked: "Tài khoản của bạn đã bị khóa."
     javascripts:
@@ -36,6 +41,7 @@ vi:
         users: "Người dùng"
         categories: "Chủ đề"
         group_users: "Nhóm Người Dùng"
+        courses: "Khóa Học"
       header:
         home: "Trang chủ"
         portfolio: "Danh mục"
@@ -633,6 +639,23 @@ vi:
           not_found: "Không tìm thấy chủ đề!"
           success: "Xóa thành công!"
           fail: "Xóa không thành công!"
+      course_registers:
+        update:
+          success: "Cập nhật thành công"
+          fail: "Cập nhật thất bại"
+        index:
+          title: "Quản lý đăng ký khóa học"
+          title_description: "Quản lý tất cả những đăng ký khóa học của Framgia"
+        search_form:
+          placeholder: "Nhập tìm kiếm"
+        list_course_register:
+          name: "Họ Tên"
+          email: "Thư điện tử"
+          address: "Địa chỉ"
+          phone_number: "Số điện thoại"
+          course_name: "Tên khóa học"
+          status: "Trạng thái"
+          action: "Hành động"
     time:
       formats:
         date_month_year: "%d/%m/%Y"

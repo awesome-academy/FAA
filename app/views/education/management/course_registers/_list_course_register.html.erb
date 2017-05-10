@@ -1,0 +1,15 @@
+<table class="table table-hover table-bordered">
+  <tr>
+    <th><%= t ".name" %></th>
+    <th><%= t ".email" %></th>
+    <th><%= t ".phone_number" %></th>
+    <th><%= t ".address" %></th>
+    <th><%= t ".course_name" %></th>
+    <th><%= t ".status" %></th>
+    <th><%= t ".action" %></th>
+  </tr>
+  <%= render partial: "course", collection: @course_register %>
+</table>
+<div class="center">
+  <%= paginate @course_register %>
+</div>

@@ -1,0 +1,9 @@
+<tr id="course-<%= course.id %>">
+  <td><%= course.name %></td>
+  <td><%= course.email %></td>
+  <td><%= course.phone_number %></td>
+  <td><%= course.address %></td>
+  <td><%= course.education_course.name %></td>
+  <td id="course-edu-stt-<%= course.id %>"><%= get_status_register_course course %></td>
+  <td id="action-course-edu-stt-<%= course.id %>"><%= get_action_send_contact course %></td>
+</tr>
