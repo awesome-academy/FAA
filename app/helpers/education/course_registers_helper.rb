@@ -3,6 +3,10 @@ module Education::CourseRegistersHelper
     CourseRegister.statuses.map{|status, index| [status, index]}
   end
 
+  def select_course
+    Education::Course.all.map{|key| [key.name, key.id]}
+  end
+
   def get_status_register_course course
     if course.status_registered?
       content_tag :span, t("education.course_status.registered"),

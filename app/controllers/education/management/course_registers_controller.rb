@@ -4,8 +4,10 @@ class Education::Management::CourseRegistersController <
   before_action :load_course_register, only: :update
 
   def index
-    @query_course_register = CourseRegister.ransack params[:q]
+    @query_course_register = CourseRegister.search name_or_email_cont:
+      params[:course_search]
     @course_register = @query_course_register.result
+      .filter_by_name(params[:name_course])
       .filter_by_status(params[:status_course])
       .includes(:education_course).newest.page(params[:page])
       .per Settings.education.course.per_page
@@ -18,7 +20,10 @@ class Education::Management::CourseRegistersController <
   def update
     respond_to do |format|
       if @course_register.update_attributes course_register_params
-        format.json{render json: {flash: t(".success"), status: 200}}
+        format.json do
+          render json: {flash: t(".success"), status: 200,
+            course_register: @course_register}
+        end
       else
         format.json{render json: {flash: t(".fail"), status: 400}}
       end

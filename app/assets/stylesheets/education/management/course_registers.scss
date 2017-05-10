@@ -7,6 +7,14 @@
   width: 300px;
  }
 
+.name-course {
+  float: right;
+  margin-right: 5px;
+  text-transform: capitalize;
+  width: 300px;
+ }
+
+
 .search-form-course input {
   border: 1px solid $gray-ddd;
   border-radius: 2em;
@@ -23,4 +31,8 @@
 .search-form-course input:focus {
   border-color: $blue-light;
   width: 300px;
+}
+
+.course-content {
+  margin-top: 10px;
 }

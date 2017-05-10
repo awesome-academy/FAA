@@ -26,6 +26,10 @@ class CourseRegister < ApplicationRecord
     where status: status if status.present?
   end
 
+  scope :filter_by_name, ->id do
+    where(course_id: id) if id.present?
+  end
+
   def send_email user_email, user_name
     CourseRegisterMailer
       .course_register(education_course, user_email, user_name).deliver_later

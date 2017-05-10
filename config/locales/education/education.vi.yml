@@ -645,6 +645,8 @@ vi:
           success: "Xóa thành công!"
           fail: "Xóa không thành công!"
       course_registers:
+        filter_form:
+          select_all: "Chọn tất cả"
         update:
           success: "Cập nhật thành công"
           fail: "Cập nhật thất bại"

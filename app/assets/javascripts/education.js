@@ -36,6 +36,7 @@
 //= require i18n/translations
 //= require jquery-ui/datepicker
 //= require common
+//= require_tree ../../../vendor/assets/javascripts/js/components
 
 $(document).ready(function(){
   showEditForm('.btn-course-edit', '/education/courses/');
