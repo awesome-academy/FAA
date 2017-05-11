@@ -161,6 +161,11 @@ en:
         see_more: "See more"
       course:
         at: "at"
+      course_register:
+        heading: "Course register"
+        submit: "Register"
+      our_clients:
+        heading: "Our Partners"
     trainings:
       training_not_found: "Training Not Found."
       index:

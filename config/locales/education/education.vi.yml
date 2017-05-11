@@ -159,6 +159,11 @@ vi:
         see_more: "Xem thêm"
       course:
         at: "tại"
+      course_register:
+        heading: "Đăng ký khóa học"
+        submit: "Đăng ký"
+      our_clients:
+        heading: "Đối tác của chúng tôi"
     trainings:
       training_not_found: "Không tìm thấy khóa đào tạo."
       index:

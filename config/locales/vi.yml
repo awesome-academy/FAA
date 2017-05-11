@@ -334,14 +334,14 @@ vi:
         filter: "Bộ Lọc"
     feedback:
       title: "Phản hồi"
-      description: "Get in Touch with Us"
-      message: "message"
-      send_feed_back: "Send Feedback"
-      send_us_an_email: "Send us an Email"
-      feedback_success: "Thanks for your feedback."
-      feedback_error: "Something was wrong, check your feedback form again."
-      success_title: "Success!"
-      failed_title: "Failed!"
+      description: "Liên lạc với chúng tôi"
+      message: "tin nhắn"
+      send_feed_back: "Gửi phản hồi"
+      send_us_an_email: "Gửi phản hồi cho chúng tôi"
+      feedback_success: "Cảm ơn về phản hồi của bạn."
+      feedback_error: "Đã xảy ra lỗi, vui lòng kiểm tra lại."
+      success_title: "Thành công!"
+      failed_title: "Thất bại!"
     posts:
       title: "Member's Posts"
       title_des: "Lastest posts of our Members"
@@ -571,3 +571,17 @@ vi:
       subject: "Bạn có một yêu cầu kết bạn từ %{name}"
       hi: "Chào %{name},"
       end: "Email này được gửi tự động từ FCSP, vui lòng đừng trả lời!"
+  course_registers:
+    create:
+      create_success: "Đăng ký thành công"
+      create_failed: "Đăng ký thất bại"
+      submit: "Đăng ký"
+    register_form:
+      submit: "Đăng ký"
+    new:
+      course_registration: "Đăng ký khóa học"
+  course_register_mailer:
+    course_register:
+      greeting: "Xin chào, %{receiver_name}"
+      thanks: "Cảm ơn bạn đã đăng ký khóa học: "
+      end: "Việc đăng ký của bạn sẽ được xem xét và chúng tôi sẽ liên lạc với bạn sớm nhất có thể."

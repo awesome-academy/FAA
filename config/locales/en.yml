@@ -289,7 +289,7 @@ en:
       description: "Get in Touch with Us"
       message: "message"
       send_feed_back: "Send Feedback"
-      send_us_an_email: "Send us an Email"
+      send_us_an_email: "Send us an Feedback"
       feedback_success: "Thanks for your feedback."
       feedback_error: "Something was wrong, check your feedback form again."
       success_title: "Success!"
