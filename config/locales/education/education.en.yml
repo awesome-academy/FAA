@@ -651,6 +651,8 @@ en:
           success: "Deleted successfully!"
           fail: "Deteted failed!"
       course_registers:
+        filter_form:
+          select_all: "Select all"
         update:
           success: "Update status successfully"
           fail: "Update status failed"
