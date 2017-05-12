@@ -127,6 +127,7 @@ en:
       profile: "Profile"
       message: "Messages"
       sign_out: "Sign out"
+      or_login_with: "or Login with"
     job_bookmark:
       bookmark: "Bookmark"
       bookmarked: "Bookmarked"

@@ -69,7 +69,7 @@ Devise.setup do |config|
   # config.http_authenticatable = false
 
   # If 401 status code should be returned for AJAX requests. True by default.
-  # config.http_authenticatable_on_xhr = true
+  config.http_authenticatable_on_xhr = true
 
   # The realm used in Http Basic Authentication. 'Application' by default.
   # config.http_authentication_realm = 'Application'
@@ -110,9 +110,12 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'a7285b62e31b113a6f8289cddada6952bb7a9b8bd3054497c31aac729645dcddb46f04501fca051510c35494821fa1e447a577b7d7588702f2a8bce521d43542'
+  # config.pepper = '2651ab8f2986a195e4fb91730bfb3d2f40b93c2ad4d87a4ebb47298b867dbeaa6664c65bca3874bd3af12c46a28742cc0957e7b5b5ae730370e5655d9f6fbfe5'
 
-  # Send a notification email when the user's password is changed
+  # Send a notification to the original email when the user's email is changed.
+  # config.send_email_changed_notification = false
+
+  # Send a notification email when the user's password is changed.
   # config.send_password_change_notification = false
 
   # ==> Configuration for :confirmable
