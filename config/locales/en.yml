@@ -546,6 +546,11 @@ en:
       submit: "Register"
     new:
       course_registration: "Course registration"
+    show:
+      thank_you: "Thank you!"
+      direction: "Your registration for %{course_name} is received and we will contact you soon."
+      back_to_home: "&#x2190; back to home"
+      view_more_course: "View more courses"
   course_register_mailer:
     course_register:
       greeting: "Hi, %{receiver_name}"

@@ -59,7 +59,7 @@ class Education::CoursesController < Education::BaseController
   def update
     if @course.update_attributes course_params
       flash[:success] = t ".update_success"
-      redirect_to :back
+      redirect_back fallback_location: {action: :index}
     else
       flash[:danger] = t ".update_faild"
       render :edit
@@ -72,7 +72,7 @@ class Education::CoursesController < Education::BaseController
     else
       flash[:danger] = t ".destroy_faild"
     end
-    redirect_to :back
+    redirect_back fallback_location: {action: :index}
   end
 
   private
