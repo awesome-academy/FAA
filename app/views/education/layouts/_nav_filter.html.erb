@@ -1,29 +1,27 @@
 <li class="<%= default_current_path %>">
-  <%= link_to education_posts_path do %>
+  <%= link_to controller: controller_name do %>
     <div><%= t ".show_all" %></div>
   <% end %>
 </li>
-<% array_category_show, array_category_hide = ArraySpliter.split_array(categories) %>
-<% array_category_show.each do |category| %>
-  <li class="category">
-    <%= link_to controller: education_posts_path,
-      category: category.id do %>
-      <div><%= category.name %></div>
+<% array_technique_show, array_technique_hide = split_array(techniques) %>
+<% array_technique_show.each do |technique| %>
+  <li class="<%= current_path_trainer? technique %>">
+    <%= link_to controller: controller_name, technique_name: technique.name do %>
+      <div><%= truncate(technique.name, length: Settings.education.search_nav.truncate_limit) %></div>
     <% end %>
   </li>
 <% end %>
-<% if array_category_hide.present? %>
+<% if array_technique_hide %>
   <li>
     <a href="#">
-      <%= t "education.projects.more" %>
+      <%= t ".more" %>
       <i class="icon-angle-down"></i>
     </a>
     <ul>
-      <% array_category_hide.each do |category| %>
-        <li class="category">
-          <%= link_to controller: education_posts_path,
-            category: category.id do %>
-            <div><%= category.name %></div>
+      <% array_technique_hide.each do |technique| %>
+        <li class="<%= current_path_trainer? technique %>">
+          <%= link_to controller: controller_name, technique_name: technique.name do %>
+            <div><%= truncate(technique.name, length: Settings.education.search_nav.truncate_limit) %></div>
           <% end %>
         </li>
       <% end %>
