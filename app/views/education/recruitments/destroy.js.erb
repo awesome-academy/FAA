@@ -1,0 +1,11 @@
+<% if @index_post_object.recruitments.any? %>
+  $('.list-recruitment').html('<%= j render partial: "list_recruitment", locals: {index_recruitment_object: @index_post_object} %>')
+  $('#popular-post-list-sidebar').html('<%= j render partial: "list_hot_recruitment", locals: {hot_recruitments: @index_post_object.hot_recruitments} %>')
+<% else %>
+  $('.list-recruitment').html('<p class="text-center"> <%= t(".no_posts") %></p>')
+<% end %>
+<% if flash[:success].present? %>
+  $.growl.notice({message: '<%= flash[:success] %>'});
+<% elsif flash[:danger].present? %>
+  $.growl.error({message: '<%= flash[:danger] %>'});
+<% end %>

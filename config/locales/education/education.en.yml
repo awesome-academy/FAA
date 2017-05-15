@@ -66,6 +66,8 @@ en:
         news: "News"
         recruitment: "Recruitment"
         contact: "Contact"
+        create_recruitment: "Create new recruitment"
+        create_news: "Create news post"
     trainers:
       trainer:
         trainer_title: "Trainer"
@@ -735,6 +737,11 @@ en:
         title: "Trainer team"
         see_more: "See more"
     recruitments:
+      destroy:
+        recruitment_delete_success: "Successfully deleted"
+        recruitment_delete_fail: "Delete failed"
+        no_posts: "No recruitment post found"
+        recruitment_not_found: "Recruitment is not found"
       index:
         hot_recruitment: "Hot recruitments"
         recruitment_tag: "Recruitment tag"
@@ -752,6 +759,7 @@ en:
         related_recruitments: "Related recruitments"
         delete_confirm: "Are you sure?"
         hot_recruitment: "Hot recruitments"
+        recruitment_not_found: "Recruitment is not found"
       nav_search:
         show_all: "Show all"
         more: "More"

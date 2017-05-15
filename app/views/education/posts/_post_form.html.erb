@@ -16,11 +16,12 @@
         <div class="row">
           <div class="col-md-3">
             <%= f.input :category_id, class: "sm-form-control",
-              collection: category_select, include_blank: false %>
+              collection: category_select(@post.post_type ||= params[:type]),
+              include_blank: false %>
           </div>
           <div class="col-md-9">
             <%= f.input :tag_list, class: "sm-form-control" %>
-            <%= f.hidden_field :post_type, value: :news %>
+            <%= f.hidden_field :post_type, value: @post.post_type ||= params[:type] %>
             <div class="hidden" id="post-tags">
               <%= @post.tags.map{|tag| tag.name} %>
             </div>

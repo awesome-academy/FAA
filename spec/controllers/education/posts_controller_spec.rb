@@ -62,13 +62,6 @@ RSpec.describe Education::PostsController, type: :controller do
   end
 
   describe "GET #new" do
-    context "logged in user" do
-      it "render new template" do
-        get :new
-        expect(response).to render_template :new
-      end
-    end
-
     context "not logged in user" do
       before{sign_out user}
 

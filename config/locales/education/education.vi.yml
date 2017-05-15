@@ -711,6 +711,11 @@ vi:
         title: "Đội ngũ giảng dạy"
         see_more: "Xem thêm"
     recruitments:
+      destroy:
+        recruitment_delete_success: "Xóa thành công"
+        recruitment_delete_fail: "Xóa thất bại"
+        no_posts: "Không tìm thấy bài tuyển dụng"
+        recruitment_not_found: "Không tìm thấy bài tuyển dụng"
       index:
         hot_recruitment: "Thông tin tuyển dụng hot"
         recruitment_tag: "Thẻ thông tin tuyển dụng"

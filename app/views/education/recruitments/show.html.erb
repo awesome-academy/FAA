@@ -49,7 +49,8 @@
             <div class="edit-delete-buttons">
               <%= link_to t(".edit"), edit_education_recruitment_path(@recruitment),
                 class: "button button-3d button-rounded button-amber" %>
-              <%= link_to t(".delete"), education_recruitment_path(@recruitment), method: :delete, data: {confirm: t(".delete_confirm")},
+              <%= link_to t(".delete"), education_recruitment_path(@recruitment),
+                method: :delete, data: {confirm: t(".delete_confirm")},
                 class: "button button-3d button-border button-rounded button-amber" %>
             </div>
           <% end %>

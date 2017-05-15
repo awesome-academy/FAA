@@ -36,8 +36,10 @@ module Education::PostsHelper
     markdown.render content
   end
 
-  def category_select
-    Education::Category.all.map{|category| [category.name, category.id]}
+  def category_select category_type
+    Education::Category.all
+      .select{|category| category.category_type == category_type}
+      .map{|category| [category.name, category.id]}
   end
 
   def load_cover_photo post

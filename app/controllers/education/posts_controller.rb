@@ -3,6 +3,8 @@ class Education::PostsController < Education::BaseController
   before_action :load_post, only: [:show]
   before_action :load_user_image_object, only: [:new, :edit, :show, :update]
   before_action :load_post_of_user, only: [:update, :destroy, :edit]
+  before_action :post_create_permission,
+    except: [:show, :index]
 
   def index
     @index_post_object = Supports::Education::IndexPost.new params[:term],
@@ -15,13 +17,20 @@ class Education::PostsController < Education::BaseController
 
   def new
     @post = Education::Post.new
+    unless Education::Post.post_types.key?(params[:type])
+      redirect_back fallback_location: {action: :index}
+    end
   end
 
   def create
     @post = current_user.education_posts.build post_params
     if @post.save
       flash[:success] = t ".post_create_success"
-      redirect_to @post
+      if @post.post_type == Settings.education.posts.recruitment
+        redirect_to education_recruitment_path @post
+      else
+        redirect_to @post
+      end
     else
       load_user_image_object
       render :new
@@ -34,7 +43,11 @@ class Education::PostsController < Education::BaseController
   def update
     if @post.update_attributes post_params
       flash[:success] = t ".post_update_success"
-      redirect_to @post
+      if @post.post_type == Settings.education.posts.recruitment
+        redirect_to education_recruitment_path @post
+      else
+        redirect_to @post
+      end
     else
       render :edit
     end
@@ -78,5 +91,12 @@ class Education::PostsController < Education::BaseController
   def load_post_of_user
     @post = Education::Post.find_by id: params[:id]
     not_found unless (manage? @post) || (@post.user == current_user)
+  end
+
+  def post_create_permission
+    if params[:type] == Settings.education.posts.news && !current_user.admin?
+      flash[:danger] = t ".create_post_permission"
+      redirect_back fallback_location: {action: :index}
+    end
   end
 end
