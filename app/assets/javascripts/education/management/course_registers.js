@@ -62,16 +62,18 @@ $(document).ready(function(){
             var label_btn = 'warning'
             var button_data_stt = 'registered'
           }
-          $('#course-edu-stt-'+id).html(`<span class="label label-${label_stt}"
-            id="course-status-label-${data.course_register.id}">
-            ${text_stt}</span>`);
-          $('#action-course-edu-stt-'+id).html(`<button
-            class="btn btn-${label_btn} send_contact_register"
-            id="send_contact_register_${data.course_register.id}"
-            data-id="${data.course_register.id}"
-            data-username="${data.course_register.name}"
-            data-status="${button_data_stt}">
-            ${button_text}</button>`);
+          $('#course-edu-stt-'+id).html(
+            '<span class="label label-' + label_stt + '"'+
+            'id="course-status-label-' + data.course_register.id + '">'+
+            text_stt + '</span>');
+          $('#action-course-edu-stt-'+id).html(
+            '<button' +
+            'class="btn btn-' + label_btn + 'send_contact_register"'+
+            'id="send_contact_register_' + data.course_register.id+ '"'+
+            'data-id="' + data.course_register.id+ '"'+
+            'data-username="' + data.course_register.name + '"'+
+            'data-status="' + button_data_stt + '">'+
+             button_text + '</button>');
         }
         else {
           $.growl.error({title: '', message: data['flash']});
