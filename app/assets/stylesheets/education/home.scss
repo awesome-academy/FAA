@@ -261,3 +261,9 @@
   max-width: 400px;
   padding: 30px;
 }
+
+.dark #top-account {
+  a {
+    color: $white-eee !important;
+  }
+}

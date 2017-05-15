@@ -1,0 +1,26 @@
+<div class="modal fade" id="myModal" role="dialog"
+  aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-body">
+      <div class="panel panel-default divcenter pnl-login">
+        <div class="panel-body login-custom">
+          <div id="div-forms">
+            <%= render "devise/sessions/form_login" %>
+            <%= render "devise/registrations/form_register" %>
+          </div>
+        </div>
+        <div class="panel-footer nopadding white-background">
+          <div class="center">
+            <h4 class="margin-section" ><%= t ".or_login_with" %></h4>
+            <%= link_to t(".facebook"), user_facebook_omniauth_authorize_path,
+              class: "button button-rounded si-facebook si-colored" %>
+            <span class="hidden-xs"></span>
+            <%= link_to t(".google"),
+              user_google_oauth2_omniauth_authorize_path,
+              class: "button button-rounded si-google si-colored" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
