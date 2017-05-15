@@ -1,0 +1,38 @@
+<% comments.each do |comment| %>
+  <li class="comment even thread-even depth-1" id="comment-<%= comment.id %>">
+    <div id="comment-1" class="comment-wrap clearfix">
+      <div class="comment-meta">
+        <div class="comment-author vcard">
+          <span class="comment-avatar clearfix">
+            <%= load_user_avatar comment.user,
+              class: "avatar avatar-60 photo avatar-default",
+              size: Settings.education.recruitments.comment_item_avatar_size %>
+          </span>
+        </div>
+      </div>
+      <div class="comment-content clearfix">
+        <div class="comment-author"><%= comment.user_name %>
+          <span>
+            <%= link_to "#" do %>
+              <%= comment.created_at.to_formatted_s :long_ordinal %>
+            <% end %>
+          </span>
+        </div>
+        <p><%= comment.content %></p>
+        <a class="comment-reply-link" href="#">
+          <% if comment.user == current_user %>
+            <%= link_to image_tag("delete.png", class: "delete-button"),
+              education_recruitment_comment_recruitment_path(@recruitment, comment),
+              data: {confirm: t(".delete_confirm")},
+              method: :delete, remote: true %>
+            <%= link_to image_tag("edit.png", class: "delete-button"),
+              edit_education_recruitment_comment_recruitment_path(@recruitment, comment),
+              remote: true %>
+          <% end %>
+        </a>
+        <div id="comment-edit-<%= comment.id %>"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </li>
+<% end %>

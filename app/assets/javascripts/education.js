@@ -31,6 +31,7 @@
 //= require education/techniques
 //= require select2-full
 //= require education/home
+//= require education/recruitments
 //= require i18n
 //= require i18n.js
 //= require i18n/translations

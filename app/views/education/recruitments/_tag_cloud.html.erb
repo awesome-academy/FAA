@@ -1,0 +1,8 @@
+<div class="widget clearfix">
+  <h4><%= t ".recruitment_tag" %></h4>
+  <div class="tagcloud">
+    <% @recruitment_object.all_tags.each do |tag| %>
+      <%= link_to tag.name, "javascript:;" %>
+    <% end %>
+  </div>
+</div>

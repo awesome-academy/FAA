@@ -510,6 +510,7 @@ en:
         rating: "Rating"
         votes: "(%{count} votes)"
       load_object:
+        post_not_found: "The post not to be found"
         not_found: "Not found"
     management:
       group_users:
@@ -682,17 +683,12 @@ en:
       index:
         about_us: "About us"
       introduce:
-        our: "Our"
-        vision: "Vision"
-        mission: "Mission"
-        core: "Core"
-        values: "Values"
-        why_chooce: "Why chooce"
-        us: "Us"
-        what: "What"
-        different: "Different"
-        what_we: "What we"
-        do: "Do"
+        our_vision: "Our vision"
+        our_mision: "Our mission"
+        core_values: "Core values"
+        why_chooce_us: "Why chooce us"
+        what_difference: "What different"
+        what_we_do: "What we do"
         vision_content: "Lorem ipsum dolor sit amet, consectetur adipisicing
           elit. Quasi quidem minus id omnis, nam expedita, ea fuga commodi
           voluptas iusto, hic autem deleniti dolores explicabo labore enim r
@@ -726,7 +722,7 @@ en:
           purpose and flexible language can be used in web/Internet development,
           to process text, to create games, and as part of the popular Ruby on
           Rails web framework. This coding course is available courtesy of
-          Codecademy, an online, interactive platform that offers free coding
+          FAA, an online, interactive platform that offers free coding
           classes in six different programming languages like Python, PHP,
           jQuery, JavaScript, and Ruby, as well as markup languages including
           HTML and CSS."
@@ -738,3 +734,49 @@ en:
         agile_certification: "Agile certification"
         title: "Trainer team"
         see_more: "See more"
+    recruitments:
+      index:
+        hot_recruitment: "Hot recruitments"
+        recruitment_tag: "Recruitment tag"
+        recruitment: "Recruitment"
+        filter: "Filter"
+        search_placeholder: "Search..."
+        not_found: "Recruitment not found"
+      show:
+        heading: "Recruitment"
+        heading_description: "All recruitments"
+        edit: "Edit"
+        delete: "Delete"
+        popular: "Popular"
+        recent: "Recent"
+        related_recruitments: "Related recruitments"
+        delete_confirm: "Are you sure?"
+        hot_recruitment: "Hot recruitments"
+      nav_search:
+        show_all: "Show all"
+        more: "More"
+      recruitment:
+        read_more: "Read more"
+        confirm_delete: "Are you sure?"
+      comment_form:
+        leave_a: "Leave a"
+        comment: "Comment"
+        comment_placeholder: "Comment something..."
+        submit_button: "Comment"
+      comment_item:
+        delete_confirm: "Are you sure?"
+      edit_comment_form:
+        edit_button: "Edit"
+      comments:
+        login_to_comment: "Login to comment"
+        comments: "Comments"
+      posted_by:
+        posted_by: "Posted by"
+      recruitment:
+        read_more: "Read more"
+        delete: "Delete"
+        confirm_delete: "Are you sure?"
+      share_recruitment:
+        share_this_recruitment: "Share this recruitment"
+      tag_cloud:
+        recruitment_tag: "Recruitment tags"

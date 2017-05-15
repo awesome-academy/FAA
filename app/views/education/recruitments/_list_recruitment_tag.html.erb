@@ -1,0 +1,9 @@
+<div class="tagcloud">
+  <% if tags.any? %>
+    <% tags.each do |tag| %>
+      <%= link_to "#" do %>
+        <%= tag.name %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

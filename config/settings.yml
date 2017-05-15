@@ -47,6 +47,16 @@ education:
     viblo_link: "https://viblo.asia/tran.xuan.nam/posts/6J3ZgD6WlmB"
     limit: 4
   number_one: 1
+  recruitments:
+    per_page: 10
+    limit: 3
+    related_recruitment_limit: 4
+    comment_form_cols: 58
+    comment_form_rows: 4
+    comment_user_avatar_height: 60
+    comment_user_avatar_width: 60
+    popular_posts_limit: 3
+    comment_item_avatar_size: "60x60"
   project:
     modal_description: "#modal_description"
     modal_core: "#modal_core"
@@ -231,3 +241,5 @@ course_register:
   min_address_length: 3
 friendly_token_low: 0
 friendly_token_high: 20
+slice:
+  slice_num: 2

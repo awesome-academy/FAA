@@ -1,0 +1,49 @@
+<section id="content">
+  <div id="page-menu">
+    <div id="page-menu-wrap">
+      <div class="container clearfix">
+        <div class="menu-title">
+          <%= t ".recruitment" %>
+          <span> <%= t ".filter" %></span>
+        </div>
+        <nav>
+          <ul>
+            <%= render "nav_search", {controller_name: "education/recruitments",
+              categories: @index_recruitment_object.categories} %>
+            <li class="training-search">
+              <%= text_field_tag :recruitment_search, params[:recruitment_search],
+                placeholder: t(".search_placeholder"), remote: true, class: "form-control" %>
+            </li>
+          </ul>
+        </nav>
+        <div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+      </div>
+    </div>
+  </div>
+  <div class="content-wrap">
+    <div class="container clearfix">
+      <div class="postcontent nobottommargin clearfix">
+        <div id="posts" class="small-thumbs">
+          <div class="entry clearfix">
+            <div class="list-recruitment">
+              <%= render "list_recruitment",
+                index_recruitment_object: @index_recruitment_object %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar nobottommargin col_last clearfix">
+        <div class="widget clearfix">
+          <h4><%= t ".hot_recruitment" %></h4>
+          <%= render partial: "list_hot_recruitment",
+            locals: {hot_recruitments: @index_recruitment_object.hot_recruitments} %>
+        </div>
+        <div class="widget clearfix">
+          <h4><%= t ".recruitment_tag" %></h4>
+          <%= render partial: "list_recruitment_tag",
+            locals: {tags: @index_recruitment_object.tags} %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

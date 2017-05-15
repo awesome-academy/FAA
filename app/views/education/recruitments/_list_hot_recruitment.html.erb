@@ -1,0 +1,25 @@
+<div id="popular-post-list-sidebar">
+  <% if hot_recruitments.any? %>
+    <% hot_recruitments.each do |recruitment| %>
+      <div class="spost clearfix">
+        <div class="entry-image">
+          <%= link_to load_cover_photo(recruitment),
+            education_recruitment_path(recruitment), class: "nobg" %>
+        </div>
+        <div class="entry-c">
+          <div class="entry-title">
+            <h4>
+              <%= link_to recruitment.title,
+                education_recruitment_path(recruitment) %>
+            </h4>
+          </div>
+          <ul class="entry-meta">
+            <li><i class="icon-comments-alt"></i>
+              <%= pluralize recruitment.comments_count, "comments" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

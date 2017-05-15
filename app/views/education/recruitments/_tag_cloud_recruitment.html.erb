@@ -1,0 +1,5 @@
+<div class="tagcloud clearfix bottommargin">
+  <% @recruitment_object.recruitment_tags.each do |tag| %>
+    <%= link_to tag, "javascript:;" %>
+  <% end %>
+</div>
