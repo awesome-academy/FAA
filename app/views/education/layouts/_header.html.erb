@@ -54,13 +54,13 @@
             <li role="separator" class="divider"></li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <%= t ".sign_out" %> <i class="icon-signout"></i>
+                <i class="icon-signout"></i> <%= t ".log_out" %>
               <% end %>
             </li>
           </ul>
         <% else %>
           <a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-            <%= t ".login" %>
+            <%= t ".log_in" %>
           </a>
         <% end %>
       </div>

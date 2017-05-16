@@ -9,6 +9,7 @@ class Education::UsersController < Education::BaseController
       @show_user_object = Supports::Education::ShowUser.new @user, params[:page]
       @activities = Activity.load_by_current_user(@user).recent
         .pagination params[:page]
+      @user.build_info_user if @user.info_user.nil?
     end
   end
 end

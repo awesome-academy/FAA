@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: :callbacks,
-    sessions: "sessions", registrations: "registrations"}
+    sessions: "sessions"}
   root "education/home#index"
   namespace :education do
     namespace :management do
@@ -48,6 +48,6 @@ Rails.application.routes.draw do
   resource :user_avatars, only: :update
   resources :user_covers, only: :create
   resource :user_covers, only: :update
-  resources :info_users, only: :update
+  resources :info_users, only: [:create, :update]
   resources :course_registers, only: [:new, :create, :show]
 end

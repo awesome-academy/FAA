@@ -6,6 +6,8 @@ $(document).ready(function(){
     $('.btn-submit-avatar').removeClass('btn-update-avatar');
     $('.btn-submit-cover').addClass('btn-create-cover');
     $('.btn-submit-cover').removeClass('btn-update-cover');
+    $('#form-create-cover img').remove();
+    $('#form-create-avatar img').remove();
   });
 
   $('.album-image').hide();

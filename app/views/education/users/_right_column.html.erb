@@ -1,34 +1,4 @@
 <div class="col-sm-3">
-  <div class="fancy-title">
-    <h4><%= t(".profile").upcase %></h4>
-    <% if current_user && current_user == @user %>
-      <%= link_to user_path(current_user) do %>
-        <span><i class="icon-edit icon-amber"></i></span>
-      <% end %>
-    <% end %>
-  </div>
-  <%= load_user_avatar @user,
-    class: "alignleft img-thumbnail notopmargin nobottommargin user-avatar" %>
-  <div class="heading-block noborder">
-    <h3><%= @user.name %></h3>
-    <span><%= @user.email %></span>
-  </div>
-  <div class="list-group">
-    <div class="list-group-item">
-      <%= t ".news" %>
-      <span id="user-posts-size" class="pull-right">
-        <%= @user.education_posts.size %>
-      </span>
-    </div>
-    <div class="list-group-item">
-      <%= t ".projects" %>
-      <span class="pull-right"><%= @user.education_projects.size %></span>
-    </div>
-    <div class="list-group-item">
-      <%= t ".courses" %>
-      <span class="pull-right"><%= @user.education_courses.size %></span>
-    </div>
-  </div>
   <div class="fancy-title topmargin title-border">
     <h4><%= t ".about_me" %></h4>
   </div>

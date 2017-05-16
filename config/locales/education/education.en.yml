@@ -2,6 +2,16 @@ en:
   time:
     formats:
       date_month_year: "%d/%m/%Y"
+  date:
+    formats:
+      date_month_year: "%d/%m/%Y"
+  info_users:
+    create:
+      success: "Updated successfully!"
+      fail: "Updated failed!"
+    update:
+      success: "Updated successfully!"
+      fail: "Updated failed!"
   education:
     course_status:
       registered: "Registered"
@@ -67,7 +77,10 @@ en:
         recruitment: "Recruitment"
         contact: "Contact"
         create_recruitment: "Create new recruitment"
-        create_news: "Create news post"
+      login_modal:
+        or_login_with: "Or login with"
+        facebook: "Facebook"
+        google: "Google +"
     trainers:
       trainer:
         trainer_title: "Trainer"
@@ -500,6 +513,13 @@ en:
         delete: "Delete"
         delete_confirm: "Are you sure?"
         edit: "Edit"
+      edit_info:
+        title: "Edit your information"
+        save: "Save"
+        close: "Close"
+        introduce: "Introduce your self"
+        birthday: "Birthday"
+        school: "School"
     rates:
       create:
         create_error: "rate unsuccessful"

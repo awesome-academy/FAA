@@ -4,12 +4,12 @@ class UserAvatarsController < ApplicationController
 
   def create
     create_avatar
-    redirect_to user_path current_user
+    redirect_to education_user_path current_user
   end
 
   def update
     update_avatar
-    redirect_to user_path current_user
+    redirect_to education_user_path current_user
   end
 
   private

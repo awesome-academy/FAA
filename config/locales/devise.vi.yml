@@ -62,6 +62,7 @@ vi:
         forgot_password: "Quên mật khẩu"
         dont_have_account: "Không có tài khoản ?"
         signup_here: "Đăng ký tại đây"
+        remember_me: "Ghi nhớ đăng nhập"
     shared:
       links:
         back: Trở về
