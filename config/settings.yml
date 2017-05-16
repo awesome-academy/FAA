@@ -135,6 +135,8 @@ education:
     title_min_length: 10
     content_min_length: 10
     comment_item_avatar_size: "60x60"
+    news: "news"
+    recruitment: "recruitment"
   rate:
     precision: 1
   index_name:
