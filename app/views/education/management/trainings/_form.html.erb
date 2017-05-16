@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-8 col-md-8 col-md-offset-2">
-    <%= simple_form_for training do |f| %>
+    <%= simple_form_for training, url: url do |f| %>
       <%= f.input :name, label: t(".name"), class: "form-control" %>
       <%= f.input :description, as: :text, label: t(".description"),
         class: "form-control",
@@ -18,20 +18,15 @@
       </div>
       <%= f.input :learner, label: t(".learner"), class: "form-control" %>
       <div class="form-group">
-        <div class="col-md-12">
-          <div class="col-md-3 left-field">
-            <%= f.input :duration, as: :integer, label: t(".duration") %>
-          </div>
-          <div class="col-md-3 right-field courses-duration">
-            <h5><%= t(".months") %></h5>
-          </div>
-          <div class="col-md-5">
-            <%= f.input :cost, as: :integer, label: t(".cost") %>
-          </div>
-          <div class="col-md-1 courses-duration">
-            <h5><%= t(".vnd") %></h5>
-          </div>
+        <div class="col_half training-new-col-half">
+          <%= f.input :duration, as: :integer, label: t(".duration") %>
+          <span><%= t(".months") %></span>
         </div>
+        <div class="col_half col_last training-new-col-half">
+          <%= f.input :cost, as: :integer, label: t(".cost") %>
+          <span><%= t(".vnd") %></span>
+        </div>
+
       </div>
       <div class="form-group">
         <%= f.input :benefit, as: :text, label: t(".benefit"),

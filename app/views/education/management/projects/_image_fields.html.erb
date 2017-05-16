@@ -1,0 +1,19 @@
+<div class="nested-fields projects-image-form">
+  <article class="portfolio-item pf-media pf-icons">
+    <div class="portfolio-image project-form-image">
+      <%= image_tag f.object.url %>
+      <div class="portfolio-overlay images-container">
+        <%= f.label :url do %>
+          <a class="left-icon">
+            <i class="icon-line-plus"></i>
+          </a>
+        <% end %>
+        <%= f.file_field :url %>
+        <%= f.hidden_field :url_cache, value: f.object.url_cache %>
+        <%= link_to_remove_association f, class: "right-icon" do %>
+          <i class="icon-remove"></i>
+        <% end %>
+      </div>
+    </div>
+  </article>
+</div>

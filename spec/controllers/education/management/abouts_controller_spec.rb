@@ -1,16 +1,9 @@
 require "rails_helper"
 
 RSpec.describe Education::Management::AboutsController, type: :controller do
-  let!(:admin_edu){FactoryGirl.create :user}
+  let!(:admin_edu){FactoryGirl.create :user, role: "admin"}
   let!(:user){FactoryGirl.create :user}
   let!(:about){FactoryGirl.create :education_about}
-  before do
-    group = FactoryGirl.create(:education_group)
-    FactoryGirl.create :education_user_group, user: admin_edu, group: group
-    FactoryGirl.create :education_permission, group: group,
-      entry: "Education::About"
-  end
-
   describe "GET #index" do
     it "render index if sign in with admin_edu account" do
       sign_in admin_edu
@@ -21,15 +14,16 @@ RSpec.describe Education::Management::AboutsController, type: :controller do
     it "render root if sign in with non_admin_edu account" do
       sign_in user
       get :index
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to education_root_url
     end
   end
 
   describe "PATCH #update" do
     it "render root if sign in with non_admin_edu account" do
       sign_in user
-      patch :update, params: {id: about}
-      expect(response).to redirect_to root_url
+      patch :update, params: {id: about,
+        education_about: FactoryGirl.attributes_for(:education_about)}
+      expect(response).to redirect_to education_root_url
     end
 
     it "raise flash success if update successfully" do

@@ -1,0 +1,51 @@
+<section id="content">
+  <div class="content-wrap content-wrap-custom">
+    <div class="container-fluid clearfix course-detail-wrapper">
+      <div class="course-slide-wrapper">
+        <div class="fslider" data-arrows="false" data-animation="fade">
+          <div class="flexslider">
+            <div class="slider-wrap">
+              <%= render "education/shared/load_images_slider",
+                object: course %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="course-detail-inner">
+        <div class="course-detail">
+          <div class="fancy-title title-bottom-border">
+            <h2><%= t ".course_info" %></h2>
+          </div>
+          <div class="description-course">
+            <p><%= truncate course.detail,
+               length: Settings.courses.truncate_detail_course %>
+              <%= check_lenght_content course.detail,
+                Settings.courses.modal_detail %>
+              <%= render "read_more", course: course %></p>
+              <span class="glyphicon glyphicon-calendar icon-date" aria-hidden="true">
+              <%= t ".start_date" %><%= l course.start_date,
+              format: :date_month_year_concise %></span>
+            <br/>
+            <span class="glyphicon glyphicon-calendar icon-date" aria-hidden="true">
+              <%= t ".end_date" %><%= l course.end_date,
+              format: :date_month_year_concise %></span>
+          </div>
+          <div>
+            <%= render "connection_course", techniques: show_course.techniques,
+              course: course, users: show_course.users %>
+          </div>
+          <div class="share-course">
+            <div class="si-share share-custom clearfix">
+              <div>
+                <span><%= t ".share" %></span>
+              </div>
+              <div>
+                <%= social_share_button_tag course.name %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

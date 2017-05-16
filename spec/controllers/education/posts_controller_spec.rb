@@ -5,12 +5,14 @@ RSpec.describe Education::PostsController, type: :controller do
   let(:education_post){FactoryGirl.create :education_post}
   let(:new_education_post){FactoryGirl.create :new_education_post}
   let(:params_valid){FactoryGirl.attributes_for :education_post,
-    title: "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem."}
+    title: "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.",
+    post_type: "recruitment"}
   let(:params_invalid){FactoryGirl.attributes_for :education_post,
     title: nil}
   let!(:category){FactoryGirl.create :education_category}
   let!(:user){FactoryGirl.create :user}
   let!(:another_user){FactoryGirl.create :user}
+  let!(:trainer){FactoryGirl.create :user, role: "trainer"}
 
   before :each do
     allow(controller).to receive(:current_user).and_return(user)
@@ -88,7 +90,7 @@ RSpec.describe Education::PostsController, type: :controller do
       let(:tag){FactoryGirl.create :tag}
       it "save success" do
         expect do
-          post :create, params: {education_post: FactoryGirl.attributes_for(:education_post, category_id: category.id)}, xhr: true
+          post :create, params: {education_post: FactoryGirl.attributes_for(:education_post, category_id: category.id, post_type: "recruitment")}, xhr: true
         end
         .to change(Education::Post, :count).by 1
       end
@@ -104,7 +106,7 @@ RSpec.describe Education::PostsController, type: :controller do
     context "create valid post" do
       it "save success" do
         expect do
-          post :create, params: {education_post: FactoryGirl.attributes_for(:education_post, category_id: nil)}, xhr: true
+          post :create, params: {education_post: FactoryGirl.attributes_for(:education_post, category_id: nil, post_type: "recruitment")}, xhr: true
         end
         .to change(Education::Post, :count).by 0
         expect(response).to render_template :new
@@ -225,7 +227,7 @@ RSpec.describe Education::PostsController, type: :controller do
 
       it "re-renders :edit template" do
         patch :update, params: {id: education_post,
-          education_post: FactoryGirl.attributes_for(:invalid_education_post)}
+          education_post: FactoryGirl.attributes_for(:invalid_education_post, post_type: "recruitment")}
         expect(response).to render_template :edit
       end
     end

@@ -1,0 +1,81 @@
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= t ".page_title" %></h1>
+    <ol class="breadcrumb">
+      <li><%= link_to t(".home"), education_root_path %></li>
+      <li class="active"><%= t ".page_title" %></li>
+    </ol>
+  </div>
+</section>
+
+<div id="page-menu" class="page-menu-course">
+  <div id="page-menu-wrap">
+    <div class="container clearfix">
+      <div class="menu-title">
+        <%= t ".course" %>
+        <span> <%= t ".filter" %></span>
+      </div>
+      <nav>
+        <ul>
+          <%= render "search_form", {controller_name: "education/management/courses"} %>
+          <li class="training-search">
+            <%= text_field_tag :course_search, params[:course_search],
+              placeholder: t(".search"), class: "form-control" %>
+          </li>
+        </ul>
+      </nav>
+      <div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+    </div>
+  </div>
+</div>
+
+<div class="clear bottommargin-sm"></div>
+<div class="container">
+  <div class="row">
+    <div class="panel panel-default panel-table">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col col-xs-6">
+            <h3 class="panel-title"><%= t ".all_course" %></h3>
+          </div>
+          <div class="col col-xs-6 text-right">
+            <% if current_user && can_manage?(Education::Course) %>
+              <button type="button" class="btn btn-warning btn-course-new">
+                <%= t ".create_new" %>
+              </button>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body nopadding">
+        <table class="table table-hover table-striped nomargin">
+          <thead>
+            <tr class="warning">
+            <th></th>
+            <th><%= t ".course_name" %></th>
+            <th><%= t ".schedule" %></th>
+            <th><%= t ".start_date" %></th>
+            <th><%= t ".place" %></th>
+            <th><%= t ".deadline_register" %></th>
+            <th><%= t ".cost" %></th>
+            <th class="text-center"><em class="icon-cog"></em></th>
+            </tr>
+          </thead>
+          <tbody class="tbody-course">
+            <%= render "course", courses: @courses %>
+          </tbody>
+        </table>
+      </div>
+      <div class="panel-footer">
+        <div class="row">
+          <div class="center">
+            <%= paginate @courses %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "education/shared/edit_popup",
+  modal_title: t("education.courses.edit.edit") %>

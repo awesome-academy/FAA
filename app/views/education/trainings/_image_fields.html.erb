@@ -1,4 +1,4 @@
-<div class="nested-fields trainnings-image-form">
+div class="nested-fields trainnings-image-form">
   <%= f.input :url, as: :file, label: false %>
   <%= f.hidden_field :url_cache, value: f.object.url_cache %>
   <%= image_tag f.object.url,

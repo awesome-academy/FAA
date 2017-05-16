@@ -1,15 +1,17 @@
 require "rails_helper"
 require "support/controller_helpers"
 
-RSpec.describe Education::TrainingsController, type: :controller do
+RSpec.describe Education::Management::TrainingsController, type: :controller do
   let(:training){FactoryGirl.create(:training)}
   let(:technique){FactoryGirl.create(:education_technique)}
   let(:technique1){FactoryGirl.create(:education_technique)}
   let(:technique2){FactoryGirl.create(:education_technique)}
-  let(:params_true){FactoryGirl.attributes_for :training, name: "training",
-   description: "description"}
+  let(:params_true) do
+    FactoryGirl.attributes_for :training, name: "training",
+      description: "description"
+  end
   let(:params_fail){FactoryGirl.attributes_for :training, name: nil}
-  let!(:user){FactoryGirl.create(:user)}
+  let!(:user){FactoryGirl.create :user, role: "admin"}
   before :each do
     FactoryGirl.create(:training_technique, training_id: training.id,
       technique_id: technique.id)
@@ -87,7 +89,7 @@ RSpec.describe Education::TrainingsController, type: :controller do
 
     it "update fail" do
       patch :update, params: {id: training, education_training: params_fail}
-       expect(response).to render_template :edit
+      expect(response).to render_template :edit
     end
 
     it "find training fail" do
@@ -97,14 +99,15 @@ RSpec.describe Education::TrainingsController, type: :controller do
     end
   end
 
-   describe "GET #show" do
+  describe "GET #show" do
     before{get :show, params: {id: training}}
 
     context "load training success" do
       context "render the show template" do
         it{expect(subject).to respond_with 200}
         it do
-          expect(subject).to render_with_layout "education/layouts/application"
+          expect(subject)
+            .to render_with_layout "education/layouts/application_management"
         end
         it{expect(subject).to render_template :show}
       end
@@ -125,7 +128,8 @@ RSpec.describe Education::TrainingsController, type: :controller do
       end
 
       it "get a flash error" do
-        expect(flash[:error]).to eq I18n.t("education.trainings.training_not_found")
+        expect(flash[:error])
+          .to eq I18n.t("education.trainings.training_not_found")
       end
     end
   end

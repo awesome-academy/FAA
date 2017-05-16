@@ -15,6 +15,9 @@ Rails.application.routes.draw do
       resources :users, only: [:index, :update, :create]
       resources :categories, except: [:show, :new, :edit]
       resources :course_registers, only: [:index, :update]
+      resources :trainings
+      resources :courses
+      resources :projects
       root "users#index"
     end
     root "home#index"
@@ -23,10 +26,10 @@ Rails.application.routes.draw do
       resources :rates, only: :create
     end
     resources :trainers, only: :index
-    resources :trainings
+    resources :trainings, only: [:index, :show]
     resources :techniques
     resources :feedbacks, only: [:new, :create]
-    resources :courses
+    resources :courses, only: [:index, :show]
     resources :trainings, only: :index
     resources :posts do
       resources :comment_posts, except: [:index, :show]

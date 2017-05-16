@@ -1,6 +1,5 @@
 class Education::Management::FeedbacksController <
   Education::Management::BaseController
-  load_and_authorize_resource class: Education::Feedback
   before_action :load_feedback, only: :destroy
 
   def index

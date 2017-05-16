@@ -43,14 +43,16 @@
                 <% end %>
               </li>
             <% end %>
-            <li>
-              <%= link_to new_education_post_path(type: Settings.education.posts.recruitment) do %>
-                <span class="nomargin">
-                  <i class="icon-edit" aria-hidden="true"></i>&nbsp;
-                  <%= t ".create_recruitment" %>
-                </span>
-              <% end %>
-            </li>
+            <% if current_user && can?(:manage, Education::Post) %>
+              <li>
+                <%= link_to new_education_post_path(type: Settings.education.posts.recruitment) do %>
+                  <span class="nomargin">
+                    <i class="icon-edit" aria-hidden="true"></i>&nbsp;
+                    <%= t ".create_recruitment" %>
+                  </span>
+                <% end %>
+              </li>
+            <% end %>
             <li role="separator" class="divider"></li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>

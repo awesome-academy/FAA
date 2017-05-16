@@ -1,0 +1,40 @@
+<section id="page-title" class="page-title">
+  <div class="container clearfix clearfix-custom shared-title">
+   <h1><%= @project.name %></h1>
+   <ul class="flex-center-vertically shared-title-right-buttons">
+     <li>
+       <a href="#" class="btn btn-warning" id="btn-project-edit" data-id="<%= @project.id %>">
+         <i class="icon-edit"></i>
+         <%= t ".edit_button" %>
+       </a>
+     </li>
+     <li>
+       <%= link_to education_management_project_path(@project),
+         method: :delete, class: "btn btn-danger",
+         data: {confirm: t(".delete_object")} do %>
+         <i class="icon-remove"></i>
+         <%= t "education.projects.destroy.delete" %>
+       <% end %>
+     </li>
+   </ol>
+   </div>
+  </div>
+</section>
+<%= render "education/shared/edit_popup",
+  modal_title: t("education.projects.edit_project") %>
+<div class="add_project_member_modal">
+  <%= render "add_project_member_modal",
+    users: @show_projects.users, project: @project %>
+</div>
+
+
+<section id="content">
+  <div class="content-wrap content-wrap-custom">
+    <div class="container clearfix">
+      <%= render partial: "detail_project", locals: {project: @project,
+        relations: @show_projects.relations, techniques: @techniques,
+        project_members: @show_projects.project_members,
+        rate: (@show_projects.get_rate(current_user.id) if user_signed_in?)} %>
+    </div>
+  </div>
+</section>

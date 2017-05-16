@@ -1,6 +1,5 @@
 class Education::Management::GroupUsersController <
   Education::Management::BaseController
-  load_and_authorize_resource class: Education::UserGroup
 
   def index
     @groups = Education::Group.includes :users

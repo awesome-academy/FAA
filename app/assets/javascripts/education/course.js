@@ -7,7 +7,7 @@ $(document).ready(function() {
     var course_search = $(this).val();
     var training_id = $('#training_id').val();
     var data = {course_search: course_search, training_id: training_id};
-    $.get('/education/courses', data, null, 'script');
+    $.get('./courses', data, null, 'script');
   });
 
   $('.course_image_slide').carousel();

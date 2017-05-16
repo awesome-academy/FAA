@@ -1,35 +1,28 @@
 require "rails_helper"
 require "support/controller_helpers"
 
-RSpec.describe Education::CoursesController, type: :controller do
-  let!(:user){FactoryGirl.create(:user)}
+RSpec.describe Education::Management::CoursesController, type: :controller do
+  let!(:admin){FactoryGirl.create :user, role: "admin"}
   before :each do
-    group = FactoryGirl.create(:education_group)
-    FactoryGirl.create :education_user_group, user: user, group: group
-    FactoryGirl.create :education_permission, group: group,
-      entry: "Education::Course"
-    allow(controller).to receive(:current_user).and_return user
-    sign_in user
+    allow(controller).to receive(:current_user).and_return admin
+    sign_in admin
   end
 
   describe "GET #index" do
-
     it do
       get :index
       expect(response).to have_http_status :success
     end
     it "load courses success" do
-      training = FactoryGirl.create :training
       course = FactoryGirl.create :course
       courses = Education::Course.newest
       expect([course]).to match_array(courses)
     end
 
-     it "load courses fail" do
+    it "load courses fail" do
       courses = Education::Course.newest
       expect([]).to match_array(courses)
     end
-
   end
 
   describe "GET #new" do
@@ -42,25 +35,25 @@ RSpec.describe Education::CoursesController, type: :controller do
   describe "POST #create" do
     context "with valid attributes" do
       it "save new course to database" do
-        expect{
+        expect do
           post :create, params:
             {education_course: FactoryGirl.attributes_for(:course)}
-        }.to change(Education::Course, :count).by 1
+        end.to change(Education::Course, :count).by 1
       end
 
       it "redirects to index courses page" do
         post :create, params:
           {education_course: FactoryGirl.attributes_for(:course)}
-        expect(response).to redirect_to education_courses_path
+        expect(response).to redirect_to education_management_courses_path
       end
     end
 
     context "with invalid attributes" do
       it "does not save invalid project to database" do
-        expect{
+        expect do
           post :create, params:
             {education_course: FactoryGirl.attributes_for(:invalid_course)}
-        }.not_to change(Education::Course, :count)
+        end.not_to change(Education::Course, :count)
       end
 
       it "re-renders :new template" do
@@ -72,15 +65,18 @@ RSpec.describe Education::CoursesController, type: :controller do
   end
 
   describe "GET #show" do
-    let(:course){FactoryGirl.create :course, name: "Course 1",
-      detail: "Course Old"}
+    let(:course) do
+      FactoryGirl.create:course, name: "Course 1", detail: "Course Old"
+    end
+
     before{get :show, params: {id: course}}
 
     context "load course success" do
       context "render the show template" do
         it{expect(subject).to respond_with 200}
         it do
-          expect(subject).to render_with_layout "education/layouts/application"
+          expect(subject)
+            .to render_with_layout "education/layouts/application_management"
         end
         it{expect(subject).to render_template :show}
       end
@@ -92,8 +88,9 @@ RSpec.describe Education::CoursesController, type: :controller do
   end
 
   describe "PATCH #update" do
-    let(:course){FactoryGirl.create :course, name: "Course 1",
-      detail: "Course Old"}
+    let(:course) do
+      FactoryGirl.create :course, name: "Course 1", detail: "Course Old"
+    end
 
     context "with valid attributes" do
       it "update course attributes" do
@@ -106,7 +103,7 @@ RSpec.describe Education::CoursesController, type: :controller do
       it "redirects to index courses page" do
         patch :update, params: {id: course, education_course:
           FactoryGirl.attributes_for(:course)}
-        expect(response).to redirect_to education_courses_path
+        expect(response).to redirect_to education_management_courses_path
       end
     end
 
@@ -122,15 +119,15 @@ RSpec.describe Education::CoursesController, type: :controller do
   describe "DELETE #destroy" do
     let!(:course){FactoryGirl.create :course}
     it "deletes the course" do
-      expect{
+      expect do
         delete :destroy, params: {id: course}
-      }.to change(Education::Course, :count).by -1
+      end.to change(Education::Course, :count).by -1
     end
 
     it "redirects to index courses page" do
       delete :destroy, params: {id: course}
-      expect(response).to redirect_to education_courses_path
-      end
+      expect(response).to redirect_to education_management_courses_path
+    end
   end
 
   context "cannot load course" do
@@ -141,7 +138,7 @@ RSpec.describe Education::CoursesController, type: :controller do
     end
 
     it "redirect to education_root_path" do
-      expect(response).to redirect_to education_courses_path
+      expect(response).to redirect_to education_management_courses_path
     end
 
     it "get a flash error" do

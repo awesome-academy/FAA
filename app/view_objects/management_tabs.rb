@@ -10,7 +10,10 @@ class ManagementTabs < Tabs
      group_user_tab,
      user_tab,
      category_tab,
-     course_tab].compact
+     course_registers_tab,
+     trainings_tab,
+     courses_tab,
+     projects_tab].compact
   end
 
   def about_tab
@@ -53,8 +56,23 @@ class ManagementTabs < Tabs
       education_management_categories_path, :categories
   end
 
-  def course_tab
-    build_tab t("education.layouts.header_management.courses"),
+  def course_registers_tab
+    build_tab t("education.layouts.header_management.course_registers"),
       education_management_course_registers_path, :course_registers
+  end
+
+  def courses_tab
+    build_tab t("education.layouts.header_management.courses"),
+      education_management_courses_path, :courses
+  end
+
+  def trainings_tab
+    build_tab t("education.layouts.header_management.trainings"),
+      education_management_trainings_path, :trainings
+  end
+
+  def projects_tab
+    build_tab t("education.layouts.header_management.trainings"),
+      education_management_projects_path, :projects
   end
 end

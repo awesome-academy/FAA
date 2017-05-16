@@ -1,0 +1,6 @@
+<% if @training_object.trainings_for_guest.any? %>
+  $('#portfolio').html('<%= j render "education/management/trainings/new_training" %>')
+  $('#portfolio').append('<%= j render partial: "education/trainers/training", collection: @training_object.trainings_for_manager %>');
+<% else %>
+  $('#portfolio').html('<h1><%= t ".not_found" %></h1>');
+<% end %>

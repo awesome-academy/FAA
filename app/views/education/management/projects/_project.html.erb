@@ -1,0 +1,18 @@
+<div class="load-more-project">
+  <article class="portfolio-item">
+    <div class="portfolio-image">
+      <ul data-liffect="pageRight" class="data-liffect">
+        <li><%= load_image project %></li>
+      </ul>
+      <div class="portfolio-overlay">
+        <div class="portfolio-desc">
+          <h3><%= truncate(project.name, length: Settings.education.index_name.truncate_limit) %></h3>
+          <span><%= truncate(project.description, length: Settings.education.project.truncate) %></span>
+        </div>
+        <%= link_to education_project_path(project), class: "center-icon" do %>
+          <i class="icon-line-ellipsis"></i>
+        <% end %>
+      </div>
+    </div>
+  </article>
+</div>

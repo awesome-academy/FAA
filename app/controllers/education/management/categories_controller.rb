@@ -1,6 +1,5 @@
 class Education::Management::CategoriesController <
   Education::Management::BaseController
-  load_and_authorize_resource class: Education::Category
   before_action :find_category, only: [:update, :destroy]
 
   def index

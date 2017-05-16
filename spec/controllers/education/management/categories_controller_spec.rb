@@ -1,15 +1,9 @@
 require "rails_helper"
 
 RSpec.describe Education::Management::CategoriesController, type: :controller do
-  let!(:admin_edu){FactoryGirl.create :user}
+  let!(:admin_edu){FactoryGirl.create :user, role: "admin"}
   let!(:user){FactoryGirl.create :user}
   let!(:category){FactoryGirl.create :education_category}
-  before do
-    group = FactoryGirl.create(:education_group)
-    FactoryGirl.create :education_user_group, user: admin_edu, group: group
-    FactoryGirl.create :education_permission, group: group,
-      entry: "Education::Category"
-  end
 
   describe "GET #index" do
     it "render index if sign in with admin_edu account" do
@@ -21,7 +15,7 @@ RSpec.describe Education::Management::CategoriesController, type: :controller do
     it "render root if sign in with non_admin_edu account" do
       sign_in user
       get :index
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to education_root_url
     end
   end
 
@@ -29,7 +23,7 @@ RSpec.describe Education::Management::CategoriesController, type: :controller do
     it "render root if sign in with non_admin_edu account" do
       sign_in user
       post :create, params: {education_category: {name: "Ruby on Rails"}}
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to education_root_url
     end
 
     it "create new category successfully" do
@@ -51,7 +45,7 @@ RSpec.describe Education::Management::CategoriesController, type: :controller do
     it "render root if sign in with non_admin_edu account" do
       sign_in user
       patch :update, params: {id: category}
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to education_root_url
     end
 
     it "render json success if update category successfully" do
@@ -86,7 +80,7 @@ RSpec.describe Education::Management::CategoriesController, type: :controller do
     it "render root if sign in with non_admin_edu account" do
       sign_in user
       delete :destroy, params: {id: category}
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to education_root_url
     end
 
     it "render json success if destroy category successfully" do

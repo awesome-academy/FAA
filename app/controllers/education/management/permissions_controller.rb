@@ -1,6 +1,5 @@
 class Education::Management::PermissionsController <
   Education::Management::BaseController
-  load_and_authorize_resource class: Education::Permission
 
   def create
     permissions_params.each do |id, value|
