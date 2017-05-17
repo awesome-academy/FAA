@@ -2,6 +2,16 @@ vi:
   time:
     formats:
       date_month_year: "%d/%m/%Y"
+  date:
+    formats:
+      date_month_year: "%d/%m/%Y"
+  info_users:
+    create:
+      success: "Cập nhật thành công!"
+      fail: "Cập nhật thất bại!"
+    update:
+      success: "Cập nhật thành công!"
+      fail: "Cập nhật thất bại!"
   education:
     course_status:
       registered: "Đã đăng ký"
@@ -64,6 +74,11 @@ vi:
         news: "Tin tức"
         recruitment: "Tuyển dụng"
         contact: "Liên hệ"
+        create_recruitment: "Tạo một bản tin tuyển dụng"
+      login_modal:
+        or_login_with: "Hoặc đăng nhập với"
+        facebook: "Facebook"
+        google: "Google +"
     trainers:
       trainer:
         trainer_title: "Giảng viên"
@@ -492,6 +507,17 @@ vi:
         twitter: "Twitter"
         photos: "Ảnh"
         techniques: "Công nghệ"
+      post:
+        delete: "Xóa"
+        delete_confirm: "Bạn chắc chắn chưa?"
+        edit: "Chỉnh sửa"
+      edit_info:
+        title: "Cập nhật thông tin của bạn"
+        save: "Lưu lại"
+        close: "Đóng"
+        introduce: "Giới thiệu bản thân"
+        birthday: "Ngày sinh"
+        school: "Trường"
     rates:
       create:
         create_error: "Đánh giá không thành công"

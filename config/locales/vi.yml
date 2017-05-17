@@ -474,8 +474,8 @@ vi:
       add_friend: "Thêm bạn"
       message: "Tin nhắn"
       edit_profile: "Chỉnh sửa hồ sơ"
-      location: "Vị trí"
-      working_at: "Đang làm việc tại"
+      birthday: "Sinh nhật"
+      school: "Trường"
       change_cover: "Thay đổi ảnh bìa"
     social_network:
       about_me: "Về tôi"

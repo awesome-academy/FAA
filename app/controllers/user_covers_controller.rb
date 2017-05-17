@@ -4,12 +4,12 @@ class UserCoversController < ApplicationController
 
   def create
     create_cover
-    redirect_to user_path current_user
+    redirect_to education_user_path current_user
   end
 
   def update
     update_cover
-    redirect_to user_path current_user
+    redirect_to education_user_path current_user
   end
 
   private

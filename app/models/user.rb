@@ -34,7 +34,9 @@ class User < ApplicationRecord
 
   accepts_nested_attributes_for :info_user
 
-  delegate :introduce, to: :info_user, prefix: true
+  delegate :introduce, to: :info_user, prefix: true, allow_nil: true
+  delegate :birthday, to: :info_user, prefix: true, allow_nil: true
+  delegate :school, to: :info_user, prefix: true, allow_nil: true
 
   enum role: [:user, :admin]
   enum education_status: [:blocked, :active], _prefix: true

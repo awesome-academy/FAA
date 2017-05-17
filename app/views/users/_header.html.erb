@@ -28,32 +28,35 @@
         <h2><%= user.name %></h2>
         <div class="user-actions">
           <div class="btn-group">
-            <% if user_signed_in? && !user.is_user?(current_user) %>
-              <%= render "friend_ship_form" %>
-            <% end %>
             <button class="btn btn-default btn-sm tip btn-responsive">
               <span class="glyphicon glyphicon-envelope glyphicon glyphicon-white"></span>
               <%= t ".message" %>
             </button>
-            <button class="btn btn-default btn-sm tip btn-responsive">
-              <span class="glyphicon glyphicon-pencil glyphicon glyphicon-white"></span>
-              <%= t ".edit_profile" %>
-            </button>
+            <% if user.is_user? current_user %>
+              <button class="btn btn-default btn-sm tip btn-responsive"
+                data-toggle="modal" data-target="#editInfoModal">
+                <span class="glyphicon glyphicon-pencil glyphicon glyphicon-white"></span>
+                <%= t ".edit_profile" %>
+              </button>
+            <% end %>
           </div>
         </div>
       </div>
       <div class="additional-info">
         <p>
-          <span class="glyphicon glyphicon-briefcase"></span>
-          <span class="title"><%= t ".working_at" %>:</span>
+          <span class="glyphicon glyphicon-calendar"></span>
+          <span class="title"><%= t ".birthday" %>:</span>
+          <span><%= l user.info_user_birthday, format: :date_month_year if user.info_user_birthday.present? %></span>
         </p>
         <p>
-          <span class="glyphicon glyphicon-map-marker"></span>
-          <span class="title"><%= t ".location" %>:</span>
+          <span class="glyphicon glyphicon-education"></span>
+          <span class="title"><%= t ".school" %>:</span>
+          <span><%= user.info_user_school %></span>
         </p>
       </div>
     </div>
   </div>
 </div>
-<%= render "change_avatar", user: user if user.is_user? current_user %>
-<%= render "change_cover", user: user if user.is_user? current_user %>
+<%= render "users/change_avatar", user: user if user.is_user? current_user %>
+<%= render "users/change_cover", user: user if user.is_user? current_user %>
+<%= render "edit_info", user: user if user.is_user? current_user %>
