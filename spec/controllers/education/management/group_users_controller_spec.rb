@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Education::Management::GroupUsersController, type: :controller do
-  let!(:admin_edu){FactoryGirl.create :user}
+  let!(:admin_edu){FactoryGirl.create :user, role: "admin"}
   let!(:user){FactoryGirl.create :user}
   let!(:group){FactoryGirl.create(:education_group)}
   before do
@@ -21,7 +21,7 @@ RSpec.describe Education::Management::GroupUsersController, type: :controller do
       sign_out admin_edu
       sign_in user
       get :index
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to education_root_url
     end
   end
 

@@ -1,6 +1,5 @@
 class Education::Management::CourseRegistersController <
   Education::Management::BaseController
-  load_and_authorize_resource class: CourseRegister
   before_action :load_course_register, only: :update
 
   def index

@@ -1,0 +1,31 @@
+<% courses.each do |course| %>
+  <tr>
+    <td>
+      <% if course.images.any? %>
+        <%= image_tag course.images.first.url, class: "img-circle" %>
+      <% else %>
+        <%= image_tag ImageUploader.new.default_url, class: "img-circle" %>
+      <% end %>
+    </td>
+    <td>
+      <h4>
+        <%= link_to course.name, education_management_course_path(course) %>
+      </h4>
+      <p><%= course.training.name %></p>
+    </td>
+    <td><%= course.schedule %></td>
+    <td><%= l course.start_date, format: :date_month_year_concise %></td>
+    <td><%= course.place %></td>
+    <td><%# l course.deadline_register, format: :date_month_year_concise %></td>
+    <td><%= course.cost %></td>
+    <td align="center">
+      <a class="btn btn-default btn-course-edit" data-id="<%= course.id %>">
+        <em class="icon-pencil"></em>
+      </a>
+      <%= link_to education_management_course_path(course), method: :delete,
+        class: "btn btn-danger", data: {confirm: t(".delete_confirm")} do %>
+        <em class="icon-trash"></em>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

@@ -8,7 +8,7 @@
       <nav>
         <ul>
           <%= render "education/layouts/nav_filter",
-            {controller_name: "education/projects", techniques: @techniques} %>
+            {controller_name: "education/management/projects", techniques: @techniques} %>
           <li class="project-search">
             <input type="text" id="projects-search-txt" class="form-control"
               placeholder= "<%= t ".placeholder_search" %>" autofocus>
@@ -19,7 +19,6 @@
     </div>
   </div>
 </div>
-
 <div class="content-wrap nobottompadding custom-wrap">
   <div id="list-portfolio" class="container clearfix">
     <div id="portfolio" class="portfolio grid-container clearfix">
@@ -27,7 +26,8 @@
         <div class="portfolio-image">
           <%= image_tag "add_project" %>
           <div class="portfolio-overlay">
-            <%= link_to new_education_project_path, class: "center-icon" do %>
+            <%= link_to new_education_management_project_path,
+              class: "center-icon" do %>
               <i class="icon-plus-sign"></i>
             <% end %>
           </div>

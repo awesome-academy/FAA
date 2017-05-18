@@ -1,0 +1,15 @@
+<% users.each_with_index do |user, index| %>
+  <tr class="search-user-image">
+    <td>
+      <%= load_user_avatar user %>
+      <strong><%= user.name %></strong>
+      <%= user.email %>
+      <i class="delete-member"><%= link_to t(".delete"),
+        education_course_member_path(
+          id: index, user_id: user.id, course_id: course.id),
+        method: :delete, remote: true, data: {confirm: t(".delete_confirm")},
+        class: "btn btn-danger" %>
+      </i>
+    </td>
+  </tr>
+<% end %>

@@ -54,6 +54,8 @@ en:
         users: "Users"
         categories: "Categories"
         courses: "Courses"
+        trainings: "Trainings"
+        course_registers: "Course Registers"
       header:
         home: "Home"
         portfolio: "Portfolio"
@@ -253,6 +255,52 @@ en:
         learner: "Object can learn training"
         benefit: "benefit training"
     projects:
+      project_not_found: "Project Not Found."
+      more: "More"
+      detail_project:
+        members: "Members"
+        name: "Name"
+        related_project: "Related Projects:"
+        read_more: "Read more"
+        technique: "Technique:"
+        project_info: "Project Info"
+        share: "Share:"
+        server_info: "Server:"
+        plat_form: "Platform:"
+        git_repo: "Git Repo:"
+        pm_url: " PM Url:"
+      read_more:
+        close: "Close"
+        description: "Description"
+        core_features: "Core Features"
+        release_note: "Release Note"
+      form:
+        name: "Name"
+        description: "Description"
+        core_features: "Core features"
+        server_info: "Server info"
+        pm_url: "PM URL"
+        plat_form: "Platform"
+        release_note: "Release note"
+        git_repo: "Git repository"
+        add_image: "add images"
+      new:
+        create_project: "Create project"
+      edit:
+        edit_project: "Edit Project"
+        update_project: "Update project"
+      create:
+        project_created: "Project created!"
+      update:
+        project_updated_successfully: "Project updated successfully!"
+      destroy:
+        delete: "Delete"
+        project_deleted: "Project deleted"
+        project_delete_fail: "Fail to delete project."
+      home:
+        title: "Project Title"
+        description: "Project Description"
+        filter: "Filter"
       form:
         choose_technique: "Choose techniques"
       index:
@@ -535,6 +583,153 @@ en:
         post_not_found: "The post not to be found"
         not_found: "Not found"
     management:
+      user_permission: "You do not have permission"
+      courses:
+        form:
+          name: "Name"
+          detail: "Detail"
+          training: "Training"
+          start_date: "Start day"
+          end_date: "End day"
+          image: "Images"
+          add_image: "Add a image"
+          save: "Save"
+          reset: "Reset"
+          select_date: "Select Date"
+        image_fields:
+          remove: "Remove"
+        new:
+          new: "Create new Course"
+          heading: "Create new course"
+          heading_description: "Heading description"
+          create_course: "Create"
+        new_course:
+          new: "Create a new course"
+          new_description: "Create a new course description"
+          new_title: "Create a new course title"
+        edit:
+          edit: "Edit Course"
+          update_course: "Update Course"
+        course:
+          delete: "Delete"
+          edit: "Edit"
+          delete_confirm: "Are you sure?"
+        create:
+          new_success: "Created new course successfully"
+          new_faild: "Cannot create new course"
+        update:
+          update_success: "Updated course successfully"
+          update_faild: "Cannot update course"
+        destroy:
+          destroy_success: "Deleted course successfully"
+          destroy_faild: "Cannot delete course"
+        not_found: "Course not found"
+        add_course_member_modal:
+          add_member: "Add Members"
+          manage_member: "Manage Members"
+          search: "Search User by name or email"
+          choose_all: "Choose all"
+          add: "Add"
+          close: "Close"
+        list_added_users:
+          delete: "Delete"
+          delete_confirm: "Are you sure?"
+        search_form:
+          show_all: "Show all"
+        index:
+          home: "Home"
+          no_courses: "Not found any course"
+          page_title: "All Courses"
+          course: "Courses"
+          filter: "Filter"
+          search: "Search courses"
+          all_course: "All courses"
+          create_new: "Create new"
+          course_name: "Course name"
+          schedule: "Schedule"
+          start_date: "Start date"
+          place: "Place"
+          deadline_register: "Registration deadline"
+          cost: "Fee"
+        detail_course:
+          start_date: "Start date : "
+          end_date: "End date : "
+          course_info: "Course info"
+        connection_course:
+          techniques: "Techniques"
+        other_course:
+          other_courses: "Other Course"
+      trainings:
+        training_not_found: "Training Not Found."
+        index:
+          read_more: "Read more"
+          title: "Education Trainings"
+          home: "Home"
+          page_title: "All Trainings"
+          filter: "Filter"
+          hot: "Hot"
+          search_placeholder: "Search..."
+          show_all: "Show all"
+          more: "More"
+          not_found: "Training Not Found."
+        trainings:
+          techniques: "Techniques"
+          view_courses: "View list courses"
+          cost: "Tuition fees: "
+          vnd: "VND"
+        show:
+          not_found: "The training could not be found"
+          home: "Home"
+          trainings: "Trainings"
+          training_info: "Training info"
+          techniques: "Techniques"
+          share: "Share"
+          all_courses: "All Courses"
+          view_courses: "View all courses"
+          edit_training: "Edit Training"
+          usage: "Use for: "
+          reason: "Reason for learn: "
+          learner: "Object can learn: "
+          duration: "Duration: "
+          benefit: "Benefit: "
+          cost: "Tuition fees: "
+          vnd: "VND"
+          month: "Months"
+        new:
+          create_training: "Create"
+          heading: "Create a training"
+          heading_description: "Make it awesome!"
+        new_training:
+          create_new_training: "Create a new training"
+        edit:
+          update_project: "Update"
+        update:
+          training_updated_successfully: "Training updated successfully!"
+        create:
+          training_created: "Training created !"
+          training_create_failed: "Create training failed!"
+        destroy:
+          training_delete_fail: "Fail to delete training."
+          deleted_success: "Deleted training successfully!"
+        form:
+          add_image: "Add image"
+          description: "Description"
+          name: "Name"
+          choose_technique: "Choose techniques"
+          usage: "Usage"
+          reason: "Reason"
+          duration: "Duration"
+          cost: "Cost"
+          benefit: "Benefit"
+          learner: "Object can learner"
+          months: "Months"
+          vnd: "VND"
+        read_more:
+          description: "description training"
+          usage: "Usage training"
+          reason: "Reason to join training"
+          learner: "Object can learn training"
+          benefit: "benefit training"
       group_users:
         index:
           title: "Group user management"
@@ -692,6 +887,87 @@ en:
           course_name: "Course name"
           status: "Status"
           action: "Action"
+      projects:
+        show:
+          edit_button: "Edit"
+        project_not_found: "Project Not Found."
+        more: "More"
+        detail_project:
+          members: "Members"
+          name: "Name"
+          related_project: "Related Projects:"
+          read_more: "Read more"
+          technique: "Technique:"
+          project_info: "Project Info:"
+          share: "Share:"
+          server_info: "Server:"
+          plat_form: "Platform:"
+          git_repo: "Git Repo:"
+          pm_url: " PM Url:"
+        read_more:
+          close: "Close"
+          description: "Description"
+          core_features: "Core Features"
+          release_note: "Release Note"
+        form:
+          name: "Name"
+          description: "Description"
+          core_features: "Core features"
+          server_info: "Server info"
+          pm_url: "PM URL"
+          plat_form: "Platform"
+          release_note: "Release note"
+          git_repo: "Git repository"
+          add_image: "add images"
+        new:
+          create_project: "Create project"
+        edit:
+          edit_project: "Edit Project"
+          update_project: "Update project"
+        create:
+          project_created: "Project created!"
+        update:
+          project_updated_successfully: "Project updated successfully!"
+        destroy:
+          delete: "Delete"
+          project_deleted: "Project deleted"
+          project_delete_fail: "Fail to delete project."
+        home:
+          title: "Project Title"
+          description: "Project Description"
+          filter: "Filter"
+        form:
+          choose_technique: "Choose techniques"
+        index:
+          placeholder_search: "Enter your search"
+          home: "Home"
+          header: "Project"
+          filter: "Filter"
+          show_all: "Show all"
+          more: "More"
+          technique_title: "3+ techniques"
+          technique_subtitle: "HTML, Bootstrap, Angularjs..."
+          platform_title: "4+ platform for education"
+          platform_subtitle: "Ruby, PHP, Android, IOS..."
+          total_project_title: "+ project of education"
+          total_project_subtitle: "Total project education of Framgia"
+        destroy:
+          project_delete_fail: "Fail to delete project."
+          deleted_success: "Deleted project successfully!"
+        add_project_member_modal:
+          add_member: "Add Members"
+          manage_member: "Manage Members"
+          search: "Search User by name or email"
+          choose_all: "Choose all"
+          add: "Add"
+          close: "Close"
+        list_added_users:
+          delete: "Delete"
+          delete_confirm: "Are you sure?"
+        list_users:
+          position: "Position"
+        not_found: "Project not found"
+        edit_project: "Edit Project"
     time:
       formats:
         date_month_year: "%d/%m/%Y"

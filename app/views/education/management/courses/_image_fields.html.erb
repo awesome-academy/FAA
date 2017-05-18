@@ -1,0 +1,11 @@
+<div class="nested-fields trainnings-image-form">
+  <%= f.input :url, as: :file, label: false %>
+  <%= f.hidden_field :url_cache, value: f.object.url_cache %>
+  <%= image_tag f.object.url,
+    size: Settings.education.trainings.img_current_size,
+    class: "img-responsive current-img"%>
+  <%= image_tag "#", class: "img-responsive hidden img_prev",
+    size: Settings.education.trainings.img_prev_size %>
+  <%= link_to_remove_association t(".remove"), f,
+    class: "button button-border button-mini button-rounded button-amber"%>
+</div>

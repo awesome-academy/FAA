@@ -1,6 +1,5 @@
 class Education::Management::LearningProgramsController <
   Education::Management::BaseController
-  load_and_authorize_resource class: Education::LearningProgram
   before_action :find_learning_program, only: :update
 
   def index

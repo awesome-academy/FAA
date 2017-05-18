@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Education::Management::UsersController, type: :controller do
-  let!(:admin_edu){FactoryGirl.create :user}
+  let!(:admin_edu){FactoryGirl.create :user, role: "admin"}
   let!(:user){FactoryGirl.create :user}
   before do
     group = FactoryGirl.create(:education_group)
@@ -20,7 +20,7 @@ RSpec.describe Education::Management::UsersController, type: :controller do
     it "render root if sign in with non_admin_edu account" do
       sign_in user
       get :index
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to education_root_url
     end
   end
 
@@ -28,7 +28,7 @@ RSpec.describe Education::Management::UsersController, type: :controller do
     it "render root if sign in with non_admin_edu account" do
       sign_in user
       patch :update, params: {id: user}
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to education_root_url
     end
 
     it "return json success if update user status successfully" do

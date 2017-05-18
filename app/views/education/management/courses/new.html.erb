@@ -11,7 +11,8 @@
 <section>
   <div class="content-wrap">
     <div class="container clearfix">
-      <%= render "form", course: @course, button_text: t(".new") %>
+      <%= render "form", course: @course, button_text: t(".new"),
+        url: education_management_courses_path %>
     </div>
   </div>
 </section>

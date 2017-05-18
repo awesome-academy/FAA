@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe Education::Management::TechniquesController, type: :controller do
   let(:technique){FactoryGirl.create(:education_technique)}
-  let!(:user){FactoryGirl.create(:user)}
+  let!(:user){FactoryGirl.create :user, role: "admin"}
   before :each do
     group = FactoryGirl.create(:education_group)
     FactoryGirl.create :education_user_group, user: user, group: group

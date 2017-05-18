@@ -1,23 +1,8 @@
-<% if current_user && can_manage?(Education::Course) %>
-  <%= render "education/shared/page_title",
-    {have_member: true,
-     btn_object_members: "btn-course-members",
-     btn_object_edit: "btn-course-edit",
-     object: @course} %>
-
-  <%= render "education/shared/edit_popup",
-    modal_title: t("education.courses.edit.edit") %>
-  <div class="add_course_member_modal">
-    <%= render "add_course_member_modal",
-      users: @show_course.users, course: @course %>
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= @course.name %></h1>
   </div>
-<% else %>
-  <section id="page-title">
-    <div class="container clearfix">
-      <h1><%= @course.name %></h1>
-    </div>
-  </section>
-<% end %>
+</section>
 
 <section id="content">
   <div class="content-wrap content-wrap-custom">

@@ -4,14 +4,16 @@
     <span><%= t ".heading_description" %></span>
     <ol class="breadcrumb">
       <li><%= link_to t("education.header.home"), education_root_path %></li>
-      <li class="active"><%= t "education.header.trainings" %></li>
+      <li class="active"><%= t "education.header.courses" %></li>
     </ol>
   </div>
 </section>
 <section>
   <div class="content-wrap">
     <div class="container clearfix">
-      <%= render "form", training: @training, button_text: t(".create_training") %>
+      <%= render "education/management/courses/form",
+        course: @course, button_text: t(".edit"),
+        url: education_management_course_path %>
     </div>
   </div>
 </section>

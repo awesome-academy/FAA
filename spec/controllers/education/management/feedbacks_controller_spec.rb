@@ -2,13 +2,9 @@ require "rails_helper"
 
 RSpec.describe Education::Management::FeedbacksController, type: :controller do
   let!(:feedback){FactoryGirl.create :education_feedback}
-  let!(:admin_edu){FactoryGirl.create :user}
+  let!(:admin_edu){FactoryGirl.create :user, role: "admin"}
   let!(:user){FactoryGirl.create :user}
   before do
-    group = FactoryGirl.create(:education_group)
-    FactoryGirl.create :education_user_group, user: admin_edu, group: group
-    FactoryGirl.create :education_permission, group: group,
-      entry: "Education::Feedback"
     sign_in admin_edu
   end
 
@@ -21,7 +17,7 @@ RSpec.describe Education::Management::FeedbacksController, type: :controller do
     it "render root if sign in with non_admin_edu account" do
       sign_in user
       get :index
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to education_root_url
     end
   end
 

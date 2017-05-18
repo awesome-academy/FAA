@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe Education::Management::PermissionsController,
   type: :controller do
-  let!(:admin_edu){FactoryGirl.create :user}
+  let!(:admin_edu){FactoryGirl.create :user, role: "admin"}
   let!(:user){FactoryGirl.create :user}
   before do
     group = FactoryGirl.create(:education_group)
@@ -16,7 +16,7 @@ RSpec.describe Education::Management::PermissionsController,
     it "render root if sign in with non_admin_edu account" do
       sign_in user
       post :create
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to education_root_url
     end
 
     it "return json with success flash if successful update" do

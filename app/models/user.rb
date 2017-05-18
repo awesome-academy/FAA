@@ -38,7 +38,7 @@ class User < ApplicationRecord
   delegate :birthday, to: :info_user, prefix: true, allow_nil: true
   delegate :school, to: :info_user, prefix: true, allow_nil: true
 
-  enum role: [:user, :admin]
+  enum role: [:user, :admin, :trainer]
   enum education_status: [:blocked, :active], _prefix: true
 
   validates :name, presence: true,
@@ -59,6 +59,12 @@ class User < ApplicationRecord
   end
 
   scope :by_active, ->{where education_status: :active}
+
+  ROLES = %w(user trainer admin)
+
+  def role? base_role
+    ROLES.index(base_role.to_s) <= ROLES.index(role)
+  end
 
   class << self
     def import file

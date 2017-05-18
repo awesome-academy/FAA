@@ -1,0 +1,125 @@
+<section id="content">
+  <div class="content-wrap content-wrap-custom">
+    <div class="container-fluid clearfix">
+      <div class="col_two_third portfolio-single-image nobottommargin">
+        <div class="fslider" data-arrows="false" data-animation="fade">
+          <div class="flexslider">
+            <div class="slider-wrap">
+              <%= render "education/shared/load_images_slider",
+                object: project %>
+            </div>
+          </div>
+        </div>
+        <div class="divider divider-center divider-custom">
+          <i class="icon-circle"></i>
+        </div>
+        <%= render "list_members",
+          project: project, project_members: project_members %>
+      </div>
+      <div class="col_one_third portfolio-single-content col_last portfolio-single-content-custom">
+        <div class="fancy-title title-bottom-border">
+          <h2><%= t ".project_info" %></h2>
+        </div>
+        <div class="content-detail-project">
+          <p><%= truncate project.description,
+            length: Settings.education.project.content_truncate %>
+            <%= check_lenght_content project.description,
+              Settings.education.project.modal_description %>
+          </p>
+          <p><%= truncate project.core_features,
+            length: Settings.education.project.content_truncate %>
+            <%= check_lenght_content project.core_features,
+              Settings.education.project.modal_core %>
+          </p>
+          <p><%= truncate project.release_note,
+            length: Settings.education.project.content_truncate %>
+            <%= check_lenght_content project.release_note,
+              Settings.education.project.modal_release %>
+          </p>
+          <%= render "read_more", project: project %>
+        </div>
+        <div class="clearfix">
+          <%= render "education/rates/score", object: project %>
+          <%= render "education/rates/rate", rateable_id: project.id,
+            rateable_type: Education::Project.name, rate: rate %>
+        </div>
+        <div class="si-share share-custom clearfix">
+          <div>
+            <span class="label-share"><%= t ".share" %></span>
+          </div>
+          <div>
+            <%= social_share_button_tag project.name %>
+          </div>
+        </div>
+        <ul class="portfolio-meta bottommargin bottommargin-custom">
+
+          <li><span><i class="icon-info-sign"></i>
+            <%= t ".server_info" %>
+            </span><%= project.server_info %>
+          </li>
+
+          <li><span><i class="icon-lightbulb"></i>
+            <%= t ".technique" %></span>
+            <% techniques.each do |technique| %>
+              <%= technique.name %>
+            <% end %>
+          </li>
+
+          <li><span><i class="icon-lightbulb">
+            </i><%= t ".plat_form" %>
+            </span><%= project.plat_form %>
+          </li>
+
+          <li><span><i class="icon-link"></i>
+            <%= t ".git_repo"  %>
+            </span><%= link_to truncate(project.git_repo,
+              length: Settings.education.project.link_truncate), project.git_repo,
+              target: t("education.project.git_repo") %>
+          </li>
+
+          <li><span><i class="icon-link"></i>
+            <%=t ".pm_url"  %></span>
+            <%= link_to truncate(project.pm_url,
+              length: Settings.education.project.link_truncate), project.pm_url,
+              target: t("education.project.pm_url") %>
+          </li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+      <div class="divider divider-center"><i class="icon-circle"></i></div>
+      <h3><%= t ".related_project" %></h3>
+      <div id="related-portfolio" class="owl-carousel portfolio-carousel
+        carousel-widget" data-margin="20" data-nav="false"
+        data-autoplay="3000" data-items-xxs="1" data-items-xs="2"
+        data-items-sm="3" data-items-lg="4">
+        <%= render "related_project", relations: relations %>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider divider-center"><i class="icon-circle"></i></div>
+<div class="col-md-10">
+  <div class="tab-pane" id="comment">
+    <div class="row margin-bottom-50">
+      </br>
+      <% if user_signed_in?%>
+        <div class="comment-errors"></div>
+        <%= render partial: "education/comments/comment_form",
+          locals: {project: @project} %>
+      <% end %>
+    </div>
+    <h3 id="comments-title" class="comments-title"><span class="comment-count">
+      <%= @project.comments.size %></span><%= t "comment.comment_count" %>
+    </h3>
+    <div class="all-comment" id="all-comment">
+      <%= render @show_projects.comments %>
+    </div>
+    <div class="load-more-button">
+      <%= link_to_next_page @show_projects.comments, t("comment.more_comment"),
+        remote: true, id: "load-more",
+        class: "button button-3d button-teal button-small nobottommargin tada animated" %>
+    </div>
+    <br />
+    <hr />
+  </div>
+</div>

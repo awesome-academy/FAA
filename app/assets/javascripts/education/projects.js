@@ -68,7 +68,7 @@ $(document).ready(function() {
 function delete_project(id) {
   $.ajax({
     type: "DELETE",
-    url: "/education/projects/" + id,
+    url: "/education/management/projects/" + id,
     dataType: "json",
     success: function(data) {
       if(data['status'] === 200) {

@@ -1,0 +1,11 @@
+<% if @projects.any? %>
+  <% if current_user && can_manage?(Education::Project) %>
+    $('#portfolio').html("<%= j render partial: 'education/trainers/project', \
+      collection: @projects %>");
+  <% else %>
+    $('#portfolio').html("<%= j render @projects %>");
+    effect();
+  <% end %>
+<% else %>
+  $('#portfolio').html('<h1><%= t "education.projects.not_found" %></h1>');
+<% end %>

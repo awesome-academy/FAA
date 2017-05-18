@@ -39,13 +39,15 @@
 //= require common
 
 $(document).ready(function(){
-  showEditForm('.btn-course-edit', '/education/courses/');
-  showEditForm('#btn-training-edit', '/education/trainings/');
-  showNewForm('.btn-course-new', '/education/courses/new')
+  showEditForm('.btn-course-edit', '/education/management/courses/')
+  showEditForm('#btn-training-edit', '/education/management/trainings/')
+  showNewForm('.btn-course-new', '/education/management/courses/new')
+  showEditForm('#btn-project-edit', '/education/management/projects/')
 })
 
 function showEditForm(object, path){
-  $(object).on('click', function(){
+  $(object).on('click', function(e){
+    e.stopPropagation();
     var id = $(this).data('id');
     $.ajax({
       url: path + id + '/edit' ,

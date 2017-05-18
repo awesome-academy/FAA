@@ -3,8 +3,8 @@ class Education::PostsController < Education::BaseController
   before_action :load_post, only: [:show]
   before_action :load_user_image_object, only: [:new, :edit, :show, :update]
   before_action :load_post_of_user, only: [:update, :destroy, :edit]
-  before_action :post_create_permission,
-    except: [:show, :index]
+  before_action :new_post_permission, only: [:new]
+  before_action :create_post_permission, only: [:update]
 
   def index
     @index_post_object = Supports::Education::IndexPost.new params[:term],
@@ -90,11 +90,20 @@ class Education::PostsController < Education::BaseController
 
   def load_post_of_user
     @post = Education::Post.find_by id: params[:id]
-    not_found unless (manage? @post) || (@post.user == current_user)
+    not_found unless (can? :manage, @post) || (@post.user == current_user)
   end
 
-  def post_create_permission
-    if params[:type] == Settings.education.posts.news && !current_user.admin?
+  def new_post_permission
+    if params[:type] && params[:type] == Settings.education.posts.news &&
+      !current_user.admin?
+      flash[:danger] = t ".create_post_permission"
+      redirect_back fallback_location: {action: :index}
+    end
+  end
+
+  def create_post_permission
+    if params[:education_post][:post_type] == Settings.education.posts.news &&
+      !current_user.admin?
       flash[:danger] = t ".create_post_permission"
       redirect_back fallback_location: {action: :index}
     end

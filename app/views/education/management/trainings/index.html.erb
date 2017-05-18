@@ -1,0 +1,12 @@
+<% provide :title, t(".title") %>
+
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= t ".page_title" %></h1>
+    <ol class="breadcrumb">
+      <li><%= link_to t(".home"), education_root_path %></li>
+      <li class="active"><%= t ".page_title" %></li>
+    </ol>
+  </div>
+</section>
+<%= render "education/trainers/index_trainings" %>

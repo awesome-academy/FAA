@@ -1,0 +1,20 @@
+@import 'variables/color';
+
+.education-management-trainings.sticky-page-menu > div {
+  left: 260px !important;
+  width: 86% !important;
+}
+
+.training-new-col-half {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  .form-group {
+    width: 100%;
+  }
+
+  span {
+    padding-left: 15px;
+  }
+}

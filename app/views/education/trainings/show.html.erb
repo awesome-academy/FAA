@@ -1,25 +1,13 @@
-<% if current_user && can_manage?(Education::Project) %>
-  <%= render "education/shared/page_title",
-    {have_member: false,
-     btn_object_members: "btn-training-members",
-     btn_object_edit: "btn-training-edit",
-     object: @training} %>
-
-  <%= render "education/shared/edit_popup",
-    modal_title: t(".edit_training") %>
-<% else %>
-  <section id="page-title">
-    <div class="container clearfix">
-      <h1><%= @training.name %></h1>
-      <ol class="breadcrumb">
-        <li><%= link_to t(".home"), education_root_path %></li>
-        <li><%= link_to t(".trainings"), education_trainings_path %></li>
-        <li class="active"><%= @training.name %></li>
-      </ol>
-    </div>
-  </section>
-<% end %>
-
+<section id="page-title">
+  <div class="container clearfix">
+    <h1><%= @training.name %></h1>
+    <ol class="breadcrumb">
+      <li><%= link_to t(".home"), education_root_path %></li>
+      <li><%= link_to t(".trainings"), education_trainings_path %></li>
+      <li class="active"><%= @training.name %></li>
+    </ol>
+  </div>
+</section>
 <section id="content">
   <div class="content-wrap">
     <div class="container clearfix">

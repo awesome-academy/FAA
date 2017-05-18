@@ -8,7 +8,7 @@
       <nav>
         <ul>
           <%= render "education/layouts/nav_filter",
-            {controller_name: "education/trainings",
+            {controller_name: "education/management/trainings",
             techniques: @training_object.techniques} %>
           <li class="training-search">
             <%= search_form_for @training_object.search do |f| %>
@@ -25,7 +25,7 @@
 <div class="content-wrap nobottompadding custom-wrap">
   <div id="list-portfolio" class="container clearfix">
     <div id="portfolio" class="portfolio grid-container clearfix">
-      <%= render "education/trainings/new_training" %>
+      <%= render "education/management/trainings/new_training" %>
       <%= render partial: "education/trainers/training",
         collection: @training_object.trainings_for_manager %>
     </div>

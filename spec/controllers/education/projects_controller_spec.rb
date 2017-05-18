@@ -1,12 +1,12 @@
 require "rails_helper"
 require "support/controller_helpers"
 
-RSpec.describe Education::ProjectsController, type: :controller do
+RSpec.describe Education::Management::ProjectsController, type: :controller do
   let(:project){FactoryGirl.create(:project)}
   let(:technique){FactoryGirl.create(:education_technique)}
   let(:technique1){FactoryGirl.create(:education_technique)}
   let(:technique2){FactoryGirl.create(:education_technique)}
-  let!(:user){FactoryGirl.create(:user)}
+  let!(:user){FactoryGirl.create :user, role: "admin"}
   before :each do
     FactoryGirl.create :project_technique, project_id: project.id,
       technique_id: technique.id
@@ -24,7 +24,8 @@ RSpec.describe Education::ProjectsController, type: :controller do
     context "render the show template" do
       it{expect(subject).to respond_with 200}
       it do
-        expect(subject).to render_with_layout "education/layouts/application"
+        expect(subject)
+          .to render_with_layout "education/layouts/application_management"
       end
       it{expect(subject).to render_template :index}
     end
@@ -65,7 +66,8 @@ RSpec.describe Education::ProjectsController, type: :controller do
       context "render the show template" do
         it{expect(subject).to respond_with 200}
         it do
-          expect(subject).to render_with_layout "education/layouts/application"
+          expect(subject)
+            .to render_with_layout "education/layouts/application_management"
         end
         it{expect(subject).to render_template :show}
       end

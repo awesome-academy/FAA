@@ -1,6 +1,5 @@
 class Education::Management::AboutsController <
   Education::Management::BaseController
-  load_and_authorize_resource class: Education::About
 
   def index
     @about = Education::About.first
