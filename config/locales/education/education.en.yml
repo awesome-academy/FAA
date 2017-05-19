@@ -56,6 +56,7 @@ en:
         courses: "Courses"
         trainings: "Trainings"
         course_registers: "Course Registers"
+        projects: "Projects"
       header:
         home: "Home"
         portfolio: "Portfolio"
@@ -107,6 +108,8 @@ en:
         edit_course: "Edit course"
         delete_course: "Delete course"
         confirm_delete: "Are you sure?"
+      new_project:
+        add_project: "Add project"
     home:
       slider:
         welcome: "Welcome to Framgia Awesome Academy"
@@ -585,6 +588,8 @@ en:
     management:
       user_permission: "You do not have permission"
       courses:
+        show:
+          edit_button: "Edit"
         form:
           name: "Name"
           detail: "Detail"

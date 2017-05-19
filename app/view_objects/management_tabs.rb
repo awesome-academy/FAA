@@ -72,7 +72,7 @@ class ManagementTabs < Tabs
   end
 
   def projects_tab
-    build_tab t("education.layouts.header_management.trainings"),
+    build_tab t("education.layouts.header_management.projects"),
       education_management_projects_path, :projects
   end
 end

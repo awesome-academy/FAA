@@ -68,7 +68,7 @@ class Education::Management::ProjectsController <
       @projects = Education::Project.newest
       respond_to do |format|
         format.html do
-          redirect_to education_projects_path
+          redirect_to education_management_projects_path
           flash[:success] = t ".deleted_success"
         end
         format.json{render json: {flash: t(".deleted_success"), status: 200}}

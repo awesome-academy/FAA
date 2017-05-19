@@ -1,0 +1,15 @@
+<article class="portfolio-item portfolio-item-project pf-media pf-icons">
+  <div class="portfolio-image">
+    <%= image_tag "add_project" %>
+    <div class="portfolio-overlay">
+      <%= link_to new_education_management_project_path,
+        class: "center-icon" do %>
+        <i class="icon-plus-sign"></i>
+      <% end %>
+    </div>
+  </div>
+  <div class="portfolio-desc">
+    <h3><%= t ".add_project" %></h3>
+    <span><%= t ".creater" %></span>
+  </div>
+</article>
