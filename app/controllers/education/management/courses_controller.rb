@@ -72,7 +72,7 @@ class Education::Management::CoursesController <
     else
       flash[:danger] = t ".destroy_faild"
     end
-    redirect_back fallback_location: {action: :index}
+    redirect_to education_management_courses_path
   end
 
   private

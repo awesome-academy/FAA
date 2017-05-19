@@ -43,6 +43,7 @@ $(document).ready(function(){
   showEditForm('#btn-training-edit', '/education/management/trainings/')
   showNewForm('.btn-course-new', '/education/management/courses/new')
   showEditForm('#btn-project-edit', '/education/management/projects/')
+  showEditForm('#btn-course-edit', '/education/management/courses/')
 })
 
 function showEditForm(object, path){

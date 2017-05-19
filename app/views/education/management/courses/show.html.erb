@@ -1,24 +1,32 @@
-<% if current_user && can_manage?(Education::Course) %>
-  <%= render "education/shared/page_title",
-    {have_member: true,
-     btn_object_members: "btn-course-members",
-     btn_object_edit: "btn-course-edit",
-     object: @course} %>
-
-  <%= render "education/shared/edit_popup",
-    modal_title: t("education.courses.edit.edit") %>
-  <div class="add_course_member_modal">
-    <%= render "add_course_member_modal",
-      users: @show_course.users, course: @course %>
-  </div>
-<% else %>
-  <section id="page-title">
-    <div class="container clearfix">
-      <h1><%= @course.name %></h1>
+<section id="page-title" class="page-title">
+  <div class="container clearfix clearfix-custom shared-title">
+    <h1><%= @course.name %></h1>
+    <ul class="flex-center-vertically shared-title-right-buttons">
+      <li>
+        <a href="#" class="btn btn-warning" id="btn-course-edit"
+          data-id="<%= @course.id %>">
+          <i class="icon-edit"></i>
+          <%= t ".edit_button" %>
+        </a>
+      </li>
+      <li>
+        <%= link_to education_management_course_path(@course),
+          method: :delete, class: "btn btn-danger",
+          data: {confirm: t(".delete_object")} do %>
+          <i class="icon-remove"></i>
+          <%= t "education.projects.destroy.delete" %>
+        <% end %>
+      </li>
+    </ol>
     </div>
-  </section>
-<% end %>
-
+  </div>
+</section>
+<%= render "education/shared/edit_popup",
+  modal_title: t("education.courses.edit.edit") %>
+<div class="add_course_member_modal">
+  <%= render "add_course_member_modal",
+    users: @show_course.users, course: @course %>
+</div>
 <section id="content">
   <div class="content-wrap content-wrap-custom">
     <div class="container clearfix">

@@ -1,6 +1,7 @@
 <% if @projects.any? %>
   <% if current_user && can_manage?(Education::Project) %>
-    $('#portfolio').html("<%= j render partial: 'education/trainers/project', \
+    $('#portfolio').html('<%= j render "education/trainers/new_project" %>')
+    $('#portfolio').append("<%= j render partial: 'education/trainers/project', \
       collection: @projects %>");
   <% else %>
     $('#portfolio').html("<%= j render @projects %>");
