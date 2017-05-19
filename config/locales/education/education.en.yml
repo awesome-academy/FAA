@@ -29,6 +29,7 @@ en:
       active_alert: "will be actived?"
       block_alert: "will be blocked?"
       detete_category: "Are you sure?"
+      change_role: "Are you sure?"
     shared:
       page_title:
         edit_button: "Edit"
@@ -833,6 +834,7 @@ en:
           group: "Group"
           action: "Action"
           show_details: "Show detais"
+          role: "Role"
         search_form:
           placeholder: "Enter name or email ..."
         import:

@@ -37,7 +37,7 @@ class Education::Management::UsersController <
   private
 
   def user_params
-    params.require(:user).permit :education_status if params[:user]
+    params.require(:user).permit :education_status, :role if params[:user]
   end
 
   def user_exists

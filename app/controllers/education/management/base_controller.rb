@@ -11,7 +11,7 @@ class Education::Management::BaseController < ApplicationController
   private
 
   def authorize_admin
-    unless current_user && current_user.admin?
+    unless current_user && current_user.role?(:admin)
       flash[:danger] = t "education.management.user_permission"
       redirect_to education_root_path
     end

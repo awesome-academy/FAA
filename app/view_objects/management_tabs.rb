@@ -2,12 +2,10 @@ class ManagementTabs < Tabs
   private
 
   def tabs
-    [group_tab,
-     about_tab,
+    [about_tab,
      learning_program_tab,
      feedback_tab,
      technique_tab,
-     group_user_tab,
      user_tab,
      category_tab,
      course_registers_tab,

@@ -243,5 +243,10 @@ course_register:
   min_address_length: 3
 friendly_token_low: 0
 friendly_token_high: 20
+user_role:
+  user: "user"
+  trainer: "trainer"
+  admin: "admin"
+  super_admin: "super_admin"
 slice:
   slice_num: 2

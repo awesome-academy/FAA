@@ -4,13 +4,11 @@ Rails.application.routes.draw do
   root "education/home#index"
   namespace :education do
     namespace :management do
-      resources :groups, only: :index
       resources :permissions, only: :create
       resources :abouts, only: [:index, :update]
       resources :feedbacks, only: [:index, :destroy]
       resources :learning_programs, only: [:index, :update]
       resources :techniques
-      resource :group_users, only: :destroy
       resources :group_users, only: [:create, :index]
       resources :users, only: [:index, :update, :create]
       resources :categories, except: [:show, :new, :edit]

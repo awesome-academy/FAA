@@ -84,7 +84,11 @@ function showNewForm(object, path){
 
 $(function(){
   return $('form#sign-in-user, form#sign-up-user').bind('ajax:success', function(event, xhr, settings){
-    window.location.reload();
+    if (xhr.role === 'admin' || xhr.role === 'super_admin'){
+      window.location.href = '/education/management'
+    } else {
+      window.location.reload()
+    }
   }).bind('ajax:error', function(event, xhr, settings, exceptions) {
     $('.form-group').removeClass('has-error');
     $('span').remove('.help-block');
