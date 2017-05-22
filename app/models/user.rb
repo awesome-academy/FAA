@@ -6,6 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
+  before_save :super_admin_reject
+
   has_many :articles
   has_many :education_posts, class_name: Education::Post.name
   has_many :education_socials, class_name: Education::Social.name
@@ -38,7 +40,7 @@ class User < ApplicationRecord
   delegate :birthday, to: :info_user, prefix: true, allow_nil: true
   delegate :school, to: :info_user, prefix: true, allow_nil: true
 
-  enum role: [:user, :admin, :trainer]
+  enum role: [:user, :admin, :trainer, :super_admin]
   enum education_status: [:blocked, :active], _prefix: true
 
   validates :name, presence: true,
@@ -60,7 +62,7 @@ class User < ApplicationRecord
 
   scope :by_active, ->{where education_status: :active}
 
-  ROLES = %w(user trainer admin)
+  ROLES = %w(user trainer admin super_admin)
 
   def role? base_role
     ROLES.index(base_role.to_s) <= ROLES.index(role)
@@ -117,5 +119,11 @@ class User < ApplicationRecord
 
   def send_email_request_friend user
     FriendRequestMailer.friend_request(self, user).deliver_later
+  end
+
+  private
+
+  def super_admin_reject
+    throw :abort if self.role == Settings.user_role.super_admin
   end
 end

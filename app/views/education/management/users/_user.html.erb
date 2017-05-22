@@ -1,11 +1,22 @@
 <tr>
   <td><%= user.name %></td>
   <td><%= user.email %></td>
-  <td><%= user.education_groups.first.name %></td>
+  <td class="management-user-role-td">
+    <% if user.super_admin? || user == current_user %>
+      <%= user.role.camelize %>
+    <% else %>
+      <%= select_tag :role, options_for_select(role_select, user.role),
+        class: "form-control management-user-role" %>
+    <% end %>
+  </td>
   <td id="user-edu-stt-<%= user.id %>">
     <%= get_user_education_status user %>
   </td>
-  <td id="action-user-edu-stt-<%= user.id %>">
-    <%= get_action_for_education_status user %>
+  <td id="action-user-edu-stt-<%= user.id %>" class="action-user-edu">
+    <% if user.super_admin? || user == current_user %>
+      <%= user.education_status.camelize %>
+    <% else %>
+      <%= get_action_for_education_status user %>
+    <% end %>
   </td>
 </tr>
