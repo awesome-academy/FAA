@@ -271,3 +271,32 @@
 .button-login {
   float: right;
 }
+
+.register-course-btn {
+  border-radius: 2px;
+  color: $white;
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  line-height: 51px;
+  position: fixed;
+  text-align: center;
+  top: 120px;
+  vertical-align: middle;
+  width: 50px;
+  z-index: 299;
+}
+
+.course-register-modal {
+  .select2-container {
+    width: 100% !important;
+  }
+}
+
+.trainer-introduce {
+  color: $black-light;
+  font-size: 13px;
+  font-style: italic;
+  padding-left: 5px;
+  padding-right: 5px;
+}

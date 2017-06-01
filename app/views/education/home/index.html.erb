@@ -7,12 +7,16 @@
     <%= render "introduction_video" %>
     <%= render "lastest_courses", courses: @home_object.courses %>
     <%= render "our_team", trainers: @home_object.trainers %>
-    <div class="content-wrap-custom">
     <%= render "clients_say" %>
-    <div id="course_registers_section">
-      <%= render partial: "course_register",
-        locals: {course_register: @home_object.new_course_register} %>
-    </div>
     <%= render "our_clients" %>
+  </div>
+
+  <%= render partial: "course_register",
+    locals: {course_register: @home_object.new_course_register} %>
+
+  <div class="register-course-btn" data-toggle="modal"
+    data-target="#course-register-modal">
+    <i class="i-rounded i-bordered icon-check"
+      data-toggle="tooltip" title="<%= t ".register" %>"></i>
   </div>
 </section>

@@ -182,11 +182,15 @@ en:
         see_more: "See more"
       course:
         at: "at"
-      course_register:
+        vnd: "VND"
+      course_register_form:
         heading: "Course register"
         submit: "Register"
+        close: "Close"
       our_clients:
         heading: "Our Partners"
+      index:
+        register: "Register course"
     trainings:
       training_not_found: "Training Not Found."
       index:

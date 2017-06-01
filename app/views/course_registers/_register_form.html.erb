@@ -2,17 +2,17 @@
   <%= simple_form_for course_register, remote: true do |f| %>
     <div class="col_full">
       <%= f.input :course_id, collection: courses_select_options,
-        as: :select, selected: params[:course], include_blank: true,
+        as: :select, selected: params[:course].present? ? params[:course] : course_register.course_id, include_blank: true,
         input_html: {class: "sm-form-control"} %>
     </div>
     <div class="col_half">
       <%= f.input :name, error_class: :error, class: "sm-form-control",
-        input_html: {value: current_user.present? ? current_user.name : "",
+        input_html: {value: current_user.present? ? current_user.name : course_register.name,
           class: "sm-form-control"} %>
     </div>
     <div class="col_half col_last">
       <%= f.input :email, error_class: :error,
-        input_html: {value: current_user.present? ? current_user.email : "",
+        input_html: {value: current_user.present? ? current_user.email : course_register.email,
           class: "sm-form-control"} %>
     </div>
     <div class="clear"></div>

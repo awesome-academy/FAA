@@ -1,37 +1,3 @@
-<div class="section notopmargin notopborder custom-lastest-course">
-  <div class="container clearfix">
-    <div class="heading-block center nomargin">
-      <h3><%= t ".heading" %></h3>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <%= simple_form_for course_register, remote: true do |f| %>
-    <div class="col_full">
-      <%= f.input :course_id, collection: courses_select_options,
-        as: :select, class: "sm-form-control" %>
-    </div>
-    <div class="col_half">
-      <%= f.input :name, error_class: :error,
-        class: "sm-form-control" %>
-    </div>
-    <div class="col_half col_last">
-      <%= f.input :email, error_class: :error,
-        class: "sm-form-control" %>
-    </div>
-    <div class="clear"></div>
-    <div class="col_half">
-      <%= f.input :phone_number, error_class: :error,
-        class: "sm-form-control" %>
-    </div>
-    <div class="col_half col_last">
-      <%= f.input :address, error_class: :error,
-        class: "sm-form-control" %>
-    </div>
-    <div class="clear"></div>
-    <div class="col_full">
-      <%= f.submit t(".submit"), class: "button button-3d button-amber nomargin",
-      id: "template-contactform-submit"%>
-    </div>
-  <% end %>
+<div class="modal fade course-register-modal" id="course-register-modal" role="dialog">
+  <%= render "course_register_form", course_register: course_register %>
 </div>

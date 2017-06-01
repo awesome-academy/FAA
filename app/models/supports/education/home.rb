@@ -33,7 +33,7 @@ module Supports::Education
     end
 
     def trainers
-      Education::Group.get_trainers.users.by_active.includes :avatar
+      Education::Group.get_trainers.users.by_active.includes :avatar, :info_user
     end
 
     def new_course_register
