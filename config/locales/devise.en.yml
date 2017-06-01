@@ -56,11 +56,16 @@ en:
       already_signed_out: "Signed out successfully."
       new:
         login: "Login"
+        hr_system: "Hr System"
+        facebook: "Facebook"
+        google: "Google+"
+        or_login_with: "Or login with"
       form_login:
         login: "Login"
         facebook: "Facebook"
         google: "Google+"
         twitter: "Twitter"
+        hr_system: "Hr System"
         or_login_with: "Or login with"
         forgot_password: "Forgot your password?"
         dont_have_account: "Don't have account ?"

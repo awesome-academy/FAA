@@ -101,20 +101,19 @@ class User < ApplicationRecord
     end
 
     def from_omniauth auth
-      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-        user.provider = auth.provider
-        user.uid = auth.uid
-        user.email = auth.info.email
-        user.name = auth.info.name
+      User.find_or_initialize_by(email: auth.info.email).tap do |user|
+        user.assign_attributes name: auth.info.name, uid: auth.uid,
+          provider: auth.provider, email: auth.info.email
         user.password = Devise
           .friendly_token[Settings.friendly_token_low,
             Settings.friendly_token_high]
+        user.save
       end
     end
   end
 
   def is_user? user
-    self == user
+    user == self
   end
 
   def send_email_request_friend user

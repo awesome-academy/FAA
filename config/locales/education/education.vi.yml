@@ -79,6 +79,7 @@ vi:
         or_login_with: "Hoặc đăng nhập với"
         facebook: "Facebook"
         google: "Google +"
+        hr_system: "Hr System"
     trainers:
       trainer:
         trainer_title: "Giảng viên"
@@ -791,3 +792,10 @@ vi:
         share_this_recruitment: "Chia sẻ thông tin tuyển dụng này"
       tag_cloud:
         recruitment_tag: "Các thẻ thông tin tuyển dụng"
+  callbacks:
+    hr_system:
+      auth_failure: "Auth failure"
+    facebook:
+      auth_failure: "Auth failure"
+    goolgle:
+      auth_failure: "Auth failure"
