@@ -381,6 +381,7 @@ en:
         delete: "Delete"
         edit: "Edit"
         delete_confirm: "Are you sure?"
+        expire: "Expire"
       create:
         new_success: "Created new course successfully"
         new_faild: "Cannot create new course"
@@ -411,9 +412,12 @@ en:
         filter: "Filter"
         search: "Search courses"
       detail_course:
-        start_date: "Start date : "
-        end_date: "End date : "
+        start_date: "Start date: "
+        end_date: "End date: "
         course_info: "Course info"
+        open_until: "Open until "
+        expiration: "Expiration"
+        place: "Place: "
       connection_course:
         techniques: "Techniques"
       other_course:

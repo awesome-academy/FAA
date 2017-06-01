@@ -78,7 +78,7 @@ class Education::Management::CoursesController <
   private
   def course_params
     params.require(:education_course).permit :name, :detail, :deadline_register,
-      :start_date, :end_date, :training_id, :cost, :place, :schedule,
+      :start_date, :end_date, :training_id, :cost, :place, :schedule, :status,
       images_attributes: [:id, :url, :url_cache, :_destroy]
   end
 

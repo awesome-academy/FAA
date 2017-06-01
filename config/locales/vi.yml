@@ -591,3 +591,7 @@ vi:
       greeting: "Chào, %{receiver_name}"
       thanks: "Cảm ơn bạn vì đã đăng kí khóa học: "
       end: "Bản đăng kí của bạn đang được xem xét, chúng tôi sẽ liên lạc lại với bạn sớm nhất có thể."
+  number:
+    currency:
+      format:
+        unit: "VND"

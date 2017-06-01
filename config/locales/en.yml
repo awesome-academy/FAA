@@ -557,3 +557,7 @@ en:
       greeting: "Hi, %{receiver_name}"
       thanks: "Thanks for your registration to course: "
       end: "Your registration will be review and we'll contact your as soon as possible."
+  number:
+    currency:
+      format:
+        unit: "VND"

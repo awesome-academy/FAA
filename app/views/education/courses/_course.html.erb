@@ -12,16 +12,28 @@
     </h4>
     <p><%= course.training.name %></p>
   </td>
-  <td><%= course.schedule %></td>
-  <td><%= l course.start_date, format: :date_month_year_concise %></td>
+  <td class="nowrap">
+    <%= date_show course.start_date %>
+  </td>
+  <td class="nowrap">
+    <%= date_show course.end_date %>
+  </td>
   <td><%= course.place %></td>
-  <td><%# l course.deadline_register, format: :date_month_year_concise %></td>
+  <td class="nowrap">
+    <%= date_show course.deadline_register %>
+  </td>
   <td><%= course.cost %></td>
   <td align="center">
-    <%= link_to new_course_register_path(course: course.id),
-      class: "button button-rounded button-reveal button-large button-yellow button-light" do %>
-      <i class="icon-ok"></i>
-      <span><%= t ".register" %></span>
+    <% if course.open? %>
+      <%= link_to new_course_register_path(course: course.id),
+        class: "button button-rounded button-reveal button-large button-yellow button-light" do %>
+        <i class="icon-ok"></i>
+        <span><%= t ".register" %></span>
       <% end %>
+    <% else %>
+      <div class="button button-3d button-rounded button-black">
+        <%= t ".expire" %>
+      </div>
+    <% end %>
   </td>
 </tr>

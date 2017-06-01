@@ -37,6 +37,9 @@
       <%= f.input :training_id, collection: training_select,
         selected: f.object.training_id %>
 
+      <%= f.input :status, collection: Education::Course.statuses.keys.to_a,
+        selected: f.object.status %>
+
       <%= f.simple_fields_for :images do |image| %>
         <%= render "image_fields", f: image %>
       <% end %>

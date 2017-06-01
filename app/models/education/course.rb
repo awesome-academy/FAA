@@ -1,6 +1,7 @@
 class Education::Course < ApplicationRecord
   translates :detail
 
+  enum status: {open: 0, close: 1}
   belongs_to :training, ->{with_deleted}, class_name: Education::Training.name
 
   has_many :course_members, class_name: Education::CourseMember.name,
@@ -24,6 +25,8 @@ class Education::Course < ApplicationRecord
   scope :by_training, ->training_id do
     where training_id: training_id if training_id.present?
   end
+
+  scope :order_by_status, -> {order("status = 0 DESC, status = 1 DESC")}
 
   accepts_nested_attributes_for :images, allow_destroy: true
 end
