@@ -85,6 +85,7 @@ en:
         or_login_with: "Or login with"
         facebook: "Facebook"
         google: "Google +"
+        hr_system: "Hr System"
     trainers:
       trainer:
         trainer_title: "Trainer"
@@ -1091,3 +1092,10 @@ en:
         share_this_recruitment: "Share this recruitment"
       tag_cloud:
         recruitment_tag: "Recruitment tags"
+  callbacks:
+    hr_system:
+      auth_failure: "Auth failure"
+    facebook:
+      auth_failure: "Auth failure"
+    goolgle:
+      auth_failure: "Auth failure"

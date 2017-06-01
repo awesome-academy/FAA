@@ -25,3 +25,15 @@ RSpec.configure do |config|
     add_group "Library", "lib/my_lib"
   end
 end
+
+OmniAuth.config.test_mode = true
+omniauth_hash = {
+  provider: "hr_system",
+  uid: "",
+  info: {
+    email: "tran.xuan.nam@framgia.com",
+    name: "Trần Xuân Nam"
+  },
+  extra: {}
+}
+OmniAuth.config.add_mock :hr_system, omniauth_hash

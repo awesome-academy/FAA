@@ -10,6 +10,7 @@ Devise.setup do |config|
   # config.omniauth :github, 'b7d170000839a653abe4', '0c5386245fcc600fbe8236d0f7c177609ef81c22', scope: "user.email"
   config.omniauth :facebook, ENV["facebook_app_key"], ENV["facebook_app_secret"], scope: "email"
   config.omniauth :google_oauth2, ENV["google_app_key"], ENV["google_app_secret"]
+  config.omniauth :hr_system, ENV["hr_system_app_key"], ENV["hr_system_app_secret"]
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class

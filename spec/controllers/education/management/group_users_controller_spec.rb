@@ -60,41 +60,4 @@ RSpec.describe Education::Management::GroupUsersController, type: :controller do
       end
     end
   end
-
-  describe "DELETE #destroy" do
-    context "not logged in user" do
-      before{sign_out admin_edu}
-      it "can not remove user from group" do
-        expect do
-          delete :destroy,
-            params: {
-              "education_management_users":
-                "{\"users\":
-                  [{\"id\":\"#{user.id}\"}],
-                \"group\":\"#{group.id}\"}"
-            },
-            xhr: true
-        end
-          .to change(user.education_groups, :count).by 0
-      end
-    end
-
-    context "change group success" do
-      before{sign_in admin_edu}
-      before{user.education_groups << group}
-      it "remove user from group successful" do
-        expect do
-          delete :destroy,
-            params: {
-              "education_management_users":
-                "{\"users\":
-                  [{\"id\":\"#{user.id}\"}],
-                \"group\":\"#{group.id}\"}"
-            },
-            xhr: true
-        end
-          .to change(user.education_groups, :count).by -1
-      end
-    end
-  end
 end

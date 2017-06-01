@@ -12,11 +12,14 @@
           <div class="center">
             <h4 class="margin-section" ><%= t ".or_login_with" %></h4>
             <%= link_to t(".facebook"), user_facebook_omniauth_authorize_path,
-              class: "button button-rounded si-facebook si-colored" %>
+              class: "button button-mini button-rounded si-facebook si-colored" %>
             <span class="hidden-xs"></span>
             <%= link_to t(".google"),
               user_google_oauth2_omniauth_authorize_path,
-              class: "button button-rounded si-google si-colored" %>
+              class: "button button-mini button-rounded si-google si-colored" %>
+            <%= link_to t(".hr_system"),
+              user_hr_system_omniauth_authorize_path,
+              class: "button button-mini button-rounded si-soundcloud si-colored" %>
           </div>
         </div>
       </div>

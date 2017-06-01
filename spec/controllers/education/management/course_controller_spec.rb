@@ -66,7 +66,7 @@ RSpec.describe Education::Management::CoursesController, type: :controller do
 
   describe "GET #show" do
     let(:course) do
-      FactoryGirl.create:course, name: "Course 1", detail: "Course Old"
+      FactoryGirl.create :course, name: "Course 1", detail: "Course Old"
     end
 
     before{get :show, params: {id: course}}
