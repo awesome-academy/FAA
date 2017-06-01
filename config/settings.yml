@@ -233,6 +233,7 @@ info_users:
   quote_form_rows: 2
   max_length_ambition: 255
   max_length_quote: 255
+  truncate_info_trainer: 100
 course_register:
   max_name_length: 255
   min_name_length: 3

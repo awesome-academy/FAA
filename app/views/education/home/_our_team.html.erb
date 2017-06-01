@@ -22,6 +22,10 @@
           <div class="team-title">
             <h4><%= trainer.name %></h4>
             <span><%= t ".team_member_trainer" %></span>
+            <p class="trainer-introduce" data-toggle="tooltip"
+              title="<%= trainer.info_user_introduce %>">
+              <%= truncate trainer.info_user_introduce, length: Settings.info_users.truncate_info_trainer %>
+            </p>
           </div>
           <a href="#" class="social-icon
             inline-block si-small si-light si-rounded si-facebook">

@@ -174,11 +174,15 @@ vi:
         see_more: "Xem thêm"
       course:
         at: "tại"
-      course_register:
+        vnd: "VND"
+      course_register_form:
         heading: "Đăng ký khóa học"
         submit: "Đăng ký"
+        close: "Đóng"
       our_clients:
         heading: "Đối tác của chúng tôi"
+      index:
+        register: "Đăng ký khóa học"
     trainings:
       training_not_found: "Không tìm thấy khóa đào tạo."
       index:

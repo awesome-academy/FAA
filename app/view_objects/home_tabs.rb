@@ -6,8 +6,6 @@ class HomeTabs < Tabs
      trainings_tab,
      schedule_tab,
      register_tab,
-     news_tab,
-     recruitment_tab,
      contact_tab].compact
   end
 
