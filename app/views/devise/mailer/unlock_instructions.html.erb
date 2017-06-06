@@ -1,0 +1,4 @@
+<p><%= t ".hello" %> <%= @resource.email %>!</p>
+<p><%= t ".body" %></p>
+<p><%= t ".click" %></p>
+<p><%= link_to t(".submit"), unlock_url(@resource, unlock_token: @token) %></p>

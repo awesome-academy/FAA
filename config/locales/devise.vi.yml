@@ -17,6 +17,10 @@ vi:
     mailer:
       confirmation_instructions:
         subject: Hướng dẫn xác nhận tài khoản
+        hello: "Xin chào"
+        body: "Tài khoản của bạn đã bị khoá do quá nhiều lần đăng nhập không thành công."
+        click: "Nhấp vào liên kết bên dưới để mở khóa tài khoản của bạn:"
+        submit: "Mở khóa tài khoản của tôi"
       reset_password_instructions:
         subject: Hướng dẫn thiết lập lại mật khẩu
       unlock_instructions:
