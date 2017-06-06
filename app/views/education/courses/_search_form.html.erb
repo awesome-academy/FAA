@@ -1,5 +1,5 @@
 <% if training_select.any? %>
-  <li class="<%= default_current_path %>">
+  <li class="<%= current_course_path %>">
     <%= link_to controller: controller_name do %>
       <div><%= t ".show_all" %></div>
     <% end %>
@@ -10,7 +10,7 @@
   </li>
   <% training_select.last(Settings.courses.number_filter)
     .each_with_index do |training, i| %>
-    <li>
+    <li class="<%= current_path_course? training %>">
       <%= link_to truncate(training.first,
         length: Settings.education.search_nav.truncate_limit),
         controller: controller_name, training_id: training.last %>

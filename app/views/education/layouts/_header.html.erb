@@ -71,13 +71,13 @@
           <%= view_object(:home_tabs).html %>
           <li class="dropdown chosen-language">
             <% if session[:locale].present? %>
-              <%= link_to url_for(locale: session[:locale]), class:"dropdown-toggle dropdown-custom",
+              <%= link_to "#", class:"dropdown-toggle dropdown-custom",
                 data: {toggle: "dropdown"} do %>
                 <%= image_tag "flag/#{session[:locale]}.png", class: "icon-language" %>
                 <i class="icon-angle-down"></i>
               <% end %>
             <% else %>
-              <%= link_to url_for(locale: :en), class:"dropdown-toggle dropdown-custom",
+              <%= link_to "#", class:"dropdown-toggle dropdown-custom",
                 data: {toggle: "dropdown"} do %>
                 <%= image_tag "flag/en.png", class: "icon-language" %>
                 <i class="icon-angle-down"></i>
@@ -94,14 +94,6 @@
             </ul>
           </li>
         </ul>
-
-        <div id="top-search">
-          <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-          <form action="#" method="get">
-            <input type="text" name="q" class="form-control" value=""
-              placeholder="<%= t "education.header.search" %>">
-          </form>
-        </div>
       </nav>
     </div>
   </div>
