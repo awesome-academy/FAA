@@ -56,9 +56,7 @@ class User < ApplicationRecord
     where("id IN (?)", object.users.pluck(:user_id))
   end
 
-  scope :of_education, -> do
-    joins(:education_user_groups).distinct
-  end
+  scope :newest, ->{order created_at: :desc}
 
   scope :by_active, ->{where education_status: :active}
 

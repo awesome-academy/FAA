@@ -8,7 +8,14 @@
 
   <section id="content">
     <div class="container clearfix">
-      <%= render "import" %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= render "import" %>
+        </div>
+        <div class="col-md-6">
+          <%= render "create_user" %>
+        </div>
+      </div>
       <div class="edu-users-search row">
         <%= render "search_form" %>
       </div>

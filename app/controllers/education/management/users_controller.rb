@@ -4,7 +4,8 @@ class Education::Management::UsersController <
   before_action :user_exists, only: :update
 
   def index
-    @query_users = User.of_education.ransack params[:q]
+    @user = User.new
+    @query_users = User.newest.ransack params[:q]
     @users = @query_users.result
       .page(params[:page]).per Settings.education.management.users.per_page
     respond_to do |format|
@@ -25,7 +26,11 @@ class Education::Management::UsersController <
 
   def create
     User.transaction do
-      User.import params[:file]
+      if params[:user]
+        User.create! user_params
+      else
+        User.import params[:file]
+      end
     end
     flash[:success] = t ".success"
     redirect_to education_management_users_path
@@ -37,7 +42,8 @@ class Education::Management::UsersController <
   private
 
   def user_params
-    params.require(:user).permit :education_status, :role if params[:user]
+    params.require(:user).permit :name, :email, :password,
+      :education_status, :role
   end
 
   def user_exists
