@@ -164,6 +164,7 @@ company:
   max_length_name: 50
 default_user_password: {"password": "123456"}
 courses:
+  current_string: "current"
   modal_detail: "#modal_detail"
   home_limit: 8
   index_limit: 8
