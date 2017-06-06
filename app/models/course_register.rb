@@ -6,13 +6,14 @@ class CourseRegister < ApplicationRecord
     length: {maximum: Settings.course_register.max_name_length,
       minimum: Settings.course_register.min_name_length}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_PHONE_NUMBER_REGEX = /\A([\+]?\d)*\z/
   validates :email, presence: true,
     length: {maximum: Settings.course_register.max_email_length},
     format: {with: VALID_EMAIL_REGEX}
   validates :phone_number,
     length: {maximum: Settings.course_register.max_phone_number_length,
       minimum: Settings.course_register.min_phone_number_length},
-      allow_blank: true
+      allow_blank: true, format: {with: VALID_PHONE_NUMBER_REGEX}
   validates :address, length:
     {maximum: Settings.course_register.max_address_length,
       minimum: Settings.course_register.min_address_length}, allow_blank: true
