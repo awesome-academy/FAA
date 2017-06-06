@@ -646,7 +646,13 @@ vi:
           success: "Cập nhật thành công"
           fail: "Cập nhật thất bại"
         create:
-          success: "Đã nhập người dùng thành công."
+          success: "Đã tạo mới người dùng thành công."
+        create_user:
+          title: "Tạo mới người dùng"
+          name: "Nhập tên người dùng"
+          email: "Nhập email người dùng"
+          password: "Nhập mật khẩu"
+          submit: "Tạo mới"
       categories:
         index:
           title: "Quản lý chủ đề bài viết"

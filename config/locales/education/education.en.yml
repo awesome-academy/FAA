@@ -850,7 +850,13 @@ en:
           success: "Update successfully"
           fail: "Update failed"
         create:
-          success: "Users imported."
+          success: "Users created."
+        create_user:
+          title: "Create a user"
+          name: "Enter user's name"
+          email: "Enter user's email"
+          password: "Enter password"
+          submit: "Submit"
       categories:
         index:
           title: "Categories Management"
