@@ -35,7 +35,7 @@
             </li>
             <% if current_user.admin? %>
               <li>
-                <%= link_to new_education_post_path(type: Settings.education.posts.news) do %>
+                <%= link_to new_education_post_path(type: Settings.education.post.news) do %>
                   <span class="nomargin">
                     <i class="icon-edit" aria-hidden="true"></i>&nbsp;
                     <%= t ".create_news" %>
@@ -45,7 +45,7 @@
             <% end %>
             <% if current_user && can?(:manage, Education::Post) %>
               <li>
-                <%= link_to new_education_post_path(type: Settings.education.posts.recruitment) do %>
+                <%= link_to new_education_post_path(type: Settings.education.post.recruitment) do %>
                   <span class="nomargin">
                     <i class="icon-edit" aria-hidden="true"></i>&nbsp;
                     <%= t ".create_recruitment" %>
