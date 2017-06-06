@@ -2,6 +2,7 @@ class Education::Feedback < ApplicationRecord
   validates :name, presence: true,
     length: {maximum: Settings.education.feedback.max_name_length}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_PHONE_NUMBER_REGEX = /\A([\+]?\d)*\z/
   validates :email, presence: true,
     length: {maximum: Settings.education.feedback.max_email_length},
     format: {with: VALID_EMAIL_REGEX}
@@ -11,7 +12,7 @@ class Education::Feedback < ApplicationRecord
   validates :content, presence: true,
     length: {minimum: Settings.education.feedback.min_content_length,
       maximum: Settings.education.feedback.max_content_length}
-  validates :phone_number,
+  validates :phone_number, format: {with: VALID_PHONE_NUMBER_REGEX},
     length: {maximum: Settings.education.feedback.max_phone_number_length}
 
   scope :newest, ->{order created_at: :desc}
