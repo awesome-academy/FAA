@@ -33,4 +33,15 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+
+  def footer_social_links
+    networks = %w(facebook twitter gplus pinterest vimeo github yahoo linkedin)
+    networks.map do |network|
+      link_to Settings.social_links[network],
+        class: "social-icon si-small si-borderless si-#{network}" do
+        content_tag(:i, nil, class: "icon-#{network}") +
+        content_tag(:i, nil, class: "icon-#{network}")
+      end
+    end
+  end
 end

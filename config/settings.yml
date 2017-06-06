@@ -252,3 +252,12 @@ user_role:
   super_admin: "super_admin"
 slice:
   slice_num: 2
+social_links:
+  facebook: "https://www.facebook.com/FramgiaVietnam/"
+  twitter: "https://twitter.com"
+  gplus: "https://google.com"
+  pinterest: "https://pinterest.com"
+  vimeo: "https://vimeo.com"
+  github: "https://github.com/framgia"
+  yahoo: "https://yahoo.com"
+  linkedin: "https://linkedin.com"

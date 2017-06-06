@@ -6,12 +6,6 @@
 
 <div class="center">
   <h4 class="margin-section" ><%= t ".or_login_with" %></h4>
-  <%= link_to t(".facebook"), user_facebook_omniauth_authorize_path,
-    class: "button button-small button-rounded si-facebook si-colored" %>
-  <span class="hidden-xs"></span>
-  <%= link_to t(".google"),
-    user_google_oauth2_omniauth_authorize_path,
-    class: "button button-small button-rounded si-google si-colored" %>
   <%= link_to t(".hr_system"),
     user_hr_system_omniauth_authorize_path,
     class: "button button-small button-rounded si-soundcloud si-colored" %>
