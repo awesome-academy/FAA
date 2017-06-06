@@ -7,13 +7,12 @@
     <%= f.label :email, class: "login-form-username" %><br />
     <%= f.email_field :email, class: "form-control not-dark", autofocus: true %>
   </div>
-
   <div class="col_full password-custom">
     <%= f.label :password, class: "login-form-password" %><br />
     <%= f.password_field :password,
       class: "form-control not-dark", autocomplete: "off" %>
   </div>
-
+  <%= link_to t(".forgot_password"), new_password_path(resource_name) %>
   <div class="col_full nobottommargin row">
     <div class="col-md-6 switch">
       <%= f.check_box :remember_me, id: "switch-toggle-2",

@@ -1,0 +1,26 @@
+<% provide :title, t(".change_password") %>
+<div class="row">
+  <h2 class="text-center title"><%= t ".change_password" %></h2>
+</div>
+<div class="row">
+  <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4
+    col-sm-offset-4 col-sm-4">
+    <%= simple_form_for(resource, as: resource_name, 
+      url: password_path(resource_name),
+      html: { method: :put }) do |f| %>
+      <%= f.input :reset_password_token, as: :hidden %>
+      <%= f.full_error :reset_password_token %>
+      <div class="form-inputs">
+        <%= f.input :password, label: t(".new_password"),
+          required: true, autofocus: true,
+          hint: (t(".minimum",
+            num: @minimum_password_length) if @minimum_password_length) %>
+        <%= f.input :password_confirmation, label: t(".confirm"),
+          required: true %>
+      </div>
+      <div class="form-actions text-center">
+        <%= f.button :submit, t(".change") %>
+      </div>
+    <% end %>
+  </div>
+</div>
