@@ -23,6 +23,10 @@ en:
         subject: "Reset password instructions"
       unlock_instructions:
         subject: "Unlock instructions"
+        hello: "Hello"
+        body: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+        click: "Click the link below to unlock your account:"
+        submit: "Unlock my account"
       password_change:
         subject: "Password Changed"
     omniauth_callbacks:

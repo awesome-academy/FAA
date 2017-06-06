@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   acts_as_follower
   has_friendship
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :lockable,
     :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   before_save :super_admin_reject
