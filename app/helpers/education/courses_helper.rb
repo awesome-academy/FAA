@@ -23,7 +23,7 @@ module Education::CoursesHelper
   end
 
   def button_status course
-    content_tag :div, course.status,
+    content_tag :div, t("education.courses.status.#{course.status}"),
       class: "btn pull-right #{course.close? ? "btn-danger" : "btn-success"}"
   end
 

@@ -52,6 +52,9 @@ vi:
         categories: "Chủ đề"
         group_users: "Nhóm Người Dùng"
         courses: "Khóa Học"
+        course_registers: "Đăng ký khóa học"
+        trainings: "Đào tạo"
+        projects: "Dự án"
       header:
         home: "Trang chủ"
         portfolio: "Danh mục"
@@ -187,6 +190,11 @@ vi:
         heading: "Đăng ký khóa học"
         submit: "Đăng ký"
         close: "Đóng"
+        name: "Tên"
+        course: "Khóa học"
+        email: "Email"
+        phone: "Số điện thoại"
+        address: "Địa chỉ"
       our_clients:
         heading: "Đối tác của chúng tôi"
       index:
@@ -196,9 +204,9 @@ vi:
       index:
         read_more: "Xem thêm"
         title: "Danh sách khóa đào tạo."
-        home: "Home"
+        home: "Trang chủ"
         page_title: "Danh sách khóa đào tạo"
-        filter: "Filter"
+        training_filter: "Lọc các khóa đào tạo"
         hot: "Hot"
         search_placeholder: "Tìm kiếm ..."
         show_all: "Xem tất cả"
@@ -227,6 +235,7 @@ vi:
         cost: "Học phí: "
         vnd: "VNĐ"
         month: "Tháng"
+        read_more: "Xem thêm"
       new:
         create_training: "Tạo mới"
         heading: "phần mở đầu"
@@ -262,6 +271,7 @@ vi:
         reason: "Lý do tham gia khóa đào tạo"
         learner: "Đối tượng có thể tham gia khóa đào tạo"
         benefit: "Lợi ích tham gia khóa đào tạo"
+        close: "Đóng"
     projects:
       form:
         choose_technique: "Chọn công nghệ"
@@ -306,6 +316,9 @@ vi:
       load_project_member:
         not_found: "Không tìm thấy thành viên"
     courses:
+      status:
+        open: "Mở"
+        close: "Đóng"
       form:
         name: "Tên"
         detail: "Chi tiết"
@@ -360,13 +373,15 @@ vi:
         home: "Trang chủ"
         no_courses: "Không tìm thấy khóa học"
         page_title: "Danh sách tất cả các khóa học"
-        course: "Khóa Học"
-        filter: "Bộ Lọc"
+        course_filter: "Bộ Lọc Khóa Học"
         search: "Tìm kiếm khóa học"
       detail_course:
         start_date: "Ngày bắt đầu : "
         end_date: "Ngày kết thúc : "
         course_info: "Chi tiết khóa học"
+        open_until: "Mở cửa cho đến "
+        expiration: "Hết hạn"
+        place: "Địa điểm: "
       connection_course:
         techniques: "Công nghệ"
       other_course:
@@ -545,6 +560,156 @@ vi:
         post_not_found: "Không tìm thấy bài viết"
         not_found: "Không tìm thấy"
     management:
+      user_permission: "Bạn không có quyền"
+      courses:
+        show:
+          edit_button: "Chỉnh sửa"
+        form:
+          name: "Tên"
+          detail: "Chi tiết"
+          training: "Đào tạo"
+          start_date: "Ngày bắt đầu"
+          end_date: "Ngày kết thúc"
+          image: "Hình ảnh"
+          add_image: "Thêm một hình ảnh"
+          save: "Lưu lại"
+          reset: "Đặt lại"
+          select_date: "Chọn ngày"
+        image_fields:
+          remove: "Xóa"
+        new:
+          new: "Tạo mới khóa học"
+          heading: "Tạo mới khóa học"
+          heading_description: "Tạo mới khóa học"
+          create_course: "Tạo mới"
+        new_course:
+          new: "Tạo mới khóa học"
+          new_description: "Tạo mới khóa học"
+          new_title: "Tạo mới khóa học"
+        edit:
+          edit: "Chỉnh sửa khóa học"
+          update_course: "Cập nhật khóa học"
+        course:
+          delete: "Xóa"
+          edit: "Chỉnh sửa"
+          delete_confirm: "Bạn chắc chắn không?"
+        create:
+          new_success: "Tạo mới khóa học thành công"
+          new_faild: "Không thể tạo khóa học"
+        update:
+          update_success: "Cập nhật khóa học thành công"
+          update_faild: "Không thể cập nhật khóa học"
+        destroy:
+          destroy_success: "Xóa khóa học thành công"
+          destroy_faild: "Không thể xóa khóa học"
+        not_found: "Không tìm thấy khóa học"
+        add_course_member_modal:
+          add_member: "Thêm thành viên"
+          manage_member: "Quản lý thành viên"
+          search: "Tìm kiếm thành viên theo tên hoặc email"
+          choose_all: "Chọn tất cả"
+          add: "Thêm"
+          close: "Đóng"
+        list_added_users:
+          delete: "Xóa"
+          delete_confirm: "Bạn chắc chắn không?"
+        search_form:
+          show_all: "Xem tất cả"
+        index:
+          home: "Trang chủ"
+          no_courses: "Không tìm thấy khóa học nào"
+          page_title: "Tất cả khóa học"
+          course: "Khóa học"
+          filter: "Bộ lọc"
+          search: "Tìm kiếm khóa học"
+          all_course: "Tất cả khóa học"
+          create_new: "Tạo mới"
+          course_name: "Tên khóa học"
+          schedule: "Lịch trình"
+          start_date: "Ngày bắt đầu"
+          place: "Địa điểm"
+          deadline_register: "Hạn cuối đăng ký"
+          cost: "Giá"
+        detail_course:
+          start_date: "Ngày bắt đầu: "
+          end_date: "Ngày kết thúc: "
+          course_info: "Thông tin khóa học"
+        connection_course:
+          techniques: "Công nghệ"
+        other_course:
+          other_courses: "Khóa học khác"
+      trainings:
+        training_not_found: "Không tìm thấy khóa đào tạo."
+        index:
+          read_more: "Xem thêm"
+          title: "Khóa Đào tạo"
+          home: "Trang chủ"
+          page_title: "Tất cả khóa đào tạo"
+          filter: "Bộ lọc"
+          hot: "Hot"
+          search_placeholder: "Tìm kiếm..."
+          show_all: "Xem tất cả"
+          more: "Nhiều hơn"
+          not_found: "Không tìm thấy khóa đào tạo."
+        trainings:
+          techniques: "Công nghệ"
+          view_courses: "Xem danh sách các khóa học"
+          cost: "Học phí: "
+          vnd: "VND"
+        show:
+          not_found: "Không tìm thấy khóa đào tạo"
+          home: "Trang chủ"
+          trainings: "Khóa Đào tạo"
+          training_info: "Training info"
+          techniques: "Công nghệ"
+          share: "Chia sẻ"
+          all_courses: "Tất cả khóa đào tạo"
+          view_courses: "Xem tất cả khóa đào tạo"
+          edit_training: "Chỉnh sửa khóa đào tạo"
+          usage: "Dùng cho: "
+          reason: "Lý do để học: "
+          learner: "Đối tượng co thể học: "
+          duration: "Thời gian: "
+          benefit: "Lợi ích: "
+          cost: "Học phí: "
+          vnd: "VND"
+          month: "Tháng"
+          edit_button: "Chỉnh sửa"
+        new:
+          create_training: "Tạo mới"
+          heading: "Tạo mới khóa đào tạo"
+          heading_description: "Làm cho nó trở nên tuyệt vời!"
+        new_training:
+          create_new_training: "Tạo mới khóa đào tạo"
+        edit:
+          update_project: "Cập nhật"
+        update:
+          training_updated_successfully: "Cập nhật khóa đào tạo thành công!"
+        create:
+          training_created: "Tạo mới khóa đào tạo thành công!"
+          training_create_failed: "Tạo mới khóa đào tạo thất bại!"
+        destroy:
+          training_delete_fail: "Xóa khóa đào tạo thất bại."
+          deleted_success: "Xóa khóa đào tạo thành công!"
+        form:
+          add_image: "Thêm ảnh"
+          description: "Mô tả"
+          name: "Tên"
+          choose_technique: "Chọn công nghệ"
+          usage: "Sử dụng"
+          reason: "Lý do"
+          duration: "Thời gian"
+          cost: "Giá"
+          benefit: "Lợi ích"
+          learner: "Đối tượng có thể học"
+          months: "Tháng"
+          vnd: "VND"
+        read_more:
+          description: "Mô tả khóa đào tạo"
+          usage: "Đào tạo sử dụng"
+          reason: "Lý do để tham gia khóa đào tạo"
+          learner: "Đối tượng có thể tham gia khóa đào tạo"
+          benefit: "Đối tượng đào tạo"
       group_users:
         index:
           title: "Quản lý nhóm của thành viên"
@@ -802,6 +967,13 @@ vi:
         share_this_recruitment: "Chia sẻ thông tin tuyển dụng này"
       tag_cloud:
         recruitment_tag: "Các thẻ thông tin tuyển dụng"
+    feedbacks:
+      new:
+        name: "Tên"
+        email: "Email"
+        phone: "Số điện thoại"
+        subject: "Chủ đề"
+        content: "Nội dung"
   callbacks:
     hr_system:
       auth_failure: "Auth failure"
