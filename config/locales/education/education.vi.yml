@@ -114,9 +114,16 @@ vi:
       our_projects:
         see_more: "Xem thêm"
       introduction_video:
-        before_heading: "Dễ Hiểu & Tuỳ chỉnh"
-        heading: "Tại Framgia Awesome Academy"
-        description: "Bất cứ đều gì chúng tôi làm, phải thật sự mang nhiều ý nghĩa. Bất cứ lúc bạn tin vào chúng tôi, bạn sẽ đạt được tầm cao mới."
+        before_heading: "Framgia Awesome Academy sẽ đem đến cho bạn những gì?"
+        heading: "Framgia Awesome Academy sẽ đem đến cho bạn những gì?"
+        description: "- Chương trình đào tạo bài bản, được xây dựng theo mô hình Agile &#13;
+          - Hệ thống đào tạo theo chuẩn quốc tế được chứng nhận bởi IC Agile và Ruby Association sau khi hoàn thành khóa học &#13;
+          - Đội ngũ giảng dạy là những chuyên gia có nhiều năm kinh nghiệm trong lĩnh vực công nghệ thông tin.&#13;
+          - Học viên được đào tạo để phát triển kỹ năng mềm một cách toàn diện.&#13;
+          - Được trực tiếp tham gia vào các dự án thực tế, hoạt động theo mô hình virtual company&#13;
+          - Môi trường học tập năng động, trẻ trung với cơ sở vật chất hiện đại.&#13;
+          - Cam kết hỗ trợ việc làm cho học viên sau khóa học.&#13;
+          - Tham gia các hoạt động ngoại khóa hấp dẫn và bổ ích."
       statistics:
         course: "Khóa học"
         trainee: "Người học"
@@ -727,18 +734,15 @@ vi:
         what_difference_content: ""
         what_we_do_content: ""
       ruby:
-        header: "Ruby"
-        description: "Ruby là một trong những ngôn ngữ lập trình tốt nhất để
-          bắt đầu khi bạn lần đầu tiên học về lập trình và khóa học này được
-          tạo ra cho những người không có kiến thức trước về Ruby nói riêng
-          hoặc kiênt thức về ngôn ngữ lập trình và khoa học máy tính nói chung.
-          Nói chung mục đích và ngôn ngữ linh hoạt có thể được sử dụng trong
-          phát triển web / Internet, dể xử lý văn bản, tạo các trò chơi, và như
-          một phần của Ruby phổ biến trên Framework Rails. Khóa học lập trình này
-          được cung cấp bởi FAA, một nền tảng tương tác trực tuyến cung cấp mã hóa
-          miễn phí các lớp học trong sáu ngôn ngữ lập trình khác nhau như Python, PHP,
-          JQuery, JavaScript, và Ruby, cũng như các ngôn ngữ đánh dấu bao gồm
-          HTML và CSS."
+        header: "KHOÁ HỌC RUBY"
+        description: "Tự hào là đơn vị đứng thứ 11 trong bản đồ xếp hạng các
+          công ty phát triển mạnh về ngôn ngữ Ruby trên thế giới, với ....
+          chuyên gia về Ruby có chứng chỉ Ruby Silver được cấp bởi Ruby Association,
+          Framgia Viet Nam đang ngày càng khẳng định được vị thế của mình trong
+          cộng đồng Ruby tại Việt Nam nói riêng và quốc tế nói chung. Đến với khóa học này,
+          các học viên sẽ được chính những chuyên gia về lập trình Ruby với hơn
+          05 kinh nghiệm, đã nhận được chứng chỉ coach Agile của tổ chức IC Agile
+          trực tiếp giảng dạy và chia sẻ những bài học bổ ích và thú vị."
       our_trainer:
         trainer: "Người hướng dẫn"
         certificates: "Chứng chỉ"
