@@ -123,8 +123,15 @@ en:
         see_more: "See more"
       introduction_video:
         before_heading: "Easily Understandable & Customizable."
-        heading: "Here we are!"
-        description: "Whatever we do, we make it awsome. Whenever you trust us, you take up to the next level."
+        heading: "What Framgia Awesome Academy will bring to you?"
+        description: "- Agile training program, built on the Agile model&#13;
+          - International standard training system certified by IC Agile and Ruby Association after completion of the course&#13;
+          - Teaching staff are experts with many years of experience in the field of information technology.&#13;
+          - Students are trained to develop soft skills in a holistic manner.&#13;
+          - Be directly involved in real projects, operating under the virtual company model&#13;
+          - A dynamic, young learning environment with modern facilities.&#13;
+          - Commitment to job support for trainees after the course.&#13;
+          - Participate in exciting and rewarding extracurricular activities."
       statistics:
         course: "Courses"
         trainee: "Trainees"
@@ -1030,18 +1037,14 @@ en:
           voluptas iusto, hic autem deleniti dolores explicabo labore enim r
           epellat earum perspiciatis."
       ruby:
-        header: "Ruby"
-        description: "Ruby is one of the best programming languages to start
-          with when you are first learning to code and this course is designed
-          for individuals with no previous knowledge of Ruby in particular or
-          any programming/computer science knowledge in general. Its general
-          purpose and flexible language can be used in web/Internet development,
-          to process text, to create games, and as part of the popular Ruby on
-          Rails web framework. This coding course is available courtesy of
-          FAA, an online, interactive platform that offers free coding
-          classes in six different programming languages like Python, PHP,
-          jQuery, JavaScript, and Ruby, as well as markup languages including
-          HTML and CSS."
+        header: "RUBY COURSE"
+        description: "Proudly the 11th-ranked company in the world for Ruby,
+          Ruby Silver is issued by Ruby Association, Framgia Viet Nam is increasingly
+          asserted its position in the Ruby community in Vietnam in particular and
+          international in general. To this course, students will be trained by Ruby
+          programming experts with more than 05 experience, received
+          The IC Agile Coach Agile Coaching Credential will teach and share
+          interesting and interesting lessons."
       our_trainer:
         trainer: "Trainer"
         certificates: "Certificates"

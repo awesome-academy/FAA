@@ -8,16 +8,7 @@
         <div class="heading-block nobottomborder">
           <h3><%= t ".heading" %></h3>
         </div>
-        <div class="center bottommargin introduction-video-url">
-          <a href="<%= Settings.education.home_page.introduction_video_link %>"
-            data-lightbox="iframe">
-            <img src="<%= Settings.education.home_page.introduction_video_link_cover_image %>">
-            <span class="i-overlay nobg">
-              <img src="<%= Settings.education.home_page.introduction_video_link_play_button %>">
-            </span>
-          </a>
-        </div>
-        <p class="lead nobottommargin"><%= t ".description" %></p>
+        <p class="lead nobottommargin"><%= simple_format t(".description") %></p>
       </div>
     </div>
   </div>
