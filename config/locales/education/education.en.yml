@@ -706,6 +706,7 @@ en:
           cost: "Tuition fees: "
           vnd: "VND"
           month: "Months"
+          edit_button: "edit"
         new:
           create_training: "Create"
           heading: "Create a training"

@@ -123,14 +123,14 @@
                     <%= image_tag "images/portfolio/4/1.jpg" %>
                   <% end %>
                   <div class="portfolio-overlay">
-                    <%= link_to "#", class: "right-icon" do %>
+                    <%= link_to education_course_path(course), class: "center-icon" do %>
                       <i class="icon-eye"></i>
                     <% end %>
                   </div>
                 </div>
                 <div class="portfolio-desc">
                   <h3>
-                    <%= link_to "#" do %>
+                    <%= link_to education_course_path(course) do %>
                       <%= course.name %>
                     <% end %>
                   </h3>
