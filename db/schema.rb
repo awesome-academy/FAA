@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(version: 20170606035049) do
     t.datetime "deadline_register"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "status"
   end
 
   create_table "education_feedbacks", force: :cascade do |t|

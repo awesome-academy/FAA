@@ -81,6 +81,8 @@ vi:
         dont_have_account: "Không có tài khoản ?"
         signup_here: "Đăng ký tại đây"
         remember_me: "Ghi nhớ đăng nhập"
+        too_long_255: "quá dài (tối đa 255 ký tự)"
+        too_short_6: "quá ngắn (tối thiểu 6 ký tự)"
     shared:
       links:
         back: Trở về
