@@ -21,7 +21,7 @@
       <label for="switch-toggle-2" title="<%= t ".remember_me" %>"></label>
     </div>
     <div class="col-md-6">
-      <%= f.submit t(".login"),
+      <%= link_to t(".login"), "#", onclick: "validateFormLogin()",
         class: "button button-3d button-mini button-rounded button-amber button-login" %>
     </div>
   </div>

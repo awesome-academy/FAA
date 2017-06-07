@@ -75,6 +75,8 @@ en:
         dont_have_account: "Don't have account ?"
         signup_here: "Sign up here"
         remember_me: "Remember me"
+        too_long_255: "is too long (maximum is 255 characters)"
+        too_short_6: "is too short (minimum is 6 characters)"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
