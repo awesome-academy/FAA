@@ -59,10 +59,14 @@
 
 .description-course {
   margin-left: 5px;
+
+  .panel-body {
+    font-size: 15px;
+  }
 }
 
 .share-course {
-  bottom: 45px;
+  bottom: 25px;
   position: absolute;
 }
 
@@ -119,4 +123,27 @@
 .technique-heading {
   font-weight: bolder;
   text-transform: uppercase;
+}
+
+.price-size {
+  display: initial;
+  font-size: 24px;
+}
+
+.line-custom {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.orange-text-color {
+  color: $orange;
+  display: initial;
+}
+
+.fancy-title-custom {
+  margin-bottom: 15px;
+}
+
+.nowrap {
+  white-space: nowrap;
 }

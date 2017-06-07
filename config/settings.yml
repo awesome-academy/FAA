@@ -178,6 +178,8 @@ courses:
   detail_rows: 5
   new_course_image: "/assets/default.jpg"
   part_num: 2
+  sale_percent: 1.2
+  round_price: 0
 user:
   max_length_name: 50
 max_length_title: 150

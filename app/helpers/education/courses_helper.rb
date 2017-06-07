@@ -21,4 +21,17 @@ module Education::CoursesHelper
   def current_path_course? training
     Settings.courses.current_string if params[:training_id] == training.last.to_s
   end
+
+  def button_status course
+    content_tag :div, course.status,
+      class: "btn pull-right #{course.close? ? "btn-danger" : "btn-success"}"
+  end
+
+  def sale_off cost
+    (cost * Settings.courses.sale_percent).round Settings.courses.round_price if cost
+  end
+
+  def date_show date
+    l date, format: :date_month_year_concise if date
+  end
 end

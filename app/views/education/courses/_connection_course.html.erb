@@ -1,19 +1,8 @@
-<h4 class="technique-heading"><%= t ".techniques" %></h4>
-<div>
-  <ul>
-    <% slice_collection(techniques.to_a).first.each do |technology| %>
+<h4 class="technique-heading">
+  <%= t ".techniques" %>
+  <ul class="pull-right">
+    <% techniques.each do |technology| %>
       <li class="label label-warning"><%= technology.name %></li>
     <% end %>
   </ul>
-</div>
-<div>
-  <ul>
-    <% slice_collection(techniques.to_a).last.each do |technology| %>
-      <li class="label label-warning"><%= technology.name %></li>
-  <% end %>
-  </ul>
-</div>
-<div class="widget clearfix">
-  <div class="tabs nobottommargin clearfix" id="sidebar-tabs">
-  </div>
-</div>
+</h4>

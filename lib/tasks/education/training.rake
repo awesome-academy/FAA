@@ -19,7 +19,8 @@ namespace :education do
           detail: FFaker::Lorem.sentence,
           training_id: n+1,
           start_date: FFaker::Time.date,
-          end_date: FFaker::Time.date
+          end_date: FFaker::Time.date,
+          status: 0
         }
         course = Education::Course.create! course_params
         course.images.create url: "/default.jpg"

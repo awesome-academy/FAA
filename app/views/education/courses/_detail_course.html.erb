@@ -13,30 +13,71 @@
       </div>
       <div class="course-detail-inner">
         <div class="course-detail">
-          <div class="fancy-title title-bottom-border">
-            <h2><%= t ".course_info" %></h2>
+          <div class="fancy-title fancy-title-custom title-bottom-border">
+            <h2>
+              <div class="product-price price-size">
+                <del>
+                  <%= number_to_currency sale_off(course.cost), precision: 0,
+                    format: "%n" %>
+                  </del>
+                <ins>
+                  <%= number_to_currency course.cost, precision: 0,
+                    format: "%n %u" %>
+                </ins>
+              </div>
+              <%= button_status course %>
+            </h2>
           </div>
+          <div class="course-registration">
+            <% if course.open? %>
+              <%= link_to t(".register"), new_course_register_path(course: course.id),
+                class: "button button-3d button-amber nomargin" %>
+              <h4 class="pull-right deadline-register">
+                <%= t ".open_until" %>
+                <%= date_show course.deadline_register %>
+              </h4>
+            <% else %>
+              <h4 class="deadline-register">
+                <%= t ".expiration" %>
+              </h4>
+            <% end %>
+          </div>
+          <div class="line line-custom"></div>
           <div class="description-course">
             <p><%= truncate course.detail,
                length: Settings.courses.truncate_detail_course %>
               <%= check_lenght_content course.detail,
                 Settings.courses.modal_detail %>
               <%= render "read_more", course: course %></p>
-              <span class="glyphicon glyphicon-calendar icon-date" aria-hidden="true">
-              <%= t ".start_date" %><%= l course.start_date,
-              format: :date_month_year_concise %></span>
-            <br/>
-            <span class="glyphicon glyphicon-calendar icon-date" aria-hidden="true">
-              <%= t ".end_date" %><%= l course.end_date,
-              format: :date_month_year_concise %></span>
+            <div class="panel panel-default product-meta">
+              <div class="panel-body">
+                <span>
+                  <i class="glyphicon glyphicon-calendar"></i>
+                  <%= t ".start_date" %>
+                  <div class="orange-text-color">
+                    <%= date_show course.start_date %>
+                  </div>
+                </span>
+                <span>
+                  <i class="glyphicon glyphicon-calendar"></i>
+                  <%= t ".end_date" %>
+                  <div class="orange-text-color">
+                    <%= date_show course.end_date %>
+                  </div>
+                </span>
+                <span>
+                  <i class="glyphicon glyphicon-map-marker"></i>
+                  <%= t ".place" %>
+                  <div class="orange-text-color">
+                    <%= course.place %>
+                  </div>
+                </span>
+              </div>
+            </div>
           </div>
           <div>
             <%= render "connection_course", techniques: show_course.techniques,
               course: course, users: show_course.users %>
-          </div>
-          <div class="course-registration">
-            <%= link_to t(".register"), new_course_register_path(course: course.id),
-              class: "button button-3d button-amber nomargin" %>
           </div>
           <div class="share-course">
             <div class="si-share share-custom clearfix">
