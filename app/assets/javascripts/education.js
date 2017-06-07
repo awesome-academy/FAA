@@ -37,6 +37,7 @@
 //= require i18n/translations
 //= require jquery-ui/datepicker
 //= require common
+//= require social-share-button
 
 $(document).ready(function(){
   showEditForm('.btn-course-edit', '/education/management/courses/')
