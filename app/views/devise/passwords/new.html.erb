@@ -1,0 +1,22 @@
+<% provide :title, t(".forgot_password") %>
+<div class="devise">
+  <div class="row">
+    <h2 class="text-center title"><%= t ".forgot_password" %></h2>
+  </div>
+  <div class="row">
+    <div class="col-lg-offset-4 col-lg-4 col-md-offset-4 col-md-4
+      col-sm-offset-4 col-sm-4">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name),
+        html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, class: "form-control" %>
+        </div>
+        <div class="actions text-center send-reset-password-btn">
+          <%= f.submit t(".send_reset_password"), class: "btn btn-info" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
