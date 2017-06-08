@@ -195,6 +195,11 @@ en:
         heading: "Course register"
         submit: "Register"
         close: "Close"
+        name: "Name"
+        course: "Course"
+        email: "Email"
+        phone: "Phone number"
+        address: "Address"
       our_clients:
         heading: "Our Partners"
       index:
@@ -206,7 +211,7 @@ en:
         title: "Education Trainings"
         home: "Home"
         page_title: "All Trainings"
-        filter: "Filter"
+        training_filter: "Trainings Filter"
         hot: "Hot"
         search_placeholder: "Search..."
         show_all: "Show all"
@@ -235,6 +240,7 @@ en:
         cost: "Tuition fees: "
         vnd: "VND"
         month: "Months"
+        read_more: "Read more"
       new:
         create_training: "Create"
         heading: "Create a training"
@@ -270,6 +276,7 @@ en:
         reason: "Reason to join training"
         learner: "Object can learn training"
         benefit: "benefit training"
+        close: "Close"
     projects:
       project_not_found: "Project Not Found."
       more: "More"
@@ -360,6 +367,9 @@ en:
       load_project_member:
         not_found: "Project member not found"
     courses:
+      status:
+        open: "Open"
+        close: "Close"
       form:
         name: "Name"
         detail: "Detail"
@@ -415,8 +425,7 @@ en:
         home: "Home"
         no_courses: "Not found any course"
         page_title: "All Courses"
-        course: "Courses"
-        filter: "Filter"
+        course_filter: "Courses Filter"
         search: "Search courses"
       detail_course:
         start_date: "Start date: "
@@ -1110,6 +1119,13 @@ en:
         share_this_recruitment: "Share this recruitment"
       tag_cloud:
         recruitment_tag: "Recruitment tags"
+    feedbacks:
+      new:
+        name: "Name"
+        email: "Email"
+        phone: "Phone number"
+        subject: "Subject"
+        content: "Content"
   callbacks:
     hr_system:
       auth_failure: "Auth failure"

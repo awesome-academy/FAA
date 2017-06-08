@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: :callbacks,
-    sessions: "sessions"}
+    sessions: "sessions"}, skip: :registrations
   root "education/home#index"
   namespace :education do
     namespace :management do

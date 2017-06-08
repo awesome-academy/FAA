@@ -38,6 +38,8 @@
 //= require jquery-ui/datepicker
 //= require common
 //= require social-share-button
+//= require moment.js
+//= require_tree ../../../vendor/assets/javascripts/js/components
 
 $(document).ready(function(){
   showEditForm('.btn-course-edit', '/education/management/courses/')
@@ -109,5 +111,3 @@ $(function(){
     $('#div-forms').height($form.height());
   });
 });
-
-//= require_tree ../../../vendor/assets/javascripts/js/components

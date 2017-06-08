@@ -361,6 +361,10 @@ en:
         publish_now: "Publish Now"
         pick_image: "Pick Image"
         delete: "Delete"
+        title: "Title"
+        category: "Category"
+        tag_list: "Tag list"
+        content: "Content"
       insert_image_modal:
         dropzone_hint: "Drag and drop files here or click to upload"
         modal_header: "Insert Images"
@@ -385,6 +389,7 @@ en:
         course_name: "Course Name"
         schedule: "Schedule"
         start_date: "Start Date"
+        end_date: "End date"
         place: "Place"
         cost: "Cost"
         all_course: "All Course"
@@ -545,6 +550,11 @@ en:
       submit: "Register"
     register_form:
       submit: "Register"
+      course: "Course"
+      email: "Email"
+      name: "Name"
+      phone: "Phone number"
+      address: "Address"
     new:
       course_registration: "Course registration"
     show:

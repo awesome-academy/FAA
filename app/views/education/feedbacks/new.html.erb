@@ -17,32 +17,32 @@
         <div class="contact-form-result"></div>
         <%= simple_form_for @feedback do |f| %>
           <div class="col_half">
-            <%= f.label :name %>
+            <%= f.label :name, t(".name") %>
             <%= f.text_field :name, error_class: :error,
               id: "template-contactform-name", class: "sm-form-control" %>
             <%= f.error :name %>
           </div>
           <div class="col_half col_last">
-            <%= f.label :email %>
+            <%= f.label :email, t(".email") %>
             <%= f.text_field :email, id: "template-contactform-email",
               class: "email sm-form-control" %>
             <%= f.error :email %>
           </div>
           <div class="clear"></div>
           <div class="col_half">
-            <%= f.label :phone_number %>
+            <%= f.label :phone_number, t(".phone") %>
             <%= f.text_field :phone_number, id: "template-contactform-phone",
               class: "sm-form-control required" %>
           </div>
           <div class="clear"></div>
           <div class="col_full">
-            <%= f.label :subject %>
+            <%= f.label :subject, t(".subject") %>
             <%= f.text_field :subject, id: "template-contactform-subject",
               class: "sm-form-control required" %>
             <%= f.error :subject %>
           </div>
           <div class="col_full">
-            <%= f.label :content %>
+            <%= f.label :content, t(".content") %>
             <%= f.text_area :content, id: "template-contactform-message",
               class: "sm-form-control",
               rows: Settings.education.feedback_form_rows,

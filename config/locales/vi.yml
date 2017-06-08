@@ -409,6 +409,10 @@ vi:
         publish_now: "Đăng ngay"
         pick_image: "Chọn hình ảnh"
         delete: "Xóa"
+        title: "Tiêu đề"
+        category: "Thể loại"
+        tag_list: "Danh sách Tag"
+        content: "Nội dung"
       insert_image_modal:
         dropzone_hint: "Kẻo và thả hoặc nhấp chuột để tải ảnh lên"
         modal_header: "Thêm hình ảnh"
@@ -433,14 +437,21 @@ vi:
         course_name: "Tên khóa học"
         schedule: "Lịch học"
         start_date: "Ngày bắt đầu"
+        end_date: "Ngày kết thúc"
         place: "Địa điểm"
         cost: "Giá"
         all_course: "Tất cả khóa học"
         deadline_register: "Thời hạn đăng ký"
       course:
-        register: "Đăng Ki"
+        register: "Đăng ký"
       new:
         create_course: "Tạo mới khóa học"
+      detail_course:
+        register: "Đăng ký"
+        share: "Chia sẻ"
+      read_more:
+        close: "Đóng"
+        detail: "Chi tiết"
   time:
     formats:
       date_month_year_concise: '%d-%m-%y'
@@ -579,6 +590,11 @@ vi:
       submit: "Đăng kí"
     register_form:
       submit: "Đăng kí"
+      course: "Khóa học"
+      name: "Tên"
+      email: "Email"
+      phone: "Số điện thoại"
+      address: "Địa chỉ"
     new:
       course_registration: "Đăng kí khóa học"
     show:

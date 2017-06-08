@@ -12,15 +12,15 @@
   <div class="content-wrap">
     <div class="container clearfix">
       <%= simple_form_for @post do |f| %>
-        <%= f.input :title, class: "sm-form-control" %>
+        <%= f.input :title, label: t(".name"), class: "sm-form-control" %>
         <div class="row">
           <div class="col-md-3">
-            <%= f.input :category_id, class: "sm-form-control",
+            <%= f.input :category_id, label: t(".category"), class: "sm-form-control",
               collection: category_select(@post.post_type ||= params[:type]),
               include_blank: false %>
           </div>
           <div class="col-md-9">
-            <%= f.input :tag_list, class: "sm-form-control" %>
+            <%= f.input :tag_list, label: t(".tag_list"), class: "sm-form-control" %>
             <%= f.hidden_field :post_type, value: @post.post_type ||= params[:type] %>
             <div class="hidden" id="post-tags">
               <%= @post.tags.map{|tag| tag.name} %>
@@ -57,7 +57,7 @@
             class: "button button-3d button-rounded button-amber btn-publish" %>
         </div>
         <div class="row">
-          <%= f.input :content, id: "content-markdown",
+          <%= f.input :content, label: t(".content"), id: "content-markdown",
             class: "education-post-content" %>
         </div>
       <% end %>
