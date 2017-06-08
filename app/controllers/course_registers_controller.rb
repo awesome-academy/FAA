@@ -18,7 +18,7 @@ class CourseRegistersController < ApplicationController
       @course_register.send_email params[:course_register][:email],
         params[:course_register][:name]
     else
-      flash[:danger] = t ".create_failed"
+      flash.now[:danger] = t ".create_failed"
       respond_to do |format|
         format.js
       end

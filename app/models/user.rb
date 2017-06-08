@@ -121,6 +121,8 @@ class User < ApplicationRecord
   private
 
   def super_admin_reject
-    throw :abort if self.role == Settings.user_role.super_admin
+    user = User.find_by id: self.id
+    throw :abort if self.role == Settings.user_role.super_admin &&
+      user.role != self.role
   end
 end
