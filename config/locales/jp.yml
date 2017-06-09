@@ -1,46 +1,90 @@
 jp:
-  employer:
-    dashboards:
-      index:
-        title: "Company"
-      dashboard:
-        menu: "Menu"
-        manager_postings: "Manager Postings"
-        candidates: "Candidates"
-        messages: "Messages"
-        recommendations: "Recommendations"
-        view_mores: "View mores"
-        current_plans: "Current Plans"
-        contact: "Contact Us"
-        trial: "Trial"
-        view_candidates: "Current viewable candidates"
-        mail: "Mail"
-        help: "Help"
-        company_info: "Company Info"
-    layouts:
-      header:
-        dashboard: "Dashboard"
-        jobs: "Jobs"
-        feed: "Feed"
-        tools: "Tools"
-        edit_profile: "Edit Profile"
-        account_info: "Account Info"
-        company_info: "Company Info"
-        setting: "Setting"
-        logout: "Logout"
-  companies:
+  models:
+    jobs:
+      show:
+        error: "Show job error!"
+  jobs:
+    job_form:
+      next: "Next"
+    candidate:
+      apply_job: "Apply Job"
+      unapply: "Unapply job"
     show:
-      info: "Info"
-      news: "News"
-      jobs: "Jobs"
-      members: "Members"
-      stats: "Stats"
-      founder: "Founder"
-      founded: "Founded on"
-      no_of_members: "# of Members"
-      about_us: "About us"
-      social_profiles: "Social Profiles"
-      follow: "Follow"
+      apply_job: "Apply Job"
+      person_applied: "Currently %{candidate} person has applied."
+      location: "Location"
+      recommend: "Recommend"
+      apply_modal_header: "We have notified %{company_name} of your interest."
+      interest_heading: "Please tell us what you are interested in."
+      let_s_work_together: "Let’s work together!"
+      let_s_have_chat: "Let’s have a chat."
+      interest_me: "This opportunity interests me."
+      your_entry_complete: "Your entry is complete!"
+      success_heading: "Let's wait to hear from the person"
+      success_description: "If the person take an interest in you, you will receive an invitation message."
+      apply_success_alt: "Apply success"
+      entry: "Entry"
+      apply_failed_title: "Apply failed"
+      need_update_profile_alt: "You should update your profile before apply this job"
+      should_update_heading: "Employer needs more on your profile"
+      should_update_heading_description: "Update your profile and comeback to us"
+      cancel: "Cancel"
+      edit_profile: "Edit my profile"
+      no_result: "No one matches these skills"
+    index:
+      popular_job: "Popular Jobs"
+      title: "List jobs"
+    search_form:
+      search: "Enter your search"
+    job_title:
+      sales: "Sales"
+      show:
+        job_type: "Job type"
+        total_views: "Total views"
+    members_of_company:
+      members: "members"
+      views_all: "All members"
+      edit_posting: "Edit posting"
+    introduction_company:
+      what_we_do: "What we do"
+      message_team_introduc_null: "Team introduction null"
+      edit_posting: "Edit posting"
+    job_description:
+      description: "Description"
+      edit_posting: "Edit posting"
+    basic_infor:
+      sales: "Sales"
+      basic_info_job: "Basic Information"
+      look_for: "Looking for"
+      job_type: "Job type"
+      posting_feature: "Posting features"
+      company_info: "Company information"
+      founded: "Founded"
+      industries: "Industries"
+      learn_more_info: "Learn more about the company"
+      comma: ", "
+      benefit_null: "Benefit null"
+      indus_info: "IT / Automobiles / Industrial Machinery/ Industrial Supplies"
+      skill_require: "Skill require"
+    job_form:
+      next: "Next"
+    posting_jobs:
+      title: "Other jobs posting you may like"
+    popular_job:
+      comments: "35 comments"
+    bookmark:
+      bookmark: "Bookmark"
+      bookmark_job: "Bookmark job"
+      bookmarked: "Bookmarked"
+    candidate:
+      apply_job: "Apply Job"
+      unapply_job: "Unapply Job"
+      currently: "Currently"
+      person_applied: "Person applied"
+    job:
+      read_more: "Read more"
+    recommend_user:
+      show_more: "View more"
   follow_companies:
     create:
       follow: "follow company successfully!"
@@ -56,31 +100,67 @@ jp:
       about: "About"
       login: "Login"
       logout: "Logout"
+      create_new_post: "Create new post"
+      course_registration: "Course registration"
   pages:
-    home:
+    index:
       title: "Home"
+      job_opportunity: "Jobs Opportunity"
     about:
       content: "This is about page"
       title: "About"
     help:
       content: "This is help page"
       title: "Help"
+  layouts:
+    base_title: "FCSP"
+    header:
+      home: "Home"
+      jobs: "Jobs"
+      employer: "Employer"
+      admin: "Admin"
+      messages: "Messages"
+      help: "Help"
+      about: "About"
+      login: "Login"
+      logout: "Logout"
+      profile: "Profile"
+      message: "Messages"
+      sign_out: "Sign out"
+      or_login_with: "or Login with"
+    job_bookmark:
+      bookmark: "Bookmark"
+      bookmarked: "Bookmarked"
+      unbookmark: "Unbookmark"
   title: "Framgia code school platform"
   copy: "Copyright by Framgia"
   flash:
     deleted_success: "deleted successfully!"
   education:
+    trainers:
+      index_posts:
+        filter: "Filter"
     home:
       our_trainings:
         techniques: "Techniques"
-        our_trainings: "Our Trainings"
+        our_trainings: "Training programs"
         see_more: "See more"
       clients_say:
         heading: "What Clients Say?"
       our_projects:
-        heading: "Our Projects"
+        heading: "Projects"
       our_team:
         heading: "Our team"
+      our_clients:
+        heading: "Our partners"
+      lastest_courses:
+        heading: "Lastest courses"
+        see_more: "See more"
+      course_register:
+        create_success: "Successfully created"
+        create_failed: "Create failed"
+        heading: "Course Register"
+        submit: "Register"
     trainings:
       training_not_found: "Training Not Found."
       index:
@@ -101,16 +181,28 @@ jp:
         view_courses: "View all courses"
       new:
         create_training: "Create"
+        add_image: "Add image"
+      new_training:
+        create_new_training: "Create a new training"
       edit:
         update_project: "Update"
+        heading: "Edit training"
+        heading_description: "Make is awesome"
+        add_image: "Add image"
+      new:
+        heading: "Create new training"
+        heading_description: "Make is awesome"
       update:
         training_updated_successfully: "Training updated successfully!"
       create:
         training_created: "Training created !"
         training_create_failed: "Create training failed!"
+      image_fields:
+        remove: "Remove"
       form:
         description: "Description"
         name: "Name"
+    related_project: "Related Projects:"
     see_more: "See More"
     title: "Framgia Awesome Academy"
     logo_alt: "Framgia logo"
@@ -165,15 +257,18 @@ jp:
         plat_form: "Platform"
         release_note: "Release note"
         git_repo: "Git repository"
+        add_image: "add images"
       new:
         create_project: "Create project"
       edit:
+        edit_project: "Edit Project"
         update_project: "Update project"
       create:
         project_created: "Project created!"
       update:
         project_updated_successfully: "Project updated successfully!"
       destroy:
+        delete: "Delete"
         project_deleted: "Project deleted"
         project_delete_fail: "Fail to delete project."
       home:
@@ -184,20 +279,99 @@ jp:
       home: "Home"
       project: "Project"
       posts: "Posts"
+      courses: "Courses"
       trainers: "Trainers"
       trainees: "Trainees"
       search: "Type & Hit Enter.."
       feedback: "Feedback"
+      trainings: "Trainings"
     feedback:
       title: "Feedback"
       description: "Get in Touch with Us"
       message: "message"
       send_feed_back: "Send Feedback"
-      send_us_an_email: "Send us an Email"
+      send_us_an_email: "Send us an Feedback"
       feedback_success: "Thanks for your feedback."
       feedback_error: "Something was wrong, check your feedback form again."
       success_title: "Success!"
       failed_title: "Failed!"
+    posts:
+      title: "Member's Posts"
+      title_des: "Lastest posts of our Members"
+      read_more: "Read more"
+      date_format: "%d-%m-%Y"
+      create_new: "Create new post"
+      older: "&larr;Older"
+      newer: "Newer &rarr;"
+      index:
+        posts: "Posts"
+        search_placeholder: "Search"
+        show_all: "Show all"
+        more: "More"
+        placeholder_search: "Search"
+        title_description: "Lastest posts of our Members"
+        title: "Member's posts"
+        filter: "Filter"
+      nav_search:
+        new: "Create new post"
+        show_all: "Show all"
+        keyword: "Search"
+      show:
+        follow_us_on_twitter: "Follow Us on Twitter"
+        share_this_post: "Share this Post:"
+        posted_by: "Posted by"
+        related_posts: "Related Posts:"
+        popular: "Popular"
+        recent: "Recent"
+        heading: "Posts"
+        comments: "Comments"
+        heading_description: "Our Latest News in Masonry Layout"
+        name: "Name"
+        email: "Email"
+        post_not_found: "Post is not found."
+      create:
+        post_create_success: "Post is successfully created"
+      update:
+        post_not_found: "Post is not found."
+        post_update_success: "Post is successfully updated"
+      destroy:
+        post_not_found: "Post is not found."
+        post_delete_fail: "Post delete failed"
+        post_delete_success: "Post is successfully deleted"
+      share_post:
+        share_this_post: "Share this post"
+      posted_by:
+        posted_by: "Posted by"
+      comments:
+        comments: "Comments"
+      comment_form:
+        leave_a: "Leave a"
+        comment: "Comment"
+        submit_comment: "Submit Comment"
+      twitter_feed:
+        twitter_feed: "Twitter Feed"
+        follow_us_on_twitter: "Follow Us on Twitter"
+      flickr_photo:
+        flickr_photo_stream: "Flickr Photostream"
+      portfolio_coursel:
+        portfolio_coursel: "Portfolio Carousel"
+      tag_cloud:
+        tag_cloud: "Tag Cloud"
+      post_form:
+        publish_now: "Publish Now"
+        pick_image: "Pick Image"
+        delete: "Delete"
+        title: "Title"
+        category: "Category"
+        tag_list: "Tag list"
+        content: "Content"
+      insert_image_modal:
+        dropzone_hint: "Drag and drop files here or click to upload"
+        modal_header: "Insert Images"
+        cancel: "Cancel"
+        modal_header: "Insert image"
+    post:
+      post_not_found: "Post is not found."
     slider:
       welcome: "Welcome to Framgia Awesome Academy"
       description: "Master your self. Come with us"
@@ -211,19 +385,47 @@ jp:
         show_all_course: "All studying IT courses at Framgia"
         training_program: "Training program"
         language_program: "Language program"
-    posts:
-      title: "Member's Posts"
-      title_des: "Lastest posts of our Members"
-      read_more: "Read more"
-      date_format: "%d-%m-%Y"
-      create_new: "Create new post"
-      older: "&larr;Older"
-      newer: "Newer &rarr;"
+        create_new: "Create New Course"
+        course_name: "Course Name"
+        schedule: "Schedule"
+        start_date: "Start Date"
+        end_date: "End date"
+        place: "Place"
+        cost: "Cost"
+        all_course: "All Course"
+        deadline_register: "Deadline Register"
+      course:
+        register: "Register"
+      new:
+        create_course: "Create Course"
+      detail_course:
+        register: "Register"
+        share: "Share"
+      read_more:
+        close: "Close"
+        detail: "Detail"
   time:
     formats:
       date_month_year_concise: '%d-%m-%y'
+      time_date_month_year: '%-d %B %Y, %H:%M %p '
   copy: "Copyright by Framgia"
   error: "error"
+  comment:
+    content: "Comment something"
+    person: "Commented by "
+    more_comment: "More comments"
+    comment_count: " Comments"
+    submit_button: "Submit comment"
+    edit_button: "Save"
+  cant_revert: "This action cannot be reversed"
+  confirm_create: "OK"
+  cancel_create: "Cancel"
+  cancelled: "Cancelled set up this company introduction"
+  safe: "This company introduction is safe"
+  browser_not_support: "This browser does not support FileReader."
+  kaminari:
+    prev: "Previous"
+    next: "Next"
   users:
     find_user:
       not_found: "User not found"
@@ -231,6 +433,73 @@ jp:
       remove_request: " Cancel Request"
       request_friend: " Add Friend"
       unfriend: " Unfriend"
+      waiting: " Waiting..."
+      request_waiting: "Sent request to you!"
+    show:
+      new_feed: "New feed"
+      information: "Information"
+      posts: "Posts"
+      not_found: "User not found"
+      blocked: "This user is blocked!"
+      job_suggest: "Suggest job"
+    header:
+      add_friend: "Add friend"
+      message: "Message"
+      edit_profile: "Edit profile"
+      birthday: "Birthday"
+      school: "School"
+      change_cover: "Change your cover image"
+    social_network:
+      about_me: "About me"
+      social_profiles: "Connect with me"
+    change_avatar:
+      title: "Update avatar"
+      save: "Save"
+      close: "Close"
+      from_album: "Choose from your album"
+    change_cover:
+      title: "Update cover image"
+      save: "Save"
+      close: "Close"
+      from_album: "Choose from your album"
+    album_image:
+      no_image: "No images"
+  info_users:
+    introduction:
+      introduction: "Introduction"
+      edit: "Edit"
+      friends: "Friends"
+      friends_of_friends: "Friends of Friends"
+      public: "Public"
+    edit_introduction_modal:
+      update_button: "Update"
+      cancel_button: "Cancel"
+      edit_introduction: "Edit introduction"
+      introduce_placeholder: "Introduce yourself..."
+    find_info_user:
+      infor_user_not_found: "Infomation of user not found"
+    ambition:
+      ambition: "My ambition"
+      edit: "Edit"
+      friends: "Friends"
+      friends_of_friends: "Friends of Friends"
+      public: "Public"
+    edit_ambition_modal:
+      update_button: "Update"
+      cancel_button: "Cancel"
+      edit_ambition: "Edit my ambition"
+      ambition_placeholder: "My ambition..."
+    quote:
+      quote: "Quote"
+      edit: "Edit"
+      friends: "Friends"
+      friends_of_friends: "Friends of Friends"
+      public: "Public"
+    edit_quote_modal:
+      update_button: "Update"
+      cancel_button: "Cancel"
+      edit_quote: "Edit my quote"
+      quote_placeholder: "My quote..."
   friend_ships:
     create:
       request_friend: "Sent a request to %{name}"
@@ -239,8 +508,66 @@ jp:
       remove_request: "Cancelled request to %{name}"
       unfriend: "Unfriended with %{name}"
       not_found: "User not found"
+    load_user:
+      not_found: "user not found"
+    update:
+      success: "confirm successfully"
+      failed: "confirm failed"
+      reject_success: "reject successfully"
+      reject_failed: "reject failed"
+    friend_request:
+      confirm: "Confirm"
+      friend-ship: "Friend Requests"
+      mutual-friends: "Mutual friends"
+      reject: "delete request"
+      request_not_found: "no new requests"
+      view_all: "View All"
+  user_avatars:
+    create:
+      success: "Change avatar successfully!"
+      fail: "Change avatar failed"
+    update:
+      success: "Change avatar successfully!"
+      fail: "Change avatar failed"
+      not_found: "Image not found"
+  user_covers:
+    create:
+      success: "Change cover image successfully!"
+      fail: "Change cover image failed"
+    update:
+      success: "Change cover image successfully!"
+      fail: "Change cover image failed"
+      not_found: "Image not found"
   friend_request_mailer:
     friend_request:
       subject: "You have a friend request from %{name}"
       hi: "Hi %{name},"
       end: "This email is sent automatically from FCSP, Please do not reply!"
+  course_registers:
+    create:
+      create_success: "Successfully registered"
+      create_failed: "Register failed"
+      submit: "Register"
+    register_form:
+      submit: "Register"
+      course: "Course"
+      email: "Email"
+      name: "Name"
+      phone: "Phone number"
+      address: "Address"
+    new:
+      course_registration: "Course registration"
+    show:
+      thank_you: "Thank you!"
+      direction: "Your registration for %{course_name} is received and we will contact you soon."
+      back_to_home: "&#x2190; back to home"
+      view_more_course: "View more courses"
+  course_register_mailer:
+    course_register:
+      greeting: "Hi, %{receiver_name}"
+      thanks: "Thanks for your registration to course: "
+      end: "Your registration will be review and we'll contact your as soon as possible."
+  number:
+    currency:
+      format:
+        unit: "VND"
