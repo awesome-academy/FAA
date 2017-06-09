@@ -121,14 +121,14 @@ vi:
       introduction_video:
         before_heading: "Framgia Awesome Academy sẽ đem đến cho bạn những gì?"
         heading: "Framgia Awesome Academy sẽ đem đến cho bạn những gì?"
-        description: "- Chương trình đào tạo bài bản, được xây dựng theo mô hình Agile &#13;
-          - Hệ thống đào tạo theo chuẩn quốc tế được chứng nhận bởi IC Agile và Ruby Association sau khi hoàn thành khóa học &#13;
-          - Đội ngũ giảng dạy là những chuyên gia có nhiều năm kinh nghiệm trong lĩnh vực công nghệ thông tin.&#13;
-          - Học viên được đào tạo để phát triển kỹ năng mềm một cách toàn diện.&#13;
-          - Được trực tiếp tham gia vào các dự án thực tế, hoạt động theo mô hình virtual company&#13;
-          - Môi trường học tập năng động, trẻ trung với cơ sở vật chất hiện đại.&#13;
-          - Cam kết hỗ trợ việc làm cho học viên sau khóa học.&#13;
-          - Tham gia các hoạt động ngoại khóa hấp dẫn và bổ ích."
+        agile: "Chương trình đào tạo bài bản, được xây dựng theo mô hình Agile "
+        certificate: "Hệ thống đào tạo theo chuẩn quốc tế được chứng nhận bởi IC Agile và Ruby Association sau khi hoàn thành khóa học "
+        expert: "Đội ngũ giảng dạy là những chuyên gia có nhiều năm kinh nghiệm trong lĩnh vực công nghệ thông tin."
+        softskill: "Học viên được đào tạo để phát triển kỹ năng mềm một cách toàn diện."
+        network: "Được trực tiếp tham gia vào các dự án thực tế, hoạt động theo mô hình virtual company"
+        teaching: "Môi trường học tập năng động, trẻ trung với cơ sở vật chất hiện đại."
+        job: "Cam kết hỗ trợ việc làm cho học viên sau khóa học."
+        activities: "Tham gia các hoạt động ngoại khóa hấp dẫn và bổ ích."
       statistics:
         course: "Khóa học"
         trainee: "Người học"

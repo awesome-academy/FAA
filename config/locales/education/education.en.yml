@@ -124,14 +124,14 @@ en:
       introduction_video:
         before_heading: "Easily Understandable & Customizable."
         heading: "What Framgia Awesome Academy will bring to you?"
-        description: "- Agile training program, built on the Agile model&#13;
-          - International standard training system certified by IC Agile and Ruby Association after completion of the course&#13;
-          - Teaching staff are experts with many years of experience in the field of information technology.&#13;
-          - Students are trained to develop soft skills in a holistic manner.&#13;
-          - Be directly involved in real projects, operating under the virtual company model&#13;
-          - A dynamic, young learning environment with modern facilities.&#13;
-          - Commitment to job support for trainees after the course.&#13;
-          - Participate in exciting and rewarding extracurricular activities."
+        agile: "Agile training program, built on the Agile model"
+        certificate: "International standard training system certified by IC Agile and Ruby Association after completion of the course"
+        expert: "Teaching staff are experts with many years of experience in the field of information technology"
+        softskill: "Students are trained to develop soft skills in a holistic manner."
+        network: "Be directly involved in real projects, operating under the virtual company model."
+        teaching: "A dynamic, young learning environment with modern facilities."
+        job: "Commitment to job support for trainees after the course."
+        activities: "Participate in exciting and rewarding extracurricular activities."
       statistics:
         course: "Courses"
         trainee: "Trainees"
