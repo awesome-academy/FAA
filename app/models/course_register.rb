@@ -5,7 +5,7 @@ class CourseRegister < ApplicationRecord
   validates :name, presence: true,
     length: {maximum: Settings.course_register.max_name_length,
       minimum: Settings.course_register.min_name_length}
-  VALID_PHONE_NUMBER_REGEX = /\A([\+]?\d)*\z/
+  VALID_PHONE_NUMBER_REGEX = /\A([\+]?)+(\d)*\z/
   VALID_EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
   validates :email, presence: true,
     length: {maximum: Settings.course_register.max_email_length},

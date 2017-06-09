@@ -21,6 +21,8 @@ vi:
     base:
       user_blocked: "Tài khoản của bạn đã bị khóa."
     javascripts:
+      reject_alert: "Từ chối đề nghị đến"
+      send_alert: "Gửi đề nghị đến"
       training_alert: "Bạn chắc muốn xóa?"
       project_alert: "Bạn chắc muốn xóa?"
       feedback_alert: "Bạn chắc muốn xóa?"

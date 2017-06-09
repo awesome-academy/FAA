@@ -20,8 +20,9 @@
       <label for="switch-toggle-2" title="<%= t ".remember_me" %>"></label>
     </div>
     <div class="col-md-6">
-      <%= link_to t(".login"), "#", onclick: "validateFormLogin()",
+      <%= link_to t(".login"), "javascript:;",
         class: "button button-3d button-mini button-rounded button-amber button-login" %>
     </div>
   </div>
 <% end %>
+<%= javascript_include_tag "login_form" %>
