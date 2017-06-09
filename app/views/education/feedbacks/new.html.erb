@@ -11,8 +11,21 @@
   <section id="map-overlay">
     <div class="container clearfix">
       <div id="contact-form-overlay" class="clearfix">
+        <div class="alignleft gmap", id="google-map1" ></div>
         <div class="fancy-title title-dotted-border">
           <h3><%= t "education.feedback.send_us_an_email" %></h3>
+          <hr>
+          <h5>
+            <span class="glyphicon glyphicon-map-marker"></span>
+            <%= t "education.feedback.address" %>
+          </h5>
+          <br>
+          <h5>
+            <span class="glyphicon glyphicon-phone-alt"></span>
+            <%= t "education.feedback.phone" %>
+            <%= Settings.education.feedback.phone_framgia %>
+          </h5>
+          <hr>
         </div>
         <div class="contact-form-result"></div>
         <%= simple_form_for @feedback do |f| %>
@@ -59,3 +72,6 @@
     </div>
     <section id="google-map" class="gmap"></section>
 </section>
+
+<%= javascript_include_tag("https://maps.googleapis.com/maps/api/js?key=AIzaSyBuAEirF1cziIey9Ovm_HPM5hiym4J9XqE&callback=initMap")
+%>

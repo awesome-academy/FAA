@@ -3,7 +3,7 @@
 
 $(document).ready(function(){
   $('#google-map').gMap({
-    address: 'Danang, Vietnam',
+    address: 'Hanoi, Vietnam',
     maptype: 'ROADMAP',
     zoom: 14,
     doubleclickzoom: false,

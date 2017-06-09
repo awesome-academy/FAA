@@ -339,6 +339,8 @@ vi:
       message: "tin nhắn"
       send_feed_back: "Gửi phản hồi"
       send_us_an_email: "Gửi phản hồi cho chúng tôi"
+      address: " Địa chỉ : Tầng 13, Keangnam Hanoi Landmark Tower, Khu E6 Khu đô thị mới Cầu Giấy, P. Mễ Trì, Q. Nam Từ Liêm, Hà Nội"
+      phone: " Điện thoại liên hệ : "
       feedback_success: "Cảm ơn về phản hồi của bạn."
       feedback_error: "Đã xảy ra lỗi, vui lòng kiểm tra lại."
       success_title: "Thành công!"
