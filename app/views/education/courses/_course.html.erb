@@ -25,7 +25,7 @@
   <td><%= course.cost %></td>
   <td align="center">
     <% if course.open? %>
-      <%= link_to new_course_register_path(course: course.id),
+      <%= link_to new_course_register_path(course: course.id), remote: true,
         class: "button button-rounded button-reveal button-large button-yellow button-light" do %>
         <i class="icon-ok"></i>
         <span><%= t ".register" %></span>
