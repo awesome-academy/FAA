@@ -11,7 +11,7 @@ class HomeTabs < Tabs
 
   def about_tab
     build_tab t("education.layouts.header.about"),
-      education_about_index_path, :about
+      root_path, :home
   end
 
   def trainings_tab

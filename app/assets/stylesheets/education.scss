@@ -100,3 +100,12 @@
 .white-background {
   background-color: $white;
 }
+
+.fright-custom {
+  display: flex;
+  align-items: center;
+
+  span {
+    padding-right: 15px;
+  }
+}
