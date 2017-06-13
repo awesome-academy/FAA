@@ -12,9 +12,12 @@
         </div>
       </div>
       <div class="col_half col_last tright">
-        <div class="fright clearfix">
-          <% footer_social_links.each do |link| %>
-            <%= link %>
+        <div class="fright clearfix fright-custom">
+          <span><%= t ".connect_with_us" %></span>
+          <%= link_to Settings.facebook,
+            class: "social-icon si-small si-borderless si-facebook" do %>
+            <i class="icon-facebook"></i>
+            <i class="icon-facebook"></i>
           <% end %>
         </div>
         <div class="clear"></div>

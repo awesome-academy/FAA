@@ -60,39 +60,11 @@
               <% end %>
             </li>
           </ul>
-        <% else %>
-          <a href="#" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-            <%= t ".log_in" %>
-          </a>
         <% end %>
       </div>
       <nav id="primary-menu" class="dark">
         <ul class="edu-menu-custom">
           <%= view_object(:home_tabs).html %>
-          <li class="dropdown chosen-language">
-            <% if session[:locale].present? %>
-              <%= link_to "#", class:"dropdown-toggle dropdown-custom",
-                data: {toggle: "dropdown"} do %>
-                <%= image_tag "flag/#{session[:locale]}.png", class: "icon-language" %>
-                <i class="icon-angle-down"></i>
-              <% end %>
-            <% else %>
-              <%= link_to "#", class:"dropdown-toggle dropdown-custom",
-                data: {toggle: "dropdown"} do %>
-                <%= image_tag "flag/vi.png", class: "icon-language" %>
-                <i class="icon-angle-down"></i>
-              <% end %>
-            <% end %>
-            <ul class="dropdown-menu dropdown-custom dropdown-menu-right choose-language" role="menu">
-              <% Settings.languages.keys.each do |lang| %>
-                <%= link_to url_for(locale: lang) do %>
-                  <%= image_tag "flag/#{lang}.png", class: "icon-language" %>
-                  <%= Settings.languages[lang] %>
-                <% end %>
-                <br/>
-              <% end %>
-            </ul>
-          </li>
         </ul>
       </nav>
     </div>
