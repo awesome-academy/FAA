@@ -8,28 +8,6 @@
 </section>
 
 <section id="content">
-  <div id="page-menu">
-    <div id="page-menu-wrap">
-      <div class="container clearfix">
-        <div class="menu-title">
-          <%= t ".news" %>
-          <span> <%= t ".filter" %></span>
-        </div>
-        <nav>
-          <ul>
-            <%= render "education/posts/nav_search",
-              {controller_name: "education/posts",
-                categories: @index_post_object.categories} %>
-            <li class="project-search">
-              <input type="text" id="posts-search-txt" class="form-control"
-                placeholder= "<%= t ".placeholder_search" %>" autofocus>
-            </li>
-          </ul>
-        </nav>
-        <div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
-      </div>
-    </div>
-  </div>
   <div class="content-wrap">
     <div class="container clearfix" id="posts_result">
       <%= render partial: "paginate",

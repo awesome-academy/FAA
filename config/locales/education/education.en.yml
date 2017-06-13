@@ -425,7 +425,7 @@ en:
       index:
         home: "Home"
         no_courses: "Not found any course"
-        page_title: "All Courses"
+        page_title: "Courses opening schedule"
         course_filter: "Courses Filter"
         search: "Search courses"
       detail_course:
@@ -671,7 +671,7 @@ en:
         index:
           home: "Home"
           no_courses: "Not found any course"
-          page_title: "All Courses"
+          page_title: "Courses opening schedule"
           course: "Courses"
           filter: "Filter"
           search: "Search courses"

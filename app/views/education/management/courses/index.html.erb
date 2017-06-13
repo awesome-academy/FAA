@@ -1,33 +1,8 @@
 <section id="page-title">
   <div class="container clearfix">
     <h1><%= t ".page_title" %></h1>
-    <ol class="breadcrumb">
-      <li><%= link_to t(".home"), education_root_path %></li>
-      <li class="active"><%= t ".page_title" %></li>
-    </ol>
   </div>
 </section>
-
-<div id="page-menu" class="page-menu-course">
-  <div id="page-menu-wrap">
-    <div class="container clearfix">
-      <div class="menu-title">
-        <%= t ".course" %>
-        <%= t ".filter" %>
-      </div>
-      <nav>
-        <ul>
-          <%= render "search_form", {controller_name: "education/management/courses"} %>
-          <li class="training-search">
-            <%= text_field_tag :course_search, params[:course_search],
-              placeholder: t(".search"), class: "form-control" %>
-          </li>
-        </ul>
-      </nav>
-      <div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
-    </div>
-  </div>
-</div>
 
 <div class="clear bottommargin-sm"></div>
 <div class="container">

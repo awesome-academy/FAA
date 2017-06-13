@@ -56,7 +56,7 @@ vi:
         group_users: "Nhóm Người Dùng"
         courses: "Khóa Học"
         course_registers: "Đăng ký khóa học"
-        trainings: "Đào tạo"
+        trainings: "Danh sách khóa học"
         projects: "Dự án"
       header:
         home: "Trang chủ"
@@ -64,7 +64,7 @@ vi:
         project: "Dự án"
         news: "Tin tức"
         courses: "Khoá học"
-        trainings: "Đào tạo"
+        trainings: "Danh sách khóa học"
         trainees: "Học viên"
         search: "Type & Hit Enter.."
         feedback: "Phản hồi"
@@ -375,7 +375,7 @@ vi:
       index:
         home: "Trang chủ"
         no_courses: "Không tìm thấy khóa học"
-        page_title: "Danh sách tất cả các khóa học"
+        page_title: "Lịch khai giảng"
         course_filter: "Bộ Lọc Khóa Học"
         search: "Tìm kiếm khóa học"
       detail_course:
