@@ -367,6 +367,15 @@ en:
       load_project_member:
         not_found: "Project member not found"
     courses:
+      course_register_form:
+        heading: "Course register"
+        submit: "Register"
+        close: "Close"
+        name: "Name"
+        course: "Course"
+        email: "Email"
+        phone: "Phone number"
+        address: "Address"
       status:
         open: "Open"
         close: "Close"

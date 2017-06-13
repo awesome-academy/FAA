@@ -318,6 +318,15 @@ vi:
       load_project_member:
         not_found: "Không tìm thấy thành viên"
     courses:
+      course_register_form:
+        heading: "Đăng ký khóa học"
+        submit: "Đăng ký"
+        close: "Đóng"
+        name: "Tên"
+        course: "Khóa học"
+        email: "Email"
+        phone: "Số điện thoại"
+        address: "Địa chỉ"
       status:
         open: "Mở"
         close: "Đóng"

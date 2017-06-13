@@ -5,7 +5,6 @@ class HomeTabs < Tabs
     [about_tab,
      trainings_tab,
      schedule_tab,
-     register_tab,
      contact_tab].compact
   end
 
@@ -22,11 +21,6 @@ class HomeTabs < Tabs
   def schedule_tab
     build_tab t("education.layouts.header.schedule"),
       education_courses_path, :courses
-  end
-
-  def register_tab
-    build_tab t("education.layouts.header.register"),
-      new_course_register_path, :course_registers
   end
 
   def news_tab

@@ -3,8 +3,7 @@
   window.location.href = '<%= course_register_path @course_register %>'
 <% elsif flash[:danger].present? %>
   $.growl.error({message: '<%= flash[:danger] %>'});
-  $('#course-register-modal').html('<%= j render partial: "education/home/course_register_form", locals: {course_register: @course_register} %>')
+  $('#course-register-modal').html('<%= j render partial: "education/courses/course_register_form", locals: {course_register: @course_register} %>');
   $('#course-register-modal').modal('show');
-  $('#new_course_register_page').html('<%= j render partial: "register_form", locals: {course_register: @course_register} %>')
   $('#course_register_course_id').select2();
 <% end %>

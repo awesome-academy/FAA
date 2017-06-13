@@ -1,8 +1,12 @@
 class CourseRegistersController < ApplicationController
   layout "education/layouts/application"
   before_action :load_course_register, only: :show
+
   def new
     @course_register = CourseRegister.new
+    respond_to do |format|
+      format.js
+    end
   end
 
   def show
@@ -11,7 +15,7 @@ class CourseRegistersController < ApplicationController
   def create
     @course_register = CourseRegister.new course_register_params
     if @course_register.save
-      flash[:success] = t ".create_success"
+      flash.now[:success] = t ".create_success"
       respond_to do |format|
         format.js
       end
