@@ -5,11 +5,12 @@ class HomeTabs < Tabs
     [about_tab,
      trainings_tab,
      schedule_tab,
+     news_tab,
      contact_tab].compact
   end
 
   def about_tab
-    build_tab t("education.layouts.header.about"),
+    build_tab t("education.layouts.header.home"),
       root_path, :home
   end
 

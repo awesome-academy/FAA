@@ -19,23 +19,24 @@
                 <del>
                   <%= number_to_currency sale_off(course.cost), precision: 0,
                     format: "%n" %>
-                  </del>
+                </del>
                 <ins>
                   <%= number_to_currency course.cost, precision: 0,
                     format: "%n %u" %>
                 </ins>
               </div>
-              <%= button_status course %>
             </h2>
           </div>
           <div class="course-registration">
             <% if course.open? %>
               <%= link_to t(".register"), new_course_register_path(course: course.id),
                 class: "button button-3d button-amber nomargin", remote: true %>
-              <h4 class="pull-right deadline-register">
-                <%= t ".open_until" %>
-                <%= date_show course.deadline_register %>
-              </h4>
+              <h5 class="pull-right deadline-register">
+                <strong>
+                  <%= t ".open_until" %>
+                  <%= date_show course.deadline_register %>
+                </strong>
+              </h5>
             <% else %>
               <h4 class="deadline-register">
                 <%= t ".expiration" %>

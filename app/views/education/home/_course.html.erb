@@ -1,24 +1,15 @@
 <% courses.each do |course| %>
-  <%= link_to education_course_path(course), class: "center-icon" do %>
-    <div class="load-more-project">
-      <article class="portfolio-item">
-        <div class="portfolio-image">
-          <ul data-liffect="pageRight" class="data-liffect">
-            <li><%= load_image course %></li>
-          </ul>
-          <div class="portfolio-overlay">
-            <div class="portfolio-desc index-course-details">
-              <h2><%= truncate(course.name, length: Settings.education.index_name.truncate_limit) %></h2>
-              <span></span>
-              <p><%= course.schedule %></p>
-              <p><%= l course.start_date, format: :date_month_year %> -
-                <%= l course.end_date, format: :date_month_year %></p>
-              <p><%= t ".at" if course.place.present? %> <%= course.place %></p>
-              <h3><%= course.cost %> <%= t ".vnd" %></h3>
-            </div>
-          </div>
-        </div>
-      </article>
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="index-course-image">
+      <%= link_to education_course_path(course), class: "center-icon" do %>
+        <%= load_image course %>
+      <% end %>
     </div>
-  <% end %>
+    <div class="index-course-details">
+      <h4><%= course.name %></h4>
+      <p><%= l course.start_date, format: :date_month_year %> -
+        <%= l course.end_date, format: :date_month_year %></p>
+      <h5><%= number_to_currency(course.cost, unit: "VND", precision: 0, delimiter: ".") %></h5>
+    </div>
+  </div>
 <% end %>
