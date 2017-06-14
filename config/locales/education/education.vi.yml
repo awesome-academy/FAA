@@ -77,7 +77,7 @@ vi:
         about: "Giới thiệu"
         schedule: "Lịch khai giảng"
         register: "Đăng ký"
-        news: "Tin tức"
+        news: "Tin tức - Thông báo"
         recruitment: "Tuyển dụng"
         contact: "Liên hệ"
         create_recruitment: "Tạo một bản tin tuyển dụng"
@@ -391,7 +391,7 @@ vi:
         start_date: "Ngày bắt đầu : "
         end_date: "Ngày kết thúc : "
         course_info: "Chi tiết khóa học"
-        open_until: "Mở cửa cho đến "
+        open_until: "Thời hạn đăng ký: "
         expiration: "Hết hạn"
         place: "Địa điểm: "
       connection_course:

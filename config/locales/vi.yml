@@ -444,6 +444,7 @@ vi:
         deadline_register: "Thời hạn đăng ký"
       course:
         register: "Đăng ký"
+        expire: "Hết hạn"
       new:
         create_course: "Tạo mới khóa học"
       detail_course:

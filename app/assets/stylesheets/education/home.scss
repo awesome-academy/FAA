@@ -235,17 +235,26 @@
 }
 
 .index-course-details {
-  color: $white;
+  padding-bottom: 20px;
+  text-align: center;
 
-  h2 {
+  h4 {
     font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    margin-top: 0;
   }
 
   p {
-    font-size: 13px;
     font-style: italic;
     margin: 0;
   }
+}
+
+.index-course-image a:hover {
+  cursor: pointer;
 }
 
 .japan-market-video {
@@ -257,6 +266,7 @@
   a {
     font-size: 10px !important;
     padding-right: 5px !important;
+    text-shadow: none !important;
   }
 }
 
@@ -264,12 +274,6 @@
   border-radius: 10px !important;
   max-width: 400px;
   padding: 30px;
-}
-
-.dark .top-account-custom {
-  a {
-    color: $white-eee !important;
-  }
 }
 
 .button-login {

@@ -22,7 +22,7 @@
   <td class="nowrap">
     <%= date_show course.deadline_register %>
   </td>
-  <td><%= course.cost %></td>
+  <td><%= number_to_currency(course.cost, unit: "VND", precision: 0, delimiter: ".") %></td>
   <td align="center">
     <% if course.open? %>
       <%= link_to new_course_register_path(course: course.id), remote: true,

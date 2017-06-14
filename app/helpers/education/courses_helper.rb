@@ -32,6 +32,6 @@ module Education::CoursesHelper
   end
 
   def date_show date
-    l date, format: :date_month_year_concise if date
+    l date, format: :date_month_year if date
   end
 end
