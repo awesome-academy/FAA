@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170606035049) do
+ActiveRecord::Schema.define(version: 20170614020700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 20170606035049) do
     t.index ["owner_id", "owner_type"], name: "index_activities_on_owner_id_and_owner_type", using: :btree
     t.index ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type", using: :btree
     t.index ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type", using: :btree
+  end
+
+  create_table "certificates", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "course_registers", force: :cascade do |t|
@@ -388,6 +395,15 @@ ActiveRecord::Schema.define(version: 20170606035049) do
     t.index ["name"], name: "index_tags_on_name", unique: true, using: :btree
   end
 
+  create_table "user_certificates", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "certificate_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["certificate_id"], name: "index_user_certificates_on_certificate_id", using: :btree
+    t.index ["user_id"], name: "index_user_certificates_on_user_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "phone"
@@ -438,4 +454,6 @@ ActiveRecord::Schema.define(version: 20170606035049) do
   add_foreign_key "education_user_groups", "education_groups", column: "group_id"
   add_foreign_key "education_user_groups", "users"
   add_foreign_key "info_users", "users"
+  add_foreign_key "user_certificates", "certificates"
+  add_foreign_key "user_certificates", "users"
 end

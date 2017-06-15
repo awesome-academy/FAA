@@ -1,0 +1,11 @@
+<% trainers.each do |trainer| %>
+  <tr>
+    <td><%= trainer.name %></td>
+    <td><%= trainer.email %></td>
+    <td>
+      <button class="btn btn-primary btn-add-certificates" data-trainer-id="<%= trainer.id %>">
+        <%= t ".edit" %>
+      </button>
+    </td>
+  </tr>
+<% end %>

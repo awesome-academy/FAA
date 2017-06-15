@@ -1,0 +1,32 @@
+<div class="col-md-6 technique-item">
+  <div class="panel panel-default panel-custom">
+    <div class="panel-body">
+      <div class="technique-btn-group">
+        <a href="#" class="btn btn-warning btn-certificate-edit" data-id="<%= certificate.id %>">
+          <i class="icon-edit"></i>
+        </a>
+        <%= link_to education_management_certificate_path(certificate), method: :delete,
+          data: {confirm: t(".confirm")}, class: "btn btn-danger" do %>
+          <i class="icon-remove"></i>
+        <% end %>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <%= load_certificate_image certificate %>
+        </div>
+        <div class="col-sm-9">
+          <div class="row">
+            <div class="col-md-12">
+              <h3><%= certificate.title %></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <p><%= certificate.description %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

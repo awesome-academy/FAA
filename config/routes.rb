@@ -16,6 +16,8 @@ Rails.application.routes.draw do
       resources :trainings
       resources :courses
       resources :projects
+      resources :user_certificates, only: [:index, :update, :edit]
+      resources :certificates
       root "users#index"
     end
     root "home#index"

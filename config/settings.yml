@@ -74,6 +74,8 @@ education:
     truncate: 100
     max_name_length: 100
     home_limit: 6
+  certificate:
+    per_page: 6
   index:
     max_learning_program_desc: 1000
     max_learning_program_name: 150
@@ -263,3 +265,8 @@ social_links:
   github: "https://github.com/framgia"
   yahoo: "https://yahoo.com"
   linkedin: "https://linkedin.com"
+certificates:
+  description_min_length: 2
+  description_max_length: 1000
+  title_min_length: 2
+  title_max_length: 100
