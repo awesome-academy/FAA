@@ -394,6 +394,7 @@ vi:
         open_until: "Thời hạn đăng ký: "
         expiration: "Hết hạn"
         place: "Địa điểm: "
+        close: "Đã đóng"
       connection_course:
         techniques: "Công nghệ"
       other_course:

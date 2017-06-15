@@ -65,11 +65,6 @@
   }
 }
 
-.share-course {
-  bottom: 25px;
-  position: absolute;
-}
-
 .latest-course-image {
   height: 180px !important;
   width: 90%;
@@ -114,9 +109,23 @@
 .course-detail-wrapper {
   display: flex;
   flex-direction: row;
+  height: 400px;
 
   .course-slide-wrapper {
     margin-right: 20px;
+    width: 50%;
+
+    img {
+      height: 350px;
+    }
+  }
+
+  .course-detail-inner {
+    width: 50%;
+  }
+
+  .course-cost, .share-course-button {
+    float: right;
   }
 }
 

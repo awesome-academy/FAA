@@ -25,14 +25,21 @@
   <td><%= number_to_currency(course.cost, unit: "VND", precision: 0, delimiter: ".") %></td>
   <td align="center">
     <% if course.open? %>
-      <%= link_to new_course_register_path(course: course.id), remote: true,
-        class: "button button-rounded button-reveal button-large button-yellow button-light" do %>
-        <i class="icon-ok"></i>
-        <span><%= t ".register" %></span>
+      <% if course.deadline_register.present? &&
+        (Date.today > course.deadline_register.to_date) %>
+        <div class="button button-3d button-rounded button-black">
+          <%= t ".expire" %>
+        </div>
+      <% else %>
+        <%= link_to new_course_register_path(course: course.id), remote: true,
+          class: "button button-rounded button-reveal button-large button-yellow button-light" do %>
+          <i class="icon-ok"></i>
+          <span><%= t ".register" %></span>
+        <% end %>
       <% end %>
     <% else %>
       <div class="button button-3d button-rounded button-black">
-        <%= t ".expire" %>
+        <%= t ".close" %>
       </div>
     <% end %>
   </td>

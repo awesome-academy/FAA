@@ -20,7 +20,7 @@
                   <%= number_to_currency sale_off(course.cost), precision: 0,
                     format: "%n" %>
                 </del>
-                <ins>
+                <ins class="course-cost">
                   <%= number_to_currency course.cost, precision: 0,
                     format: "%n %u" %>
                 </ins>
@@ -29,27 +29,31 @@
           </div>
           <div class="course-registration">
             <% if course.open? %>
-              <%= link_to t(".register"), new_course_register_path(course: course.id),
-                class: "button button-3d button-amber nomargin", remote: true %>
-              <h5 class="pull-right deadline-register">
-                <strong>
-                  <%= t ".open_until" %>
-                  <%= date_show course.deadline_register %>
-                </strong>
-              </h5>
+              <% if course.deadline_register.present? &&
+                (Date.today > course.deadline_register.to_date) %>
+                <div class="button button-3d button-rounded button-black">
+                  <%= t ".expiration" %>
+                </div>
+              <% else %>
+                <%= link_to t(".register"), new_course_register_path(course: course.id),
+                  class: "button button-3d button-amber nomargin", remote: true %>
+                <h5 class="pull-right deadline-register">
+                  <strong>
+                    <%= t ".open_until" %>
+                    <%= date_show course.deadline_register %>
+                  </strong>
+                </h5>
+              <% end %>
             <% else %>
               <h4 class="deadline-register">
-                <%= t ".expiration" %>
+                <div class="button button-3d button-rounded button-black">
+                  <%= t ".close" %>
+                </div>
               </h4>
             <% end %>
           </div>
           <div class="line line-custom"></div>
           <div class="description-course">
-            <p><%= truncate course.detail,
-               length: Settings.courses.truncate_detail_course %>
-              <%= check_lenght_content course.detail,
-                Settings.courses.modal_detail %>
-              <%= render "read_more", course: course %></p>
             <div class="panel panel-default product-meta">
               <div class="panel-body">
                 <span>
@@ -83,13 +87,20 @@
           <div class="share-course">
             <div class="si-share share-custom clearfix">
               <div>
-                <span><%= t ".share" %></span>
+                <h5 class="technique-heading"><%= t ".share" %></h5>
               </div>
-              <div>
+              <div class="share-course-button">
                 <%= social_share_button_tag course.name %>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="course-description-wrapper container-fluid clearfix">
+      <div class="panel panel-default product-meta">
+        <div class="panel-body">
+          <%= course.detail %>
         </div>
       </div>
     </div>
