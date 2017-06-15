@@ -1,0 +1,21 @@
+<%= simple_form_for trainer, url: education_management_user_certificate_path,
+  html: {class: "no-bottom-margin-form"} do |f| %>
+  <div class="col-md-12">
+    <div id="user_certificates">
+      <%= f.simple_fields_for :certificates do |certificate| %>
+        <%= render "certificate_fields", f: certificate %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association t(".add"), f, :certificates,
+          class: "button button-3d button-small button-rounded button-green" %>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-btns">
+    <%= f.submit t(".save"), class: "button button-3d button-rounded button-amber" %>
+    <button type="button" class="button button-3d button-rounded button-white button-light"
+      data-dismiss="modal">
+      <%= t ".close" %>
+    </button>
+  </div>
+<% end %>

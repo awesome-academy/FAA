@@ -26,6 +26,11 @@
               title="<%= trainer.info_user_introduce %>">
               <%= truncate trainer.info_user_introduce, length: Settings.info_users.truncate_info_trainer %>
             </p>
+            <div class="certificates">
+              <% trainer.certificates.includes(:image).each do |certificate| %>
+                <%= image_tag certificate.image.url, class: "trainer-certificate", title: certificate.title %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>

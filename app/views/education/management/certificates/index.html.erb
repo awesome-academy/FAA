@@ -1,0 +1,27 @@
+<div class="container">
+  <section id="page-title" class="edu-managment-page-title">
+    <div class="clearfix">
+      <h1><%= t "education.certificates.index.certificates" %></h1>
+      <span>
+        <a href="#" class="button button-xlarge button-circle button-3d button-amber btn-new-certificate" >
+          <i class="icon-plus"></i>
+          <%= t "education.certificates.new.create_certificate" %>
+        </a>
+      </span>
+    </div>
+  </section>
+  <section id="content">
+    <div class="clearfix technique-index">
+      <div class="row">
+        <%= render partial: "certificate",
+          collection: @certificates %>
+      </div>
+    </div>
+    <div class="center">
+      <%= paginate @certificates %>
+    </div>
+  </section>
+</div>
+
+<%= render "education/shared/edit_popup",
+  modal_title: t("education.certificates.certificate") %>

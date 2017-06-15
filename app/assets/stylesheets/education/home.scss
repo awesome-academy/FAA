@@ -305,6 +305,7 @@
   color: $black-light;
   font-size: 13px;
   font-style: italic;
+  min-height: 70px;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -331,4 +332,19 @@
       width: 100px;
     }
   }
+}
+
+.trainer-certificate {
+  border-radius: 50%;
+  display: block !important;
+  height: 50px;
+  padding: 10px 5px;
+  width: 50px !important;
+}
+
+.certificates {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

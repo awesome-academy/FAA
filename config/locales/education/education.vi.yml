@@ -41,7 +41,7 @@ vi:
         delete_object: "Bạn chắc muốn xóa?"
       footer:
         tools: "Công cụ khác"
-        copyright: "&copy; 2017 Framgia Human Development Div Education Section - All rights reserved."
+        copyright: "&copy; 2017 Framgia Awesome Academy - All rights reserved."
         tearm_of_use: "Điều khoản sử dụng"
         privacy_policy: "Chính sách bảo mật"
         connect_with_us: "Kết nối với chúng tôi:"
@@ -885,6 +885,50 @@ vi:
           course_name: "Tên khóa học"
           status: "Trạng thái"
           action: "Hành động"
+      certificates:
+        form:
+          title: "Chứng chỉ"
+          description: "mô tả"
+        new:
+          create_certificate: "Thêm chứng chỉ"
+        create:
+          create_success: "Thêm mới thành công"
+          create_fail: "Thêm mới thất bại"
+        edit:
+          update_certificate: "Cập nhật"
+        update:
+          update_success: "Cập nhật thành công"
+          update_fail: "Cập nhật thất bại"
+        destroy:
+          delete_success: "Xóa thành công"
+          delete_fail: "Xóa thất bại"
+        certificate:
+          confirm: "Bạn có chắc chắn không?"
+      user_certificates:
+        edit_user_certificate:
+          save: "Lưu"
+          title: "Chỉnh sửa"
+        form:
+          save: "Lưu"
+          close: "Đóng"
+          add: "Thêm chứng chỉ"
+          certificate: "Chứng chỉ"
+        certificate_fields:
+          remove: "Xoá"
+          certificate: "Chứng chỉ"
+        update:
+          update_success: "Cập nhật thành công"
+          update_fail: "Cập nhật thất bại"
+        edit:
+          edit: "Cập nhật"
+        not_found: "Không tìm thấy"
+        user_certificate:
+          edit: "Chỉnh sửa"
+        index:
+          name: "Tên"
+          email: "Email"
+          settings: "Cài đặt"
+          title: "Chứng chỉ cho trainers"
     time:
       formats:
         date_month_year: "%d/%m/%Y"
@@ -986,6 +1030,24 @@ vi:
         phone: "Số điện thoại"
         subject: "Chủ đề"
         content: "Nội dung"
+    certificates:
+      certificate: "Chứng chỉ"
+      new:
+        create_certificate: "Thêm chứng chỉ"
+      edit:
+        edit_certificate: "Thêm chứng chỉ"
+      index:
+        certificates: "Chứng chỉ"
+      edit:
+        update_certificate: "Cập nhật"
+        edit_certificate: "Chỉnh sửa chứng chỉ"
+      update:
+        update_success: "Cập nhật thành công"
+        update_fail: "Cập nhật thất bại"
+      create:
+        new_success: "Thêm chứng chỉ thành công"
+        new_failed: "Thêm chứng chỉ thất bại"
+      not_found: "Không tìm thấy chứng chỉ"
   callbacks:
     hr_system:
       auth_failure: "Auth failure"

@@ -42,11 +42,13 @@
 //= require_tree ../../../vendor/assets/javascripts/js/components
 
 $(document).ready(function(){
-  showEditForm('.btn-course-edit', '/education/management/courses/')
-  showEditForm('#btn-training-edit', '/education/management/trainings/')
-  showNewForm('.btn-course-new', '/education/management/courses/new')
-  showEditForm('#btn-project-edit', '/education/management/projects/')
-  showEditForm('#btn-course-edit', '/education/management/courses/')
+  showEditForm('.btn-course-edit', '/education/management/courses/');
+  showEditForm('#btn-training-edit', '/education/management/trainings/');
+  showNewForm('.btn-course-new', '/education/management/courses/new');
+  showEditForm('#btn-project-edit', '/education/management/projects/');
+  showEditForm('#btn-course-edit', '/education/management/courses/');
+  showEditForm('.btn-certificate-edit', '/education/management/certificates/');
+  showNewForm('.btn-new-certificate', '/education/management/certificates/new');
 })
 
 function showEditForm(object, path){
@@ -78,7 +80,6 @@ function showNewForm(object, path){
         $('#show-edit-form').html(html_text);
         $('#edit-modal').modal('show');
         $('.datetimepicker').datepicker({dateFormat: 'dd/mm/yy'});
-        $('#myModalLabel').text(I18n.t("education.courses.new.create_course"));
       }
     })
   })

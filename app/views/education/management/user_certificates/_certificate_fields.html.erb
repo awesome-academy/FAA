@@ -1,0 +1,6 @@
+<div class="nested-fields">
+  <%= f.input :id, as: :select, include_blank: false,
+    collection: @certificates, label: t(".certificate") %>
+  <%= link_to_remove_association t(".remove"), f,
+    class: "button button-border button-mini button-rounded button-amber" %>
+</div>

@@ -26,15 +26,16 @@ class User < ApplicationRecord
   has_many :education_images, class_name: Education::Image.name,
     as: :imageable, dependent: :destroy
   has_many :images, as: :imageable, dependent: :destroy
-
   has_one :avatar, class_name: Image.name, foreign_key: :id,
     primary_key: :avatar_id
   has_one :cover_image, class_name: Image.name, foreign_key: :id,
     primary_key: :cover_image_id
-
   has_one :info_user
+  has_many :user_certificates, dependent: :destroy
+  has_many :certificates, through: :user_certificates
 
   accepts_nested_attributes_for :info_user
+  accepts_nested_attributes_for :certificates, allow_destroy: true
 
   delegate :introduce, to: :info_user, prefix: true, allow_nil: true
   delegate :birthday, to: :info_user, prefix: true, allow_nil: true
@@ -64,6 +65,16 @@ class User < ApplicationRecord
 
   def role? base_role
     ROLES.index(base_role.to_s) <= ROLES.index(role)
+  end
+
+  def certificates_attributes= attributes
+    self.certificates.delete_all
+    attributes.to_a.each do |attribute|
+      if attribute[1][:id].present? && attribute[1][:_destroy] != 1
+        self.certificates |= [Certificate.find_by(id: attribute[1][:id])]
+      end
+    end
+    super
   end
 
   class << self
