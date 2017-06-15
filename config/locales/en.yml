@@ -291,6 +291,8 @@ en:
       message: "message"
       send_feed_back: "Send Feedback"
       send_us_an_email: "Send us an Feedback"
+      address: " Address : 13F Keangnam Landmark 72 Tower, Plot E6, Pham Hung Road, Nam Tu Liem District., Ha Noi"
+      phone: " Phone : "
       feedback_success: "Thanks for your feedback."
       feedback_error: "Something was wrong, check your feedback form again."
       success_title: "Success!"

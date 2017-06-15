@@ -116,6 +116,7 @@ education:
     min_subject_length: 3
     min_content_length: 10
     max_content_length: 255
+    phone_framgia: "84-4-3795-5417"
   category:
     max_length_title: 200
   posts:
