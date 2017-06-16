@@ -2,7 +2,7 @@ class Education::Feedback < ApplicationRecord
   validates :name, presence: true,
     length: {maximum: Settings.education.feedback.max_name_length}
   VALID_PHONE_NUMBER_REGEX = /\A\+?\d{1,3}?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d/
-  VALID_EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+  VALID_EMAIL_REGEX = /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,3}\z/
   validates :email, presence: true,
     length: {maximum: Settings.education.feedback.max_email_length},
     format: {with: VALID_EMAIL_REGEX}
