@@ -19,7 +19,7 @@ gem "kaminari"
 gem "bootstrap-kaminari-views"
 gem "devise"
 gem "jquery-turbolinks"
-gem "bootstrap-sass", "~> 3.3.6"
+gem "bootstrap-sass"#, "~> 3.3.6"
 gem "ffaker"
 gem "therubyracer"
 gem "simple_form"
@@ -87,7 +87,7 @@ group :test do
   gem "rspec-collection_matchers"
   gem "shoulda-matchers", "~> 3.0"
   gem "database_cleaner", "~> 1.5"
-  gem "rubocop", "0.47.1", require: false
+  gem "rubocop"#, "0.47.1", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "scss_lint", require: false
   gem "scss_lint_reporter_checkstyle", require: false
