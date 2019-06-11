@@ -53,10 +53,10 @@ gem "has_friendship"
 gem "figaro"
 gem "faker"
 gem "select2-rails", "~> 4.0", ">= 4.0.3"
-gem "omniauth-facebook"
-gem "omniauth-google-oauth2"
-gem "omniauth-hrsystem",
-  git: "https://github.com/framgia-education/omniauth-hrsystem.git"
+gem "omniauth-facebook", ">1.9.0"
+gem "omniauth-google-oauth2", ">1.9.0"
+#gem "omniauth-hrsystem",
+#  git: "https://github.com/framgia-education/omniauth-hrsystem.git"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 3.0"
